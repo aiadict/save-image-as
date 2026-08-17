@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Save Image As — save any web image as PNG, JPG, WebP, AVIF or PDF</title>
+    <meta
+      name="description"
+      content="A Chrome extension that adds real image format conversion to the right-click menu. 100% local, no uploads, no tracking."
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3.5v11" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
+            <path d="M7.5 11l4.5 4.5 4.5-4.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        Save Image As
+      </a>
+      <nav class="site-nav">
+        <a href="./" aria-current="page">Welcome</a>
+        <a href="privacy/">Privacy</a>
+        <a href="terms/">Terms</a>
+        <a href="feedback/">Feedback</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Save any web image exactly how you need it.</h1>
+      <p class="lede">
+        Right-click any image, pick PNG, JPG, WebP, AVIF or PDF, and get a real, correctly-encoded file — not just the
+        original bytes with a new extension slapped on. Everything happens on your device.
+      </p>
+
+      <div class="actions">
+        <!-- TODO: point at the real Chrome Web Store listing URL once the extension is published and its ID is assigned -->
+        <a class="btn-primary" href="https://github.com/aiadict/save-image-as" rel="noopener">Coming soon to the Chrome Web Store →</a>
+        <a class="btn-secondary" href="https://github.com/aiadict/save-image-as" rel="noopener">View source on GitHub</a>
+      </div>
+
+      <h2>What it does</h2>
+      <div class="card">
+        <h3>⚙️ Five real output formats</h3>
+        <p>
+          PNG for lossless quality and transparency, JPG for smaller photo files, WebP and AVIF for modern
+          compression, PDF for a print-ready document — or just save the original with no conversion at all.
+        </p>
+      </div>
+      <div class="card">
+        <h3>⚡ One click, every time</h3>
+        <p>
+          Set your favorite format and folder once. After that, the right-click menu shows a single "Save as
+          [format]" shortcut that saves instantly — no dialog, no digging through a submenu.
+        </p>
+      </div>
+      <div class="card">
+        <h3>📐 The real image, not the thumbnail</h3>
+        <p>
+          Modern pages load an image several different ways — <code>srcset</code>, <code>&lt;picture&gt;</code>, a
+          small preview linked to a larger original. Save Image As checks all of them and saves the
+          highest-resolution version actually available.
+        </p>
+      </div>
+      <div class="card">
+        <h3>🔒 100% local, private by design</h3>
+        <p>
+          Every conversion happens directly on your device. Images are never uploaded, never sent to a server, and
+          never seen by us. No accounts, no ads, no tracking. Read the full details on the
+          <a href="privacy/">privacy policy</a> page.
+        </p>
+      </div>
+
+      <h2>Three steps to get started</h2>
+      <ol>
+        <li><strong>Pin it</strong> — click the puzzle-piece icon in your Chrome toolbar and pin Save Image As.</li>
+        <li><strong>Set your defaults</strong> — open the popup and choose your save mode, format and folder.</li>
+        <li><strong>Right-click any image</strong> — pick a format, or use the one-click shortcut.</li>
+      </ol>
+    </main>
+
+    <footer class="site-footer">
+      <span>Save Image As</span>
+      <span><a href="https://github.com/aiadict/save-image-as" rel="noopener">Source on GitHub</a></span>
+    </footer>
+  </body>
+</html>

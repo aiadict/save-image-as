@@ -53,7 +53,8 @@ export function initRatingWidget(): void {
     const value = Number(target.dataset.value);
 
     if (value === selected) {
-      const url = value <= 3 ? FEEDBACK_FORM_URL : CWS_REVIEWS_URL;
+      // Pass the rating along so the feedback page can show "you rated us N/5" context.
+      const url = value <= 3 ? `${FEEDBACK_FORM_URL}?rating=${value}` : CWS_REVIEWS_URL;
       void chrome.tabs.create({ url });
       return;
     }

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Feedback — Save Image As</title>
+    <meta name="description" content="Tell us what went wrong with Save Image As." />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3.5v11" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
+            <path d="M7.5 11l4.5 4.5 4.5-4.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        Save Image As
+      </a>
+      <nav class="site-nav">
+        <a href="../">Welcome</a>
+        <a href="../privacy/">Privacy</a>
+        <a href="../terms/">Terms</a>
+        <a href="./" aria-current="page">Feedback</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>What went wrong?</h1>
+      <p class="lede" id="lede">
+        Sorry the extension didn't work the way you expected. Tell us what happened and we'll take a look — this
+        goes straight to the person who builds it, not a support queue.
+      </p>
+
+      <form id="feedbackForm">
+        <label for="reasonGroup">What happened? (optional, pick one)</label>
+        <div class="reason-pills" id="reasonGroup" role="group" aria-label="Reason">
+          <button type="button" class="reason-pill" data-reason="Saved the wrong format">Saved the wrong format</button>
+          <button type="button" class="reason-pill" data-reason="Image didn't save at all">Image didn't save at all</button>
+          <button type="button" class="reason-pill" data-reason="Saved the wrong image / low-res thumbnail">Wrong image / low-res thumbnail</button>
+          <button type="button" class="reason-pill" data-reason="Extension icon or popup broken">Popup or icon broken</button>
+          <button type="button" class="reason-pill" data-reason="Something else">Something else</button>
+        </div>
+
+        <label for="message">Tell us more</label>
+        <textarea id="message" placeholder="What were you trying to save, on what site, and what happened instead?" required></textarea>
+
+        <label for="siteUrl">Site you were on (optional, but very helpful)</label>
+        <input type="text" id="siteUrl" placeholder="https://example.com/the-page-you-were-on" />
+
+        <label for="email">Your email (optional — only if you want a reply)</label>
+        <input type="email" id="email" placeholder="you@example.com" />
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">Send feedback via GitHub →</button>
+          <a class="btn-secondary" id="mailtoFallback" href="mailto:majchrowski.d@gmail.com">Prefer email instead</a>
+        </div>
+        <p class="hint">
+          "Send feedback" opens a pre-filled GitHub issue in a new tab (public, no account needed to view — a free
+          account is needed to actually submit it). Prefer not to use GitHub? Use the email link instead, which
+          opens your own mail app with the same details filled in.
+        </p>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <span>Save Image As</span>
+      <span><a href="https://github.com/aiadict/save-image-as" rel="noopener">Source on GitHub</a></span>
+    </footer>
+
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var rating = params.get("rating");
+        var lede = document.getElementById("lede");
+        if (rating) {
+          lede.textContent =
+            "You rated Save Image As " + rating + "/5 — sorry it wasn't better. Tell us what happened and we'll take a look.";
+        }
+
+        var selectedReason = "";
+        var pills = document.querySelectorAll(".reason-pill");
+        pills.forEach(function (pill) {
+          pill.addEventListener("click", function () {
+            var already = pill.classList.contains("selected");
+            pills.forEach(function (p) {
+              p.classList.remove("selected");
+            });
+            selectedReason = already ? "" : pill.dataset.reason;
+            if (!already) pill.classList.add("selected");
+          });
+        });
+
+        function buildBody() {
+          var message = document.getElementById("message").value.trim();
+          var siteUrl = document.getElementById("siteUrl").value.trim();
+          var email = document.getElementById("email").value.trim();
+          var lines = [];
+          if (rating) lines.push("Rating given: " + rating + "/5");
+          if (selectedReason) lines.push("Reason: " + selectedReason);
+          if (siteUrl) lines.push("Site: " + siteUrl);
+          lines.push("");
+          lines.push(message || "(no message provided)");
+          if (email) {
+            lines.push("");
+            lines.push("Contact: " + email);
+          }
+          return lines.join("\n");
+        }
+
+        var mailtoFallback = document.getElementById("mailtoFallback");
+        mailtoFallback.addEventListener("click", function (e) {
+          var subject = "Save Image As feedback" + (selectedReason ? ": " + selectedReason : "");
+          var body = buildBody();
+          mailtoFallback.href =
+            "mailto:majchrowski.d@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        });
+
+        document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var message = document.getElementById("message").value.trim();
+          if (!message) {
+            document.getElementById("message").focus();
+            return;
+          }
+          var title = "Feedback: " + (selectedReason || "Save Image As");
+          var body = buildBody();
+          var url =
+            "https://github.com/aiadict/save-image-as/issues/new?title=" +
+            encodeURIComponent(title) +
+            "&body=" +
+            encodeURIComponent(body) +
+            "&labels=feedback";
+          window.open(url, "_blank", "noopener");
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Save Image As</title>
+    <meta name="description" content="Save Image As does not collect, transmit, sell, or share any of your data. Read exactly what the extension does and why." />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3.5v11" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
+            <path d="M7.5 11l4.5 4.5 4.5-4.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        Save Image As
+      </a>
+      <nav class="site-nav">
+        <a href="../">Welcome</a>
+        <a href="./" aria-current="page">Privacy</a>
+        <a href="../terms/">Terms</a>
+        <a href="../feedback/">Feedback</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: August 18, 2026</p>
+
+      <p class="lede"><strong>Save Image As does not collect, transmit, sell, or share any of your data.</strong></p>
+
+      <h2>What the extension does</h2>
+      <p>
+        Save Image As lets you right-click an image on a web page and save it in a different format (PNG, JPG,
+        WebP, AVIF or PDF), optionally to a folder and format you've chosen as your default. All image decoding and
+        re-encoding happens entirely on your device, inside your browser. The image you save is never uploaded to
+        any server we operate or any third party.
+      </p>
+
+      <h2>Data we collect</h2>
+      <p>None. Specifically, we do not collect:</p>
+      <ul>
+        <li>The images you view, click, or save</li>
+        <li>The URLs or pages you visit</li>
+        <li>Your browsing history</li>
+        <li>Any personally identifiable information</li>
+        <li>Any analytics tied to the content of pages you visit</li>
+      </ul>
+
+      <h2>Data stored locally on your device</h2>
+      <p>
+        The extension stores a small set of preferences, locally in your browser (via Chrome's <code>storage</code>
+        API, optionally synced across your own signed-in Chrome devices by Chrome itself — we never see this data):
+      </p>
+      <ul>
+        <li>Your preferred save mode (ask where to save vs. quick save)</li>
+        <li>Your default image format and default download sub-folder name</li>
+        <li>Whether you've completed the first-run walkthrough</li>
+      </ul>
+      <p>None of this leaves your device or is accessible to us.</p>
+
+      <h2>Permissions and why we need them</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>What it's used for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>contextMenus</td><td>Add "Save Image As" entries to the right-click menu</td></tr>
+          <tr><td>downloads</td><td>Save the converted file to your Downloads folder</td></tr>
+          <tr><td>storage</td><td>Remember your format/folder/save-mode preferences, locally</td></tr>
+          <tr><td>scripting / activeTab</td><td>Read the specific image you right-clicked, on the tab you're using, so it can be resolved to its real source</td></tr>
+          <tr><td>notifications</td><td>Tell you why a save failed, if it fails, instead of failing silently</td></tr>
+          <tr><td>Host permission for a specific site (automatic, best-effort)</td><td>Fetch the actual image bytes from that site when the browser's own security rules would otherwise block it</td></tr>
+          <tr><td>Host permission for all sites (optional)</td><td>Only if you click "Allow on all sites" in Settings — the reliable alternative when the automatic per-site request doesn't go through; entirely your choice, off by default</td></tr>
+        </tbody>
+      </table>
+      <p>
+        We never request broad access to your browsing activity by default — "Allow on all sites" only ever runs
+        because you clicked a button that says exactly that, and even then it's used only to read the bytes of an
+        image you've asked us to convert, not to observe your browsing.
+      </p>
+
+      <h2>No remote code</h2>
+      <p>
+        Every part of the extension that runs is packaged inside the extension itself and reviewed by the Chrome
+        Web Store at each release. Nothing is fetched and executed from a remote server after installation.
+      </p>
+
+      <h2>No ads, no affiliate links, no tracking</h2>
+      <p>The extension does not display ads, inject affiliate links, or track you across sites.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        If this policy changes, the "Last updated" date above will change, and material changes will be reflected
+        in the extension's release notes.
+      </p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy: <a href="mailto:majchrowski.d@gmail.com">majchrowski.d@gmail.com</a>, or open an issue on <a href="https://github.com/aiadict/save-image-as" rel="noopener">GitHub</a>.</p>
+    </main>
+
+    <footer class="site-footer">
+      <span>Save Image As</span>
+      <span><a href="https://github.com/aiadict/save-image-as" rel="noopener">Source on GitHub</a></span>
+    </footer>
+  </body>
+</html>

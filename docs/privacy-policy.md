@@ -1,8 +1,10 @@
 ---
-title: Privacy Policy (draft — for Chrome Web Store submission)
-status: draft, needs legal review before publishing
-updated: 2026-08-16
+title: Privacy Policy (internal working draft)
+status: superseded by the published page — this file is now just an editable source/internal-notes copy
+updated: 2026-08-18
 ---
+
+**Published version (canonical, use this URL for CWS submission):** `docs/privacy/index.html`, live at https://aiadict.github.io/save-image-as/privacy/. Edit that file for anything user-facing; keep this .md in sync for the internal notes below if the policy changes materially.
 
 # Privacy Policy — Save Image As
 
