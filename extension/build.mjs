@@ -3,8 +3,9 @@
 // build: node build.mjs           (production bundle)
 // zip:   node build.mjs --zip     (build, then zip dist/ for Chrome Web Store upload)
 import { build, context } from "esbuild";
-import { cpSync, mkdirSync, rmSync, existsSync } from "node:fs";
+import { cpSync, mkdirSync, rmSync, existsSync, readFileSync } from "node:fs";
 import { execSync } from "node:child_process";
+import { resolve } from "node:path";
 
 const watch = process.argv.includes("--watch");
 const zip = process.argv.includes("--zip");
@@ -53,9 +54,14 @@ if (watch) {
 } else {
   await build(buildOptions);
   if (zip) {
-    const zipName = "save-image-as.zip";
-    rmSync(zipName, { force: true });
-    execSync(`cd ${outdir} && zip -r ../${zipName} .`, { stdio: "inherit" });
-    console.log(`Packaged ${zipName} for Chrome Web Store upload.`);
+    const { version } = JSON.parse(readFileSync("manifest.json", "utf8"));
+    // Absolute path — the zip command below `cd`s into dist/ first, so a
+    // relative path here would resolve against the wrong directory.
+    const releasesDir = resolve(process.cwd(), "..", "releases");
+    mkdirSync(releasesDir, { recursive: true });
+    const zipPath = resolve(releasesDir, `save-image-as-v${version}.zip`);
+    rmSync(zipPath, { force: true });
+    execSync(`cd ${outdir} && zip -r "${zipPath}" .`, { stdio: "inherit" });
+    console.log(`Packaged ${zipPath} for Chrome Web Store upload.`);
   }
 }
