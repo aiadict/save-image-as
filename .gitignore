@@ -1,0 +1,18 @@
+node_modules/
+dist/
+*.zip
+.DS_Store
+*.log
+.env
+
+# Internal planning/research/strategy material — kept locally, never pushed.
+# docs/ is otherwise reserved for public-facing content (privacy policy,
+# terms of use) since it may double as a GitHub Pages source later.
+/example/
+/prompts/
+/docs/architecture.md
+/docs/competitive-analysis.md
+/docs/description.md
+/docs/roadmap.md
+/docs/site-compatibility.md
+/docs/store-listing.md

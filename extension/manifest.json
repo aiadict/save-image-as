@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Save Image As",
+  "short_name": "Save Image As",
+  "version": "0.1.0",
+  "description": "Save any web image as JPG, PNG, WebP or AVIF from the right-click menu. Highest resolution, right filename, one click. 100% local.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/index.js",
+    "type": "module"
+  },
+  "permissions": [
+    "contextMenus",
+    "downloads",
+    "storage",
+    "scripting",
+    "activeTab",
+    "notifications"
+  ],
+  "optional_host_permissions": [
+    "*://*/*"
+  ],
+  "minimum_chrome_version": "116"
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Save Image As</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup-header">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3.5v11" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
+            <path d="M7.5 11l4.5 4.5 4.5-4.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="word">Save Image As</span>
+      </header>
+
+      <section>
+        <div class="segmented" id="saveModeSeg" role="radiogroup" aria-label="Save mode">
+          <button type="button" data-mode="ask" role="radio">Ask where to save</button>
+          <button type="button" data-mode="quick" role="radio">Quick save</button>
+        </div>
+        <p class="helper" id="saveModeHelper"></p>
+      </section>
+
+      <section class="quick-action">
+        <p class="label">Right-click menu</p>
+        <p class="sentence">
+          Save as
+          <select id="defaultFormat" class="chip-select" aria-label="Default format">
+            <option value="original">Original</option>
+            <option value="png">PNG</option>
+            <option value="jpg">JPG</option>
+            <option value="webp">WebP</option>
+            <option value="avif">AVIF</option>
+            <option value="pdf">PDF</option>
+          </select>
+          to
+          <span class="chip-static">Downloads /</span>
+          <input id="defaultFolder" class="chip-input" type="text" aria-label="Default folder" placeholder="SaveImageAs" />
+        </p>
+        <p class="quick-action-note" id="quickActionNote"></p>
+      </section>
+
+      <section>
+        <button type="button" class="advanced-toggle" id="advToggle" aria-expanded="false" aria-controls="advPanel">
+          <svg class="chevron" viewBox="0 0 10 10" fill="none">
+            <path d="M3 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Advanced
+        </button>
+        <div class="advanced-panel" id="advPanel" hidden>
+          <div>
+            <p class="field-label">JPG quality</p>
+            <div class="quality-row">
+              <input type="range" id="jpgQuality" min="0.5" max="1" step="0.01" />
+              <span class="value" id="jpgQualityValue"></span>
+            </div>
+          </div>
+          <div>
+            <p class="field-label">Site access</p>
+            <div class="access-row">
+              <p>Needed to read an image's bytes from its own site.</p>
+              <button type="button" class="btn-primary" id="grantAccess">Allow on all sites</button>
+            </div>
+            <p class="status-pill" id="accessStatus"></p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="popup-footer">
+        <span class="prompt">Enjoying Save Image As?</span>
+        <div class="stars" id="stars">
+          <button type="button" class="star" data-value="1" aria-label="1 star">★</button>
+          <button type="button" class="star" data-value="2" aria-label="2 stars">★</button>
+          <button type="button" class="star" data-value="3" aria-label="3 stars">★</button>
+          <button type="button" class="star" data-value="4" aria-label="4 stars">★</button>
+          <button type="button" class="star" data-value="5" aria-label="5 stars">★</button>
+        </div>
+      </footer>
+      <p class="rating-hint" id="ratingHint"></p>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
