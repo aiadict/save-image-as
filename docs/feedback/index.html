@@ -34,7 +34,16 @@
         goes straight to the person who builds it, not a support queue.
       </p>
 
-      <form id="feedbackForm">
+      <!-- Progressive enhancement: works as a plain form POST to FormSubmit.co even
+           without JS; the script below intercepts it for an in-page confirmation. -->
+      <form id="feedbackForm" action="https://formsubmit.co/majchrowski.d@gmail.com" method="POST">
+        <input type="hidden" name="_subject" id="subjectField" value="Save Image As feedback" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_replyto" id="replyToField" value="" />
+        <input type="hidden" name="Rating" id="ratingField" value="" />
+        <input type="hidden" name="Reason" id="reasonField" value="" />
+
         <label for="reasonGroup">What happened? (optional, pick one)</label>
         <div class="reason-pills" id="reasonGroup" role="group" aria-label="Reason">
           <button type="button" class="reason-pill" data-reason="Saved the wrong format">Saved the wrong format</button>
@@ -45,19 +54,29 @@
         </div>
 
         <label for="message">Tell us more</label>
-        <textarea id="message" placeholder="What were you trying to save, on what site, and what happened instead?" required></textarea>
+        <textarea
+          id="message"
+          name="Message"
+          placeholder="What were you trying to save, on what site, and what happened instead?"
+          required
+        ></textarea>
 
         <label for="siteUrl">Site you were on (optional, but very helpful)</label>
-        <input type="text" id="siteUrl" placeholder="https://example.com/the-page-you-were-on" />
+        <input type="text" id="siteUrl" name="Site" placeholder="https://example.com/the-page-you-were-on" />
 
         <label for="email">Your email (optional — only if you want a reply)</label>
-        <input type="email" id="email" placeholder="you@example.com" />
+        <input type="email" id="email" name="Your Email" placeholder="you@example.com" />
 
         <div class="actions">
-          <button type="submit" class="btn-primary">Send feedback</button>
+          <button type="submit" class="btn-primary" id="submitBtn">Send feedback</button>
         </div>
-        <p class="hint">Opens your email app with everything above filled in, addressed to us directly.</p>
+        <p class="hint" id="hint">Sent straight to us — no account or email app needed.</p>
       </form>
+
+      <div class="card" id="successMessage" style="display: none">
+        <h3>Thanks — feedback sent.</h3>
+        <p>We read every message. If you left your email, we'll get back to you if there's something to say.</p>
+      </div>
     </main>
 
     <footer class="site-footer">
@@ -73,6 +92,7 @@
         if (rating) {
           lede.textContent =
             "You rated Save Image As " + rating + "/5 — sorry it wasn't better. Tell us what happened and we'll take a look.";
+          document.getElementById("ratingField").value = rating + "/5";
         }
 
         var selectedReason = "";
@@ -85,37 +105,45 @@
             });
             selectedReason = already ? "" : pill.dataset.reason;
             if (!already) pill.classList.add("selected");
+            document.getElementById("reasonField").value = selectedReason;
           });
         });
 
-        function buildBody() {
-          var message = document.getElementById("message").value.trim();
-          var siteUrl = document.getElementById("siteUrl").value.trim();
-          var email = document.getElementById("email").value.trim();
-          var lines = [];
-          if (rating) lines.push("Rating given: " + rating + "/5");
-          if (selectedReason) lines.push("Reason: " + selectedReason);
-          if (siteUrl) lines.push("Site: " + siteUrl);
-          lines.push("");
-          lines.push(message || "(no message provided)");
-          if (email) {
-            lines.push("");
-            lines.push("Contact: " + email);
-          }
-          return lines.join("\n");
-        }
+        var form = document.getElementById("feedbackForm");
+        var submitBtn = document.getElementById("submitBtn");
+        var hint = document.getElementById("hint");
 
-        document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+        form.addEventListener("submit", function (e) {
           e.preventDefault();
           var message = document.getElementById("message").value.trim();
           if (!message) {
             document.getElementById("message").focus();
             return;
           }
-          var subject = "Save Image As feedback" + (selectedReason ? ": " + selectedReason : "");
-          var body = buildBody();
-          window.location.href =
-            "mailto:majchrowski.d@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+          document.getElementById("replyToField").value = document.getElementById("email").value.trim();
+          document.getElementById("subjectField").value = "Save Image As feedback" + (selectedReason ? ": " + selectedReason : "");
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Sending…";
+
+          fetch("https://formsubmit.co/ajax/majchrowski.d@gmail.com", {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: new FormData(form),
+          })
+            .then(function (res) {
+              if (!res.ok) throw new Error("send failed");
+              form.style.display = "none";
+              document.getElementById("successMessage").style.display = "block";
+            })
+            .catch(function () {
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Send feedback";
+              hint.textContent =
+                "Sending failed — you can also email us directly: majchrowski.d@gmail.com";
+              hint.style.color = "inherit";
+            });
         });
       })();
     </script>
