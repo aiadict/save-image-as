@@ -18,6 +18,15 @@
         <span class="word">Save Image As</span>
       </header>
 
+      <section class="banner" id="permissionBanner" hidden>
+        <p class="banner-title">One quick fix</p>
+        <p class="banner-body" id="permissionBannerBody"></p>
+        <div class="banner-actions">
+          <button type="button" class="btn-primary" id="bannerGrantBtn">Allow on all sites</button>
+          <button type="button" class="btn-text" id="bannerDismissBtn">Dismiss</button>
+        </div>
+      </section>
+
       <section>
         <div class="segmented" id="saveModeSeg" role="radiogroup" aria-label="Save mode">
           <button type="button" data-mode="ask" role="radio">Ask where to save</button>

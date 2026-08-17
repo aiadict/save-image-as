@@ -21,6 +21,10 @@ async function init(): Promise<void> {
   const qualityValue = document.getElementById("jpgQualityValue")!;
   const grantAccessBtn = document.getElementById("grantAccess") as HTMLButtonElement;
   const accessStatus = document.getElementById("accessStatus")!;
+  const permissionBanner = document.getElementById("permissionBanner") as HTMLElement;
+  const permissionBannerBody = document.getElementById("permissionBannerBody")!;
+  const bannerGrantBtn = document.getElementById("bannerGrantBtn") as HTMLButtonElement;
+  const bannerDismissBtn = document.getElementById("bannerDismissBtn") as HTMLButtonElement;
 
   // --- Save mode ---
   const setActiveSegment = (mode: SaveMode) => {
@@ -87,17 +91,53 @@ async function init(): Promise<void> {
     accessStatus.textContent = granted ? "Granted — images on any site can be converted." : "Not granted yet.";
     accessStatus.classList.toggle("granted", granted);
     grantAccessBtn.disabled = granted;
+    return granted;
   };
   void refreshAccessStatus();
 
-  grantAccessBtn.addEventListener("click", () => {
-    // Must be the first call in this handler — chrome.permissions.request()
-    // only reliably honors a direct, synchronous user gesture like this.
+  const hideBanner = () => {
+    permissionBanner.hidden = true;
+  };
+
+  const dismissBanner = () => {
+    void setPreferences({ lastSaveBlockedByPermission: false, lastBlockedOrigin: "" });
+    hideBanner();
+  };
+
+  // Shared by both the Advanced-section button and the reactive banner's
+  // button below — each caller invokes this as the FIRST statement of its
+  // own click handler, so the synchronous user gesture chrome.permissions
+  // .request() needs stays intact regardless of which button was clicked.
+  const grantBroadAccess = () => {
     void requestBroadImageAccess().then((granted) => {
       void refreshAccessStatus();
-      if (!granted) accessStatus.textContent = "Permission wasn't granted.";
+      if (granted) {
+        dismissBanner();
+      } else {
+        accessStatus.textContent = "Permission wasn't granted.";
+      }
     });
-  });
+  };
+
+  grantAccessBtn.addEventListener("click", grantBroadAccess);
+  bannerGrantBtn.addEventListener("click", grantBroadAccess);
+  bannerDismissBtn.addEventListener("click", dismissBanner);
+
+  // --- Reactive permission banner ---
+  // Only shown to someone who just actually hit a permission-blocked save —
+  // never by default. See docs/architecture.md "Reactive permission prompt".
+  if (prefs.lastSaveBlockedByPermission) {
+    const alreadyGranted = await refreshAccessStatus();
+    if (alreadyGranted) {
+      // Resolved some other way (e.g. granted from a previous popup open) — clean up quietly.
+      void setPreferences({ lastSaveBlockedByPermission: false, lastBlockedOrigin: "" });
+    } else {
+      permissionBannerBody.textContent = prefs.lastBlockedOrigin
+        ? `A recent save on ${prefs.lastBlockedOrigin} was blocked by the site's own permissions. Allow Save Image As on all sites to fix it.`
+        : "A recent save was blocked by site permissions. Allow Save Image As on all sites to fix it.";
+      permissionBanner.hidden = false;
+    }
+  }
 }
 
 void init();

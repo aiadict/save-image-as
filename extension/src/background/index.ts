@@ -2,7 +2,7 @@
 // pipeline, calls chrome.downloads. See docs/architecture.md "End-to-end
 // data flow" for the pipeline this implements.
 
-import { getPreferences, onPreferencesChanged, type DefaultFormat } from "../lib/storage";
+import { getPreferences, setPreferences, onPreferencesChanged, type DefaultFormat } from "../lib/storage";
 import { tryRequestOriginPermission } from "../lib/permissions";
 import { downloadBlob } from "../lib/downloads";
 import { notifyFailure } from "../lib/notify";
@@ -163,6 +163,7 @@ async function handleSaveRequest(
         console.log(LOG_PREFIX, "fetch blocked, requesting origin permission (best effort)", resolved.url);
         const granted = await tryRequestOriginPermission(resolved.url);
         if (!granted) {
+          void setPreferences({ lastSaveBlockedByPermission: true, lastBlockedOrigin: safeOrigin(resolved.url) });
           throw new ConversionError({
             reason: "permission-denied",
             message:
@@ -177,6 +178,7 @@ async function handleSaveRequest(
       const filename = buildOriginalFilename(resolved.url, folder);
       console.log(LOG_PREFIX, "downloading original", filename);
       await downloadBlob(blob, filename, saveAs);
+      void clearPermissionBlockFlag();
       return;
     }
 
@@ -188,10 +190,27 @@ async function handleSaveRequest(
     console.log(LOG_PREFIX, "downloading", filename);
     await downloadBlob(encoded, filename, saveAs);
     console.log(LOG_PREFIX, "done", filename);
+    void clearPermissionBlockFlag();
   } catch (err) {
     console.error(LOG_PREFIX, "save failed", err);
     const message =
       err instanceof ConversionError ? err.failure.message : "Something went wrong saving this image. Please try again.";
     notifyFailure(message);
+  }
+}
+
+function safeOrigin(url: string): string {
+  try {
+    return new URL(url).origin;
+  } catch {
+    return "";
+  }
+}
+
+/** A successful save means the block (if any) is no longer relevant — don't keep nagging about it. */
+async function clearPermissionBlockFlag(): Promise<void> {
+  const prefs = await getPreferences();
+  if (prefs.lastSaveBlockedByPermission) {
+    await setPreferences({ lastSaveBlockedByPermission: false, lastBlockedOrigin: "" });
   }
 }

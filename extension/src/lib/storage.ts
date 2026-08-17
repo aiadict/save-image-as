@@ -11,6 +11,17 @@ export interface Preferences {
   defaultFolder: string;
   jpgQuality: number;
   hasCompletedOnboarding: boolean;
+  /**
+   * Set by the background pipeline when a save fails specifically because
+   * "Allow on all sites" wasn't granted; cleared on a successful save or
+   * once the user grants/dismisses it. Drives the reactive permission
+   * banner in the popup — see docs/architecture.md "Reactive permission
+   * prompt". Deliberately NOT surfaced by default to everyone; only shown
+   * to someone who just actually hit the problem.
+   */
+  lastSaveBlockedByPermission: boolean;
+  /** Origin of the site that triggered the block above, for a concrete banner message; "" if unknown. */
+  lastBlockedOrigin: string;
 }
 
 export const DEFAULT_PREFERENCES: Preferences = {
@@ -19,6 +30,8 @@ export const DEFAULT_PREFERENCES: Preferences = {
   defaultFolder: "SaveImageAs",
   jpgQuality: 0.92,
   hasCompletedOnboarding: false,
+  lastSaveBlockedByPermission: false,
+  lastBlockedOrigin: "",
 };
 
 export async function getPreferences(): Promise<Preferences> {
