@@ -54,14 +54,9 @@
         <input type="email" id="email" placeholder="you@example.com" />
 
         <div class="actions">
-          <button type="submit" class="btn-primary">Send feedback via GitHub →</button>
-          <a class="btn-secondary" id="mailtoFallback" href="mailto:majchrowski.d@gmail.com">Prefer email instead</a>
+          <button type="submit" class="btn-primary">Send feedback</button>
         </div>
-        <p class="hint">
-          "Send feedback" opens a pre-filled GitHub issue in a new tab (public, no account needed to view — a free
-          account is needed to actually submit it). Prefer not to use GitHub? Use the email link instead, which
-          opens your own mail app with the same details filled in.
-        </p>
+        <p class="hint">Opens your email app with everything above filled in, addressed to us directly.</p>
       </form>
     </main>
 
@@ -110,14 +105,6 @@
           return lines.join("\n");
         }
 
-        var mailtoFallback = document.getElementById("mailtoFallback");
-        mailtoFallback.addEventListener("click", function (e) {
-          var subject = "Save Image As feedback" + (selectedReason ? ": " + selectedReason : "");
-          var body = buildBody();
-          mailtoFallback.href =
-            "mailto:majchrowski.d@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-        });
-
         document.getElementById("feedbackForm").addEventListener("submit", function (e) {
           e.preventDefault();
           var message = document.getElementById("message").value.trim();
@@ -125,15 +112,10 @@
             document.getElementById("message").focus();
             return;
           }
-          var title = "Feedback: " + (selectedReason || "Save Image As");
+          var subject = "Save Image As feedback" + (selectedReason ? ": " + selectedReason : "");
           var body = buildBody();
-          var url =
-            "https://github.com/aiadict/save-image-as/issues/new?title=" +
-            encodeURIComponent(title) +
-            "&body=" +
-            encodeURIComponent(body) +
-            "&labels=feedback";
-          window.open(url, "_blank", "noopener");
+          window.location.href =
+            "mailto:majchrowski.d@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
         });
       })();
     </script>
