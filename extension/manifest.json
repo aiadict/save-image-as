@@ -1,9 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "Save Image As",
+  "default_locale": "en",
+  "name": "__MSG_appName__",
   "short_name": "Save Image As",
-  "version": "1.0.1",
-  "description": "Save any image as PNG, JPG, WebP, AVIF or PDF from the right-click menu. Real conversion, highest resolution, 100% local & private.",
+  "version": "1.0.2",
+  "description": "__MSG_shortDesc__",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
