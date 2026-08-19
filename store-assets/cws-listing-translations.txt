@@ -1,0 +1,1929 @@
+Save Image As — Chrome Web Store listing translations
+Generated from extension/public/_locales/<code>/messages.json (source of truth).
+Paste storeDesc into Dashboard > Store listing > language switcher > Detailed description.
+appName / shortDesc auto-apply from the manifest — included here for reference only.
+======================================================================
+
+##### Amharic (am) #####
+
+[appName]
+ምስል እንደ አስቀምጥ - Save Image As
+
+[shortDesc]
+ምስል በPNG, JPG, WebP, AVIF ወይም PDF አድርገው ያስቀምጡ — እውነተኛ ልወጣ፣ ከፍተኛ ጥራት፣ 100% በአካባቢያዊ።
+
+[storeDesc]
+Save Image As የChrome ቀኝ-ጠቅታ ምናሌን ወደ እውነተኛ የምስል መቀየሪያ ይለውጣል — ምንም መስቀል የለም፣ ተጨማሪ መተግበሪያዎች የሉም፣ ፋይሉ በእርግጥ ይከፈት እንደሆነ መገመት አያስፈልግም።
+
+በማንኛውም ድረ-ገጽ ላይ ባለ ማንኛውም ምስል ላይ በቀኝ ጠቅ ያድርጉ እና የሚያስፈልግዎትን ቅርጸት ይምረጡ። ምስሉ በቀጥታ በአሳሽዎ ውስጥ ይፈታል እና እንደገና ይመሰጠራል፣ ስለዚህ እውነተኛ፣ በትክክል የተቀረጸ ፋይል ያገኛሉ — አዲስ ቅጥያ ያለው የመጀመሪያ ባይት ብቻ አይደለም።
+
+⚙️ ያሉ የውጤት ቅርጸቶች:
+- እንደ png አስቀምጥ – ያለ ጥራት ማጣት፣ ግልጽነትን ይጠብቃል፣ ለአርማዎች፣ ግራፊክስ እና ስክሪንሾቶች ትክክለኛ ምርጫ
+- እንደ jpg አስቀምጥ – ትንሽ የፋይል መጠን፣ ለፎቶዎች፣ ለማጋራት እና ለኢሜይል ማያያዣዎች ተስማሚ
+- እንደ webp አስቀምጥ – በጣም ትንሽ በሆነ መጠን ጥሩ የእይታ ጥራት ያለው ዘመናዊ መጭመቅ
+- እንደ avif አስቀምጥ – ዛሬ ለሚቻለው ትንሽ ፋይል አዲስ ትውልድ ቅርጸት
+- እንደ pdf አስቀምጥ – ማንኛውንም ምስል ለህትመት ዝግጁ፣ ሊጋራ የሚችል የPDF ሰነድ ያደርገዋል
+- ኦሪጅናል አስቀምጥ – የመጀመሪያው ቅርጸት አስቀድሞ የሚያስፈልግዎት ሲሆን፣ ያለ ምንም ልወጣ ፋይሉን በትክክል እንዳለ ያወርዳል
+
+⚡ በእያንዳንዱ ጊዜ አንድ ጠቅታ
+የሚወዱትን ቅርጸት እና አቃፊ በፖፕ-አፕ ውስጥ አንድ ጊዜ ይምረጡ። ከዚያ በኋላ፣ ቀኝ-ጠቅታ ምናሌ ወዲያውኑ የሚያስቀምጥ አንድ አቋራጭ "እንደ [ቅርጸት] አስቀምጥ" ያሳያል — ምንም የንግግር ሳጥን የለም፣ በንዑስ ምናሌዎች ውስጥ መፈለግ አያስፈልግም፣ ለእያንዳንዱ ምስል ተመሳሳይ ምርጫ መድገም አያስፈልግም።
+
+📐 እውነተኛው ምስል፣ አነስተኛ ምስል አይደለም
+ዘመናዊ ገጾች ምስልን በተለያዩ መንገዶች ይጭናሉ — srcset፣ የpicture ክፍሎች፣ ከትልቅ ኦሪጅናል ጋር የተገናኘ ትንሽ ቅድመ-እይታ። Save Image As እነዚህን ሁሉ ይፈትሻል እና መጀመሪያ ከሚያገኘው አነስተኛ ምስል ይልቅ በእውነት ያለውን ከፍተኛ ጥራት ያለው ስሪት ያስቀምጣል።
+
+🔒 100% በአካባቢያዊ፣ ከንድፍ ጀምሮ በግላዊነት
+ሁሉም ልወጣ በቀጥታ በመሳሪያዎ ላይ ይከናወናል። ምስሎች ፈጽሞ አይሰቀሉም፣ ፈጽሞ ወደ ማንኛውም አገልጋይ አይላኩም፣ እና በእኛ ፈጽሞ አይታዩም። መለያዎች የሉም፣ ምዝገባ የለም፣ ማስታወቂያዎች የሉም፣ መከታተያ የለም።
+
+🧩 አነስተኛ ፈቃዶች፣ በግልጽ ተብራርተዋል
+Save Image As የሚያነበው እርስዎ በሚጠቀሙበት ገጽ ላይ በቀኝ ጠቅ ያደረጉበትን ምስል ብቻ ነው። "ለጥንቃቄ ሲባል" ምንም ነገር አይጠየቅም — ቅጥያው የሚጠይቀው እያንዳንዱ ፈቃድ በራሱ የቅንብሮች ገጽ ላይ ተብራርቷል።
+
+webp ወደ jpg እየቀየሩ ይሁን፣ ምስል እንደ png እያስቀመጡ ይሁን፣ ፎቶ ወደ pdf እየቀየሩ ይሁን፣ ወይም ደብዛዛ አነስተኛ ምስል ፈንታ ሙሉ ጥራት ያለው ምስል ለማግኘት እየሞከሩ ይሁን፣ Save Image As በአንድ ቀኝ-ጠቅታ ያደርገዋል። ነጻ፣ የግል እና አስተማማኝ።
+
+----------------------------------------------------------------------
+
+##### Arabic (ar) #####
+
+[appName]
+حفظ الصورة باسم - Save Image As
+
+[shortDesc]
+احفظ الصورة بصيغة PNG أو JPG أو WebP أو AVIF أو PDF — تحويل حقيقي، أعلى دقة، محلي بنسبة 100%.
+
+[storeDesc]
+يحوّل Save Image As قائمة النقر بزر الماوس الأيمن في Chrome إلى محوّل صور حقيقي — بلا رفع للملفات، بلا تطبيقات إضافية، وبلا تخمين إن كان الملف سيُفتح أصلاً.
+
+انقر بزر الماوس الأيمن على أي صورة في أي موقع، واختر الصيغة التي تحتاجها. تُفكّ ترميز الصورة ويُعاد ترميزها مباشرة داخل متصفحك، لذا تحصل على ملف حقيقي ومنسّق بشكل صحيح — وليس مجرد البيانات الأصلية بامتداد جديد.
+
+⚙️ صيغ الإخراج المتاحة:
+- الحفظ بصيغة png – جودة بلا فقدان، يحافظ على الشفافية، الخيار الصحيح للشعارات والرسومات ولقطات الشاشة
+- الحفظ بصيغة jpg – حجم ملف أصغر، مثالي للصور وللمشاركة ومرفقات البريد الإلكتروني
+- الحفظ بصيغة webp – ضغط حديث بجودة بصرية ممتازة وحجم أصغر بكثير
+- الحفظ بصيغة avif – صيغة الجيل الجديد لأصغر حجم ملف ممكن اليوم
+- الحفظ بصيغة pdf – يحوّل أي صورة إلى مستند PDF جاهز للطباعة والمشاركة
+- حفظ الأصل – يُنزّل الملف تماماً كما هو، دون تحويل، عندما تكون الصيغة الأصلية هي ما تحتاجه فعلاً
+
+⚡ نقرة واحدة، في كل مرة
+اختر صيغتك ومجلدك المفضلين مرة واحدة فقط من النافذة المنبثقة. بعدها، تعرض قائمة النقر بزر الماوس الأيمن اختصاراً واحداً "حفظ بصيغة [الصيغة]" يحفظ فوراً — دون مربع حوار، ودون البحث في قوائم فرعية، ودون تكرار الاختيار نفسه مع كل صورة.
+
+📐 الصورة الحقيقية، لا الصورة المصغّرة
+تحمّل الصفحات الحديثة الصورة بطرق مختلفة عديدة — srcset، وعناصر picture، ومعاينة صغيرة مرتبطة بأصل أكبر. يتحقق Save Image As من كل ذلك، ويحفظ النسخة ذات أعلى دقة متاحة فعلياً، بدلاً من أول صورة مصغّرة يصادفها.
+
+🔒 محلي 100%، خاص بالتصميم
+تتم كل عمليات التحويل مباشرة على جهازك. لا تُرفع الصور أبداً، ولا تُرسل إلى أي خادم، ولا نراها نحن أبداً. بلا حسابات، بلا تسجيل، بلا إعلانات، بلا تتبع.
+
+🧩 أذونات محدودة، موضّحة بوضوح
+لا يقرأ Save Image As سوى الصورة التي تنقر عليها بزر الماوس الأيمن، على الصفحة التي تستخدمها. لا شيء يُطلب "احتياطاً" — كل إذن يطلبه الامتداد موضّح في صفحة إعداداته الخاصة.
+
+سواء كنت تحوّل webp إلى jpg، أو تحفظ صورة بصيغة png، أو تحوّل صورة إلى pdf، أو تحاول فقط الحصول على صورة بدقتها الكاملة بدلاً من صورة مصغّرة ضبابية، ينجز Save Image As ذلك بنقرة يمنى واحدة. مجاني وخاص وموثوق.
+
+----------------------------------------------------------------------
+
+##### Bulgarian (bg) #####
+
+[appName]
+Запазване на изображението като - Save Image As
+
+[shortDesc]
+Запазете изображение като PNG, JPG, WebP, AVIF или PDF — истинско преобразуване, максимална резолюция, 100% локално.
+
+[storeDesc]
+Save Image As превръща менюто с десен бутон на Chrome в истински конвертор на изображения — без качване, без допълнителни приложения, без гадаене дали файлът изобщо ще се отвори.
+
+Кликнете с десния бутон върху всяко изображение на всеки сайт и изберете нужния формат. Изображението се декодира и прекодира directno във вашия браузър, така че получавате истински, правилно форматиран файл — не просто оригиналните байтове с ново разширение.
+
+⚙️ Налични изходни формати:
+- запази като png – качество без загуби, запазва прозрачността, правилният избор за лога, графики и снимки на екрана
+- запази като jpg – по-малък размер на файла, идеален за снимки, споделяне и прикачени файлове към имейл
+- запази като webp – модерна компресия с отлично визуално качество при много по-малък размер
+- запази като avif – формат от ново поколение за най-малкия възможен файл днес
+- запази като pdf – превръща всяко изображение в готов за печат, споделим PDF документ
+- запази оригинала – изтегля файла точно такъв, какъвто е, без преобразуване, когато оригиналният формат вече е този, от който имате нужда
+
+⚡ Едно кликване, всеки път
+Изберете любимия си формат и папка веднъж в изскачащия прозорец. След това менюто с десен бутон показва един единствен пряк път "Запази като [формат]", който запазва мигновено — без диалогов прозорец, без ровене в подменюта, без повтаряне на същия избор за всяко изображение.
+
+📐 Истинското изображение, не миниатюрата
+Съвременните страници зареждат изображение по няколко различни начина — srcset, елементи picture, малка визуализация, свързана с по-голям оригинал. Save Image As проверява всички тях и запазва версията с реално наличната най-висока резолюция, вместо първата попаднала миниатюра.
+
+🔒 100% локално, поверително по замисъл
+Цялото преобразуване се извършва directno на вашето устройство. Изображенията никога не се качват, никога не се изпращат до сървър и никога не се виждат от нас. Без акаунти, без регистрация, без реклами, без проследяване.
+
+🧩 Минимални разрешения, ясно обяснени
+Save Image As чете само изображението, върху което кликвате с десния бутон, на страницата, която използвате. Нищо не се иска "за всеки случай" — всяко разрешение, което разширението иска, е обяснено на собствената му страница с настройки.
+
+Независимо дали преобразувате webp в jpg, запазвате изображение като png, превръщате снимка в pdf, или просто се опитвате да получите изображение в пълна резолюция вместо размазана миниатюра, Save Image As го прави с едно кликване с десния бутон. Безплатно, поверително и надеждно.
+
+----------------------------------------------------------------------
+
+##### Bengali (bn) #####
+
+[appName]
+ছবি এভাবে সংরক্ষণ করুন - Save Image As
+
+[shortDesc]
+ছবি PNG, JPG, WebP, AVIF বা PDF হিসেবে সংরক্ষণ করুন — প্রকৃত রূপান্তর, সর্বোচ্চ রেজোলিউশন, ১০০% স্থানীয়।
+
+[storeDesc]
+Save Image As Chrome-এর রাইট-ক্লিক মেনুকে একটি প্রকৃত ইমেজ কনভার্টারে পরিণত করে — কোনো আপলোড নেই, অতিরিক্ত অ্যাপ নেই, ফাইলটি আদৌ খুলবে কিনা তা অনুমান করার দরকার নেই।
+
+যেকোনো ওয়েবসাইটের যেকোনো ছবিতে রাইট-ক্লিক করুন এবং আপনার প্রয়োজনীয় ফরম্যাট বেছে নিন। ছবিটি সরাসরি আপনার ব্রাউজারে ডিকোড এবং পুনরায় এনকোড করা হয়, তাই আপনি একটি প্রকৃত, সঠিকভাবে ফরম্যাট করা ফাইল পান — শুধু নতুন এক্সটেনশনযুক্ত মূল বাইট নয়।
+
+⚙️ উপলব্ধ আউটপুট ফরম্যাট:
+- png হিসেবে সংরক্ষণ করুন – ক্ষতিবিহীন মান, স্বচ্ছতা বজায় রাখে, লোগো, গ্রাফিক্স এবং স্ক্রিনশটের জন্য সঠিক পছন্দ
+- jpg হিসেবে সংরক্ষণ করুন – ছোট ফাইল আকার, ছবি, শেয়ারিং এবং ইমেইল সংযুক্তির জন্য আদর্শ
+- webp হিসেবে সংরক্ষণ করুন – অনেক ছোট আকারে চমৎকার ভিজ্যুয়াল মানসহ আধুনিক কম্প্রেশন
+- avif হিসেবে সংরক্ষণ করুন – আজকের দিনে সম্ভাব্য ক্ষুদ্রতম ফাইলের জন্য নতুন প্রজন্মের ফরম্যাট
+- pdf হিসেবে সংরক্ষণ করুন – যেকোনো ছবিকে প্রিন্ট-রেডি, শেয়ারযোগ্য PDF নথিতে রূপান্তরিত করে
+- মূল ফাইল সংরক্ষণ করুন – মূল ফরম্যাট ইতিমধ্যে আপনার প্রয়োজনীয় হলে, কোনো রূপান্তর ছাড়াই ফাইলটি ঠিক যেমন আছে তেমন ডাউনলোড করে
+
+⚡ প্রতিবার একটি ক্লিক
+পপআপে আপনার পছন্দের ফরম্যাট এবং ফোল্ডার একবার বেছে নিন। এরপর, রাইট-ক্লিক মেনুতে একটি একক শর্টকাট "[ফরম্যাট] হিসেবে সংরক্ষণ করুন" দেখা যায়, যা সঙ্গে সঙ্গে সংরক্ষণ করে — কোনো ডায়ালগ বক্স নেই, সাবমেনুতে খোঁজার দরকার নেই, প্রতিটি ছবির জন্য একই পছন্দ পুনরাবৃত্তি করার দরকার নেই।
+
+📐 প্রকৃত ছবি, থাম্বনেইল নয়
+আধুনিক পেজগুলো বিভিন্ন উপায়ে একটি ছবি লোড করে — srcset, picture এলিমেন্ট, একটি বড় মূল ছবির সাথে লিঙ্ক করা একটি ছোট প্রিভিউ। Save Image As এই সবগুলো পরীক্ষা করে এবং প্রকৃতপক্ষে উপলব্ধ সর্বোচ্চ রেজোলিউশনের সংস্করণটি সংরক্ষণ করে, প্রথমে পাওয়া থাম্বনেইলের পরিবর্তে।
+
+🔒 ১০০% স্থানীয়, নকশা অনুযায়ী ব্যক্তিগত
+সমস্ত রূপান্তর সরাসরি আপনার ডিভাইসে ঘটে। ছবি কখনো আপলোড করা হয় না, কখনো কোনো সার্ভারে পাঠানো হয় না, এবং আমরা কখনো তা দেখি না। কোনো অ্যাকাউন্ট নেই, কোনো সাইন-আপ নেই, কোনো বিজ্ঞাপন নেই, কোনো ট্র্যাকিং নেই।
+
+🧩 ন্যূনতম অনুমতি, স্পষ্টভাবে ব্যাখ্যা করা
+Save Image As শুধুমাত্র আপনি যে ছবিতে রাইট-ক্লিক করেন সেটিই পড়ে, আপনি যে পেজ ব্যবহার করছেন সেখানে। "সাবধানতার জন্য" কিছুই চাওয়া হয় না — এক্সটেনশনটি যে অনুমতি চায় তা তার নিজস্ব সেটিংস পেজে ব্যাখ্যা করা আছে।
+
+আপনি webp কে jpg-তে রূপান্তর করছেন, একটি ছবি png হিসেবে সংরক্ষণ করছেন, একটি ছবিকে pdf-এ রূপান্তর করছেন, বা শুধু একটি ঝাপসা থাম্বনেইলের পরিবর্তে সম্পূর্ণ রেজোলিউশনের ছবি পেতে চাইছেন—Save Image As তা একটি রাইট-ক্লিকেই করে দেয়। বিনামূল্যে, ব্যক্তিগত এবং নির্ভরযোগ্য।
+
+----------------------------------------------------------------------
+
+##### Catalan (ca) #####
+
+[appName]
+Desa la imatge com - Save Image As
+
+[shortDesc]
+Desa qualsevol imatge com a PNG, JPG, WebP, AVIF o PDF: conversió real, màxima resolució, 100% local.
+
+[storeDesc]
+Save Image As converteix el menú contextual de Chrome en un veritable conversor d'imatges — sense pujades, sense aplicacions addicionals, sense haver d'endevinar si el fitxer s'obrirà correctament.
+
+Fes clic dret sobre qualsevol imatge de qualsevol lloc web i tria el format que necessitis. La imatge es descodifica i es torna a codificar directament al navegador, així que obtens un fitxer autèntic i ben format, no només els bytes originals amb una extensió nova.
+
+⚙️ Formats de sortida disponibles:
+- desa com a png – qualitat sense pèrdua, conserva la transparència, l'opció correcta per a logotips, gràfics i captures de pantalla
+- desa com a jpg – fitxer més petit, ideal per a fotos, per compartir i per adjuntar a correus
+- desa com a webp – compressió moderna amb una qualitat visual excel·lent i una mida molt més reduïda
+- desa com a avif – format de nova generació per al fitxer més petit possible avui dia
+- desa com a pdf – converteix qualsevol imatge en un document PDF llest per imprimir o compartir
+- desa l'original – descarrega el fitxer tal com és, sense conversió, quan el format original ja és el que necessites
+
+⚡ Un clic, sempre
+Tria el teu format i carpeta preferits una sola vegada al popup. Després, el menú contextual mostra una única drecera "Desa com a [format]" que desa a l'instant — sense finestres de diàleg, sense buscar en submenús, sense repetir la mateixa tria imatge rere imatge.
+
+📐 La imatge real, no la miniatura
+Les pàgines modernes carreguen una imatge de diverses maneres — srcset, elements picture, una petita previsualització enllaçada a un original més gran. Save Image As les comprova totes i desa la versió de resolució més alta realment disponible, en lloc de la primera miniatura que trobi.
+
+🔒 100% local, privat per disseny
+Tota la conversió passa directament al teu dispositiu. Les imatges mai no es pugen, mai no s'envien a cap servidor i mai no les veiem nosaltres. Sense comptes, sense registre, sense anuncis, sense seguiment.
+
+🧩 Permisos mínims, explicats amb claredat
+Save Image As només llegeix la imatge sobre la qual fas clic dret, a la pàgina que estàs fent servir. Res es demana "per si de cas" — cada permís que sol·licita l'extensió s'explica a la seva pròpia pàgina de configuració.
+
+Tant si converteixes webp a jpg, com si desis una imatge com a png, converteixes una foto en pdf, o simplement vols una imatge a resolució completa en lloc d'una miniatura borrosa, Save Image As ho fa amb un sol clic dret. Gratuït, privat i fiable.
+
+----------------------------------------------------------------------
+
+##### Czech (cs) #####
+
+[appName]
+Uložit obrázek jako - Save Image As
+
+[shortDesc]
+Ulož obrázek jako PNG, JPG, WebP, AVIF nebo PDF — skutečná konverze, nejvyšší rozlišení, 100% lokálně.
+
+[storeDesc]
+Save Image As mění kontextovou nabídku Chromu ve skutečný konvertor obrázků — žádné nahrávání, žádné další aplikace, žádné hádání, jestli se soubor vůbec otevře.
+
+Klikni pravým tlačítkem na jakýkoli obrázek na jakékoli stránce a vyber požadovaný formát. Obrázek se dekóduje a znovu zakóduje přímo v prohlížeči, takže dostaneš skutečný, správně formátovaný soubor — ne jen původní bajty s novou příponou.
+
+⚙️ Dostupné výstupní formáty:
+- uložit jako png – bezztrátová kvalita, zachovává průhlednost, správná volba pro loga, grafiku a snímky obrazovky
+- uložit jako jpg – menší velikost souboru, ideální pro fotky, sdílení a e-mailové přílohy
+- uložit jako webp – moderní komprese s vynikající vizuální kvalitou při mnohem menší velikosti
+- uložit jako avif – formát nové generace pro nejmenší možný soubor
+- uložit jako pdf – změní jakýkoli obrázek na tiskový, sdílitelný PDF dokument
+- uložit originál – stáhne soubor přesně tak, jak je, bez konverze, když už je původní formát ten, který potřebuješ
+
+⚡ Jedno kliknutí, pokaždé
+Vyber si oblíbený formát a složku jednou v popup okně. Poté kontextová nabídka zobrazí jedinou zkratku "Uložit jako [formát]", která uloží okamžitě — žádné dialogové okno, žádné hledání v podnabídkách, žádné opakování stejné volby u každého obrázku.
+
+📐 Skutečný obrázek, ne náhled
+Moderní stránky načítají obrázek několika různými způsoby — srcset, prvky picture, malý náhled propojený s větším originálem. Save Image As je všechny zkontroluje a uloží verzi se skutečně dostupným nejvyšším rozlišením, místo prvního náhledu, na který narazí.
+
+🔒 100% lokálně, soukromé od základu
+Veškerá konverze probíhá přímo na tvém zařízení. Obrázky se nikdy nenahrávají, nikdy neposílají na žádný server a nikdy je nevidíme. Žádné účty, žádná registrace, žádné reklamy, žádné sledování.
+
+🧩 Minimální oprávnění, jasně vysvětlená
+Save Image As čte pouze obrázek, na který klikneš pravým tlačítkem, na stránce, kterou používáš. Nic se nežádá "pro jistotu" — každé oprávnění, o které rozšíření žádá, je vysvětleno na jeho vlastní stránce nastavení.
+
+Ať už převádíš webp na jpg, ukládáš obrázek jako png, měníš fotku na pdf, nebo se jen snažíš stáhnout obrázek v plném rozlišení místo rozmazaného náhledu, Save Image As to zvládne jedním kliknutím pravým tlačítkem. Zdarma, soukromě a spolehlivě.
+
+----------------------------------------------------------------------
+
+##### Danish (da) #####
+
+[appName]
+Gem billede som - Save Image As
+
+[shortDesc]
+Gem ethvert billede som PNG, JPG, WebP, AVIF eller PDF — ægte konvertering, højeste opløsning, 100% lokalt.
+
+[storeDesc]
+Save Image As gør Chromes højreklik-menu til en rigtig billedkonverter — ingen upload, ingen ekstra apps, ingen gætteri om filen overhovedet vil åbne.
+
+Højreklik på et hvilket som helst billede på en hvilken som helst hjemmeside, og vælg det format, du har brug for. Billedet bliver afkodet og genkodet direkte i din browser, så du får en ægte, korrekt formateret fil — ikke bare de originale bytes med en ny filendelse.
+
+⚙️ Tilgængelige outputformater:
+- gem som png – tabsfri kvalitet, bevarer gennemsigtighed, det rette valg til logoer, grafik og skærmbilleder
+- gem som jpg – mindre filstørrelse, ideel til fotos, deling og e-mailvedhæftninger
+- gem som webp – moderne komprimering med fremragende visuel kvalitet og en langt mindre størrelse
+- gem som avif – nyeste generations format til den mindst mulige fil i dag
+- gem som pdf – laver et billede om til et printklart, delbart PDF-dokument
+- gem original – downloader filen præcis som den er, uden konvertering, når originalformatet allerede er det, du har brug for
+
+⚡ Ét klik, hver gang
+Vælg dit foretrukne format og mappe én gang i popup'en. Derefter viser højreklik-menuen en enkelt genvej "Gem som [format]", der gemmer med det samme — ingen dialogboks, ingen leden i undermenuer, ingen gentagelse af det samme valg billede efter billede.
+
+📐 Det rigtige billede, ikke miniaturen
+Moderne sider indlæser et billede på flere forskellige måder — srcset, picture-elementer, en lille forhåndsvisning linket til et større originalbillede. Save Image As tjekker dem alle og gemmer den version med den højeste opløsning, der faktisk er tilgængelig, i stedet for den første miniature, den støder på.
+
+🔒 100% lokalt, privat fra bunden
+Al konvertering foregår direkte på din enhed. Billeder bliver aldrig uploadet, aldrig sendt til en server og aldrig set af os. Ingen konti, ingen tilmelding, ingen reklamer, ingen sporing.
+
+🧩 Minimale tilladelser, forklaret enkelt
+Save Image As læser kun det billede, du højreklikker på, på den side, du bruger. Intet bliver anmodet om "for en sikkerheds skyld" — hver eneste tilladelse, udvidelsen beder om, er forklaret på dens egen indstillingsside.
+
+Uanset om du konverterer webp til jpg, gemmer et billede som png, laver et foto om til pdf, eller bare vil have et billede i fuld opløsning i stedet for en sløret miniature, klarer Save Image As det med ét højreklik. Gratis, privat og pålideligt.
+
+----------------------------------------------------------------------
+
+##### German (de) #####
+
+[appName]
+Bild speichern unter - Save Image As
+
+[shortDesc]
+Speichere jedes Bild als PNG, JPG, WebP, AVIF oder PDF — echte Konvertierung, höchste Auflösung, 100% lokal.
+
+[storeDesc]
+Save Image As macht aus dem Rechtsklick-Menü von Chrome einen echten Bildkonverter — kein Upload, keine zusätzliche App, kein Rätselraten, ob die Datei sich überhaupt öffnen lässt.
+
+Rechtsklick auf ein beliebiges Bild auf einer beliebigen Website, und wähle das gewünschte Format. Das Bild wird direkt im Browser dekodiert und neu kodiert — du bekommst also eine echte, korrekt formatierte Datei, nicht einfach die Originalbytes mit neuer Dateiendung.
+
+⚙️ Verfügbare Ausgabeformate:
+- als png speichern – verlustfreie Qualität, erhält Transparenz, die richtige Wahl für Logos, Grafiken und Screenshots
+- als jpg speichern – kleinere Dateigröße, ideal für Fotos, zum Teilen und für E-Mail-Anhänge
+- als webp speichern – moderne Komprimierung mit hervorragender Bildqualität bei deutlich kleinerer Größe
+- als avif speichern – Format der nächsten Generation für die kleinstmögliche Dateigröße
+- als pdf speichern – verwandelt jedes Bild in ein druckfertiges, teilbares PDF-Dokument
+- original speichern – lädt die Datei genau so herunter, wie sie ist, ohne Konvertierung, wenn das Originalformat bereits passt
+
+⚡ Ein Klick, jedes Mal
+Wähle dein bevorzugtes Format und den Zielordner einmalig im Popup. Danach zeigt das Rechtsklick-Menü einen einzigen Schnellzugriff „Speichern als [Format]“, der sofort speichert — ohne Dialogfenster, ohne Untermenüs, ohne die gleiche Wahl bei jedem Bild zu wiederholen.
+
+📐 Das echte Bild, nicht die Miniaturansicht
+Moderne Websites laden ein Bild auf ganz unterschiedliche Arten — srcset, picture-Elemente, eine kleine Vorschau, die mit einem größeren Original verlinkt ist. Save Image As prüft alle diese Quellen und speichert die tatsächlich verfügbare Version mit der höchsten Auflösung, statt einfach die erste Miniaturansicht zu nehmen.
+
+🔒 100% lokal, von Anfang an privat
+Die gesamte Konvertierung läuft direkt auf deinem Gerät. Bilder werden nie hochgeladen, nie an einen Server gesendet und von uns nie gesehen. Kein Konto, keine Anmeldung, keine Werbung, kein Tracking.
+
+🧩 Minimale Berechtigungen, klar erklärt
+Save Image As liest ausschließlich das Bild, auf das du per Rechtsklick klickst, auf der Seite, die du gerade nutzt. Nichts wird „auf Verdacht“ angefragt — jede Berechtigung der Erweiterung wird auf der eigenen Einstellungsseite erklärt.
+
+Ob du webp in jpg umwandelst, ein Bild als png speicherst, ein Foto in ein pdf verwandelst, oder einfach nur ein Bild in voller Auflösung statt als unscharfe Miniaturansicht haben willst — Save Image As erledigt es mit einem Rechtsklick. Kostenlos, privat und zuverlässig.
+
+----------------------------------------------------------------------
+
+##### Greek (el) #####
+
+[appName]
+Αποθήκευση εικόνας ως - Save Image As
+
+[shortDesc]
+Αποθηκεύστε μια εικόνα ως PNG, JPG, WebP, AVIF ή PDF — πραγματική μετατροπή, μέγιστη ανάλυση, 100% τοπικά.
+
+[storeDesc]
+Το Save Image As μετατρέπει το μενού δεξιού κλικ του Chrome σε έναν πραγματικό μετατροπέα εικόνων — χωρίς μεταφορτώσεις, χωρίς επιπλέον εφαρμογές, χωρίς να μαντεύετε αν το αρχείο θα ανοίξει τελικά.
+
+Κάντε δεξί κλικ σε οποιαδήποτε εικόνα σε οποιονδήποτε ιστότοπο και επιλέξτε τη μορφή που χρειάζεστε. Η εικόνα αποκωδικοποιείται και επανακωδικοποιείται απευθείας στο πρόγραμμα περιήγησής σας, οπότε λαμβάνετε ένα γνήσιο, σωστά μορφοποιημένο αρχείο — όχι απλώς τα αρχικά bytes με μια νέα επέκταση.
+
+⚙️ Διαθέσιμες μορφές εξόδου:
+- αποθήκευση ως png – ποιότητα χωρίς απώλειες, διατηρεί τη διαφάνεια, η σωστή επιλογή για λογότυπα, γραφικά και στιγμιότυπα οθόνης
+- αποθήκευση ως jpg – μικρότερο μέγεθος αρχείου, ιδανικό για φωτογραφίες, κοινή χρήση και συνημμένα email
+- αποθήκευση ως webp – σύγχρονη συμπίεση με εξαιρετική οπτική ποιότητα σε πολύ μικρότερο μέγεθος
+- αποθήκευση ως avif – μορφή νέας γενιάς για το μικρότερο δυνατό αρχείο σήμερα
+- αποθήκευση ως pdf – μετατρέπει οποιαδήποτε εικόνα σε έγγραφο PDF έτοιμο για εκτύπωση και κοινή χρήση
+- αποθήκευση πρωτότυπου – κατεβάζει το αρχείο ακριβώς όπως είναι, χωρίς μετατροπή, όταν η αρχική μορφή είναι ήδη αυτή που χρειάζεστε
+
+⚡ Ένα κλικ, κάθε φορά
+Επιλέξτε την αγαπημένη σας μορφή και τον φάκελο μία φορά στο αναδυόμενο παράθυρο. Μετά, το μενού δεξιού κλικ εμφανίζει μία μόνο συντόμευση "Αποθήκευση ως [μορφή]" που αποθηκεύει άμεσα — χωρίς παράθυρο διαλόγου, χωρίς ψάξιμο σε υπομενού, χωρίς επανάληψη της ίδιας επιλογής εικόνα προς εικόνα.
+
+📐 Η πραγματική εικόνα, όχι η μικρογραφία
+Οι σύγχρονες σελίδες φορτώνουν μια εικόνα με πολλούς διαφορετικούς τρόπους — srcset, στοιχεία picture, μια μικρή προεπισκόπηση συνδεδεμένη με ένα μεγαλύτερο πρωτότυπο. Το Save Image As τα ελέγχει όλα και αποθηκεύει την έκδοση με την πραγματικά διαθέσιμη υψηλότερη ανάλυση, αντί για την πρώτη τυχαία μικρογραφία.
+
+🔒 100% τοπικά, ιδιωτικά εξ ορισμού
+Όλη η μετατροπή γίνεται απευθείας στη συσκευή σας. Οι εικόνες δεν μεταφορτώνονται ποτέ, δεν αποστέλλονται ποτέ σε κανέναν διακομιστή και δεν τις βλέπουμε ποτέ εμείς. Χωρίς λογαριασμούς, χωρίς εγγραφή, χωρίς διαφημίσεις, χωρίς παρακολούθηση.
+
+🧩 Ελάχιστα δικαιώματα, σαφώς εξηγημένα
+Το Save Image As διαβάζει μόνο την εικόνα στην οποία κάνετε δεξί κλικ, στη σελίδα που χρησιμοποιείτε. Τίποτα δεν ζητείται "για κάθε ενδεχόμενο" — κάθε δικαίωμα που ζητά η επέκταση εξηγείται στη δική του σελίδα ρυθμίσεων.
+
+Είτε μετατρέπετε webp σε jpg, είτε αποθηκεύετε μια εικόνα ως png, είτε μετατρέπετε μια φωτογραφία σε pdf, είτε απλώς προσπαθείτε να πάρετε μια εικόνα σε πλήρη ανάλυση αντί για μια θολή μικρογραφία, το Save Image As το κάνει με ένα δεξί κλικ. Δωρεάν, ιδιωτικό και αξιόπιστο.
+
+----------------------------------------------------------------------
+
+##### English (en) #####
+
+[appName]
+Save Image As
+
+[shortDesc]
+Save any image as PNG, JPG, WebP, AVIF or PDF — real conversion, highest resolution, 100% local.
+
+[storeDesc]
+Save Image As turns Chrome's right-click menu into a real image converter — no uploads, no extra apps, no guessing whether the file will actually open.
+
+Right-click any picture on any website and pick the format you need. The image is decoded and re-encoded right there in your browser, so what you get is a genuine, correctly-formatted file — not just the original bytes with a new file extension slapped on.
+
+⚙️ Supported output formats:
+- save as png – lossless quality, keeps transparency, the right choice for logos, graphics and screenshots
+- save as jpg – smaller file size, ideal for photos, sharing and email attachments
+- save as webp – modern compression with excellent visual quality at a fraction of the size
+- save as avif – next-generation format for the smallest file size available today
+- save as pdf – turn any picture into a print-ready, shareable PDF document
+- save original – download the exact file as-is, no conversion, when the source format is already what you need
+
+⚡ One click, every time
+Pick your favorite format and folder once in the popup. After that, the right-click menu shows a single "Save as [format]" shortcut that saves instantly — no save dialog, no digging through a submenu, no repeating the same choice image after image.
+
+📐 Gets the real image, not the thumbnail
+Modern pages load an image several different ways — srcset, picture elements, a small preview linked to a larger original. Save Image As checks all of them and saves the highest-resolution version actually available, instead of whatever thumbnail happened to load first.
+
+🔒 100% local, private by design
+Every conversion happens directly on your device. Images are never uploaded, never sent to any server, and never seen by us. No accounts, no sign-up, no ads, no tracking.
+
+🧩 Minimal permissions, explained in plain English
+Save Image As only ever reads the image you right-click, on the page you're using it on. Nothing is requested "just in case" — every permission the extension asks for is explained on its own settings page.
+
+Whether you're converting webp to jpg, saving a picture as png, turning an image into a pdf, or just trying to get a photo off a page in full resolution instead of a blurry thumbnail, Save Image As does it in one right-click. Free, private and reliable.
+
+----------------------------------------------------------------------
+
+##### Spanish (es) #####
+
+[appName]
+Guardar imagen como - Save Image As
+
+[shortDesc]
+Guarda cualquier imagen como PNG, JPG, WebP, AVIF o PDF: conversión real, máxima resolución, 100% local.
+
+[storeDesc]
+Save Image As convierte el menú contextual de Chrome en un verdadero conversor de imágenes: sin subidas, sin aplicaciones adicionales, sin dudar si el archivo se abrirá correctamente.
+
+Haz clic derecho sobre cualquier imagen de cualquier sitio web y elige el formato que necesitas. La imagen se decodifica y se vuelve a codificar directamente en tu navegador, así que obtienes un archivo genuino y correctamente formateado, no solo los bytes originales con una nueva extensión.
+
+⚙️ Formatos de salida disponibles:
+- guardar como png – calidad sin pérdidas, conserva la transparencia, la opción correcta para logotipos, gráficos y capturas de pantalla
+- guardar como jpg – archivo más pequeño, ideal para fotos, para compartir y adjuntar en correos
+- guardar como webp – compresión moderna con excelente calidad visual y un tamaño mucho menor
+- guardar como avif – formato de nueva generación para el archivo más pequeño posible hoy en día
+- guardar como pdf – convierte cualquier imagen en un documento PDF listo para imprimir o compartir
+- guardar original – descarga el archivo exactamente como es, sin conversión, cuando el formato original ya es el que necesitas
+
+⚡ Un clic, siempre
+Elige tu formato y carpeta favoritos una sola vez en el popup. Después, el menú contextual muestra un único atajo "Guardar como [formato]" que guarda al instante, sin cuadro de diálogo, sin buscar en submenús, sin repetir la misma elección imagen tras imagen.
+
+📐 La imagen real, no la miniatura
+Las páginas modernas cargan una imagen de varias formas distintas: srcset, elementos picture, una vista previa pequeña enlazada a un original más grande. Save Image As las comprueba todas y guarda la versión de mayor resolución realmente disponible, en lugar de la primera miniatura que aparezca.
+
+🔒 100% local, privado por diseño
+Toda la conversión ocurre directamente en tu dispositivo. Las imágenes nunca se suben, nunca se envían a ningún servidor y nunca las vemos nosotros. Sin cuentas, sin registro, sin anuncios, sin rastreo.
+
+🧩 Permisos mínimos, explicados con claridad
+Save Image As solo lee la imagen sobre la que haces clic derecho, en la página que estás usando. Nada se solicita "por si acaso": cada permiso que pide la extensión se explica en su propia página de configuración.
+
+Tanto si estás convirtiendo webp a jpg, guardando una imagen como png, convirtiendo una foto en pdf, o simplemente intentando obtener una imagen de una página en su resolución completa en lugar de una miniatura borrosa, Save Image As lo hace con un solo clic derecho. Gratis, privado y fiable.
+
+----------------------------------------------------------------------
+
+##### Spanish (Latin America) (es_419) #####
+
+[appName]
+Guardar imagen como - Save Image As
+
+[shortDesc]
+Guarda cualquier imagen como PNG, JPG, WebP, AVIF o PDF: conversión real, máxima resolución, 100% local.
+
+[storeDesc]
+Save Image As convierte el menú contextual de Chrome en un verdadero conversor de imágenes: sin subir archivos, sin aplicaciones adicionales, sin adivinar si el archivo se va a abrir bien.
+
+Haz clic derecho sobre cualquier imagen de cualquier sitio web y elige el formato que necesitas. La imagen se decodifica y se vuelve a codificar directamente en tu navegador, así que obtienes un archivo genuino y correctamente formateado, no solo los bytes originales con una extensión nueva.
+
+⚙️ Formatos de salida disponibles:
+- guardar como png – calidad sin pérdidas, conserva la transparencia, la opción correcta para logos, gráficos y capturas de pantalla
+- guardar como jpg – archivo más liviano, ideal para fotos, para compartir y adjuntar en correos
+- guardar como webp – compresión moderna con excelente calidad visual y un tamaño mucho menor
+- guardar como avif – formato de nueva generación para el archivo más pequeño posible hoy en día
+- guardar como pdf – convierte cualquier imagen en un documento PDF listo para imprimir o compartir
+- guardar original – descarga el archivo tal cual, sin conversión, cuando el formato original ya es el que necesitas
+
+⚡ Un clic, siempre
+Elige tu formato y carpeta favoritos una sola vez en el popup. Después, el menú contextual muestra un único atajo "Guardar como [formato]" que guarda al instante, sin cuadro de diálogo, sin buscar en submenús, sin repetir la misma elección imagen tras imagen.
+
+📐 La imagen real, no la miniatura
+Las páginas modernas cargan una imagen de varias formas distintas: srcset, elementos picture, una vista previa chica enlazada a un original más grande. Save Image As las revisa todas y guarda la versión de mayor resolución realmente disponible, en vez de la primera miniatura que aparezca.
+
+🔒 100% local, privado por diseño
+Toda la conversión ocurre directamente en tu dispositivo. Las imágenes nunca se suben, nunca se envían a ningún servidor y nunca las vemos nosotros. Sin cuentas, sin registro, sin anuncios, sin rastreo.
+
+🧩 Permisos mínimos, explicados con claridad
+Save Image As solo lee la imagen sobre la que haces clic derecho, en la página que estás usando. Nada se pide "por si acaso": cada permiso que solicita la extensión se explica en su propia página de configuración.
+
+Ya sea que estés convirtiendo webp a jpg, guardando una imagen como png, convirtiendo una foto en pdf, o simplemente tratando de bajar una imagen de una página en su resolución completa en vez de una miniatura borrosa, Save Image As lo hace con un solo clic derecho. Gratis, privado y confiable.
+
+----------------------------------------------------------------------
+
+##### Estonian (et) #####
+
+[appName]
+Salvesta pilt nimega - Save Image As
+
+[shortDesc]
+Salvesta pilt PNG, JPG, WebP, AVIF või PDF-ina — tõeline teisendamine, kõrgeim eraldusvõime, 100% kohalik.
+
+[storeDesc]
+Save Image As muudab Chrome'i paremklõpsu menüü päris pildikonverteriks — ilma üleslaadimiseta, ilma lisarakendusteta, ilma et peaks arvama, kas fail üldse avaneb.
+
+Tee paremklõps mis tahes pildil mis tahes veebisaidil ja vali vajalik vorming. Pilt dekodeeritakse ja kodeeritakse uuesti otse sinu brauseris, nii et saad ehtsa, õigesti vormindatud faili — mitte lihtsalt algseid baite uue laiendiga.
+
+⚙️ Saadaolevad väljundvormingud:
+- salvesta png-na – kadudeta kvaliteet, säilitab läbipaistvuse, õige valik logodele, graafikale ja ekraanipiltidele
+- salvesta jpg-na – väiksem failisuurus, ideaalne fotodele, jagamiseks ja e-posti manustele
+- salvesta webp-na – kaasaegne tihendus suurepärase visuaalse kvaliteediga palju väiksemas suuruses
+- salvesta avif-na – uue põlvkonna vorming väikseima võimaliku faili jaoks täna
+- salvesta pdf-na – muudab mis tahes pildi trükivalmis, jagatavaks PDF-dokumendiks
+- salvesta originaal – laadib faili alla täpselt sellisena, nagu see on, ilma teisendamiseta, kui originaalvorming on juba see, mida vajad
+
+⚡ Üks klõps, iga kord
+Vali oma lemmikvorming ja kaust üks kord hüpikaknas. Pärast seda näitab paremklõpsu menüü ühte otseteed "Salvesta kui [vorming]", mis salvestab koheselt — ilma dialoogiaknata, ilma alammenüüdes otsimiseta, ilma sama valikut iga pildi juures kordamata.
+
+📐 Tõeline pilt, mitte pisipilt
+Kaasaegsed lehed laadivad pilti mitmel eri viisil — srcset, picture-elemendid, väike eelvaade, mis on lingitud suurema originaaliga. Save Image As kontrollib neid kõiki ja salvestab tegelikult saadaoleva kõrgeima eraldusvõimega versiooni, mitte esimest ettejuhtuvat pisipilti.
+
+🔒 100% kohalik, algusest peale privaatne
+Kogu teisendamine toimub otse sinu seadmes. Pilte ei laadita kunagi üles, ei saadeta kunagi mingisse serverisse ega näe me neid kunagi. Ei mingeid kontosid, registreerimist, reklaame ega jälgimist.
+
+🧩 Minimaalsed õigused, selgelt selgitatud
+Save Image As loeb ainult seda pilti, millel teed paremklõpsu, sellel lehel, mida kasutad. Midagi ei küsita "igaks juhuks" — iga õigus, mida laiendus küsib, on selgitatud selle enda seadete lehel.
+
+Olgu sa teisendamas webp-d jpg-ks, salvestamas pilti png-na, muutmas fotot pdf-iks või lihtsalt üritamas saada pilti täies eraldusvõimes hägusa pisipildi asemel, Save Image As teeb seda ühe paremklõpsuga. Tasuta, privaatne ja usaldusväärne.
+
+----------------------------------------------------------------------
+
+##### Persian (fa) #####
+
+[appName]
+ذخیره تصویر با نام - Save Image As
+
+[shortDesc]
+تصویر را با فرمت PNG، JPG، WebP، AVIF یا PDF ذخیره کنید — تبدیل واقعی، بالاترین کیفیت، ۱۰۰٪ محلی.
+
+[storeDesc]
+‏Save Image As منوی کلیک راست کروم را به یک مبدل تصویر واقعی تبدیل می‌کند — بدون آپلود، بدون برنامه اضافی، بدون حدس زدن اینکه آیا فایل اصلاً باز خواهد شد یا نه.
+
+روی هر تصویری در هر وب‌سایتی کلیک راست کنید و فرمت مورد نیاز خود را انتخاب کنید. تصویر مستقیماً در مرورگر شما رمزگشایی و دوباره رمزگذاری می‌شود، بنابراین یک فایل واقعی و با فرمت صحیح دریافت می‌کنید — نه فقط بایت‌های اصلی با پسوند جدید.
+
+⚙️ فرمت‌های خروجی موجود:
+- ذخیره به صورت png – کیفیت بدون افت، حفظ شفافیت، انتخاب درست برای لوگو، گرافیک و اسکرین‌شات
+- ذخیره به صورت jpg – حجم فایل کوچک‌تر، ایده‌آل برای عکس‌ها، اشتراک‌گذاری و پیوست ایمیل
+- ذخیره به صورت webp – فشرده‌سازی مدرن با کیفیت بصری عالی در حجمی به‌مراتب کوچک‌تر
+- ذخیره به صورت avif – فرمت نسل جدید برای کوچک‌ترین حجم ممکن فایل امروزه
+- ذخیره به صورت pdf – هر تصویری را به یک سند PDF آماده چاپ و اشتراک‌گذاری تبدیل می‌کند
+- ذخیره نسخه اصلی – فایل را دقیقاً همان‌طور که هست، بدون تبدیل، دانلود می‌کند، وقتی فرمت اصلی همان چیزی است که نیاز دارید
+
+⚡ یک کلیک، هر بار
+فرمت و پوشه مورد علاقه خود را یک‌بار در پنجره بازشو انتخاب کنید. پس از آن، منوی کلیک راست یک میان‌بر واحد "ذخیره به صورت [فرمت]" نشان می‌دهد که فوراً ذخیره می‌کند — بدون کادر گفتگو، بدون جستجو در زیرمنوها، بدون تکرار همان انتخاب برای هر تصویر.
+
+📐 تصویر واقعی، نه تصویر بندانگشتی
+صفحات مدرن تصویر را به روش‌های مختلفی بارگذاری می‌کنند — srcset، عناصر picture، یک پیش‌نمایش کوچک که به یک نسخه اصلی بزرگ‌تر پیوند خورده است. Save Image As همه این‌ها را بررسی می‌کند و نسخه‌ای با بالاترین کیفیت واقعاً موجود را ذخیره می‌کند، نه اولین تصویر بندانگشتی که پیدا می‌شود.
+
+🔒 ۱۰۰٪ محلی، خصوصی از پایه
+تمام تبدیل مستقیماً روی دستگاه شما انجام می‌شود. تصاویر هرگز آپلود نمی‌شوند، هرگز به هیچ سروری ارسال نمی‌شوند و هرگز توسط ما دیده نمی‌شوند. بدون حساب کاربری، بدون ثبت‌نام، بدون تبلیغات، بدون ردیابی.
+
+🧩 حداقل مجوزها، به‌وضوح توضیح داده شده
+‏Save Image As فقط تصویری را می‌خواند که روی آن کلیک راست کرده‌اید، در صفحه‌ای که در حال استفاده از آن هستید. هیچ‌چیز "برای احتیاط" درخواست نمی‌شود — هر مجوزی که افزونه درخواست می‌کند در صفحه تنظیمات مخصوص به خودش توضیح داده شده است.
+
+چه در حال تبدیل webp به jpg باشید، چه ذخیره تصویری به صورت png، چه تبدیل عکسی به pdf، یا فقط تلاش برای دریافت تصویری با کیفیت کامل به‌جای یک تصویر بندانگشتی محو، Save Image As این کار را با یک کلیک راست انجام می‌دهد. رایگان، خصوصی و قابل‌اعتماد.
+
+----------------------------------------------------------------------
+
+##### Finnish (fi) #####
+
+[appName]
+Tallenna kuva nimellä - Save Image As
+
+[shortDesc]
+Tallenna kuva PNG-, JPG-, WebP-, AVIF- tai PDF-muodossa — todellinen muunnos, korkein resoluutio, 100% paikallinen.
+
+[storeDesc]
+Save Image As muuttaa Chromen hiiren oikean napin valikon aidoksi kuvamuuntimeksi — ei latauksia palvelimelle, ei ylimääräisiä sovelluksia, ei arvailua siitä, avautuuko tiedosto ylipäätään.
+
+Napsauta hiiren oikealla painikkeella mitä tahansa kuvaa millä tahansa sivustolla ja valitse tarvitsemasi muoto. Kuva puretaan ja koodataan uudelleen suoraan selaimessasi, joten saat aidon, oikein muotoillun tiedoston — et vain alkuperäisiä tavuja uudella tiedostopäätteellä.
+
+⚙️ Käytettävissä olevat tallennusmuodot:
+- tallenna png-muodossa – häviötön laatu, säilyttää läpinäkyvyyden, oikea valinta logoille, grafiikalle ja kuvakaappauksille
+- tallenna jpg-muodossa – pienempi tiedostokoko, ihanteellinen valokuville, jakamiselle ja sähköpostiliitteille
+- tallenna webp-muodossa – moderni pakkaus erinomaisella visuaalisella laadulla huomattavasti pienemmässä koossa
+- tallenna avif-muodossa – uuden sukupolven muoto pienimmälle mahdolliselle tiedostolle tänään
+- tallenna pdf-muodossa – muuttaa minkä tahansa kuvan tulostusvalmiiksi, jaettavaksi PDF-asiakirjaksi
+- tallenna alkuperäinen – lataa tiedoston juuri sellaisenaan, ilman muunnosta, kun alkuperäinen muoto on jo se, mitä tarvitset
+
+⚡ Yksi napsautus, joka kerta
+Valitse suosikkimuotosi ja kansiosi kerran ponnahdusikkunassa. Sen jälkeen hiiren oikean napin valikossa näkyy yksi pikakuvake "Tallenna muodossa [muoto]", joka tallentaa heti — ei valintaikkunaa, ei alavalikoiden penkomista, ei saman valinnan toistamista kuva kuvalta.
+
+📐 Todellinen kuva, ei pikkukuva
+Nykyaikaiset sivut lataavat kuvan monella eri tavalla — srcset, picture-elementit, pieni esikatselu, joka on linkitetty suurempaan alkuperäiskuvaan. Save Image As tarkistaa ne kaikki ja tallentaa todella saatavilla olevan korkeimman resoluution version sen sijaan, että käyttäisi ensimmäistä vastaan tulevaa pikkukuvaa.
+
+🔒 100% paikallinen, yksityinen alusta asti
+Kaikki muunnos tapahtuu suoraan laitteellasi. Kuvia ei koskaan ladata palvelimelle, ei koskaan lähetetä mihinkään palvelimeen, eikä me koskaan näe niitä. Ei tilejä, ei rekisteröitymistä, ei mainoksia, ei seurantaa.
+
+🧩 Minimaaliset käyttöoikeudet, selkeästi selitetty
+Save Image As lukee vain sen kuvan, jota napsautat hiiren oikealla painikkeella, sillä sivulla, jota käytät. Mitään ei pyydetä "varmuuden vuoksi" — jokainen laajennuksen pyytämä käyttöoikeus selitetään sen omalla asetussivulla.
+
+Muunnatpa webp-kuvaa jpg-muotoon, tallennatpa kuvan png-muodossa, muutatpa valokuvan pdf-tiedostoksi, tai yrität vain saada kuvan sivulta täydessä resoluutiossa epätarkan pikkukuvan sijaan, Save Image As hoitaa sen yhdellä hiiren oikean napin napsautuksella. Ilmainen, yksityinen ja luotettava.
+
+----------------------------------------------------------------------
+
+##### Filipino (fil) #####
+
+[appName]
+I-save ang Larawan Bilang - Save Image As
+
+[shortDesc]
+I-save ang larawan bilang PNG, JPG, WebP, AVIF, o PDF — tunay na pag-convert, pinakamataas na resolution, 100% lokal.
+
+[storeDesc]
+Ginagawa ng Save Image As ang right-click menu ng Chrome na isang totoong image converter — walang mag-uupload, walang extra apps, walang haka-haka kung mabubuksan nga ba ang file.
+
+Mag-right-click sa anumang larawan sa anumang website at piliin ang format na kailangan mo. Nade-decode at nare-encode ulit ang larawan direkta sa iyong browser, kaya nakakakuha ka ng tunay, tamang naka-format na file — hindi lang ang orihinal na bytes na may bagong extension.
+
+⚙️ Mga available na output format:
+- i-save bilang png – lossless na kalidad, pinapanatili ang transparency, ang tamang pagpipilian para sa mga logo, graphics, at screenshot
+- i-save bilang jpg – mas maliit na file size, perpekto para sa mga larawan, pagsha-share, at email attachment
+- i-save bilang webp – modernong compression na may napakagandang visual quality sa mas maliit na sukat
+- i-save bilang avif – next-generation na format para sa pinakamaliit na posibleng file ngayon
+- i-save bilang pdf – ginagawang print-ready at nasha-share na PDF document ang anumang larawan
+- i-save ang orihinal – dini-download ang file nang eksakto kung ano ito, walang pag-convert, kapag ang orihinal na format ay siya na mismong kailangan mo
+
+⚡ Isang click, bawat pagkakataon
+Piliin ang paborito mong format at folder nang isang beses sa popup. Pagkatapos, magpapakita ang right-click menu ng iisang shortcut na "I-save bilang [format]" na agad na nagsa-save — walang dialog box, walang paghahanap sa submenu, walang pag-uulit ng parehong pagpili sa bawat larawan.
+
+📐 Ang totoong larawan, hindi ang thumbnail
+Nagla-load ang mga modernong page ng larawan sa iba't ibang paraan — srcset, picture elements, isang maliit na preview na naka-link sa mas malaking orihinal. Chine-check ng Save Image As ang lahat ng ito at ise-save ang bersyon na may talagang available na pinakamataas na resolution, sa halip na ang unang thumbnail na makikita.
+
+🔒 100% lokal, pribado mula sa disenyo
+Direkta sa iyong device nangyayari ang lahat ng pag-convert. Hindi kailanman ina-upload ang mga larawan, hindi ipinapadala sa anumang server, at hindi namin ito nakikita. Walang account, walang sign-up, walang ads, walang tracking.
+
+🧩 Minimal na mga pahintulot, malinaw na ipinaliwanag
+Binabasa lang ng Save Image As ang larawang na-right-click mo, sa page na ginagamit mo. Wala nang hinihinging "just in case" — bawat pahintulot na hinihingi ng extension ay ipinaliwanag sa sarili nitong settings page.
+
+Kung nagko-convert ka man ng webp papuntang jpg, nagsa-save ng larawan bilang png, ginagawang pdf ang isang larawan, o sinusubukan lang makakuha ng larawan sa buong resolution sa halip na malabong thumbnail, ginagawa ito ng Save Image As sa isang right-click. Libre, pribado, at maaasahan.
+
+----------------------------------------------------------------------
+
+##### French (fr) #####
+
+[appName]
+Enregistrer l'image sous - Save Image As
+
+[shortDesc]
+Enregistrez une image en PNG, JPG, WebP, AVIF ou PDF — conversion réelle, résolution maximale, 100% local.
+
+[storeDesc]
+Save Image As transforme le menu contextuel de Chrome en véritable convertisseur d'images — sans envoi de fichiers, sans application supplémentaire, sans se demander si le fichier va vraiment s'ouvrir.
+
+Faites un clic droit sur n'importe quelle image, sur n'importe quel site, et choisissez le format voulu. L'image est décodée puis réencodée directement dans votre navigateur : vous obtenez un fichier authentique et correctement formaté, pas simplement les octets d'origine avec une nouvelle extension.
+
+⚙️ Formats de sortie disponibles :
+- enregistrer en png – qualité sans perte, conserve la transparence, le bon choix pour les logos, graphiques et captures d'écran
+- enregistrer en jpg – fichier plus léger, idéal pour les photos, le partage et les pièces jointes
+- enregistrer en webp – compression moderne avec une excellente qualité visuelle pour une taille bien réduite
+- enregistrer en avif – format de nouvelle génération pour le fichier le plus léger possible aujourd'hui
+- enregistrer en pdf – transforme n'importe quelle image en document PDF prêt à imprimer ou à partager
+- enregistrer l'original – télécharge le fichier tel quel, sans conversion, quand le format d'origine est déjà celui qu'il vous faut
+
+⚡ Un clic, à chaque fois
+Choisissez votre format et votre dossier préférés une seule fois dans le popup. Ensuite, le menu contextuel affiche un raccourci unique « Enregistrer en [format] » qui enregistre instantanément — sans boîte de dialogue, sans fouiller dans un sous-menu, sans répéter le même choix image après image.
+
+📐 La vraie image, pas la miniature
+Les sites modernes chargent une image de plusieurs façons différentes — srcset, éléments picture, un petit aperçu lié à un original plus grand. Save Image As les vérifie toutes et enregistre la version dans la meilleure résolution réellement disponible, plutôt que la première miniature venue.
+
+🔒 100% local, privé par conception
+Toute la conversion se fait directement sur votre appareil. Les images ne sont jamais envoyées, jamais transmises à un serveur, et jamais vues par nous. Pas de compte, pas d'inscription, pas de publicité, pas de suivi.
+
+🧩 Permissions minimales, expliquées clairement
+Save Image As ne lit que l'image sur laquelle vous faites un clic droit, sur la page que vous utilisez. Rien n'est demandé « au cas où » — chaque permission demandée par l'extension est expliquée sur sa propre page de réglages.
+
+Que vous convertissiez du webp en jpg, enregistriez une image en png, transformiez une photo en pdf, ou cherchiez simplement à récupérer une image en pleine résolution plutôt qu'une miniature floue, Save Image As le fait en un clic droit. Gratuit, privé et fiable.
+
+----------------------------------------------------------------------
+
+##### Gujarati (gu) #####
+
+[appName]
+છબીને આ રીતે સાચવો - Save Image As
+
+[shortDesc]
+છબીને PNG, JPG, WebP, AVIF અથવા PDF તરીકે સાચવો — સાચું રૂપાંતરણ, ઉચ્ચતમ રિઝોલ્યુશન, 100% સ્થાનિક.
+
+[storeDesc]
+Save Image As Chrome ના જમણું-ક્લિક મેનૂને એક સાચા ઇમેજ કન્વર્ટરમાં ફેરવે છે — કોઈ અપલોડ નહીં, વધારાની એપ્સ નહીં, ફાઇલ ખરેખર ખુલશે કે નહીં તેનો અંદાજ લગાવવાની જરૂર નહીં.
+
+કોઈપણ વેબસાઇટ પરની કોઈપણ છબી પર જમણું-ક્લિક કરો અને તમને જોઈતું ફોર્મેટ પસંદ કરો. છબી સીધી તમારા બ્રાઉઝરમાં ડિકોડ અને ફરીથી એન્કોડ થાય છે, તેથી તમને એક સાચી, યોગ્ય રીતે ફોર્મેટ કરેલી ફાઇલ મળે છે — ફક્ત નવા એક્સટેન્શન સાથેના મૂળ બાઇટ્સ નહીં.
+
+⚙️ ઉપલબ્ધ આઉટપુટ ફોર્મેટ:
+- png તરીકે સાચવો – ગુણવત્તા ગુમાવ્યા વિના, પારદર્શિતા જાળવી રાખે છે, લોગો, ગ્રાફિક્સ અને સ્ક્રીનશોટ માટે યોગ્ય પસંદગી
+- jpg તરીકે સાચવો – નાનું ફાઇલ કદ, ફોટા, શેરિંગ અને ઈમેલ જોડાણ માટે આદર્શ
+- webp તરીકે સાચવો – ઘણા નાના કદમાં ઉત્તમ વિઝ્યુઅલ ગુણવત્તા સાથે આધુનિક કમ્પ્રેશન
+- avif તરીકે સાચવો – આજે શક્ય તેટલી નાની ફાઇલ માટે નવી પેઢીનું ફોર્મેટ
+- pdf તરીકે સાચવો – કોઈપણ છબીને પ્રિન્ટ-તૈયાર, શેર કરી શકાય તેવા PDF દસ્તાવેજમાં ફેરવે છે
+- મૂળ સાચવો – મૂળ ફોર્મેટ પહેલેથી જ તમને જોઈતું હોય ત્યારે, કોઈપણ રૂપાંતરણ વિના ફાઇલને બરાબર જેમ છે તેમ ડાઉનલોડ કરે છે
+
+⚡ દર વખતે, એક જ ક્લિક
+પોપઅપમાં તમારું મનપસંદ ફોર્મેટ અને ફોલ્ડર એકવાર પસંદ કરો. ત્યારબાદ, જમણું-ક્લિક મેનૂ એક જ શોર્ટકટ "[ફોર્મેટ] તરીકે સાચવો" બતાવે છે જે તરત જ સાચવે છે — કોઈ ડાયલોગ બોક્સ નહીં, સબમેનૂમાં શોધવાની જરૂર નહીં, દરેક છબી માટે એ જ પસંદગીનું પુનરાવર્તન કરવાની જરૂર નહીં.
+
+📐 સાચી છબી, થંબનેલ નહીં
+આધુનિક પેજ છબીને ઘણી અલગ અલગ રીતે લોડ કરે છે — srcset, picture એલિમેન્ટ્સ, મોટા મૂળ સાથે લિંક કરેલ નાનું પ્રિવ્યુ. Save Image As આ બધું તપાસે છે અને ખરેખર ઉપલબ્ધ ઉચ્ચતમ રિઝોલ્યુશન વર્ઝન સાચવે છે, પહેલા મળેલા થંબનેલને બદલે.
+
+🔒 100% સ્થાનિક, ડિઝાઇનથી જ ખાનગી
+તમામ રૂપાંતરણ સીધું તમારા ડિવાઇસ પર થાય છે. છબીઓ ક્યારેય અપલોડ થતી નથી, ક્યારેય કોઈ સર્વર પર મોકલાતી નથી, અને અમે તેને ક્યારેય જોતા નથી. કોઈ એકાઉન્ટ નહીં, કોઈ સાઇન-અપ નહીં, કોઈ જાહેરાત નહીં, કોઈ ટ્રેકિંગ નહીં.
+
+🧩 ન્યૂનતમ પરવાનગીઓ, સ્પષ્ટ રીતે સમજાવેલી
+Save Image As ફક્ત તમે જમણું-ક્લિક કરેલી છબી જ વાંચે છે, તમે ઉપયોગ કરી રહ્યાં છો તે પેજ પર. "સાવચેતી માટે" કંઈ માંગવામાં આવતું નથી — એક્સટેન્શન જે પણ પરવાનગી માંગે છે તે તેના પોતાના સેટિંગ્સ પેજ પર સમજાવેલી છે.
+
+તમે webp ને jpg માં રૂપાંતરિત કરી રહ્યાં હો, છબીને png તરીકે સાચવી રહ્યાં હો, ફોટાને pdf માં ફેરવી રહ્યાં હો, અથવા ફક્ત ઝાંખા થંબનેલને બદલે સંપૂર્ણ રિઝોલ્યુશનવાળી છબી મેળવવાનો પ્રયાસ કરી રહ્યાં હો, Save Image As તે એક જ જમણા ક્લિકમાં કરે છે. મફત, ખાનગી અને વિશ્વસનીય.
+
+----------------------------------------------------------------------
+
+##### Hebrew (he) #####
+
+[appName]
+שמור תמונה בשם - Save Image As
+
+[shortDesc]
+שמרו תמונה כ-PNG, JPG, WebP, AVIF או PDF — המרה אמיתית, רזולוציה מקסימלית, 100% מקומי.
+
+[storeDesc]
+‏Save Image As הופך את תפריט הקליק הימני של Chrome לממיר תמונות אמיתי — בלי העלאות לשרת, בלי אפליקציות נוספות, בלי לנחש אם הקובץ בכלל ייפתח.
+
+לחצו קליק ימני על כל תמונה בכל אתר, ובחרו את הפורמט שאתם צריכים. התמונה מפוענחת ומקודדת מחדש ישירות בדפדפן שלכם, כך שאתם מקבלים קובץ אמיתי ומעוצב כראוי — לא סתם את הבייטים המקוריים עם סיומת חדשה.
+
+⚙️ פורמטי פלט זמינים:
+- שמירה כ-png – איכות ללא אובדן, שומרת על שקיפות, הבחירה הנכונה ללוגואים, גרפיקה וצילומי מסך
+- שמירה כ-jpg – גודל קובץ קטן יותר, אידיאלי לתמונות, שיתוף וצירופי דוא"ל
+- שמירה כ-webp – דחיסה מודרנית עם איכות חזותית מצוינת בגודל קטן בהרבה
+- שמירה כ-avif – פורמט מהדור הבא לקובץ הקטן ביותר האפשרי כיום
+- שמירה כ-pdf – הופכת כל תמונה למסמך PDF מוכן להדפסה ולשיתוף
+- שמירת המקור – מורידה את הקובץ בדיוק כפי שהוא, ללא המרה, כאשר הפורמט המקורי כבר מתאים לצרכים שלכם
+
+⚡ קליק אחד, בכל פעם
+בחרו את הפורמט והתיקייה המועדפים עליכם פעם אחת בחלון הקופץ. לאחר מכן, תפריט הקליק הימני יציג קיצור דרך יחיד "שמור כ-[פורמט]" ששומר באופן מיידי — בלי תיבת דו-שיח, בלי לחפש בתפריטי משנה, בלי לחזור על אותה בחירה בכל תמונה מחדש.
+
+📐 התמונה האמיתית, לא התמונה הממוזערת
+דפים מודרניים טוענים תמונה במספר דרכים שונות — srcset, רכיבי picture, תצוגה מקדימה קטנה המקושרת למקור גדול יותר. Save Image As בודק את כולם ושומר את הגרסה ברזולוציה הגבוהה ביותר שקיימת בפועל, במקום את התמונה הממוזערת הראשונה שנתקל בה.
+
+🔒 100% מקומי, פרטי מעצם התכנון
+כל ההמרה מתבצעת ישירות במכשיר שלכם. תמונות לעולם לא מועלות, לעולם לא נשלחות לשום שרת, ולעולם לא נראות על ידינו. בלי חשבונות, בלי הרשמה, בלי פרסומות, בלי מעקב.
+
+🧩 הרשאות מינימליות, מוסברות בבירור
+Save Image As קורא רק את התמונה שעליה לחצתם קליק ימני, בדף שבו אתם משתמשים. שום דבר לא מתבקש "ליתר ביטחון" — כל הרשאה שההרחבה מבקשת מוסברת בדף ההגדרות שלה.
+
+בין אם אתם ממירים webp ל-jpg, שומרים תמונה כ-png, הופכים תמונה ל-pdf, או פשוט מנסים לקבל תמונה ברזולוציה מלאה במקום תמונה ממוזערת מטושטשת, Save Image As עושה זאת בלחיצה ימנית אחת. חינם, פרטי ואמין.
+
+----------------------------------------------------------------------
+
+##### Hindi (hi) #####
+
+[appName]
+इमेज को इस रूप में सेव करें - Save Image As
+
+[shortDesc]
+इमेज को PNG, JPG, WebP, AVIF या PDF के रूप में सेव करें — असली कन्वर्शन, सबसे बेहतरीन रिज़ॉल्यूशन, 100% लोकल।
+
+[storeDesc]
+Save Image As, Chrome के राइट-क्लिक मेन्यू को एक असली इमेज कन्वर्टर में बदल देता है — कोई अपलोड नहीं, कोई अतिरिक्त ऐप नहीं, यह अंदाज़ा लगाने की ज़रूरत नहीं कि फ़ाइल खुलेगी भी या नहीं।
+
+किसी भी वेबसाइट की किसी भी इमेज पर राइट-क्लिक करें और अपनी ज़रूरत का फ़ॉर्मैट चुनें। इमेज सीधे आपके ब्राउज़र में डिकोड और फिर से एनकोड होती है, इसलिए आपको एक असली, सही तरीके से फ़ॉर्मैट की गई फ़ाइल मिलती है — न कि सिर्फ़ नए एक्सटेंशन के साथ मूल बाइट्स।
+
+⚙️ उपलब्ध आउटपुट फ़ॉर्मैट:
+- png के रूप में सेव करें – बिना गुणवत्ता खोए, ट्रांसपेरेंसी बरकरार रखता है, लोगो, ग्राफ़िक्स और स्क्रीनशॉट के लिए सही चुनाव
+- jpg के रूप में सेव करें – छोटा फ़ाइल साइज़, फ़ोटो, शेयरिंग और ईमेल अटैचमेंट के लिए बेहतरीन
+- webp के रूप में सेव करें – बहुत छोटे साइज़ में बेहतरीन विज़ुअल क्वालिटी वाला आधुनिक कम्प्रेशन
+- avif के रूप में सेव करें – आज उपलब्ध सबसे छोटी फ़ाइल के लिए नई पीढ़ी का फ़ॉर्मैट
+- pdf के रूप में सेव करें – किसी भी इमेज को प्रिंट के लिए तैयार, शेयर करने लायक PDF डॉक्यूमेंट में बदल देता है
+- मूल फ़ाइल सेव करें – बिना किसी कन्वर्शन के फ़ाइल को बिल्कुल वैसे ही डाउनलोड करता है, जब मूल फ़ॉर्मैट पहले से वही हो जो आपको चाहिए
+
+⚡ हर बार, बस एक क्लिक
+पॉपअप में अपना पसंदीदा फ़ॉर्मैट और फ़ोल्डर एक बार चुनें। इसके बाद, राइट-क्लिक मेन्यू में एक ही शॉर्टकट "[फ़ॉर्मैट] के रूप में सेव करें" दिखता है, जो तुरंत सेव करता है — कोई डायलॉग बॉक्स नहीं, सबमेन्यू में खोजने की ज़रूरत नहीं, हर इमेज पर वही चुनाव दोहराने की ज़रूरत नहीं।
+
+📐 असली इमेज, थंबनेल नहीं
+आधुनिक पेज इमेज को कई अलग-अलग तरीकों से लोड करते हैं — srcset, picture एलिमेंट्स, एक बड़े ओरिजिनल से लिंक्ड छोटा प्रीव्यू। Save Image As इन सभी की जांच करता है और असल में उपलब्ध सबसे बेहतरीन रिज़ॉल्यूशन वाला वर्ज़न सेव करता है, न कि जो पहला थंबनेल मिल जाए।
+
+🔒 100% लोकल, शुरुआत से ही निजी
+सारा कन्वर्शन सीधे आपकी डिवाइस पर होता है। इमेज कभी अपलोड नहीं होतीं, कभी किसी सर्वर पर नहीं भेजी जातीं, और हमें कभी नहीं दिखतीं। कोई अकाउंट नहीं, कोई साइन-अप नहीं, कोई विज्ञापन नहीं, कोई ट्रैकिंग नहीं।
+
+🧩 न्यूनतम परमिशन, साफ़ तौर पर समझाई गई
+Save Image As सिर्फ़ वही इमेज पढ़ता है जिस पर आप राइट-क्लिक करते हैं, उसी पेज पर जिसे आप इस्तेमाल कर रहे हैं। "एहतियात के तौर पर" कुछ भी नहीं मांगा जाता — एक्सटेंशन जो भी परमिशन मांगता है, वह अपने सेटिंग्स पेज पर समझाई जाती है।
+
+चाहे आप webp को jpg में बदल रहे हों, किसी इमेज को png के रूप में सेव कर रहे हों, किसी फ़ोटो को pdf में बदल रहे हों, या बस किसी धुंधले थंबनेल की बजाय पूरे रिज़ॉल्यूशन वाली इमेज पाने की कोशिश कर रहे हों, Save Image As यह सब एक राइट-क्लिक में कर देता है। मुफ़्त, निजी और भरोसेमंद।
+
+----------------------------------------------------------------------
+
+##### Croatian (hr) #####
+
+[appName]
+Spremi sliku kao - Save Image As
+
+[shortDesc]
+Spremite sliku kao PNG, JPG, WebP, AVIF ili PDF — stvarna konverzija, najveća rezolucija, 100% lokalno.
+
+[storeDesc]
+Save Image As pretvara izbornik desnog klika u Chromeu u pravi pretvarač slika — bez slanja na poslužitelj, bez dodatnih aplikacija, bez nagađanja hoće li se datoteka uopće otvoriti.
+
+Desnom tipkom miša kliknite bilo koju sliku na bilo kojoj web stranici i odaberite format koji vam treba. Slika se dekodira i ponovno kodira izravno u vašem pregledniku, pa dobivate pravu, ispravno formatiranu datoteku — ne samo izvorne bajtove s novim nastavkom.
+
+⚙️ Dostupni izlazni formati:
+- spremi kao png – kvaliteta bez gubitaka, zadržava prozirnost, pravi izbor za logotipe, grafiku i snimke zaslona
+- spremi kao jpg – manja veličina datoteke, idealno za fotografije, dijeljenje i privitke e-pošte
+- spremi kao webp – moderna kompresija s izvrsnom vizualnom kvalitetom uz puno manju veličinu
+- spremi kao avif – format nove generacije za najmanju moguću datoteku danas
+- spremi kao pdf – pretvara bilo koju sliku u PDF dokument spreman za ispis i dijeljenje
+- spremi original – preuzima datoteku točno onakvu kakva jest, bez konverzije, kada je izvorni format već onaj koji vam treba
+
+⚡ Jedan klik, svaki put
+Odaberite omiljeni format i mapu jednom u skočnom prozoru. Nakon toga izbornik desnog klika prikazuje jedan prečac "Spremi kao [format]" koji sprema odmah — bez dijaloškog okvira, bez pretraživanja podizbornika, bez ponavljanja istog izbora za svaku sliku.
+
+📐 Prava slika, ne minijatura
+Moderne stranice učitavaju sliku na nekoliko različitih načina — srcset, elementi picture, mali pregled povezan s većim originalom. Save Image As provjerava sve njih i sprema verziju sa stvarno dostupnom najvišom rezolucijom, umjesto prve minijature na koju naiđe.
+
+🔒 100% lokalno, privatno po dizajnu
+Cijela konverzija odvija se izravno na vašem uređaju. Slike se nikada ne šalju na poslužitelj, nikada nikamo ne prenose i nikada ih ne vidimo. Bez računa, bez registracije, bez oglasa, bez praćenja.
+
+🧩 Minimalne dozvole, jasno objašnjene
+Save Image As čita samo sliku na koju kliknete desnom tipkom miša, na stranici koju koristite. Ništa se ne traži "za svaki slučaj" — svaka dozvola koju ekstenzija traži objašnjena je na vlastitoj stranici postavki.
+
+Bilo da pretvarate webp u jpg, spremate sliku kao png, pretvarate fotografiju u pdf, ili jednostavno pokušavate dobiti sliku u punoj rezoluciji umjesto mutne minijature, Save Image As to radi jednim desnim klikom. Besplatno, privatno i pouzdano.
+
+----------------------------------------------------------------------
+
+##### Hungarian (hu) #####
+
+[appName]
+Kép mentése másként - Save Image As
+
+[shortDesc]
+Kép mentése PNG, JPG, WebP, AVIF vagy PDF formátumban — valódi konverzió, legmagasabb felbontás, 100% helyi.
+
+[storeDesc]
+A Save Image As valódi képkonverterré alakítja a Chrome jobbklikk menüjét — nincs feltöltés, nincs extra alkalmazás, nem kell találgatni, hogy a fájl egyáltalán megnyílik-e.
+
+Kattints jobb gombbal bármely képre bármely weboldalon, és válaszd ki a kívánt formátumot. A kép közvetlenül a böngésződben dekódolódik és kódolódik újra, így valódi, helyesen formázott fájlt kapsz — nem csak az eredeti bájtokat új kiterjesztéssel.
+
+⚙️ Elérhető kimeneti formátumok:
+- mentés png formátumban – veszteségmentes minőség, megőrzi az átlátszóságot, a helyes választás logókhoz, grafikákhoz és képernyőképekhez
+- mentés jpg formátumban – kisebb fájlméret, ideális fotókhoz, megosztáshoz és e-mail mellékletekhez
+- mentés webp formátumban – modern tömörítés kiváló vizuális minőséggel, sokkal kisebb méretben
+- mentés avif formátumban – új generációs formátum a lehető legkisebb fájlmérethez
+- mentés pdf formátumban – bármely képet nyomtatásra kész, megosztható PDF dokumentummá alakít
+- eredeti mentése – letölti a fájlt pontosan úgy, ahogy van, konverzió nélkül, ha az eredeti formátum már az, amire szükséged van
+
+⚡ Egy kattintás, minden alkalommal
+Válaszd ki kedvenc formátumodat és mappádat egyszer a felugró ablakban. Ezután a jobbklikk menü egyetlen "Mentés mint [formátum]" gyorsgombot mutat, amely azonnal ment — nincs párbeszédablak, nincs almenükben turkálás, nincs ismétlődő választás képről képre.
+
+📐 A valódi kép, nem a miniatűr
+A modern oldalak többféle módon töltenek be egy képet — srcset, picture elemek, egy nagyobb eredetihez kapcsolt kis előnézet. A Save Image As mindegyiket ellenőrzi, és a ténylegesen elérhető legmagasabb felbontású verziót menti, nem csak az elsőként talált miniatűrt.
+
+🔒 100% helyi, alapból privát
+A teljes konverzió közvetlenül az eszközödön történik. A képeket soha nem töltjük fel, soha nem küldjük szerverre, és soha nem látjuk. Nincs fiók, nincs regisztráció, nincs hirdetés, nincs nyomkövetés.
+
+🧩 Minimális jogosultságok, világosan elmagyarázva
+A Save Image As csak azt a képet olvassa be, amelyre jobb gombbal kattintasz, azon az oldalon, amelyet éppen használsz. Semmit sem kérünk "biztonság kedvéért" — a kiterjesztés minden egyes kért jogosultsága el van magyarázva a saját beállítási oldalán.
+
+Akár webp-t alakítasz jpg-vé, akár képet mentesz png formátumban, akár fotót alakítasz pdf-fé, akár csak egy oldalról szeretnél teljes felbontású képet elmosódott miniatűr helyett, a Save Image As egyetlen jobbklikkel megoldja. Ingyenes, privát és megbízható.
+
+----------------------------------------------------------------------
+
+##### Indonesian (id) #####
+
+[appName]
+Simpan Gambar sebagai - Save Image As
+
+[shortDesc]
+Simpan gambar sebagai PNG, JPG, WebP, AVIF, atau PDF — konversi asli, resolusi tertinggi, 100% lokal.
+
+[storeDesc]
+Save Image As mengubah menu klik kanan Chrome menjadi konverter gambar sungguhan — tanpa unggahan, tanpa aplikasi tambahan, tanpa perlu menebak apakah filenya akan bisa dibuka.
+
+Klik kanan pada gambar apa pun di situs mana pun dan pilih format yang Anda butuhkan. Gambar didekode dan dienkode ulang langsung di browser Anda, jadi Anda mendapatkan file asli yang diformat dengan benar — bukan sekadar byte asli dengan ekstensi baru.
+
+⚙️ Format keluaran yang tersedia:
+- simpan sebagai png – kualitas tanpa kehilangan data, mempertahankan transparansi, pilihan tepat untuk logo, grafik, dan tangkapan layar
+- simpan sebagai jpg – ukuran file lebih kecil, ideal untuk foto, berbagi, dan lampiran email
+- simpan sebagai webp – kompresi modern dengan kualitas visual sangat baik pada ukuran yang jauh lebih kecil
+- simpan sebagai avif – format generasi terbaru untuk file terkecil yang mungkin saat ini
+- simpan sebagai pdf – mengubah gambar apa pun menjadi dokumen PDF siap cetak dan dibagikan
+- simpan asli – mengunduh file persis seperti aslinya, tanpa konversi, saat format asli sudah sesuai kebutuhan Anda
+
+⚡ Satu klik, setiap saat
+Pilih format dan folder favorit Anda sekali saja di popup. Setelah itu, menu klik kanan menampilkan satu pintasan "Simpan sebagai [format]" yang langsung menyimpan — tanpa kotak dialog, tanpa mencari di submenu, tanpa mengulangi pilihan yang sama untuk setiap gambar.
+
+📐 Gambar asli, bukan thumbnail
+Halaman modern memuat gambar dengan beberapa cara berbeda — srcset, elemen picture, pratinjau kecil yang ditautkan ke gambar asli yang lebih besar. Save Image As memeriksa semuanya dan menyimpan versi dengan resolusi tertinggi yang benar-benar tersedia, alih-alih thumbnail pertama yang ditemui.
+
+🔒 100% lokal, privat sejak dirancang
+Semua konversi terjadi langsung di perangkat Anda. Gambar tidak pernah diunggah, tidak pernah dikirim ke server mana pun, dan tidak pernah kami lihat. Tanpa akun, tanpa pendaftaran, tanpa iklan, tanpa pelacakan.
+
+🧩 Izin minimal, dijelaskan dengan jelas
+Save Image As hanya membaca gambar yang Anda klik kanan, di halaman yang sedang Anda gunakan. Tidak ada yang diminta "untuk berjaga-jaga" — setiap izin yang diminta ekstensi dijelaskan di halaman pengaturannya sendiri.
+
+Baik Anda mengonversi webp ke jpg, menyimpan gambar sebagai png, mengubah foto menjadi pdf, atau hanya mencoba mendapatkan gambar dengan resolusi penuh alih-alih thumbnail buram, Save Image As melakukannya dengan satu klik kanan. Gratis, privat, dan andal.
+
+----------------------------------------------------------------------
+
+##### Italian (it) #####
+
+[appName]
+Salva immagine con nome - Save Image As
+
+[shortDesc]
+Salva qualsiasi immagine come PNG, JPG, WebP, AVIF o PDF: conversione reale, massima risoluzione, 100% locale.
+
+[storeDesc]
+Save Image As trasforma il menu del tasto destro di Chrome in un vero convertitore di immagini — nessun caricamento, nessuna app aggiuntiva, nessun dubbio se il file si aprirà correttamente.
+
+Fai clic con il tasto destro su qualsiasi immagine di qualsiasi sito e scegli il formato che ti serve. L'immagine viene decodificata e ricodificata direttamente nel browser, quindi ottieni un file autentico e correttamente formattato, non semplicemente i byte originali con una nuova estensione.
+
+⚙️ Formati di output disponibili:
+- salva come png – qualità senza perdita, mantiene la trasparenza, la scelta giusta per loghi, grafica e screenshot
+- salva come jpg – file più leggero, ideale per foto, condivisione e allegati email
+- salva come webp – compressione moderna con eccellente qualità visiva e dimensioni molto ridotte
+- salva come avif – formato di nuova generazione per il file più piccolo possibile oggi
+- salva come pdf – trasforma qualsiasi immagine in un documento PDF pronto per la stampa o la condivisione
+- salva originale – scarica il file esattamente com'è, senza conversione, quando il formato originale è già quello che ti serve
+
+⚡ Un clic, sempre
+Scegli il tuo formato e la cartella preferiti una sola volta nel popup. Dopodiché, il menu del tasto destro mostra una singola scorciatoia "Salva come [formato]" che salva istantaneamente — senza finestre di dialogo, senza cercare nei sottomenu, senza ripetere la stessa scelta immagine dopo immagine.
+
+📐 L'immagine reale, non la miniatura
+Le pagine moderne caricano un'immagine in diversi modi — srcset, elementi picture, una piccola anteprima collegata a un originale più grande. Save Image As li controlla tutti e salva la versione con la risoluzione più alta realmente disponibile, invece della prima miniatura che capita.
+
+🔒 100% locale, privato per progettazione
+Ogni conversione avviene direttamente sul tuo dispositivo. Le immagini non vengono mai caricate, mai inviate a un server e mai viste da noi. Nessun account, nessuna registrazione, nessuna pubblicità, nessun tracciamento.
+
+🧩 Permessi minimi, spiegati chiaramente
+Save Image As legge solo l'immagine su cui fai clic destro, nella pagina che stai usando. Niente viene richiesto "per sicurezza" — ogni permesso richiesto dall'estensione è spiegato nella sua pagina delle impostazioni.
+
+Che tu stia convertendo webp in jpg, salvando un'immagine come png, trasformando una foto in pdf, o semplicemente cercando di scaricare un'immagine da una pagina alla risoluzione piena invece di una miniatura sfocata, Save Image As lo fa con un clic destro. Gratuito, privato e affidabile.
+
+----------------------------------------------------------------------
+
+##### Japanese (ja) #####
+
+[appName]
+名前を付けて画像を保存 - Save Image As
+
+[shortDesc]
+右クリックでPNG、JPG、WebP、AVIF、PDFに保存。本物の変換、最高解像度、100%ローカル。
+
+[storeDesc]
+Save Image AsはChromeの右クリックメニューを本物の画像コンバーターに変えます — アップロードなし、追加アプリ不要、ファイルが本当に開けるかどうか賭けにならない。
+
+どのサイトの画像でも右クリックして、必要な形式を選ぶだけ。画像はブラウザ内で直接デコードされ、再エンコードされるので、元のバイトに新しい拡張子を付けただけではない、本物の正しくフォーマットされたファイルが手に入ります。
+
+⚙️ 対応する出力形式:
+- pngで保存 – 劣化なしの画質、透明度を維持、ロゴ・グラフィック・スクリーンショットに最適
+- jpgで保存 – ファイルサイズが小さい、写真・共有・メール添付に最適
+- webpで保存 – はるかに小さいサイズで優れた画質を実現するモダンな圧縮形式
+- avifで保存 – 現在利用できる最小サイズを実現する次世代フォーマット
+- pdfで保存 – どんな画像も印刷・共有可能なPDF文書に変換
+- オリジナルを保存 – 元の形式がすでに必要なものである場合、変換せずにそのままダウンロード
+
+⚡ 毎回ワンクリック
+ポップアップでお気に入りの形式とフォルダを一度だけ設定。その後は右クリックメニューに「[形式]で保存」という単一のショートカットが表示され、即座に保存 — ダイアログなし、サブメニューを探す必要なし、画像ごとに同じ選択を繰り返す必要もありません。
+
+📐 サムネイルではなく本物の画像
+最近のページは画像を様々な方法で読み込みます — srcset、picture要素、より大きなオリジナルにリンクされた小さなプレビューなど。Save Image Asはこれらすべてを確認し、たまたま最初に見つかったサムネイルではなく、実際に利用可能な最高解像度のバージョンを保存します。
+
+🔒 100%ローカル、設計段階からプライベート
+すべての変換はお使いのデバイス上で直接行われます。画像がアップロードされることも、サーバーに送信されることも、私たちが目にすることも一切ありません。アカウント不要、登録不要、広告なし、トラッキングなし。
+
+🧩 最小限の権限、明確に説明
+Save Image Asは、右クリックした画像を、使用しているページ上でのみ読み取ります。「念のため」に要求されるものは何もありません — 拡張機能が要求するすべての権限は、専用の設定ページで説明されています。
+
+webpをjpgに変換する場合でも、画像をpngとして保存する場合でも、写真をpdfに変換する場合でも、あるいはぼやけたサムネイルではなく元の解像度で画像を取得したいだけの場合でも、Save Image Asは右クリック一つでそれを実現します。無料、プライベート、そして信頼できる。
+
+----------------------------------------------------------------------
+
+##### Kannada (kn) #####
+
+[appName]
+ಚಿತ್ರವನ್ನು ಹೀಗೆ ಉಳಿಸಿ - Save Image As
+
+[shortDesc]
+ಚಿತ್ರವನ್ನು PNG, JPG, WebP, AVIF ಅಥವಾ PDF ಆಗಿ ಉಳಿಸಿ — ನೈಜ ಪರಿವರ್ತನೆ, ಅತ್ಯುತ್ತಮ ರೆಸಲ್ಯೂಶನ್, 100% ಸ್ಥಳೀಯ.
+
+[storeDesc]
+Save Image As Chrome ನ ಬಲ-ಕ್ಲಿಕ್ ಮೆನುವನ್ನು ನಿಜವಾದ ಇಮೇಜ್ ಪರಿವರ್ತಕವಾಗಿ ಬದಲಾಯಿಸುತ್ತದೆ — ಯಾವುದೇ ಅಪ್‌ಲೋಡ್ ಇಲ್ಲ, ಹೆಚ್ಚುವರಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಲ್ಲ, ಫೈಲ್ ನಿಜವಾಗಿಯೂ ತೆರೆಯುತ್ತದೆಯೇ ಎಂದು ಊಹಿಸುವ ಅಗತ್ಯವಿಲ್ಲ.
+
+ಯಾವುದೇ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ಯಾವುದೇ ಚಿತ್ರದ ಮೇಲೆ ಬಲ ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು ನಿಮಗೆ ಅಗತ್ಯವಿರುವ ಫಾರ್ಮ್ಯಾಟ್ ಆಯ್ಕೆಮಾಡಿ. ಚಿತ್ರವನ್ನು ನೇರವಾಗಿ ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಡಿಕೋಡ್ ಮಾಡಿ ಮರುಎನ್‌ಕೋಡ್ ಮಾಡಲಾಗುತ್ತದೆ, ಆದ್ದರಿಂದ ನೀವು ನಿಜವಾದ, ಸರಿಯಾಗಿ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಿದ ಫೈಲ್ ಅನ್ನು ಪಡೆಯುತ್ತೀರಿ — ಹೊಸ ವಿಸ್ತರಣೆಯೊಂದಿಗೆ ಮೂಲ ಬೈಟ್‌ಗಳು ಮಾತ್ರವಲ್ಲ.
+
+⚙️ ಲಭ್ಯವಿರುವ ಔಟ್‌ಪುಟ್ ಫಾರ್ಮ್ಯಾಟ್‌ಗಳು:
+- png ಆಗಿ ಉಳಿಸಿ – ನಷ್ಟವಿಲ್ಲದ ಗುಣಮಟ್ಟ, ಪಾರದರ್ಶಕತೆಯನ್ನು ಕಾಪಾಡುತ್ತದೆ, ಲೋಗೋಗಳು, ಗ್ರಾಫಿಕ್ಸ್ ಮತ್ತು ಸ್ಕ್ರೀನ್‌ಶಾಟ್‌ಗಳಿಗೆ ಸರಿಯಾದ ಆಯ್ಕೆ
+- jpg ಆಗಿ ಉಳಿಸಿ – ಚಿಕ್ಕ ಫೈಲ್ ಗಾತ್ರ, ಫೋಟೋಗಳು, ಹಂಚಿಕೆ ಮತ್ತು ಇಮೇಲ್ ಲಗತ್ತುಗಳಿಗೆ ಸೂಕ್ತ
+- webp ಆಗಿ ಉಳಿಸಿ – ಹೆಚ್ಚು ಚಿಕ್ಕ ಗಾತ್ರದಲ್ಲಿ ಅತ್ಯುತ್ತಮ ದೃಶ್ಯ ಗುಣಮಟ್ಟದೊಂದಿಗೆ ಆಧುನಿಕ ಸಂಕುಚನ
+- avif ಆಗಿ ಉಳಿಸಿ – ಇಂದು ಸಾಧ್ಯವಿರುವ ಅತ್ಯಂತ ಚಿಕ್ಕ ಫೈಲ್‌ಗಾಗಿ ಹೊಸ ಪೀಳಿಗೆಯ ಫಾರ್ಮ್ಯಾಟ್
+- pdf ಆಗಿ ಉಳಿಸಿ – ಯಾವುದೇ ಚಿತ್ರವನ್ನು ಮುದ್ರಣ-ಸಿದ್ಧ, ಹಂಚಿಕೊಳ್ಳಬಹುದಾದ PDF ದಾಖಲೆಯಾಗಿ ಪರಿವರ್ತಿಸುತ್ತದೆ
+- ಮೂಲವನ್ನು ಉಳಿಸಿ – ಮೂಲ ಫಾರ್ಮ್ಯಾಟ್ ಈಗಾಗಲೇ ನಿಮಗೆ ಅಗತ್ಯವಿರುವುದೇ ಆಗಿದ್ದಾಗ, ಯಾವುದೇ ಪರಿವರ್ತನೆ ಇಲ್ಲದೆ ಫೈಲ್ ಅನ್ನು ಇರುವ ಹಾಗೆಯೇ ಡೌನ್‌ಲೋಡ್ ಮಾಡುತ್ತದೆ
+
+⚡ ಪ್ರತಿ ಬಾರಿ, ಒಂದೇ ಕ್ಲಿಕ್
+ಪಾಪ್‌ಅಪ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಮೆಚ್ಚಿನ ಫಾರ್ಮ್ಯಾಟ್ ಮತ್ತು ಫೋಲ್ಡರ್ ಅನ್ನು ಒಮ್ಮೆ ಆಯ್ಕೆಮಾಡಿ. ಅದರ ನಂತರ, ಬಲ-ಕ್ಲಿಕ್ ಮೆನು ತಕ್ಷಣ ಉಳಿಸುವ ಒಂದೇ ಶಾರ್ಟ್‌ಕಟ್ "[ಫಾರ್ಮ್ಯಾಟ್] ಆಗಿ ಉಳಿಸಿ" ಅನ್ನು ತೋರಿಸುತ್ತದೆ — ಯಾವುದೇ ಡೈಲಾಗ್ ಬಾಕ್ಸ್ ಇಲ್ಲ, ಸಬ್‌ಮೆನುಗಳಲ್ಲಿ ಹುಡುಕುವ ಅಗತ್ಯವಿಲ್ಲ, ಪ್ರತಿ ಚಿತ್ರಕ್ಕೂ ಅದೇ ಆಯ್ಕೆಯನ್ನು ಪುನರಾವರ್ತಿಸುವ ಅಗತ್ಯವಿಲ್ಲ.
+
+📐 ನಿಜವಾದ ಚಿತ್ರ, ಥಂಬ್‌ನೇಲ್ ಅಲ್ಲ
+ಆಧುನಿಕ ಪುಟಗಳು ಚಿತ್ರವನ್ನು ಹಲವಾರು ವಿಭಿನ್ನ ರೀತಿಯಲ್ಲಿ ಲೋಡ್ ಮಾಡುತ್ತವೆ — srcset, picture ಎಲಿಮೆಂಟ್‌ಗಳು, ದೊಡ್ಡ ಮೂಲಕ್ಕೆ ಲಿಂಕ್ ಮಾಡಲಾದ ಸಣ್ಣ ಪೂರ್ವವೀಕ್ಷಣೆ. Save Image As ಇವೆಲ್ಲವನ್ನೂ ಪರಿಶೀಲಿಸಿ, ಮೊದಲು ಸಿಗುವ ಥಂಬ್‌ನೇಲ್‌ಗೆ ಬದಲಾಗಿ ನಿಜವಾಗಿಯೂ ಲಭ್ಯವಿರುವ ಅತ್ಯುತ್ತಮ ರೆಸಲ್ಯೂಶನ್ ಆವೃತ್ತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ.
+
+🔒 100% ಸ್ಥಳೀಯ, ವಿನ್ಯಾಸದಿಂದಲೇ ಖಾಸಗಿ
+ಎಲ್ಲಾ ಪರಿವರ್ತನೆಯು ನೇರವಾಗಿ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ನಡೆಯುತ್ತದೆ. ಚಿತ್ರಗಳನ್ನು ಎಂದಿಗೂ ಅಪ್‌ಲೋಡ್ ಮಾಡಲಾಗುವುದಿಲ್ಲ, ಎಂದಿಗೂ ಯಾವುದೇ ಸರ್ವರ್‌ಗೆ ಕಳುಹಿಸಲಾಗುವುದಿಲ್ಲ ಮತ್ತು ನಾವು ಎಂದಿಗೂ ಅವುಗಳನ್ನು ನೋಡುವುದಿಲ್ಲ. ಖಾತೆಗಳಿಲ್ಲ, ಸೈನ್-ಅಪ್ ಇಲ್ಲ, ಜಾಹೀರಾತುಗಳಿಲ್ಲ, ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ.
+
+🧩 ಕನಿಷ್ಠ ಅನುಮತಿಗಳು, ಸ್ಪಷ್ಟವಾಗಿ ವಿವರಿಸಲಾಗಿದೆ
+ನೀವು ಬಳಸುತ್ತಿರುವ ಪುಟದಲ್ಲಿ ನೀವು ಬಲ-ಕ್ಲಿಕ್ ಮಾಡಿದ ಚಿತ್ರವನ್ನು ಮಾತ್ರ Save Image As ಓದುತ್ತದೆ. "ಮುನ್ನೆಚ್ಚರಿಕೆಗಾಗಿ" ಏನನ್ನೂ ಕೇಳಲಾಗುವುದಿಲ್ಲ — ವಿಸ್ತರಣೆಯು ಕೇಳುವ ಪ್ರತಿಯೊಂದು ಅನುಮತಿಯನ್ನು ಅದರ ಸ್ವಂತ ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಪುಟದಲ್ಲಿ ವಿವರಿಸಲಾಗಿದೆ.
+
+ನೀವು webp ಅನ್ನು jpg ಗೆ ಪರಿವರ್ತಿಸುತ್ತಿರಲಿ, ಚಿತ್ರವನ್ನು png ಆಗಿ ಉಳಿಸುತ್ತಿರಲಿ, ಫೋಟೋವನ್ನು pdf ಗೆ ಬದಲಾಯಿಸುತ್ತಿರಲಿ, ಅಥವಾ ಮಸುಕಾದ ಥಂಬ್‌ನೇಲ್‌ಗೆ ಬದಲಾಗಿ ಪೂರ್ಣ ರೆಸಲ್ಯೂಶನ್ ಚಿತ್ರವನ್ನು ಪಡೆಯಲು ಪ್ರಯತ್ನಿಸುತ್ತಿರಲಿ, Save Image As ಅದನ್ನು ಒಂದೇ ಬಲ-ಕ್ಲಿಕ್‌ನಲ್ಲಿ ಮಾಡುತ್ತದೆ. ಉಚಿತ, ಖಾಸಗಿ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ.
+
+----------------------------------------------------------------------
+
+##### Korean (ko) #####
+
+[appName]
+다른 이름으로 이미지 저장 - Save Image As
+
+[shortDesc]
+오른쪽 클릭으로 PNG, JPG, WebP, AVIF, PDF로 저장. 실제 변환, 최고 해상도, 100% 로컬.
+
+[storeDesc]
+Save Image As는 Chrome의 오른쪽 클릭 메뉴를 진짜 이미지 변환기로 바꿔줍니다 — 업로드 없음, 추가 앱 없음, 파일이 제대로 열릴지 추측할 필요 없음.
+
+어떤 웹사이트에서든 이미지를 오른쪽 클릭하고 필요한 형식을 선택하세요. 이미지는 브라우저 안에서 바로 디코딩되고 다시 인코딩되므로, 원본 바이트에 새 확장자만 붙인 게 아니라 진짜로 올바르게 포맷된 파일을 얻게 됩니다.
+
+⚙️ 사용 가능한 출력 형식:
+- png로 저장 – 무손실 화질, 투명도 유지, 로고·그래픽·스크린샷에 적합한 선택
+- jpg로 저장 – 더 작은 파일 크기, 사진·공유·이메일 첨부에 이상적
+- webp로 저장 – 훨씬 작은 크기로 뛰어난 시각적 품질을 제공하는 최신 압축 방식
+- avif로 저장 – 오늘날 가능한 가장 작은 파일을 위한 차세대 포맷
+- pdf로 저장 – 어떤 이미지든 인쇄 및 공유가 가능한 PDF 문서로 변환
+- 원본 저장 – 원래 형식이 이미 필요한 형식일 때, 변환 없이 파일을 그대로 다운로드
+
+⚡ 매번 한 번의 클릭
+팝업에서 즐겨 쓰는 형식과 폴더를 한 번만 선택하세요. 그 후에는 오른쪽 클릭 메뉴에 즉시 저장되는 단일 바로가기 "[형식]으로 저장"이 표시됩니다 — 대화 상자도, 하위 메뉴를 뒤질 필요도, 이미지마다 같은 선택을 반복할 필요도 없습니다.
+
+📐 썸네일이 아닌 진짜 이미지
+요즘 웹페이지는 여러 다른 방식으로 이미지를 불러옵니다 — srcset, picture 요소, 더 큰 원본에 연결된 작은 미리보기 등. Save Image As는 이 모든 것을 확인하고, 우연히 처음 발견한 썸네일이 아니라 실제로 사용 가능한 최고 해상도 버전을 저장합니다.
+
+🔒 100% 로컬, 설계부터 비공개
+모든 변환은 기기에서 직접 이루어집니다. 이미지는 절대 업로드되지 않고, 서버로 전송되지 않으며, 저희가 보는 일도 없습니다. 계정도, 가입도, 광고도, 추적도 없습니다.
+
+🧩 최소한의 권한, 명확한 설명
+Save Image As는 사용 중인 페이지에서 오른쪽 클릭한 이미지만 읽습니다. "혹시 몰라서" 요청하는 것은 없습니다 — 확장 프로그램이 요청하는 모든 권한은 자체 설정 페이지에서 설명됩니다.
+
+webp를 jpg로 변환하든, 이미지를 png로 저장하든, 사진을 pdf로 바꾸든, 아니면 흐릿한 썸네일 대신 전체 해상도의 이미지를 얻으려는 것이든, Save Image As는 오른쪽 클릭 한 번으로 해결합니다. 무료, 비공개, 그리고 신뢰할 수 있습니다.
+
+----------------------------------------------------------------------
+
+##### Lithuanian (lt) #####
+
+[appName]
+Išsaugoti vaizdą kaip - Save Image As
+
+[shortDesc]
+Išsaugokite vaizdą kaip PNG, JPG, WebP, AVIF ar PDF — tikras konvertavimas, aukščiausia raiška, 100% vietinis.
+
+[storeDesc]
+„Save Image As" paverčia „Chrome" dešiniojo pelės klavišo meniu tikru vaizdų konverteriu — jokių įkėlimų, jokių papildomų programų, jokio spėliojimo, ar failas apskritai atsidarys.
+
+Spustelėkite dešiniuoju pelės klavišu bet kurį vaizdą bet kurioje svetainėje ir pasirinkite reikiamą formatą. Vaizdas iššifruojamas ir vėl užšifruojamas tiesiai jūsų naršyklėje, todėl gaunate tikrą, teisingai suformatuotą failą — o ne tik originalius baitus su nauju plėtiniu.
+
+⚙️ Galimi išvesties formatai:
+- išsaugoti kaip png – nenuostolinga kokybė, išsaugo skaidrumą, tinkamas pasirinkimas logotipams, grafikai ir ekrano nuotraukoms
+- išsaugoti kaip jpg – mažesnis failo dydis, idealus nuotraukoms, dalinimuisi ir el. pašto priedams
+- išsaugoti kaip webp – šiuolaikinis suspaudimas su puikia vizualine kokybe žymiai mažesniu dydžiu
+- išsaugoti kaip avif – naujos kartos formatas mažiausiam galimam failui šiandien
+- išsaugoti kaip pdf – paverčia bet kokį vaizdą spausdinimui paruoštu, bendrinamu PDF dokumentu
+- išsaugoti originalą – atsisiunčia failą lygiai tokį, koks jis yra, be konvertavimo, kai originalus formatas jau yra tas, kurio reikia
+
+⚡ Vienas paspaudimas, kiekvieną kartą
+Pasirinkite mėgstamą formatą ir aplanką vieną kartą iššokančiajame lange. Po to dešiniojo pelės klavišo meniu rodo vieną nuorodą „Išsaugoti kaip [formatas]", kuri išsaugo iškart — jokio dialogo lango, jokio ieškojimo submeniu, jokio to paties pasirinkimo kartojimo su kiekvienu vaizdu.
+
+📐 Tikras vaizdas, ne miniatiūra
+Šiuolaikiniai puslapiai įkelia vaizdą keliais skirtingais būdais — srcset, picture elementai, mažas peržiūros vaizdas, susietas su didesniu originalu. „Save Image As" patikrina juos visus ir išsaugo versiją su realiai pasiekiama aukščiausia raiška, o ne pirmą pasitaikiusią miniatiūrą.
+
+🔒 100% vietinis, privatus pagal numatymą
+Visas konvertavimas vyksta tiesiai jūsų įrenginyje. Vaizdai niekada neįkeliami, niekada nesiunčiami į jokį serverį ir niekada mūsų nematomi. Jokių paskyrų, jokios registracijos, jokios reklamos, jokio sekimo.
+
+🧩 Minimalūs leidimai, aiškiai paaiškinti
+„Save Image As" nuskaito tik tą vaizdą, kurį spustelėjote dešiniuoju pelės klavišu, tame puslapyje, kurį naudojate. Niekas neprašoma „bet kokiam atvejui" — kiekvienas plėtinio prašomas leidimas paaiškintas jo paties nustatymų puslapyje.
+
+Ar konvertuojate webp į jpg, išsaugote vaizdą kaip png, verčiate nuotrauką į pdf, ar tiesiog bandote gauti pilnos raiškos vaizdą vietoj neryškios miniatiūros, „Save Image As" tai atlieka vienu dešiniojo pelės klavišo paspaudimu. Nemokamai, privačiai ir patikimai.
+
+----------------------------------------------------------------------
+
+##### Latvian (lv) #####
+
+[appName]
+Saglabāt attēlu kā - Save Image As
+
+[shortDesc]
+Saglabājiet attēlu kā PNG, JPG, WebP, AVIF vai PDF — reāla konvertēšana, augstākā izšķirtspēja, 100% lokāli.
+
+[storeDesc]
+Save Image As pārvērš Chrome peles labās pogas izvēlni par īstu attēlu konvertētāju — bez augšupielādes, bez papildu lietotnēm, bez minēšanas, vai fails vispār atvērsies.
+
+Uzklikšķiniet ar labo peles pogu jebkuram attēlam jebkurā vietnē un izvēlieties nepieciešamo formātu. Attēls tiek atkodēts un atkārtoti kodēts tieši jūsu pārlūkprogrammā, tāpēc jūs iegūstat īstu, pareizi formatētu failu — nevis tikai oriģinālos baitus ar jaunu paplašinājumu.
+
+⚙️ Pieejamie izvades formāti:
+- saglabāt kā png – bezzudumu kvalitāte, saglabā caurspīdīgumu, pareizā izvēle logotipiem, grafikai un ekrānuzņēmumiem
+- saglabāt kā jpg – mazāks faila lielums, ideāli fotoattēliem, koplietošanai un e-pasta pielikumiem
+- saglabāt kā webp – moderna saspiešana ar izcilu vizuālo kvalitāti daudz mazākā izmērā
+- saglabāt kā avif – jaunās paaudzes formāts pēc iespējas mazākam failam šodien
+- saglabāt kā pdf – pārvērš jebkuru attēlu drukai gatavā, koplietojamā PDF dokumentā
+- saglabāt oriģinālu – lejupielādē failu tieši tādu, kāds tas ir, bez konvertēšanas, ja oriģinālais formāts jau ir tas, kas nepieciešams
+
+⚡ Viens klikšķis, katru reizi
+Izvēlieties iecienītāko formātu un mapi vienu reizi uznirstošajā logā. Pēc tam peles labās pogas izvēlnē redzama viena saīsne "Saglabāt kā [formāts]", kas saglabā uzreiz — bez dialoglodziņa, bez meklēšanas apakšizvēlnēs, bez tās pašas izvēles atkārtošanas ar katru attēlu.
+
+📐 Īstais attēls, nevis sīktēls
+Mūsdienīgas lapas ielādē attēlu vairākos dažādos veidos — srcset, picture elementi, mazs priekšskatījums, kas saistīts ar lielāku oriģinālu. Save Image As pārbauda tos visus un saglabā versiju ar faktiski pieejamo augstāko izšķirtspēju, nevis pirmo sastapto sīktēlu.
+
+🔒 100% lokāli, privāti pēc noklusējuma
+Visa konvertēšana notiek tieši jūsu ierīcē. Attēli nekad netiek augšupielādēti, nekad netiek nosūtīti uz serveri, un mēs tos nekad neredzam. Bez kontiem, bez reģistrācijas, bez reklāmām, bez izsekošanas.
+
+🧩 Minimālas atļaujas, skaidri izskaidrotas
+Save Image As nolasa tikai attēlu, kuram uzklikšķināt ar labo peles pogu, lapā, kuru izmantojat. Nekas netiek pieprasīts "drošības pēc" — katra atļauja, ko paplašinājums pieprasa, ir izskaidrota tā paša iestatījumu lapā.
+
+Vai konvertējat webp uz jpg, saglabājat attēlu kā png, pārvēršat fotoattēlu par pdf, vai vienkārši mēģināt iegūt attēlu pilnā izšķirtspējā izplūduša sīktēla vietā, Save Image As to izdara ar vienu peles labās pogas klikšķi. Bez maksas, privāti un uzticami.
+
+----------------------------------------------------------------------
+
+##### Malayalam (ml) #####
+
+[appName]
+ചിത്രം ഇങ്ങനെ സംരക്ഷിക്കുക - Save Image As
+
+[shortDesc]
+ചിത്രം PNG, JPG, WebP, AVIF അല്ലെങ്കിൽ PDF ആയി സംരക്ഷിക്കുക — യഥാർത്ഥ പരിവർത്തനം, ഉയർന്ന റെസല്യൂഷൻ, 100% ലോക്കൽ.
+
+[storeDesc]
+Save Image As Chrome-ന്റെ റൈറ്റ്-ക്ലിക്ക് മെനുവിനെ ഒരു യഥാർത്ഥ ഇമേജ് കൺവെർട്ടറാക്കി മാറ്റുന്നു — അപ്‌ലോഡുകളില്ല, അധിക ആപ്പുകളില്ല, ഫയൽ ശരിക്കും തുറക്കുമോ എന്ന് ഊഹിക്കേണ്ട ആവശ്യമില്ല.
+
+ഏത് വെബ്‌സൈറ്റിലെയും ഏത് ചിത്രത്തിലും റൈറ്റ്-ക്ലിക്ക് ചെയ്ത്, നിങ്ങൾക്ക് വേണ്ട ഫോർമാറ്റ് തിരഞ്ഞെടുക്കുക. ചിത്രം നേരിട്ട് നിങ്ങളുടെ ബ്രൗസറിൽ ഡീകോഡ് ചെയ്ത് വീണ്ടും എൻകോഡ് ചെയ്യുന്നു, അതിനാൽ പുതിയ എക്സ്റ്റൻഷനുള്ള യഥാർത്ഥ ബൈറ്റുകൾ മാത്രമല്ല, ശരിയായി ഫോർമാറ്റ് ചെയ്ത ഒരു യഥാർത്ഥ ഫയൽ നിങ്ങൾക്ക് ലഭിക്കും.
+
+⚙️ ലഭ്യമായ ഔട്ട്‌പുട്ട് ഫോർമാറ്റുകൾ:
+- png ആയി സംരക്ഷിക്കുക – നഷ്ടമില്ലാത്ത ഗുണനിലവാരം, സുതാര്യത നിലനിർത്തുന്നു, ലോഗോകൾ, ഗ്രാഫിക്സ്, സ്ക്രീൻഷോട്ടുകൾ എന്നിവയ്ക്ക് ശരിയായ തിരഞ്ഞെടുപ്പ്
+- jpg ആയി സംരക്ഷിക്കുക – ചെറിയ ഫയൽ വലുപ്പം, ഫോട്ടോകൾ, പങ്കിടൽ, ഇമെയിൽ അറ്റാച്ച്‌മെന്റുകൾ എന്നിവയ്ക്ക് അനുയോജ്യം
+- webp ആയി സംരക്ഷിക്കുക – വളരെ ചെറിയ വലുപ്പത്തിൽ മികച്ച ദൃശ്യ ഗുണനിലവാരമുള്ള ആധുനിക കംപ്രഷൻ
+- avif ആയി സംരക്ഷിക്കുക – ഇന്ന് സാധ്യമായ ഏറ്റവും ചെറിയ ഫയലിനായുള്ള പുതിയ തലമുറ ഫോർമാറ്റ്
+- pdf ആയി സംരക്ഷിക്കുക – ഏത് ചിത്രത്തെയും പ്രിന്റിന് തയ്യാറായ, പങ്കിടാവുന്ന PDF രേഖയാക്കി മാറ്റുന്നു
+- യഥാർത്ഥത് സംരക്ഷിക്കുക – യഥാർത്ഥ ഫോർമാറ്റ് ഇതിനകം നിങ്ങൾക്ക് വേണ്ടതാണെങ്കിൽ, യാതൊരു പരിവർത്തനവുമില്ലാതെ ഫയൽ അതേപടി ഡൗൺലോഡ് ചെയ്യുന്നു
+
+⚡ ഓരോ തവണയും ഒരു ക്ലിക്ക്
+പോപ്പപ്പിൽ നിങ്ങളുടെ പ്രിയപ്പെട്ട ഫോർമാറ്റും ഫോൾഡറും ഒരിക്കൽ തിരഞ്ഞെടുക്കുക. അതിനുശേഷം, റൈറ്റ്-ക്ലിക്ക് മെനു ഉടനടി സംരക്ഷിക്കുന്ന ഒരൊറ്റ കുറുക്കുവഴി "[ഫോർമാറ്റ്] ആയി സംരക്ഷിക്കുക" കാണിക്കുന്നു — ഡയലോഗ് ബോക്സില്ല, സബ്‌മെനുകളിൽ തിരയേണ്ട ആവശ്യമില്ല, ഓരോ ചിത്രത്തിനും ഒരേ തിരഞ്ഞെടുപ്പ് ആവർത്തിക്കേണ്ട ആവശ്യമില്ല.
+
+📐 യഥാർത്ഥ ചിത്രം, തംബ്നെയിൽ അല്ല
+ആധുനിക പേജുകൾ ഒരു ചിത്രം പല വ്യത്യസ്ത രീതികളിൽ ലോഡ് ചെയ്യുന്നു — srcset, picture ഘടകങ്ങൾ, വലിയ ഒറിജിനലുമായി ലിങ്ക് ചെയ്ത ഒരു ചെറിയ പ്രിവ്യൂ. Save Image As ഇവയെല്ലാം പരിശോധിച്ച്, ആദ്യം കിട്ടുന്ന തംബ്നെയിലിന് പകരം യഥാർത്ഥത്തിൽ ലഭ്യമായ ഏറ്റവും ഉയർന്ന റെസല്യൂഷൻ പതിപ്പ് സംരക്ഷിക്കുന്നു.
+
+🔒 100% ലോക്കൽ, രൂപകൽപ്പന മുതൽ സ്വകാര്യം
+എല്ലാ പരിവർത്തനവും നിങ്ങളുടെ ഉപകരണത്തിൽ നേരിട്ട് നടക്കുന്നു. ചിത്രങ്ങൾ ഒരിക്കലും അപ്‌ലോഡ് ചെയ്യപ്പെടില്ല, ഒരിക്കലും ഒരു സെർവറിലേക്കും അയക്കപ്പെടില്ല, ഞങ്ങൾ ഒരിക്കലും അവ കാണില്ല. അക്കൗണ്ടുകളില്ല, സൈൻ-അപ്പ് ഇല്ല, പരസ്യങ്ങളില്ല, ട്രാക്കിംഗ് ഇല്ല.
+
+🧩 കുറഞ്ഞ അനുമതികൾ, വ്യക്തമായി വിശദീകരിച്ചത്
+നിങ്ങൾ ഉപയോഗിക്കുന്ന പേജിൽ, നിങ്ങൾ റൈറ്റ്-ക്ലിക്ക് ചെയ്യുന്ന ചിത്രം മാത്രമേ Save Image As വായിക്കൂ. "മുൻകരുതലായി" ഒന്നും ആവശ്യപ്പെടുന്നില്ല — വിപുലീകരണം ആവശ്യപ്പെടുന്ന ഓരോ അനുമതിയും അതിന്റെ സ്വന്തം ക്രമീകരണ പേജിൽ വിശദീകരിച്ചിട്ടുണ്ട്.
+
+നിങ്ങൾ webp-യെ jpg ആക്കി മാറ്റുകയോ, ഒരു ചിത്രം png ആയി സംരക്ഷിക്കുകയോ, ഒരു ഫോട്ടോ pdf ആക്കി മാറ്റുകയോ, അല്ലെങ്കിൽ മങ്ങിയ തംബ്നെയിലിന് പകരം പൂർണ്ണ റെസല്യൂഷനിലുള്ള ഒരു ചിത്രം ലഭിക്കാൻ ശ്രമിക്കുകയോ ചെയ്യുകയാണെങ്കിലും, Save Image As അത് ഒരൊറ്റ റൈറ്റ്-ക്ലിക്കിൽ ചെയ്യുന്നു. സൗജന്യം, സ്വകാര്യം, വിശ്വസനീയം.
+
+----------------------------------------------------------------------
+
+##### Marathi (mr) #####
+
+[appName]
+प्रतिमा अशी जतन करा - Save Image As
+
+[shortDesc]
+प्रतिमा PNG, JPG, WebP, AVIF किंवा PDF म्हणून जतन करा — खरे रूपांतरण, सर्वोच्च रिझोल्यूशन, 100% स्थानिक.
+
+[storeDesc]
+Save Image As Chrome च्या उजव्या क्लिक मेनूला खऱ्या अर्थाने प्रतिमा रूपांतरकात बदलते — कोणतेही अपलोड नाही, अतिरिक्त अ‍ॅप्स नाहीत, फाईल उघडेल की नाही याचा अंदाज बांधण्याची गरज नाही.
+
+कोणत्याही वेबसाइटवरील कोणत्याही प्रतिमेवर उजवे क्लिक करा आणि तुम्हाला हवा असलेला फॉरमॅट निवडा. प्रतिमा थेट तुमच्या ब्राउझरमध्ये डीकोड आणि पुन्हा एन्कोड केली जाते, त्यामुळे तुम्हाला खरी, योग्य प्रकारे फॉरमॅट केलेली फाईल मिळते — फक्त नवीन एक्सटेंशनसह मूळ बाइट्स नव्हे.
+
+⚙️ उपलब्ध आउटपुट फॉरमॅट:
+- png म्हणून जतन करा – गुणवत्तेत कोणतीही घट नाही, पारदर्शकता कायम राहते, लोगो, ग्राफिक्स आणि स्क्रीनशॉटसाठी योग्य निवड
+- jpg म्हणून जतन करा – लहान फाईल आकार, फोटो, शेअरिंग आणि ईमेल अटॅचमेंटसाठी योग्य
+- webp म्हणून जतन करा – खूपच लहान आकारात उत्कृष्ट व्हिज्युअल गुणवत्ता देणारे आधुनिक कॉम्प्रेशन
+- avif म्हणून जतन करा – आज उपलब्ध सर्वात लहान फाईलसाठी नव्या पिढीचा फॉरमॅट
+- pdf म्हणून जतन करा – कोणत्याही प्रतिमेला प्रिंटसाठी तयार, शेअर करण्यायोग्य PDF दस्तऐवजात बदलते
+- मूळ जतन करा – मूळ फॉरमॅट आधीच तुम्हाला हवा असलेला असल्यास, कोणतेही रूपांतरण न करता फाईल जशीच्या तशी डाउनलोड करते
+
+⚡ प्रत्येक वेळी, एकच क्लिक
+पॉपअपमध्ये तुमचा आवडता फॉरमॅट आणि फोल्डर एकदाच निवडा. त्यानंतर, उजव्या क्लिक मेनूमध्ये एकच शॉर्टकट "[फॉरमॅट] म्हणून जतन करा" दिसतो, जो त्वरित जतन करतो — कोणताही डायलॉग बॉक्स नाही, सबमेनूमध्ये शोधण्याची गरज नाही, प्रत्येक प्रतिमेसाठी तोच निवड पुन्हा करण्याची गरज नाही.
+
+📐 खरी प्रतिमा, थंबनेल नव्हे
+आधुनिक पाने प्रतिमा वेगवेगळ्या प्रकारे लोड करतात — srcset, picture एलिमेंट्स, मोठ्या मूळ प्रतिमेशी लिंक केलेला छोटा प्रिव्ह्यू. Save Image As हे सर्व तपासते आणि प्रत्यक्षात उपलब्ध असलेल्या सर्वोच्च रिझोल्यूशनची आवृत्ती जतन करते, पहिल्याच सापडलेल्या थंबनेलऐवजी.
+
+🔒 100% स्थानिक, सुरुवातीपासूनच खाजगी
+सर्व रूपांतरण थेट तुमच्या डिव्हाइसवर होते. प्रतिमा कधीही अपलोड होत नाहीत, कधीही कोणत्याही सर्व्हरवर पाठवल्या जात नाहीत आणि आम्ही त्या कधीही पाहत नाही. खाते नाही, नोंदणी नाही, जाहिराती नाहीत, ट्रॅकिंग नाही.
+
+🧩 किमान परवानग्या, स्पष्टपणे समजावलेल्या
+Save Image As फक्त तुम्ही उजवे क्लिक केलेली प्रतिमा वाचते, तुम्ही वापरत असलेल्या पानावर. "उगाच म्हणून" काहीही मागितले जात नाही — एक्स्टेंशन मागत असलेली प्रत्येक परवानगी त्याच्या स्वतःच्या सेटिंग्ज पानावर समजावलेली आहे.
+
+तुम्ही webp चे jpg मध्ये रूपांतर करत असाल, प्रतिमा png म्हणून जतन करत असाल, फोटोला pdf मध्ये बदलत असाल, किंवा फक्त अस्पष्ट थंबनेलऐवजी पूर्ण रिझोल्यूशनची प्रतिमा मिळवण्याचा प्रयत्न करत असाल, Save Image As हे सर्व एका उजव्या क्लिकमध्ये करते. मोफत, खाजगी आणि विश्वासार्ह.
+
+----------------------------------------------------------------------
+
+##### Malay (ms) #####
+
+[appName]
+Simpan Imej Sebagai - Save Image As
+
+[shortDesc]
+Simpan imej sebagai PNG, JPG, WebP, AVIF atau PDF — penukaran sebenar, resolusi tertinggi, 100% setempat.
+
+[storeDesc]
+Save Image As mengubah menu klik kanan Chrome menjadi penukar imej sebenar — tiada muat naik, tiada aplikasi tambahan, tiada tekaan sama ada fail itu akan dapat dibuka.
+
+Klik kanan pada mana-mana imej di mana-mana laman web dan pilih format yang anda perlukan. Imej dinyahkod dan dikodkan semula terus dalam pelayar anda, jadi anda mendapat fail sebenar yang diformat dengan betul — bukan sekadar bait asal dengan sambungan baharu.
+
+⚙️ Format output yang tersedia:
+- simpan sebagai png – kualiti tanpa kehilangan, mengekalkan ketelusan, pilihan yang tepat untuk logo, grafik dan tangkapan skrin
+- simpan sebagai jpg – saiz fail lebih kecil, sesuai untuk foto, perkongsian dan lampiran e-mel
+- simpan sebagai webp – mampatan moden dengan kualiti visual yang cemerlang pada saiz yang jauh lebih kecil
+- simpan sebagai avif – format generasi baharu untuk fail terkecil yang mungkin hari ini
+- simpan sebagai pdf – menukar mana-mana imej kepada dokumen PDF sedia cetak dan boleh dikongsi
+- simpan asal – memuat turun fail betul-betul seperti asalnya, tanpa penukaran, apabila format asal sudah menjadi apa yang anda perlukan
+
+⚡ Satu klik, setiap kali
+Pilih format dan folder kegemaran anda sekali sahaja dalam popup. Selepas itu, menu klik kanan memaparkan satu pintasan "Simpan sebagai [format]" yang menyimpan serta-merta — tiada kotak dialog, tiada penggeledahan submenu, tiada pengulangan pilihan yang sama untuk setiap imej.
+
+📐 Imej sebenar, bukan lakaran kecil
+Laman moden memuatkan imej dengan beberapa cara berbeza — srcset, elemen picture, pratonton kecil yang dipautkan kepada imej asal yang lebih besar. Save Image As menyemak kesemuanya dan menyimpan versi dengan resolusi tertinggi yang benar-benar tersedia, bukannya lakaran kecil pertama yang ditemui.
+
+🔒 100% setempat, peribadi mengikut reka bentuk
+Semua penukaran berlaku terus pada peranti anda. Imej tidak pernah dimuat naik, tidak pernah dihantar ke mana-mana pelayan, dan tidak pernah dilihat oleh kami. Tiada akaun, tiada pendaftaran, tiada iklan, tiada penjejakan.
+
+🧩 Kebenaran minimum, dijelaskan dengan jelas
+Save Image As hanya membaca imej yang anda klik kanan, pada halaman yang anda gunakan. Tiada apa-apa diminta "berjaga-jaga" — setiap kebenaran yang diminta oleh sambungan ini dijelaskan pada halaman tetapannya sendiri.
+
+Sama ada anda menukar webp kepada jpg, menyimpan imej sebagai png, menukar foto kepada pdf, atau sekadar cuba mendapatkan imej dalam resolusi penuh dan bukannya lakaran kecil kabur, Save Image As melakukannya dengan satu klik kanan. Percuma, peribadi dan boleh dipercayai.
+
+----------------------------------------------------------------------
+
+##### Dutch (nl) #####
+
+[appName]
+Afbeelding opslaan als - Save Image As
+
+[shortDesc]
+Sla elke afbeelding op als PNG, JPG, WebP, AVIF of PDF — echte conversie, hoogste resolutie, 100% lokaal.
+
+[storeDesc]
+Save Image As maakt van het rechtermuisklikmenu van Chrome een echte afbeeldingsconverter — geen uploads, geen extra apps, geen giswerk of het bestand wel echt zal openen.
+
+Klik met de rechtermuisknop op een afbeelding op elke website en kies het gewenste formaat. De afbeelding wordt direct in je browser gedecodeerd en opnieuw gecodeerd, dus je krijgt een echt, correct geformatteerd bestand — niet gewoon de originele bytes met een nieuwe extensie.
+
+⚙️ Beschikbare uitvoerformaten:
+- opslaan als png – verliesvrije kwaliteit, behoudt transparantie, de juiste keuze voor logo's, afbeeldingen en schermafbeeldingen
+- opslaan als jpg – kleiner bestand, ideaal voor foto's, delen en e-mailbijlagen
+- opslaan als webp – moderne compressie met uitstekende beeldkwaliteit bij een veel kleinere bestandsgrootte
+- opslaan als avif – nieuwste generatie formaat voor het kleinst mogelijke bestand vandaag de dag
+- opslaan als pdf – verandert elke afbeelding in een afdrukklaar, deelbaar PDF-document
+- origineel opslaan – downloadt het bestand precies zoals het is, zonder conversie, als het originele formaat al is wat je nodig hebt
+
+⚡ Eén klik, elke keer
+Kies je favoriete formaat en map één keer in de popup. Daarna toont het rechtermuisklikmenu één snelkoppeling "Opslaan als [formaat]" die direct opslaat — geen dialoogvenster, geen gezoek in submenu's, geen herhaling van dezelfde keuze bij elke afbeelding.
+
+📐 De echte afbeelding, niet de miniatuur
+Moderne pagina's laden een afbeelding op verschillende manieren — srcset, picture-elementen, een kleine voorvertoning gekoppeld aan een groter origineel. Save Image As controleert ze allemaal en slaat de daadwerkelijk beschikbare versie met de hoogste resolutie op, in plaats van de eerste de beste miniatuur.
+
+🔒 100% lokaal, privé door ontwerp
+Alle conversie gebeurt rechtstreeks op je apparaat. Afbeeldingen worden nooit geüpload, nooit naar een server gestuurd en nooit door ons gezien. Geen accounts, geen aanmelding, geen advertenties, geen tracking.
+
+🧩 Minimale rechten, duidelijk uitgelegd
+Save Image As leest alleen de afbeelding waarop je rechtsklikt, op de pagina die je gebruikt. Niets wordt "voor de zekerheid" aangevraagd — elke gevraagde toestemming wordt op de eigen instellingenpagina van de extensie uitgelegd.
+
+Of je nu webp naar jpg converteert, een afbeelding als png opslaat, een foto omzet naar pdf, of gewoon een afbeelding in volledige resolutie wilt in plaats van een wazige miniatuur, Save Image As doet het met één rechterklik. Gratis, privé en betrouwbaar.
+
+----------------------------------------------------------------------
+
+##### Norwegian (no) #####
+
+[appName]
+Lagre bilde som - Save Image As
+
+[shortDesc]
+Lagre ethvert bilde som PNG, JPG, WebP, AVIF eller PDF — ekte konvertering, høyeste oppløsning, 100% lokalt.
+
+[storeDesc]
+Save Image As gjør Chromes høyreklikkmeny om til en ekte bildekonverterer — ingen opplasting, ingen ekstra apper, ingen gjetting på om filen faktisk vil åpne seg.
+
+Høyreklikk på et hvilket som helst bilde på en hvilken som helst nettside, og velg formatet du trenger. Bildet blir dekodet og kodet på nytt direkte i nettleseren din, så du får en ekte, korrekt formatert fil — ikke bare de originale bytene med en ny filendelse.
+
+⚙️ Tilgjengelige utdataformater:
+- lagre som png – tapsfri kvalitet, beholder gjennomsiktighet, det riktige valget for logoer, grafikk og skjermbilder
+- lagre som jpg – mindre filstørrelse, ideelt for bilder, deling og e-postvedlegg
+- lagre som webp – moderne komprimering med utmerket visuell kvalitet til en mye mindre størrelse
+- lagre som avif – neste generasjons format for den minst mulige filen i dag
+- lagre som pdf – gjør om et hvilket som helst bilde til et utskriftsklart, delbart PDF-dokument
+- lagre original – laster ned filen akkurat som den er, uten konvertering, når originalformatet allerede er det du trenger
+
+⚡ Ett klikk, hver gang
+Velg favorittformatet og mappen din én gang i popup-vinduet. Etterpå viser høyreklikkmenyen en enkelt snarvei "Lagre som [format]" som lagrer umiddelbart — ingen dialogboks, ingen leting i undermenyer, ingen gjentakelse av samme valg bilde etter bilde.
+
+📐 Det ekte bildet, ikke miniatyren
+Moderne sider laster et bilde på flere forskjellige måter — srcset, picture-elementer, en liten forhåndsvisning lenket til et større original. Save Image As sjekker alle disse og lagrer versjonen med høyest oppløsning som faktisk er tilgjengelig, i stedet for den første miniatyren den finner.
+
+🔒 100% lokalt, privat fra grunnen av
+All konvertering skjer direkte på enheten din. Bilder blir aldri lastet opp, aldri sendt til noen server, og aldri sett av oss. Ingen kontoer, ingen registrering, ingen annonser, ingen sporing.
+
+🧩 Minimale tillatelser, tydelig forklart
+Save Image As leser bare bildet du høyreklikker på, på siden du bruker. Ingenting blir bedt om "i tilfelle" — hver tillatelse utvidelsen ber om er forklart på sin egen innstillingsside.
+
+Enten du konverterer webp til jpg, lagrer et bilde som png, gjør om et bilde til pdf, eller bare prøver å få tak i et bilde i full oppløsning i stedet for en uskarp miniatyr, gjør Save Image As det med ett høyreklikk. Gratis, privat og pålitelig.
+
+----------------------------------------------------------------------
+
+##### Polish (pl) #####
+
+[appName]
+Zapisz obraz jako - Save Image As
+
+[shortDesc]
+Zapisz obraz jako PNG, JPG, WebP, AVIF lub PDF — prawdziwa konwersja, najwyższa rozdzielczość, 100% lokalnie.
+
+[storeDesc]
+Save Image As zamienia menu prawego przycisku myszy w Chrome w prawdziwy konwerter obrazów — bez wysyłania plików, bez dodatkowych aplikacji, bez zastanawiania się, czy plik w ogóle się otworzy.
+
+Kliknij prawym przyciskiem myszy dowolny obraz na dowolnej stronie i wybierz potrzebny format. Obraz jest dekodowany i ponownie kodowany bezpośrednio w przeglądarce, więc otrzymujesz prawdziwy, poprawnie sformatowany plik — a nie tylko oryginalne bajty z nowym rozszerzeniem.
+
+⚙️ Dostępne formaty wyjściowe:
+- zapisz jako png – jakość bezstratna, zachowuje przezroczystość, właściwy wybór dla logo, grafik i zrzutów ekranu
+- zapisz jako jpg – mniejszy rozmiar pliku, idealny do zdjęć, udostępniania i załączników e-mail
+- zapisz jako webp – nowoczesna kompresja z doskonałą jakością wizualną przy znacznie mniejszym rozmiarze
+- zapisz jako avif – format nowej generacji dla najmniejszego możliwego pliku
+- zapisz jako pdf – zamienia dowolny obraz w gotowy do druku, łatwy do udostępnienia dokument PDF
+- zapisz oryginał – pobiera plik dokładnie taki, jaki jest, bez konwersji, gdy oryginalny format już jest tym, czego potrzebujesz
+
+⚡ Jedno kliknięcie, za każdym razem
+Wybierz ulubiony format i folder raz w wyskakującym okienku. Potem menu prawego przycisku myszy pokazuje jeden skrót "Zapisz jako [format]", który zapisuje natychmiast — bez okna dialogowego, bez szukania w podmenu, bez powtarzania tego samego wyboru przy każdym obrazie.
+
+📐 Prawdziwy obraz, nie miniatura
+Nowoczesne strony ładują obraz na wiele różnych sposobów — srcset, elementy picture, mała miniatura połączona z większym oryginałem. Save Image As sprawdza je wszystkie i zapisuje wersję o faktycznie dostępnej najwyższej rozdzielczości, zamiast pierwszej lepszej miniatury.
+
+🔒 100% lokalnie, prywatnie od podstaw
+Cała konwersja odbywa się bezpośrednio na Twoim urządzeniu. Obrazy nigdy nie są przesyłane, nigdy nie trafiają na żaden serwer i nigdy nie są przez nas widziane. Bez kont, bez rejestracji, bez reklam, bez śledzenia.
+
+🧩 Minimalne uprawnienia, jasno wyjaśnione
+Save Image As odczytuje wyłącznie obraz, na który klikasz prawym przyciskiem myszy, na stronie, z której korzystasz. Nic nie jest żądane "na wszelki wypadek" — każde uprawnienie, o które prosi rozszerzenie, jest wyjaśnione na jego własnej stronie ustawień.
+
+Niezależnie od tego, czy konwertujesz webp na jpg, zapisujesz obraz jako png, zamieniasz zdjęcie na pdf, czy po prostu chcesz pobrać obraz w pełnej rozdzielczości zamiast rozmytej miniatury, Save Image As robi to jednym kliknięciem prawym przyciskiem myszy. Bezpłatnie, prywatnie i niezawodnie.
+
+----------------------------------------------------------------------
+
+##### Portuguese (Brazil) (pt_BR) #####
+
+[appName]
+Salvar imagem como - Save Image As
+
+[shortDesc]
+Salve qualquer imagem como PNG, JPG, WebP, AVIF ou PDF — conversão real, resolução máxima, 100% local.
+
+[storeDesc]
+O Save Image As transforma o menu de clique direito do Chrome em um verdadeiro conversor de imagens — sem uploads, sem aplicativos extras, sem adivinhar se o arquivo vai abrir direito.
+
+Clique com o botão direito em qualquer imagem, em qualquer site, e escolha o formato que precisar. A imagem é decodificada e recodificada diretamente no seu navegador, então você recebe um arquivo genuíno e corretamente formatado — não apenas os bytes originais com uma extensão nova.
+
+⚙️ Formatos de saída disponíveis:
+- salvar como png – qualidade sem perdas, mantém a transparência, a escolha certa para logos, gráficos e capturas de tela
+- salvar como jpg – arquivo menor, ideal para fotos, compartilhamento e anexos de e-mail
+- salvar como webp – compressão moderna com excelente qualidade visual em um tamanho bem menor
+- salvar como avif – formato de última geração para o menor arquivo possível atualmente
+- salvar como pdf – transforma qualquer imagem em um documento PDF pronto para imprimir ou compartilhar
+- salvar original – baixa o arquivo exatamente como está, sem conversão, quando o formato original já é o que você precisa
+
+⚡ Um clique, sempre
+Escolha seu formato e pasta favoritos uma única vez no popup. Depois disso, o menu de clique direito mostra um atalho único "Salvar como [formato]" que salva instantaneamente — sem caixa de diálogo, sem procurar em submenus, sem repetir a mesma escolha imagem após imagem.
+
+📐 A imagem real, não a miniatura
+Páginas modernas carregam uma imagem de várias formas diferentes — srcset, elementos picture, uma prévia pequena vinculada a um original maior. O Save Image As verifica todas elas e salva a versão de maior resolução realmente disponível, em vez da primeira miniatura que aparecer.
+
+🔒 100% local, privado por padrão
+Toda a conversão acontece diretamente no seu dispositivo. As imagens nunca são enviadas, nunca vão para nenhum servidor e nunca são vistas por nós. Sem contas, sem cadastro, sem anúncios, sem rastreamento.
+
+🧩 Permissões mínimas, explicadas com clareza
+O Save Image As só lê a imagem que você clicou com o botão direito, na página que você está usando. Nada é pedido "só por precaução" — cada permissão que a extensão solicita é explicada na própria página de configurações.
+
+Seja convertendo webp para jpg, salvando uma imagem como png, transformando uma foto em pdf, ou só tentando baixar uma imagem de uma página na resolução completa em vez de uma miniatura borrada, o Save Image As faz tudo em um clique direito. Grátis, privado e confiável.
+
+----------------------------------------------------------------------
+
+##### Portuguese (Portugal) (pt_PT) #####
+
+[appName]
+Guardar imagem como - Save Image As
+
+[shortDesc]
+Guarde qualquer imagem como PNG, JPG, WebP, AVIF ou PDF — conversão real, resolução máxima, 100% local.
+
+[storeDesc]
+O Save Image As transforma o menu de contexto do Chrome num verdadeiro conversor de imagens — sem envios para servidores, sem aplicações extra, sem adivinhar se o ficheiro vai abrir correctamente.
+
+Clique com o botão direito em qualquer imagem, em qualquer sítio, e escolha o formato de que precisa. A imagem é descodificada e recodificada directamente no seu navegador, pelo que obtém um ficheiro genuíno e correctamente formatado — não apenas os bytes originais com uma nova extensão.
+
+⚙️ Formatos de saída disponíveis:
+- guardar como png – qualidade sem perdas, preserva a transparência, a escolha certa para logótipos, gráficos e capturas de ecrã
+- guardar como jpg – ficheiro mais pequeno, ideal para fotografias, partilha e anexos de e-mail
+- guardar como webp – compressão moderna com excelente qualidade visual e um tamanho bem menor
+- guardar como avif – formato de última geração para o ficheiro mais pequeno possível actualmente
+- guardar como pdf – transforma qualquer imagem num documento PDF pronto a imprimir ou partilhar
+- guardar original – transfere o ficheiro exactamente como está, sem conversão, quando o formato original já é o que precisa
+
+⚡ Um clique, sempre
+Escolha o seu formato e pasta preferidos uma única vez no popup. Depois disso, o menu de contexto mostra um atalho único "Guardar como [formato]" que guarda instantaneamente — sem caixa de diálogo, sem procurar em submenus, sem repetir a mesma escolha imagem após imagem.
+
+📐 A imagem real, não a miniatura
+As páginas modernas carregam uma imagem de várias formas diferentes — srcset, elementos picture, uma pré-visualização pequena associada a um original maior. O Save Image As verifica todas e guarda a versão de maior resolução realmente disponível, em vez da primeira miniatura que aparecer.
+
+🔒 100% local, privado por definição
+Toda a conversão acontece directamente no seu dispositivo. As imagens nunca são enviadas, nunca vão para nenhum servidor e nunca são vistas por nós. Sem contas, sem registo, sem anúncios, sem monitorização.
+
+🧩 Permissões mínimas, explicadas com clareza
+O Save Image As só lê a imagem sobre a qual clicou com o botão direito, na página que está a utilizar. Nada é pedido "por precaução" — cada permissão solicitada pela extensão é explicada na sua própria página de definições.
+
+Quer esteja a converter webp para jpg, a guardar uma imagem como png, a transformar uma fotografia em pdf, ou apenas a tentar obter uma imagem de uma página na resolução total em vez de uma miniatura desfocada, o Save Image As faz tudo com um único clique direito. Grátis, privado e fiável.
+
+----------------------------------------------------------------------
+
+##### Romanian (ro) #####
+
+[appName]
+Salvează imaginea ca - Save Image As
+
+[shortDesc]
+Salvează o imagine ca PNG, JPG, WebP, AVIF sau PDF — conversie reală, rezoluție maximă, 100% local.
+
+[storeDesc]
+Save Image As transformă meniul clic dreapta din Chrome într-un adevărat convertor de imagini — fără încărcări, fără aplicații suplimentare, fără a ghici dacă fișierul se va deschide vreodată.
+
+Dă clic dreapta pe orice imagine de pe orice site și alege formatul de care ai nevoie. Imaginea este decodată și recodată direct în browser, așa că obții un fișier autentic, formatat corect — nu doar biții originali cu o extensie nouă.
+
+⚙️ Formate de ieșire disponibile:
+- salvează ca png – calitate fără pierderi, păstrează transparența, alegerea potrivită pentru logo-uri, grafică și capturi de ecran
+- salvează ca jpg – fișier mai mic, ideal pentru fotografii, distribuire și atașamente de e-mail
+- salvează ca webp – compresie modernă cu o calitate vizuală excelentă la o dimensiune mult mai mică
+- salvează ca avif – format de nouă generație pentru cel mai mic fișier posibil astăzi
+- salvează ca pdf – transformă orice imagine într-un document PDF gata de tipărit și distribuit
+- salvează originalul – descarcă fișierul exact așa cum este, fără conversie, atunci când formatul original este deja cel de care ai nevoie
+
+⚡ Un clic, de fiecare dată
+Alege formatul și folderul preferate o singură dată în popup. După aceea, meniul clic dreapta arată o singură comandă rapidă "Salvează ca [format]" care salvează instantaneu — fără fereastră de dialog, fără căutare în submeniuri, fără repetarea aceleiași alegeri imagine după imagine.
+
+📐 Imaginea reală, nu miniatura
+Paginile moderne încarcă o imagine în mai multe moduri diferite — srcset, elemente picture, o previzualizare mică legată de un original mai mare. Save Image As le verifică pe toate și salvează versiunea cu cea mai mare rezoluție disponibilă efectiv, în loc de prima miniatură întâlnită.
+
+🔒 100% local, privat prin design
+Întreaga conversie are loc direct pe dispozitivul tău. Imaginile nu sunt niciodată încărcate, niciodată trimise către vreun server și niciodată văzute de noi. Fără conturi, fără înregistrare, fără reclame, fără urmărire.
+
+🧩 Permisiuni minime, explicate clar
+Save Image As citește doar imaginea pe care dai clic dreapta, pe pagina pe care o folosești. Nimic nu este cerut "de siguranță" — fiecare permisiune solicitată de extensie este explicată pe propria pagină de setări.
+
+Fie că convertești webp în jpg, salvezi o imagine ca png, transformi o fotografie în pdf, sau încerci pur și simplu să obții o imagine la rezoluție completă în loc de o miniatură neclară, Save Image As o face dintr-un singur clic dreapta. Gratuit, privat și de încredere.
+
+----------------------------------------------------------------------
+
+##### Russian (ru) #####
+
+[appName]
+Сохранить изображение как - Save Image As
+
+[shortDesc]
+Сохраняйте изображение как PNG, JPG, WebP, AVIF или PDF — реальное преобразование, максимальное разрешение, 100% локально.
+
+[storeDesc]
+Save Image As превращает контекстное меню Chrome в настоящий конвертер изображений — никаких загрузок на сервер, никаких дополнительных приложений, никаких догадок, откроется ли файл вообще.
+
+Щёлкните правой кнопкой мыши по любому изображению на любом сайте и выберите нужный формат. Изображение декодируется и перекодируется прямо в вашем браузере, поэтому вы получаете настоящий, корректно отформатированный файл — а не просто исходные байты с новым расширением.
+
+⚙️ Доступные форматы вывода:
+- сохранить как png – качество без потерь, сохраняет прозрачность, правильный выбор для логотипов, графики и скриншотов
+- сохранить как jpg – меньший размер файла, идеально для фотографий, отправки и вложений в письмах
+- сохранить как webp – современное сжатие с отличным визуальным качеством при значительно меньшем размере
+- сохранить как avif – формат нового поколения для минимально возможного файла на сегодня
+- сохранить как pdf – превращает любое изображение в готовый к печати PDF-документ, которым легко поделиться
+- сохранить оригинал – скачивает файл точно таким, какой он есть, без преобразования, когда исходный формат уже тот, что нужен
+
+⚡ Один клик, каждый раз
+Выберите любимый формат и папку один раз во всплывающем окне. После этого в контекстном меню появляется один ярлык «Сохранить как [формат]», который сохраняет мгновенно — без диалогового окна, без поиска в подменю, без повторения одного и того же выбора для каждого изображения.
+
+📐 Настоящее изображение, а не миниатюра
+Современные страницы загружают изображение несколькими разными способами — srcset, элементы picture, маленькое превью, связанное с более крупным оригиналом. Save Image As проверяет их все и сохраняет версию с реально доступным максимальным разрешением, а не первую попавшуюся миниатюру.
+
+🔒 100% локально, приватно по умолчанию
+Всё преобразование происходит прямо на вашем устройстве. Изображения никогда не загружаются на сервер, никогда никуда не отправляются и никогда не видны нам. Никаких аккаунтов, никакой регистрации, никакой рекламы, никакого отслеживания.
+
+🧩 Минимальные разрешения, чётко объяснённые
+Save Image As считывает только то изображение, по которому вы щёлкнули правой кнопкой мыши, на той странице, которую вы используете. Ничего не запрашивается «на всякий случай» — каждое разрешение, которое запрашивает расширение, объясняется на его собственной странице настроек.
+
+Конвертируете ли вы webp в jpg, сохраняете изображение как png, превращаете фото в pdf, или просто пытаетесь получить изображение в полном разрешении вместо размытой миниатюры, Save Image As делает это одним щелчком правой кнопки мыши. Бесплатно, приватно и надёжно.
+
+----------------------------------------------------------------------
+
+##### Slovak (sk) #####
+
+[appName]
+Uložiť obrázok ako - Save Image As
+
+[shortDesc]
+Ulož obrázok ako PNG, JPG, WebP, AVIF alebo PDF — skutočná konverzia, najvyššie rozlíšenie, 100% lokálne.
+
+[storeDesc]
+Save Image As mení kontextovú ponuku Chromu na skutočný konvertor obrázkov — žiadne nahrávanie, žiadne ďalšie aplikácie, žiadne hádanie, či sa súbor vôbec otvorí.
+
+Klikni pravým tlačidlom na akýkoľvek obrázok na akejkoľvek stránke a vyber požadovaný formát. Obrázok sa dekóduje a znova zakóduje priamo v prehliadači, takže dostaneš skutočný, správne formátovaný súbor — nie len pôvodné bajty s novou príponou.
+
+⚙️ Dostupné výstupné formáty:
+- uložiť ako png – bezstratová kvalita, zachováva priehľadnosť, správna voľba pre logá, grafiku a snímky obrazovky
+- uložiť ako jpg – menšia veľkosť súboru, ideálne pre fotky, zdieľanie a e-mailové prílohy
+- uložiť ako webp – moderná kompresia s vynikajúcou vizuálnou kvalitou pri oveľa menšej veľkosti
+- uložiť ako avif – formát novej generácie pre najmenší možný súbor
+- uložiť ako pdf – zmení akýkoľvek obrázok na tlačový, zdieľateľný PDF dokument
+- uložiť originál – stiahne súbor presne tak, ako je, bez konverzie, keď je pôvodný formát už ten, ktorý potrebuješ
+
+⚡ Jedno kliknutie, zakaždým
+Vyber si obľúbený formát a priečinok raz vo vyskakovacom okne. Potom kontextová ponuka zobrazí jedinú skratku "Uložiť ako [formát]", ktorá uloží okamžite — žiadne dialógové okno, žiadne hľadanie v podponukách, žiadne opakovanie rovnakej voľby pri každom obrázku.
+
+📐 Skutočný obrázok, nie náhľad
+Moderné stránky načítavajú obrázok viacerými rôznymi spôsobmi — srcset, prvky picture, malý náhľad prepojený s väčším originálom. Save Image As ich všetky skontroluje a uloží verziu so skutočne dostupným najvyšším rozlíšením, namiesto prvého náhľadu, na ktorý narazí.
+
+🔒 100% lokálne, súkromné od základu
+Celá konverzia prebieha priamo na tvojom zariadení. Obrázky sa nikdy nenahrávajú, nikdy neposielajú na žiadny server a nikdy ich nevidíme. Žiadne účty, žiadna registrácia, žiadne reklamy, žiadne sledovanie.
+
+🧩 Minimálne oprávnenia, jasne vysvetlené
+Save Image As číta iba obrázok, na ktorý klikneš pravým tlačidlom, na stránke, ktorú používaš. Nič sa nežiada "pre istotu" — každé oprávnenie, o ktoré rozšírenie žiada, je vysvetlené na jeho vlastnej stránke nastavení.
+
+Či už prevádzaš webp na jpg, ukladáš obrázok ako png, meníš fotku na pdf, alebo sa len snažíš stiahnuť obrázok v plnom rozlíšení namiesto rozmazaného náhľadu, Save Image As to zvládne jedným kliknutím pravým tlačidlom. Zadarmo, súkromne a spoľahlivo.
+
+----------------------------------------------------------------------
+
+##### Slovenian (sl) #####
+
+[appName]
+Shrani sliko kot - Save Image As
+
+[shortDesc]
+Shranite sliko kot PNG, JPG, WebP, AVIF ali PDF — prava pretvorba, najvišja ločljivost, 100% lokalno.
+
+[storeDesc]
+Save Image As spremeni Chromov kontekstni meni v pravi pretvornik slik — brez nalaganja, brez dodatnih aplikacij, brez ugibanja, ali se bo datoteka sploh odprla.
+
+Z desnim klikom kliknite katero koli sliko na kateri koli spletni strani in izberite želeno obliko zapisa. Slika se dekodira in znova kodira neposredno v vašem brskalniku, tako da dobite pristno, pravilno oblikovano datoteko — ne le izvirnih bajtov z novo končnico.
+
+⚙️ Razpoložljive izhodne oblike zapisa:
+- shrani kot png – brezizgubna kakovost, ohrani prosojnost, prava izbira za logotipe, grafiko in posnetke zaslona
+- shrani kot jpg – manjša velikost datoteke, idealno za fotografije, deljenje in e-poštne priloge
+- shrani kot webp – sodobno stiskanje z odlično vizualno kakovostjo pri veliko manjši velikosti
+- shrani kot avif – oblika zapisa nove generacije za najmanjšo možno datoteko danes
+- shrani kot pdf – katero koli sliko spremeni v za tisk pripravljen, deljiv dokument PDF
+- shrani izvirnik – prenese datoteko točno takšno, kot je, brez pretvorbe, ko je izvirna oblika zapisa že tista, ki jo potrebujete
+
+⚡ En klik, vsakič
+Priljubljeno obliko zapisa in mapo izberite enkrat v pojavnem oknu. Nato kontekstni meni prikaže eno samo bližnjico "Shrani kot [oblika]", ki shrani takoj — brez pogovornega okna, brez brskanja po podmenijih, brez ponavljanja iste izbire za vsako sliko posebej.
+
+📐 Prava slika, ne sličica
+Sodobne strani naložijo sliko na več različnih načinov — srcset, elementi picture, majhen predogled, povezan z večjim izvirnikom. Save Image As preveri vse te vire in shrani različico z dejansko najvišjo razpoložljivo ločljivostjo, namesto prve sličice, na katero naleti.
+
+🔒 100% lokalno, zasebno po zasnovi
+Celotna pretvorba poteka neposredno v vaši napravi. Slike se nikoli ne naložijo, nikoli ne pošljejo na strežnik in jih nikoli ne vidimo. Brez računov, brez prijave, brez oglasov, brez sledenja.
+
+🧩 Minimalna dovoljenja, jasno pojasnjena
+Save Image As prebere le sliko, na katero kliknete z desno tipko miške, na strani, ki jo uporabljate. Nič se ne zahteva "za vsak primer" — vsako dovoljenje, ki ga razširitev zahteva, je pojasnjeno na njeni lastni strani z nastavitvami.
+
+Ne glede na to, ali pretvarjate webp v jpg, shranjujete sliko kot png, spreminjate fotografijo v pdf ali preprosto želite sliko v polni ločljivosti namesto zamegljene sličice, Save Image As to naredi z enim desnim klikom. Brezplačno, zasebno in zanesljivo.
+
+----------------------------------------------------------------------
+
+##### Serbian (sr) #####
+
+[appName]
+Сачувај слику као - Save Image As
+
+[shortDesc]
+Сачувајте слику као PNG, JPG, WebP, AVIF или PDF — права конверзија, највећа резолуција, 100% локално.
+
+[storeDesc]
+Save Image As претвара мени десног клика у Chrome-у у прави конвертор слика — без слања на сервер, без додатних апликација, без нагађања да ли ће се фајл уопште отворити.
+
+Кликните десним тастером миша на било коју слику на било ком сајту и изаберите формат који вам је потребан. Слика се декодира и поново кодира directno у вашем прегледачу, тако да добијате прави, исправно форматиран фајл — не само оригиналне бајтове са новом екстензијом.
+
+⚙️ Доступни излазни формати:
+- сачувај као png – квалитет без губитака, чува транспарентност, прави избор за логотипе, графику и снимке екрана
+- сачувај као jpg – мања величина фајла, идеално за фотографије, дељење и имејл прилоге
+- сачувај као webp – модерна компресија са одличним визуелним квалитетом уз много мању величину
+- сачувај као avif – формат нове генерације за најмањи могући фајл данас
+- сачувај као pdf – претвара било коју слику у PDF документ спреман за штампу и дељење
+- сачувај оригинал – преузима фајл тачно такав какав јесте, без конверзије, када је оригинални формат већ онај који вам треба
+
+⚡ Један клик, сваки пут
+Изаберите омиљени формат и фасциклу једном у искачућем прозору. Након тога, мени десног клика приказује једну пречицу "Сачувај као [формат]" која чува тренутно — без дијалога, без претраживања подменија, без понављања истог избора за сваку слику.
+
+📐 Права слика, не сличица
+Модерне странице учитавају слику на неколико различитих начина — srcset, елементи picture, мали приказ повезан са већим оригиналом. Save Image As проверава све њих и чува верзију са стварно доступном највећом резолуцијом, уместо прве сличице на коју наиђе.
+
+🔒 100% локално, приватно по дизајну
+Цела конверзија се одвија directno на вашем уређају. Слике се никада не шаљу на сервер, никада никуда не преносе и никада их ми не видимо. Без налога, без регистрације, без реклама, без праћења.
+
+🧩 Минималне дозволе, јасно објашњене
+Save Image As чита само слику на коју кликнете десним тастером миша, на страници коју користите. Ништа се не тражи "за сваки случај" — свака дозвола коју екстензија тражи објашњена је на сопственој страници подешавања.
+
+Без обзира да ли претварате webp у jpg, чувате слику као png, претварате фотографију у pdf, или само покушавате да добијете слику у пуној резолуцији уместо мутне сличице, Save Image As то ради једним десним кликом. Бесплатно, приватно и поуздано.
+
+----------------------------------------------------------------------
+
+##### Swedish (sv) #####
+
+[appName]
+Spara bild som - Save Image As
+
+[shortDesc]
+Spara valfri bild som PNG, JPG, WebP, AVIF eller PDF — verklig konvertering, högsta upplösning, 100% lokalt.
+
+[storeDesc]
+Save Image As gör Chromes högerklicksmeny till en riktig bildkonverterare — inga uppladdningar, inga extra appar, inget gissande om filen faktiskt kommer att gå att öppna.
+
+Högerklicka på valfri bild på valfri webbplats och välj det format du behöver. Bilden avkodas och kodas om direkt i din webbläsare, så du får en äkta, korrekt formaterad fil — inte bara originalbytes med en ny filändelse.
+
+⚙️ Tillgängliga utdataformat:
+- spara som png – förlustfri kvalitet, behåller transparens, rätt val för logotyper, grafik och skärmdumpar
+- spara som jpg – mindre filstorlek, perfekt för foton, delning och e-postbilagor
+- spara som webp – modern komprimering med utmärkt bildkvalitet till en mycket mindre storlek
+- spara som avif – nästa generations format för den minsta möjliga filen idag
+- spara som pdf – gör om vilken bild som helst till ett utskriftsklart, delbart PDF-dokument
+- spara original – laddar ner filen exakt som den är, utan konvertering, när originalformatet redan är det du behöver
+
+⚡ Ett klick, varje gång
+Välj ditt favoritformat och mapp en gång i popup-fönstret. Därefter visar högerklicksmenyn en enda genväg "Spara som [format]" som sparar direkt — ingen dialogruta, inget letande i undermenyer, ingen upprepning av samma val bild efter bild.
+
+📐 Den riktiga bilden, inte miniatyren
+Moderna sidor laddar en bild på flera olika sätt — srcset, picture-element, en liten förhandsvisning länkad till ett större original. Save Image As kontrollerar alla dessa och sparar den version med högsta upplösning som faktiskt finns tillgänglig, istället för den första miniatyren som råkar dyka upp.
+
+🔒 100% lokalt, privat från grunden
+All konvertering sker direkt på din enhet. Bilder laddas aldrig upp, skickas aldrig till någon server och ses aldrig av oss. Inga konton, ingen registrering, inga annonser, ingen spårning.
+
+🧩 Minimala behörigheter, tydligt förklarade
+Save Image As läser bara den bild du högerklickar på, på den sida du använder. Inget begärs "för säkerhets skull" — varje behörighet tillägget frågar efter förklaras på sin egen inställningssida.
+
+Oavsett om du konverterar webp till jpg, sparar en bild som png, gör om ett foto till pdf, eller bara vill ha en bild i full upplösning istället för en suddig miniatyr, gör Save Image As det med ett högerklick. Gratis, privat och pålitligt.
+
+----------------------------------------------------------------------
+
+##### Swahili (sw) #####
+
+[appName]
+Hifadhi Picha Kama - Save Image As
+
+[shortDesc]
+Hifadhi picha kama PNG, JPG, WebP, AVIF, au PDF — ubadilishaji halisi, ubora wa juu zaidi, 100% wa ndani.
+
+[storeDesc]
+Save Image As inabadilisha menyu ya kubofya kulia ya Chrome kuwa kibadilishaji halisi cha picha — hakuna kupakia kwenye seva, hakuna programu za ziada, hakuna kubahatisha kama faili itafunguka kabisa.
+
+Bofya kulia kwenye picha yoyote kwenye tovuti yoyote na uchague fomati unayohitaji. Picha inasimbuliwa na kusimbwa upya moja kwa moja kwenye kivinjari chako, hivyo unapata faili halisi, iliyoumbwa vizuri — si tu baiti za asili zenye kiambishi kipya.
+
+⚙️ Fomati za matokeo zinazopatikana:
+- hifadhi kama png – ubora usio na hasara, huhifadhi uwazi, chaguo sahihi kwa nembo, michoro, na picha za skrini
+- hifadhi kama jpg – ukubwa mdogo wa faili, bora kwa picha, kushiriki, na viambatisho vya barua pepe
+- hifadhi kama webp – ukandamizaji wa kisasa wenye ubora bora wa kuona kwa ukubwa mdogo zaidi
+- hifadhi kama avif – fomati ya kizazi kipya kwa faili ndogo zaidi inayowezekana leo
+- hifadhi kama pdf – hubadilisha picha yoyote kuwa hati ya PDF tayari kuchapishwa na kushirikiwa
+- hifadhi ya asili – hupakua faili kama ilivyo, bila ubadilishaji, wakati fomati ya asili tayari ndiyo unayohitaji
+
+⚡ Bofyo moja, kila wakati
+Chagua fomati na folda unayopenda mara moja kwenye popup. Baada ya hapo, menyu ya kubofya kulia inaonyesha njia ya mkato moja "Hifadhi kama [fomati]" ambayo huhifadhi papo hapo — hakuna dirisha la mazungumzo, hakuna kutafuta kwenye menyu ndogo, hakuna kurudia chaguo lile lile kwa kila picha.
+
+📐 Picha halisi, si picha ndogo
+Kurasa za kisasa hupakia picha kwa njia kadhaa tofauti — srcset, vipengele vya picture, muhtasari mdogo uliounganishwa na asili kubwa zaidi. Save Image As huangalia zote hizo na kuhifadhi toleo lenye ubora wa juu zaidi unaopatikana kihalisi, badala ya picha ndogo ya kwanza inayokutana nayo.
+
+🔒 100% wa ndani, wa faragha kwa muundo
+Ubadilishaji wote hufanyika moja kwa moja kwenye kifaa chako. Picha kamwe hazipakiwi, kamwe hazitumwi kwenye seva yoyote, na kamwe hazionekani na sisi. Hakuna akaunti, hakuna usajili, hakuna matangazo, hakuna ufuatiliaji.
+
+🧩 Ruhusa ndogo zaidi, zilizoelezwa wazi
+Save Image As husoma tu picha unayobofya kulia, kwenye ukurasa unaotumia. Hakuna kinachoombwa "kwa tahadhari" — kila ruhusa inayoombwa na kiendelezi inaelezwa kwenye ukurasa wake wa mipangilio.
+
+Iwe unabadilisha webp kuwa jpg, kuhifadhi picha kama png, kubadilisha picha kuwa pdf, au unajaribu tu kupata picha kwa ubora kamili badala ya picha ndogo isiyo wazi, Save Image As hufanya hivyo kwa bofyo moja la kulia. Bure, faragha, na ya kuaminika.
+
+----------------------------------------------------------------------
+
+##### Tamil (ta) #####
+
+[appName]
+படத்தை இப்படிச் சேமி - Save Image As
+
+[shortDesc]
+படத்தை PNG, JPG, WebP, AVIF அல்லது PDF ஆக சேமிக்கவும் — உண்மையான மாற்றம், அதிக தெளிவுத்திறன், 100% லோக்கல்.
+
+[storeDesc]
+Save Image As, Chrome இன் வலது கிளிக் மெனுவை ஒரு உண்மையான பட மாற்றியாக மாற்றுகிறது — பதிவேற்றம் இல்லை, கூடுதல் ஆப்ஸ் இல்லை, கோப்பு உண்மையில் திறக்குமா என்று யூகிக்கத் தேவையில்லை.
+
+எந்த வலைத்தளத்திலும் உள்ள எந்த படத்திலும் வலது கிளிக் செய்து, உங்களுக்குத் தேவையான வடிவமைப்பைத் தேர்ந்தெடுக்கவும். படம் நேரடியாக உங்கள் உலாவியில் டிகோட் செய்யப்பட்டு மீண்டும் என்கோட் செய்யப்படுகிறது, எனவே நீங்கள் ஒரு உண்மையான, சரியாக வடிவமைக்கப்பட்ட கோப்பைப் பெறுகிறீர்கள் — புதிய நீட்டிப்புடன் கூடிய அசல் பைட்டுகள் மட்டுமல்ல.
+
+⚙️ கிடைக்கும் வெளியீட்டு வடிவங்கள்:
+- png ஆக சேமி – இழப்பில்லா தரம், வெளிப்படைத்தன்மையைப் பாதுகாக்கிறது, லோகோக்கள், கிராஃபிக்ஸ் மற்றும் ஸ்கிரீன்ஷாட்களுக்கு சரியான தேர்வு
+- jpg ஆக சேமி – சிறிய கோப்பு அளவு, புகைப்படங்கள், பகிர்வு மற்றும் மின்னஞ்சல் இணைப்புகளுக்கு ஏற்றது
+- webp ஆக சேமி – மிகவும் சிறிய அளவில் சிறந்த காட்சித் தரத்துடன் நவீன அமுக்கம்
+- avif ஆக சேமி – இன்று சாத்தியமான மிகச்சிறிய கோப்புக்கான புதிய தலைமுறை வடிவம்
+- pdf ஆக சேமி – எந்த படத்தையும் அச்சிடத் தயாரான, பகிரக்கூடிய PDF ஆவணமாக மாற்றுகிறது
+- மூலத்தை சேமி – அசல் வடிவமைப்பு ஏற்கனவே உங்களுக்குத் தேவையானதாக இருக்கும்போது, எந்த மாற்றமும் இல்லாமல் கோப்பை அப்படியே பதிவிறக்குகிறது
+
+⚡ ஒரு கிளிக், ஒவ்வொரு முறையும்
+பாப்அப்பில் உங்களுக்குப் பிடித்த வடிவமைப்பு மற்றும் கோப்புறையை ஒருமுறை தேர்ந்தெடுக்கவும். அதன் பிறகு, வலது கிளிக் மெனு "[வடிவமைப்பு] ஆக சேமி" என்ற ஒரே குறுக்குவழியைக் காட்டும், அது உடனடியாக சேமிக்கும் — உரையாடல் பெட்டி இல்லை, சப்மெனுக்களில் தேட வேண்டியதில்லை, ஒவ்வொரு படத்திற்கும் அதே தேர்வை மீண்டும் செய்ய வேண்டியதில்லை.
+
+📐 உண்மையான படம், சிறு படம் அல்ல
+நவீன பக்கங்கள் ஒரு படத்தை பல்வேறு வழிகளில் ஏற்றுகின்றன — srcset, picture உறுப்புகள், பெரிய மூலத்துடன் இணைக்கப்பட்ட ஒரு சிறிய முன்னோட்டம். Save Image As இவை அனைத்தையும் சரிபார்த்து, முதலில் கிடைக்கும் சிறு படத்திற்குப் பதிலாக, உண்மையில் கிடைக்கும் அதிக தெளிவுத்திறன் கொண்ட பதிப்பைச் சேமிக்கிறது.
+
+🔒 100% லோக்கல், வடிவமைப்பிலிருந்தே தனியுரிமை
+அனைத்து மாற்றமும் நேரடியாக உங்கள் சாதனத்தில் நடைபெறுகிறது. படங்கள் ஒருபோதும் பதிவேற்றப்படுவதில்லை, எந்த சர்வருக்கும் அனுப்பப்படுவதில்லை, எங்களால் ஒருபோதும் பார்க்கப்படுவதில்லை. கணக்குகள் இல்லை, பதிவு இல்லை, விளம்பரங்கள் இல்லை, கண்காணிப்பு இல்லை.
+
+🧩 குறைந்தபட்ச அனுமதிகள், தெளிவாக விளக்கப்பட்டவை
+நீங்கள் பயன்படுத்தும் பக்கத்தில், நீங்கள் வலது கிளிக் செய்யும் படத்தை மட்டுமே Save Image As படிக்கிறது. "முன்னெச்சரிக்கையாக" எதுவும் கேட்கப்படுவதில்லை — நீட்டிப்பு கேட்கும் ஒவ்வொரு அனுமதியும் அதன் சொந்த அமைப்புகள் பக்கத்தில் விளக்கப்பட்டுள்ளது.
+
+நீங்கள் webp ஐ jpg ஆக மாற்றினாலும், ஒரு படத்தை png ஆக சேமித்தாலும், ஒரு புகைப்படத்தை pdf ஆக மாற்றினாலும், அல்லது மங்கலான சிறு படத்திற்குப் பதிலாக முழு தெளிவுத்திறன் கொண்ட படத்தைப் பெற முயற்சித்தாலும், Save Image As அதை ஒரே ஒரு வலது கிளிக்கில் செய்கிறது. இலவசம், தனியுரிமை மற்றும் நம்பகமானது.
+
+----------------------------------------------------------------------
+
+##### Telugu (te) #####
+
+[appName]
+చిత్రాన్ని ఇలా సేవ్ చేయండి - Save Image As
+
+[shortDesc]
+చిత్రాన్ని PNG, JPG, WebP, AVIF లేదా PDF గా సేవ్ చేయండి — నిజమైన మార్పిడి, అత్యధిక రిజల్యూషన్, 100% లోకల్.
+
+[storeDesc]
+Save Image As, Chrome యొక్క రైట్-క్లిక్ మెనూను నిజమైన ఇమేజ్ కన్వర్టర్‌గా మారుస్తుంది — అప్‌లోడ్ లేదు, అదనపు యాప్‌లు లేవు, ఫైల్ నిజంగా తెరుచుకుంటుందా అని ఊహించాల్సిన అవసరం లేదు.
+
+ఏదైనా వెబ్‌సైట్‌లోని ఏదైనా చిత్రంపై కుడి-క్లిక్ చేసి, మీకు అవసరమైన ఫార్మాట్‌ను ఎంచుకోండి. చిత్రం నేరుగా మీ బ్రౌజర్‌లోనే డీకోడ్ చేయబడి, మళ్లీ ఎన్‌కోడ్ చేయబడుతుంది, కాబట్టి మీరు నిజమైన, సరిగ్గా ఫార్మాట్ చేయబడిన ఫైల్‌ను పొందుతారు — కొత్త పొడిగింపుతో ఉన్న అసలు బైట్‌లు మాత్రమే కాదు.
+
+⚙️ అందుబాటులో ఉన్న అవుట్‌పుట్ ఫార్మాట్‌లు:
+- png గా సేవ్ చేయండి – నష్టం లేని నాణ్యత, పారదర్శకతను కాపాడుతుంది, లోగోలు, గ్రాఫిక్స్ మరియు స్క్రీన్‌షాట్‌లకు సరైన ఎంపిక
+- jpg గా సేవ్ చేయండి – చిన్న ఫైల్ పరిమాణం, ఫోటోలు, షేరింగ్ మరియు ఇమెయిల్ జోడింపులకు అనువైనది
+- webp గా సేవ్ చేయండి – చాలా చిన్న పరిమాణంలో అద్భుతమైన దృశ్య నాణ్యతతో ఆధునిక కంప్రెషన్
+- avif గా సేవ్ చేయండి – ఈరోజు సాధ్యమయ్యే అతి చిన్న ఫైల్ కోసం కొత్త తరం ఫార్మాట్
+- pdf గా సేవ్ చేయండి – ఏదైనా చిత్రాన్ని ప్రింట్-సిద్ధమైన, షేర్ చేయదగిన PDF పత్రంగా మారుస్తుంది
+- ఒరిజినల్‌ను సేవ్ చేయండి – అసలు ఫార్మాట్ ఇప్పటికే మీకు అవసరమైనదే అయినప్పుడు, ఎలాంటి మార్పిడి లేకుండా ఫైల్‌ను ఉన్నది ఉన్నట్లుగా డౌన్‌లోడ్ చేస్తుంది
+
+⚡ ప్రతిసారీ ఒకే క్లిక్
+పాప్‌అప్‌లో మీకు ఇష్టమైన ఫార్మాట్ మరియు ఫోల్డర్‌ను ఒకసారి ఎంచుకోండి. ఆ తర్వాత, రైట్-క్లిక్ మెనూ తక్షణమే సేవ్ చేసే ఒకే ఒక్క షార్ట్‌కట్ "[ఫార్మాట్]గా సేవ్ చేయండి" చూపిస్తుంది — డైలాగ్ బాక్స్ లేదు, సబ్‌మెనూల్లో వెతకాల్సిన అవసరం లేదు, ప్రతి చిత్రానికి అదే ఎంపికను పునరావృతం చేయాల్సిన అవసరం లేదు.
+
+📐 నిజమైన చిత్రం, థంబ్‌నెయిల్ కాదు
+ఆధునిక పేజీలు ఒక చిత్రాన్ని అనేక విభిన్న మార్గాల్లో లోడ్ చేస్తాయి — srcset, picture ఎలిమెంట్‌లు, పెద్ద ఒరిజినల్‌కు లింక్ చేయబడిన చిన్న ప్రివ్యూ. Save Image As వీటన్నింటినీ తనిఖీ చేసి, మొదట కనిపించే థంబ్‌నెయిల్‌కు బదులుగా నిజంగా అందుబాటులో ఉన్న అత్యధిక రిజల్యూషన్ వెర్షన్‌ను సేవ్ చేస్తుంది.
+
+🔒 100% లోకల్, రూపకల్పన నుండే ప్రైవేట్
+మొత్తం మార్పిడి నేరుగా మీ పరికరంలోనే జరుగుతుంది. చిత్రాలు ఎప్పుడూ అప్‌లోడ్ చేయబడవు, ఎప్పుడూ ఏ సర్వర్‌కూ పంపబడవు, మేము వాటిని ఎప్పుడూ చూడము. ఖాతాలు లేవు, సైన్-అప్ లేదు, ప్రకటనలు లేవు, ట్రాకింగ్ లేదు.
+
+🧩 కనీస అనుమతులు, స్పష్టంగా వివరించబడ్డాయి
+మీరు ఉపయోగిస్తున్న పేజీలో మీరు కుడి-క్లిక్ చేసిన చిత్రాన్ని మాత్రమే Save Image As చదువుతుంది. "జాగ్రత్త కోసం" ఏదీ అభ్యర్థించబడదు — పొడిగింపు అభ్యర్థించే ప్రతి అనుమతి దాని స్వంత సెట్టింగ్‌ల పేజీలో వివరించబడింది.
+
+మీరు webp ను jpg గా మార్చినా, ఒక చిత్రాన్ని png గా సేవ్ చేసినా, ఒక ఫోటోను pdf గా మార్చినా, లేదా అస్పష్టమైన థంబ్‌నెయిల్‌కు బదులుగా పూర్తి రిజల్యూషన్‌లో చిత్రాన్ని పొందడానికి ప్రయత్నించినా, Save Image As దీన్ని ఒకే కుడి-క్లిక్‌తో చేస్తుంది. ఉచితం, ప్రైవేట్ మరియు నమ్మదగినది.
+
+----------------------------------------------------------------------
+
+##### Thai (th) #####
+
+[appName]
+บันทึกรูปภาพเป็น - Save Image As
+
+[shortDesc]
+บันทึกรูปภาพเป็น PNG, JPG, WebP, AVIF หรือ PDF — แปลงไฟล์จริง ความละเอียดสูงสุด ในเครื่อง 100%
+
+[storeDesc]
+Save Image As เปลี่ยนเมนูคลิกขวาของ Chrome ให้เป็นตัวแปลงรูปภาพจริง — ไม่มีการอัปโหลด ไม่ต้องใช้แอปเพิ่มเติม ไม่ต้องเดาว่าไฟล์จะเปิดได้จริงหรือไม่
+
+คลิกขวาที่รูปภาพใดก็ได้บนเว็บไซต์ใดก็ได้ แล้วเลือกรูปแบบที่คุณต้องการ รูปภาพจะถูกถอดรหัสและเข้ารหัสใหม่โดยตรงในเบราว์เซอร์ของคุณ ดังนั้นคุณจะได้ไฟล์ที่แท้จริงและมีรูปแบบถูกต้อง ไม่ใช่แค่ไบต์ต้นฉบับที่มีนามสกุลไฟล์ใหม่
+
+⚙️ รูปแบบผลลัพธ์ที่รองรับ:
+- บันทึกเป็น png – คุณภาพไม่สูญเสีย รักษาความโปร่งใส ตัวเลือกที่เหมาะสำหรับโลโก้ กราฟิก และภาพหน้าจอ
+- บันทึกเป็น jpg – ขนาดไฟล์เล็กลง เหมาะสำหรับภาพถ่าย การแชร์ และไฟล์แนบอีเมล
+- บันทึกเป็น webp – การบีบอัดสมัยใหม่ที่ให้คุณภาพภาพยอดเยี่ยมในขนาดที่เล็กลงมาก
+- บันทึกเป็น avif – รูปแบบยุคใหม่สำหรับไฟล์ที่เล็กที่สุดเท่าที่จะเป็นไปได้ในปัจจุบัน
+- บันทึกเป็น pdf – เปลี่ยนรูปภาพใดก็ได้ให้เป็นเอกสาร PDF ที่พร้อมพิมพ์และแชร์ได้
+- บันทึกต้นฉบับ – ดาวน์โหลดไฟล์ตามที่เป็นอยู่จริง โดยไม่แปลง เมื่อรูปแบบต้นฉบับเป็นสิ่งที่คุณต้องการอยู่แล้ว
+
+⚡ คลิกเดียว ทุกครั้ง
+เลือกรูปแบบและโฟลเดอร์ที่คุณชื่นชอบเพียงครั้งเดียวในป๊อปอัป จากนั้นเมนูคลิกขวาจะแสดงทางลัดเดียวคือ "บันทึกเป็น [รูปแบบ]" ที่บันทึกได้ทันที — ไม่มีกล่องโต้ตอบ ไม่ต้องค้นหาในเมนูย่อย ไม่ต้องเลือกซ้ำแบบเดิมทุกครั้งกับทุกรูปภาพ
+
+📐 รูปภาพจริง ไม่ใช่ภาพขนาดย่อ
+หน้าเว็บสมัยใหม่โหลดรูปภาพด้วยหลายวิธีที่แตกต่างกัน — srcset, องค์ประกอบ picture, ภาพตัวอย่างขนาดเล็กที่เชื่อมโยงกับต้นฉบับขนาดใหญ่กว่า Save Image As จะตรวจสอบทั้งหมดนี้และบันทึกเวอร์ชันที่มีความละเอียดสูงสุดที่มีอยู่จริง แทนที่จะเป็นภาพขนาดย่อแรกที่พบ
+
+🔒 ในเครื่อง 100% เป็นส่วนตัวตั้งแต่การออกแบบ
+การแปลงทั้งหมดเกิดขึ้นบนอุปกรณ์ของคุณโดยตรง รูปภาพจะไม่ถูกอัปโหลด ไม่ถูกส่งไปยังเซิร์ฟเวอร์ใดๆ และเราจะไม่มีวันเห็นมัน ไม่มีบัญชี ไม่ต้องสมัครสมาชิก ไม่มีโฆษณา ไม่มีการติดตาม
+
+🧩 สิทธิ์ขั้นต่ำ อธิบายอย่างชัดเจน
+Save Image As จะอ่านเฉพาะรูปภาพที่คุณคลิกขวาเท่านั้น บนหน้าเว็บที่คุณกำลังใช้งาน ไม่มีการขอสิทธิ์ "เผื่อไว้" — ทุกสิทธิ์ที่ส่วนขยายร้องขอจะอธิบายไว้ในหน้าการตั้งค่าของตัวเอง
+
+ไม่ว่าคุณจะแปลง webp เป็น jpg บันทึกรูปภาพเป็น png แปลงภาพถ่ายเป็น pdf หรือแค่พยายามได้รูปภาพความละเอียดเต็มแทนที่จะเป็นภาพขนาดย่อที่เบลอ Save Image As ทำได้ด้วยคลิกขวาเพียงครั้งเดียว ฟรี เป็นส่วนตัว และเชื่อถือได้
+
+----------------------------------------------------------------------
+
+##### Turkish (tr) #####
+
+[appName]
+Resmi Farklı Kaydet - Save Image As
+
+[shortDesc]
+Resmi PNG, JPG, WebP, AVIF veya PDF olarak kaydedin — gerçek dönüştürme, en yüksek çözünürlük, %100 yerel.
+
+[storeDesc]
+Save Image As, Chrome'un sağ tık menüsünü gerçek bir resim dönüştürücüye çeviriyor — sunucuya yükleme yok, ekstra uygulama yok, dosyanın açılıp açılmayacağını tahmin etmek yok.
+
+Herhangi bir sitede herhangi bir resme sağ tıklayın ve ihtiyacınız olan formatı seçin. Resim doğrudan tarayıcınızda çözülür ve yeniden kodlanır, böylece gerçek, doğru biçimlendirilmiş bir dosya elde edersiniz — sadece yeni bir uzantıya sahip orijinal baytlar değil.
+
+⚙️ Kullanılabilir çıktı formatları:
+- png olarak kaydet – kayıpsız kalite, şeffaflığı korur, logolar, grafikler ve ekran görüntüleri için doğru seçim
+- jpg olarak kaydet – daha küçük dosya boyutu, fotoğraflar, paylaşım ve e-posta ekleri için ideal
+- webp olarak kaydet – çok daha küçük boyutta mükemmel görsel kaliteyle modern sıkıştırma
+- avif olarak kaydet – bugün için mümkün olan en küçük dosya için yeni nesil format
+- pdf olarak kaydet – herhangi bir resmi baskıya hazır, paylaşılabilir bir PDF belgesine dönüştürür
+- orijinali kaydet – orijinal format zaten ihtiyacınız olan format olduğunda, dosyayı hiçbir dönüştürme yapmadan olduğu gibi indirir
+
+⚡ Her seferinde tek tıklama
+Favori formatınızı ve klasörünüzü açılır pencerede bir kez seçin. Bundan sonra, sağ tık menüsü anında kaydeden tek bir "Farklı kaydet: [format]" kısayolu gösterir — iletişim kutusu yok, alt menülerde arama yok, her resimde aynı seçimi tekrarlama yok.
+
+📐 Gerçek resim, küçük resim değil
+Modern sayfalar bir resmi birçok farklı şekilde yükler — srcset, picture öğeleri, daha büyük bir orijinale bağlı küçük bir önizleme. Save Image As bunların hepsini kontrol eder ve rastgele bulunan ilk küçük resim yerine gerçekten mevcut olan en yüksek çözünürlüklü sürümü kaydeder.
+
+🔒 %100 yerel, tasarım gereği gizli
+Tüm dönüştürme doğrudan cihazınızda gerçekleşir. Resimler asla yüklenmez, asla bir sunucuya gönderilmez ve bizim tarafımızdan asla görülmez. Hesap yok, kayıt yok, reklam yok, takip yok.
+
+🧩 Minimum izinler, açıkça anlatılmış
+Save Image As yalnızca sağ tıkladığınız resmi, kullandığınız sayfada okur. Hiçbir şey "ihtiyaten" istenmez — uzantının istediği her izin kendi ayarlar sayfasında açıklanır.
+
+İster webp'yi jpg'ye dönüştürüyor, ister bir resmi png olarak kaydediyor, ister bir fotoğrafı pdf'ye çeviriyor, ister bulanık bir küçük resim yerine tam çözünürlükte bir resim almaya çalışıyor olun, Save Image As bunu tek bir sağ tıklamayla yapar. Ücretsiz, gizli ve güvenilir.
+
+----------------------------------------------------------------------
+
+##### Ukrainian (uk) #####
+
+[appName]
+Зберегти зображення як - Save Image As
+
+[shortDesc]
+Зберігайте зображення як PNG, JPG, WebP, AVIF або PDF — справжнє перетворення, найвища роздільна здатність, 100% локально.
+
+[storeDesc]
+Save Image As перетворює контекстне меню Chrome на справжній конвертер зображень — без завантаження на сервер, без додаткових застосунків, без здогадок, чи файл взагалі відкриється.
+
+Клацніть правою кнопкою миші на будь-якому зображенні на будь-якому сайті та виберіть потрібний формат. Зображення декодується та повторно кодується прямо у вашому браузері, тож ви отримуєте справжній, правильно відформатований файл — а не просто оригінальні байти з новим розширенням.
+
+⚙️ Доступні формати виводу:
+- зберегти як png – якість без втрат, зберігає прозорість, правильний вибір для логотипів, графіки та знімків екрана
+- зберегти як jpg – менший розмір файлу, ідеально для фотографій, надсилання та вкладень у листах
+- зберегти як webp – сучасне стиснення з відмінною візуальною якістю при значно меншому розмірі
+- зберегти як avif – формат нового покоління для найменшого можливого файлу сьогодні
+- зберегти як pdf – перетворює будь-яке зображення на готовий до друку PDF-документ, яким легко поділитися
+- зберегти оригінал – завантажує файл точно таким, яким він є, без перетворення, коли оригінальний формат вже той, що потрібен
+
+⚡ Один клік, щоразу
+Виберіть улюблений формат і папку один раз у спливаючому вікні. Після цього контекстне меню показує один ярлик «Зберегти як [формат]», який зберігає миттєво — без діалогового вікна, без пошуку в підменю, без повторення того самого вибору для кожного зображення.
+
+📐 Справжнє зображення, а не мініатюра
+Сучасні сторінки завантажують зображення кількома різними способами — srcset, елементи picture, невеликий попередній перегляд, пов'язаний з більшим оригіналом. Save Image As перевіряє їх усі та зберігає версію з реально доступною найвищою роздільною здатністю, а не першу-ліпшу мініатюру.
+
+🔒 100% локально, приватно за задумом
+Усе перетворення відбувається прямо на вашому пристрої. Зображення ніколи не завантажуються на сервер, ніколи нікуди не надсилаються і ніколи не бачені нами. Без облікових записів, без реєстрації, без реклами, без відстеження.
+
+🧩 Мінімальні дозволи, чітко пояснені
+Save Image As зчитує лише те зображення, на якому ви клацнули правою кнопкою миші, на сторінці, яку ви використовуєте. Нічого не запитується «про всяк випадок» — кожен дозвіл, який запитує розширення, пояснено на його власній сторінці налаштувань.
+
+Чи конвертуєте ви webp у jpg, зберігаєте зображення як png, перетворюєте фото на pdf, чи просто намагаєтеся отримати зображення в повній роздільній здатності замість розмитої мініатюри, Save Image As робить це одним клацанням правої кнопки миші. Безкоштовно, приватно і надійно.
+
+----------------------------------------------------------------------
+
+##### Vietnamese (vi) #####
+
+[appName]
+Lưu hình ảnh dưới dạng - Save Image As
+
+[shortDesc]
+Lưu hình ảnh dưới dạng PNG, JPG, WebP, AVIF hoặc PDF — chuyển đổi thực sự, độ phân giải cao nhất, 100% cục bộ.
+
+[storeDesc]
+Save Image As biến menu chuột phải của Chrome thành một trình chuyển đổi hình ảnh thực thụ — không tải lên máy chủ, không cần ứng dụng bổ sung, không phải đoán xem tệp có thực sự mở được hay không.
+
+Nhấp chuột phải vào bất kỳ hình ảnh nào trên bất kỳ trang web nào và chọn định dạng bạn cần. Hình ảnh được giải mã và mã hóa lại ngay trong trình duyệt của bạn, vì vậy bạn nhận được một tệp thực sự, được định dạng đúng — không chỉ là các byte gốc với một phần mở rộng mới.
+
+⚙️ Các định dạng đầu ra có sẵn:
+- lưu dưới dạng png – chất lượng không mất dữ liệu, giữ độ trong suốt, lựa chọn đúng đắn cho logo, đồ họa và ảnh chụp màn hình
+- lưu dưới dạng jpg – kích thước tệp nhỏ hơn, lý tưởng cho ảnh, chia sẻ và đính kèm email
+- lưu dưới dạng webp – nén hiện đại với chất lượng hình ảnh tuyệt vời ở kích thước nhỏ hơn nhiều
+- lưu dưới dạng avif – định dạng thế hệ mới cho tệp nhỏ nhất có thể hiện nay
+- lưu dưới dạng pdf – biến bất kỳ hình ảnh nào thành tài liệu PDF sẵn sàng in và chia sẻ
+- lưu bản gốc – tải xuống tệp chính xác như hiện trạng, không chuyển đổi, khi định dạng gốc đã là định dạng bạn cần
+
+⚡ Một cú nhấp chuột, mỗi lần
+Chọn định dạng và thư mục yêu thích của bạn một lần trong popup. Sau đó, menu chuột phải hiển thị một lối tắt duy nhất "Lưu dưới dạng [định dạng]" giúp lưu ngay lập tức — không hộp thoại, không tìm kiếm trong menu con, không lặp lại cùng một lựa chọn cho từng hình ảnh.
+
+📐 Hình ảnh thật, không phải ảnh thu nhỏ
+Các trang web hiện đại tải hình ảnh theo nhiều cách khác nhau — srcset, phần tử picture, một bản xem trước nhỏ được liên kết với bản gốc lớn hơn. Save Image As kiểm tra tất cả những thứ đó và lưu phiên bản có độ phân giải cao nhất thực sự có sẵn, thay vì ảnh thu nhỏ đầu tiên bắt gặp.
+
+🔒 100% cục bộ, riêng tư theo thiết kế
+Toàn bộ quá trình chuyển đổi diễn ra trực tiếp trên thiết bị của bạn. Hình ảnh không bao giờ được tải lên, không bao giờ được gửi đến bất kỳ máy chủ nào và chúng tôi không bao giờ nhìn thấy chúng. Không tài khoản, không đăng ký, không quảng cáo, không theo dõi.
+
+🧩 Quyền tối thiểu, được giải thích rõ ràng
+Save Image As chỉ đọc hình ảnh mà bạn nhấp chuột phải, trên trang bạn đang sử dụng. Không có gì được yêu cầu "để phòng hờ" — mọi quyền mà tiện ích mở rộng yêu cầu đều được giải thích trên trang cài đặt riêng của nó.
+
+Dù bạn đang chuyển đổi webp sang jpg, lưu hình ảnh dưới dạng png, biến ảnh thành pdf, hay chỉ đơn giản là cố gắng lấy một hình ảnh với độ phân giải đầy đủ thay vì một ảnh thu nhỏ mờ, Save Image As thực hiện điều đó chỉ với một cú nhấp chuột phải. Miễn phí, riêng tư và đáng tin cậy.
+
+----------------------------------------------------------------------
+
+##### Chinese (Simplified) (zh_CN) #####
+
+[appName]
+图片另存为 - Save Image As
+
+[shortDesc]
+一键将图片保存为 PNG、JPG、WebP、AVIF 或 PDF——真实转换，最高分辨率，100% 本地处理。
+
+[storeDesc]
+Save Image As 将 Chrome 的右键菜单变成真正的图片转换工具——无需上传，无需额外应用，也不用猜测文件到底能不能打开。
+
+在任意网站上右键点击任意图片，选择你需要的格式。图片会直接在你的浏览器中解码并重新编码，因此你得到的是一个真正、格式正确的文件——而不仅仅是换了扩展名的原始字节。
+
+⚙️ 支持的输出格式：
+- 另存为 png——无损画质，保留透明度，是徽标、图形和截图的正确选择
+- 另存为 jpg——文件更小，适合照片、分享和邮件附件
+- 另存为 webp——现代压缩技术，在体积小得多的情况下保持出色的视觉质量
+- 另存为 avif——新一代格式，实现当今可能的最小文件体积
+- 另存为 pdf——将任意图片转换为可打印、可分享的 PDF 文档
+- 保存原图——当原始格式已经是你需要的格式时，直接下载文件，不做任何转换
+
+⚡ 每次只需一次点击
+在弹出窗口中一次性设置好你偏好的格式和文件夹。之后，右键菜单会显示一个"另存为 [格式]"的一键快捷方式，立即保存——没有对话框，无需翻找子菜单，也不用每张图片都重复同样的选择。
+
+📐 获取真实图片，而非缩略图
+现代网页会以多种不同方式加载图片——srcset、picture 元素、链接到更大原图的小预览图等。Save Image As 会逐一检查这些来源，保存实际可获取的最高分辨率版本，而不是随便碰到的第一张缩略图。
+
+🔒 100% 本地处理，从设计上保护隐私
+所有转换都直接在你的设备上完成。图片从不上传，从不发送到任何服务器，我们也永远不会看到它们。无需账号，无需注册，没有广告，没有追踪。
+
+🧩 权限最小化，说明清晰
+Save Image As 只会读取你右键点击的那张图片，且仅限于你正在使用的页面。没有任何"以防万一"式的权限请求——扩展所请求的每一项权限都在其自己的设置页面中作了说明。
+
+无论你是要把 webp 转换成 jpg，把图片另存为 png，把照片转换成 pdf，还是只是想获取全分辨率图片而不是模糊的缩略图，Save Image As 只需右键一点即可完成。免费、隐私、可靠。
+
+----------------------------------------------------------------------
+
+##### Chinese (Traditional) (zh_TW) #####
+
+[appName]
+圖片另存新檔 - Save Image As
+
+[shortDesc]
+一鍵將圖片儲存為 PNG、JPG、WebP、AVIF 或 PDF——真正的轉檔，最高解析度，100% 本機處理。
+
+[storeDesc]
+Save Image As 讓 Chrome 的右鍵選單搖身一變成為真正的圖片轉檔工具——不用上傳、不需額外應用程式，也不用猜檔案到底打不打得開。
+
+在任何網站上對任何圖片按右鍵，選擇你需要的格式。圖片會直接在你的瀏覽器中解碼並重新編碼，所以你拿到的是一個真正、格式正確的檔案——而不只是換了副檔名的原始位元組。
+
+⚙️ 支援的輸出格式：
+- 另存為 png——無損畫質，保留透明度，適合標誌、圖形和截圖的正確選擇
+- 另存為 jpg——檔案較小，適合照片、分享和電子郵件附件
+- 另存為 webp——現代壓縮技術，在體積小得多的情況下維持出色的視覺品質
+- 另存為 avif——新一代格式，實現目前可能的最小檔案體積
+- 另存為 pdf——將任何圖片轉換成可列印、可分享的 PDF 文件
+- 儲存原始檔——當原始格式已經是你需要的格式時，直接下載檔案，不做任何轉換
+
+⚡ 每次只需一次點擊
+在彈出視窗中一次設定好你偏好的格式和資料夾。之後，右鍵選單會顯示一個「另存為 [格式]」的單一捷徑，立即儲存——沒有對話框，不用翻找子選單，也不用每張圖片都重複同樣的選擇。
+
+📐 取得真正的圖片，而非縮圖
+現代網頁會用多種不同方式載入圖片——srcset、picture 元素、連結到更大原圖的小預覽圖等。Save Image As 會逐一檢查這些來源，儲存實際可取得的最高解析度版本，而不是隨便遇到的第一張縮圖。
+
+🔒 100% 本機處理，從設計上保護隱私
+所有轉檔都直接在你的裝置上完成。圖片從不上傳，從不傳送到任何伺服器，我們也絕不會看到它們。不需要帳號、不需要註冊、沒有廣告、沒有追蹤。
+
+🧩 權限最小化，說明清楚
+Save Image As 只會讀取你按右鍵的那張圖片，且僅限於你正在使用的頁面。沒有任何「以防萬一」式的權限請求——擴充功能所要求的每一項權限都在自己的設定頁面中有清楚說明。
+
+不論你是要把 webp 轉成 jpg、把圖片另存為 png、把照片轉成 pdf，還是只是想取得全解析度的圖片而非模糊的縮圖，Save Image As 只需按一下右鍵即可完成。免費、保護隱私、值得信賴。
+
+----------------------------------------------------------------------
