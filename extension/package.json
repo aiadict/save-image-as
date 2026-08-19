@@ -1,6 +1,6 @@
 {
   "name": "save-image-as-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Save Image As — Chrome extension. Save any web image as PNG, JPG, WebP, AVIF or PDF from the right-click menu.",
   "type": "module",

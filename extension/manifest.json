@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Save Image As",
   "short_name": "Save Image As",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Save any image as PNG, JPG, WebP, AVIF or PDF from the right-click menu. Real conversion, highest resolution, 100% local & private.",
   "icons": {
     "16": "icons/icon16.png",
