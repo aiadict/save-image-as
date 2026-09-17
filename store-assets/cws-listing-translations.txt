@@ -2,6 +2,9 @@ Save Image As — Chrome Web Store listing translations
 Generated from extension/public/_locales/<code>/messages.json (source of truth).
 Paste storeDesc into Dashboard > Store listing > language switcher > Detailed description.
 appName / shortDesc auto-apply from the manifest — included here for reference only.
+NOTE (2026-09-17): English storeDesc updated for v1.1.0 (Compressed save, descriptive
+filenames, trust ledger). The other 51 locales below still reflect the v1.0.2-era text —
+re-translating them is a separate follow-up pass, not yet done.
 ======================================================================
 
 ##### Amharic (am) #####
@@ -356,6 +359,7 @@ Right-click any picture on any website and pick the format you need. The image i
 - save as webp – modern compression with excellent visual quality at a fraction of the size
 - save as avif – next-generation format for the smallest file size available today
 - save as pdf – turn any picture into a print-ready, shareable PDF document
+- save compressed – targets a size you choose (under 1MB for chat/email, under 200KB for the web), automatically using WebP to hit it reliably
 - save original – download the exact file as-is, no conversion, when the source format is already what you need
 
 ⚡ One click, every time
@@ -364,13 +368,16 @@ Pick your favorite format and folder once in the popup. After that, the right-cl
 📐 Gets the real image, not the thumbnail
 Modern pages load an image several different ways — srcset, picture elements, a small preview linked to a larger original. Save Image As checks all of them and saves the highest-resolution version actually available, instead of whatever thumbnail happened to load first.
 
+🏷️ Filenames that make sense
+Saved files are named from the image's own alt text when available — "golden-retriever-puppy.jpg" instead of a CDN's "IMG_4821.jpg" — falling back automatically to the original filename when there's no alt text to use.
+
 🔒 100% local, private by design
-Every conversion happens directly on your device. Images are never uploaded, never sent to any server, and never seen by us. No accounts, no sign-up, no ads, no tracking.
+Every conversion happens directly on your device. Images are never uploaded, never sent to any server, and never seen by us. No accounts, no sign-up, no ads, no tracking — and the popup shows exactly how many images you've saved on this device, so that's something you can see, not just something we say.
 
 🧩 Minimal permissions, explained in plain English
 Save Image As only ever reads the image you right-click, on the page you're using it on. Nothing is requested "just in case" — every permission the extension asks for is explained on its own settings page.
 
-Whether you're converting webp to jpg, saving a picture as png, turning an image into a pdf, or just trying to get a photo off a page in full resolution instead of a blurry thumbnail, Save Image As does it in one right-click. Free, private and reliable.
+Whether you're converting webp to jpg, saving a picture as png, compressing a photo to fit an email, turning an image into a pdf, or just trying to get a photo off a page in full resolution instead of a blurry thumbnail, Save Image As does it in one right-click. Free, private and reliable.
 
 ----------------------------------------------------------------------
 
