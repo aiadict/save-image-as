@@ -39,6 +39,41 @@ describe("buildFilename", () => {
     expect(result.length).toBeLessThanOrEqual(124); // 120 + ".jpg"
     expect(result.endsWith(".jpg")).toBe(true);
   });
+
+  describe("descriptive filenames (alt text)", () => {
+    it("uses alt text over the CDN basename when provided", () => {
+      expect(buildFilename("https://cdn.example.com/a8f3e9d1.jpg", "jpg", undefined, "Golden retriever puppy")).toBe(
+        "Golden retriever puppy.jpg"
+      );
+    });
+
+    it("falls back to the CDN basename when alt text is empty", () => {
+      expect(buildFilename("https://cdn.example.com/a8f3e9d1.jpg", "jpg", undefined, "")).toBe("a8f3e9d1.jpg");
+    });
+
+    it("falls back to the CDN basename when alt text is whitespace-only", () => {
+      expect(buildFilename("https://cdn.example.com/a8f3e9d1.jpg", "jpg", undefined, "   ")).toBe("a8f3e9d1.jpg");
+    });
+
+    it("falls back to the CDN basename when alt text is undefined (preference off)", () => {
+      expect(buildFilename("https://cdn.example.com/a8f3e9d1.jpg", "jpg", undefined, undefined)).toBe("a8f3e9d1.jpg");
+    });
+
+    it("sanitizes unsafe characters in alt text the same way as URL-derived names", () => {
+      expect(buildFilename("https://cdn.example.com/x.png", "png", undefined, 'weird:name*"?')).toBe("weird-name-.png");
+    });
+
+    it("truncates excessively long alt text (regression: some CMSes stuff alt text for SEO)", () => {
+      const hugeAlt = "a".repeat(300);
+      const result = buildFilename("https://cdn.example.com/x.png", "jpg", undefined, hugeAlt);
+      expect(result.length).toBeLessThanOrEqual(124);
+      expect(result.endsWith(".jpg")).toBe(true);
+    });
+
+    it("still prefixes the default sub-folder when alt text is used", () => {
+      expect(buildFilename("https://cdn.example.com/x.png", "webp", "SaveImageAs", "Cat")).toBe("SaveImageAs/Cat.webp");
+    });
+  });
 });
 
 describe("buildOriginalFilename", () => {
@@ -57,5 +92,11 @@ describe("buildOriginalFilename", () => {
   it("infers the extension from a data: URL's own MIME type instead of parsing it as a path (regression)", () => {
     expect(buildOriginalFilename("data:image/png;base64,iVBORw0KGgo=")).toBe("image.png");
     expect(buildOriginalFilename("data:image/svg+xml;base64,PHN2Zz4=")).toBe("image.svg");
+  });
+
+  it("uses alt text over the CDN basename when provided", () => {
+    expect(buildOriginalFilename("https://cdn.example.com/a8f3e9d1.jpg", undefined, "Golden retriever puppy")).toBe(
+      "Golden retriever puppy.jpg"
+    );
   });
 });

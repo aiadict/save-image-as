@@ -11,9 +11,10 @@ import type { OutputFormat } from "./types";
 export function buildFilename(
   originalUrl: string,
   format: OutputFormat,
-  folder?: string
+  folder?: string,
+  altText?: string
 ): string {
-  const base = sanitize(guessBasename(originalUrl));
+  const base = sanitize(chooseBasename(originalUrl, altText));
   const withExt = `${base}.${format}`;
   return folder ? `${sanitizeFolder(folder)}/${withExt}` : withExt;
 }
@@ -23,11 +24,25 @@ export function buildFilename(
  * keeps whatever extension the source URL actually had (falls back to no
  * extension if none is present — the browser still saves it fine).
  */
-export function buildOriginalFilename(originalUrl: string, folder?: string): string {
-  const base = sanitize(guessBasename(originalUrl));
+export function buildOriginalFilename(originalUrl: string, folder?: string, altText?: string): string {
+  const base = sanitize(chooseBasename(originalUrl, altText));
   const ext = guessExtension(originalUrl);
   const withExt = ext ? `${base}.${ext}` : base;
   return folder ? `${sanitizeFolder(folder)}/${withExt}` : withExt;
+}
+
+/**
+ * Descriptive-filenames feature: prefer the image's alt text over its CDN
+ * basename when the caller opted in and alt text is actually present. The
+ * caller (background/index.ts) is responsible for passing `undefined` when
+ * the user's "use descriptive filenames" preference is off — this function
+ * only ever decides WHICH raw string to use, sanitize() still runs on
+ * whichever one is chosen, so both paths get identical character-stripping
+ * and length-capping.
+ */
+function chooseBasename(originalUrl: string, altText: string | undefined): string {
+  const trimmed = altText?.trim();
+  return trimmed ? trimmed : guessBasename(originalUrl);
 }
 
 function guessBasename(url: string): string {

@@ -1,5 +1,6 @@
 import { ConversionError, type OutputFormat } from "./types";
 import { buildSinglePageImagePdf } from "./pdf";
+import { findQualityForTargetSize, type SizeSearchResult } from "./size-search";
 
 const MIME: Record<OutputFormat, string> = {
   png: "image/png",
@@ -55,6 +56,41 @@ export async function encodeImage(bitmap: ImageBitmap, format: OutputFormat, qua
       message: `Your browser can't encode ${format.toUpperCase()} yet. Try a different format.`,
     });
   }
+}
+
+export interface TargetSizeEncodeResult extends SizeSearchResult {
+  blob: Blob;
+}
+
+/**
+ * Encode to the highest quality that still fits under `maxBytes`, via
+ * bisection search (see size-search.ts). Always outputs WebP: it's the only
+ * format here that combines a tunable quality knob (unlike lossless PNG,
+ * which has none) with alpha support (unlike JPG, which would flatten
+ * transparent sources onto white) — so it's the one format that can honor
+ * both "hit this size" and "don't silently change how the image looks."
+ *
+ * `hitTarget: false` on the result means even MIN_QUALITY (see size-search.ts)
+ * didn't fit the budget — the caller gets the smallest achievable result
+ * back rather than a silently-broken or over-compressed image, and should
+ * tell the user honestly rather than claim success at the requested size.
+ */
+export async function encodeToTargetSize(bitmap: ImageBitmap, maxBytes: number): Promise<TargetSizeEncodeResult> {
+  const blobsByQuality = new Map<number, Blob>();
+
+  const result = await findQualityForTargetSize(maxBytes, async (quality) => {
+    const blob = await encodeImage(bitmap, "webp", quality);
+    blobsByQuality.set(quality, blob);
+    return blob.size;
+  });
+
+  const blob = blobsByQuality.get(result.quality);
+  if (!blob) {
+    // Unreachable in practice: every quality findQualityForTargetSize tries is recorded above.
+    throw new ConversionError({ reason: "unknown", message: "Couldn't prepare a compressed version of this image." });
+  }
+
+  return { ...result, blob };
 }
 
 async function encodePdfPage(canvas: OffscreenCanvas, quality: number, width: number, height: number): Promise<Blob> {

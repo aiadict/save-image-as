@@ -4,6 +4,8 @@
 
 export type SaveMode = "ask" | "quick";
 export type DefaultFormat = "png" | "jpg" | "webp" | "avif" | "pdf" | "original";
+/** Target size for the context menu's "Compressed" item — see image-core/size-search.ts. */
+export type SizeBudget = "chat" | "web";
 
 export interface Preferences {
   saveMode: SaveMode;
@@ -11,6 +13,17 @@ export interface Preferences {
   defaultFolder: string;
   jpgQuality: number;
   hasCompletedOnboarding: boolean;
+  /**
+   * When true, a converted file is named from the source image's alt text
+   * (when present and non-empty) instead of its CDN filename — e.g.
+   * "golden-retriever-puppy.jpg" instead of "IMG_20938.jpg". Falls back to
+   * the original-URL basename whenever alt text is missing. Default true:
+   * this only ever replaces an already-arbitrary CDN name, so the fallback
+   * chain means there's no meaningful downside to leaving it on.
+   */
+  useDescriptiveFilenames: boolean;
+  /** Byte target for the "Compressed" context-menu item. See image-core/size-search.ts for the thresholds. */
+  sizeBudget: SizeBudget;
   /**
    * Set by the background pipeline when a save fails specifically because
    * "Allow on all sites" wasn't granted; cleared on a successful save or
@@ -30,6 +43,8 @@ export const DEFAULT_PREFERENCES: Preferences = {
   defaultFolder: "SaveImageAs",
   jpgQuality: 0.92,
   hasCompletedOnboarding: false,
+  useDescriptiveFilenames: true,
+  sizeBudget: "chat",
   lastSaveBlockedByPermission: false,
   lastBlockedOrigin: "",
 };

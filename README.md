@@ -6,10 +6,13 @@ A Chrome extension that adds real image format conversion to the right-click men
 
 ## Features
 
-- Right-click any image → **Save Image As** → PNG / JPG / WebP / AVIF / PDF / original
+- Right-click any image → **Save Image As** → PNG / JPG / WebP / AVIF / PDF / Compressed / original
 - Real re-encoding, not just a renamed file — the image is decoded and re-encoded on your device
 - Set a default format and folder once; the right-click menu then shows a single one-click **"Save as [format]"** shortcut
 - Finds the actual highest-resolution source (checks `srcset`, `<picture>`, and linked full-size originals), not just whatever thumbnail loaded first
+- **Compressed** save targets a size budget (under 1MB or under 200KB) instead of a fixed quality, for email/chat/web use
+- Descriptive filenames from the image's alt text when available (e.g. `golden-retriever-puppy.jpg` instead of `IMG_4821.jpg`), on by default
+- A visible on-device usage counter in the popup — the privacy claim made concrete, not just asserted
 - 100% local processing — images are never uploaded or sent to a server
 - Minimal permissions, each explained in plain language in the extension's own popup
 
@@ -28,7 +31,7 @@ Then load `extension/dist/` as an unpacked extension via `chrome://extensions` (
 ```bash
 npm run build     # production bundle
 npm run zip        # zip dist/ for Chrome Web Store upload
-npm test           # image-core unit tests
+npm test           # image-core unit tests + the no-telemetry guard
 npm run typecheck  # tsc --noEmit
 ```
 
@@ -46,11 +49,13 @@ extension/          the Chrome extension (Manifest V3, TypeScript, esbuild)
     popup/             the extension's UI — settings, save mode, rating prompt
     welcome/           first-run onboarding page
     lib/
-      image-core/        conversion logic (source detection, decode, encode, PDF export, filenames)
-      storage.ts           typed chrome.storage.sync wrapper
+      image-core/        conversion logic (source detection, decode, encode, size-budget search, PDF export, filenames)
+      storage.ts           typed chrome.storage.sync wrapper (preferences)
+      stats.ts               typed chrome.storage.local wrapper (Trust ledger usage counter)
       permissions.ts        runtime host-permission strategy
       downloads.ts           chrome.downloads wrapper
   public/icons/       extension icons
+  scripts/            build-time checks (e.g. check-no-telemetry.mjs — see docs/architecture.md "Trust ledger")
 docs/                public-facing docs (privacy policy; terms of use to follow)
 tests/               unit tests for extension/src/lib/image-core
 store-assets/        Chrome Web Store listing assets (icon, screenshots)

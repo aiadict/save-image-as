@@ -2,13 +2,15 @@
 // pipeline, calls chrome.downloads. See docs/architecture.md "End-to-end
 // data flow" for the pipeline this implements.
 
-import { getPreferences, setPreferences, onPreferencesChanged, type DefaultFormat } from "../lib/storage";
+import { getPreferences, setPreferences, onPreferencesChanged, type DefaultFormat, type SizeBudget } from "../lib/storage";
 import { tryRequestOriginPermission } from "../lib/permissions";
 import { downloadBlob } from "../lib/downloads";
-import { notifyFailure } from "../lib/notify";
+import { notifyFailure, notifyInfo } from "../lib/notify";
 import { base64ToBlob } from "../lib/base64";
+import { incrementImagesSaved } from "../lib/stats";
+import { formatBytes } from "../lib/format-bytes";
 import { fetchImageBlob, decodeImage } from "../lib/image-core/decode";
-import { encodeImage } from "../lib/image-core/encode";
+import { encodeImage, encodeToTargetSize } from "../lib/image-core/encode";
 import { buildFilename, buildOriginalFilename } from "../lib/image-core/filename";
 import { ConversionError, type OutputFormat, type ResolvedSource } from "../lib/image-core/types";
 import { resolveImageInPage } from "./resolve-in-page";
@@ -16,8 +18,20 @@ import { resolveImageInPage } from "./resolve-in-page";
 const LOG_PREFIX = "[Save Image As]";
 const SUBMENU_ID = "save-image-as-submenu";
 const QUICK_SAVE_ID = "save-image-as-quick-save";
+const COMPRESSED_ID = "save-image-as-compressed";
 
 const FORMATS: readonly OutputFormat[] = ["png", "jpg", "webp", "avif", "pdf"];
+
+/** Byte targets for the "Compressed" context-menu item — see docs/architecture.md "Size-budget compression". */
+const SIZE_BUDGET_BYTES: Record<SizeBudget, number> = {
+  chat: 1024 * 1024, // 1MB — comfortable for email/Slack/messaging attachments
+  web: 200 * 1024, // 200KB — for fastest page loads
+};
+
+const SIZE_BUDGET_LABEL: Record<SizeBudget, string> = {
+  chat: "1MB",
+  web: "200KB",
+};
 
 chrome.runtime.onInstalled.addListener((details) => {
   console.log(LOG_PREFIX, "onInstalled", details.reason);
@@ -60,6 +74,13 @@ async function rebuildContextMenu(): Promise<void> {
   }
 
   chrome.contextMenus.create({
+    id: COMPRESSED_ID,
+    parentId: SUBMENU_ID,
+    title: `Compressed (WebP, under ${SIZE_BUDGET_LABEL[prefs.sizeBudget]})`,
+    contexts: ["image"],
+  });
+
+  chrome.contextMenus.create({
     id: `${SUBMENU_ID}-original`,
     parentId: SUBMENU_ID,
     title: "Save original",
@@ -80,6 +101,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
   if (info.menuItemId === `${SUBMENU_ID}-original`) {
     void handleSaveRequest(info, tab.id, "original");
+    return;
+  }
+
+  if (info.menuItemId === COMPRESSED_ID) {
+    void handleSaveRequest(info, tab.id, "compressed");
     return;
   }
 
@@ -124,7 +150,7 @@ async function resolveSource(info: chrome.contextMenus.OnClickData, tabId: numbe
 async function handleSaveRequest(
   info: chrome.contextMenus.OnClickData,
   tabId: number,
-  format: DefaultFormat,
+  format: DefaultFormat | "compressed",
   folder?: string
 ): Promise<void> {
   try {
@@ -132,6 +158,11 @@ async function handleSaveRequest(
 
     const prefs = await getPreferences();
     const saveAs = prefs.saveMode === "ask";
+    // Descriptive-filenames feature: only pass alt text through when the user
+    // opted in — buildFilename/buildOriginalFilename fall back to the CDN
+    // basename on `undefined` either way, so this is the only place the
+    // preference is consulted.
+    const altText = prefs.useDescriptiveFilenames ? resolved.alt : undefined;
 
     let blob: Blob;
     if (resolved.inlineBlob) {
@@ -175,21 +206,44 @@ async function handleSaveRequest(
     }
 
     if (format === "original") {
-      const filename = buildOriginalFilename(resolved.url, folder);
+      const filename = buildOriginalFilename(resolved.url, folder, altText);
       console.log(LOG_PREFIX, "downloading original", filename);
       await downloadBlob(blob, filename, saveAs);
+      void incrementImagesSaved();
       void clearPermissionBlockFlag();
       return;
     }
 
     console.log(LOG_PREFIX, "decoding");
     const bitmap = await decodeImage(blob);
-    console.log(LOG_PREFIX, "encoding as", format);
-    const encoded = await encodeImage(bitmap, format, prefs.jpgQuality);
-    const filename = buildFilename(resolved.url, format, folder);
+
+    let encoded: Blob;
+    let outputFormat: OutputFormat;
+    if (format === "compressed") {
+      const maxBytes = SIZE_BUDGET_BYTES[prefs.sizeBudget];
+      console.log(LOG_PREFIX, "compressing to fit", SIZE_BUDGET_LABEL[prefs.sizeBudget]);
+      const result = await encodeToTargetSize(bitmap, maxBytes);
+      encoded = result.blob;
+      outputFormat = "webp";
+      if (!result.hitTarget) {
+        // Saved successfully, just not as small as requested — tell the user
+        // the honest result instead of silently claiming full success. See
+        // docs/architecture.md "Size-budget compression".
+        notifyInfo(
+          `Saved at ${formatBytes(result.size)} — the smallest size possible without losing too much quality (target was under ${SIZE_BUDGET_LABEL[prefs.sizeBudget]}).`
+        );
+      }
+    } else {
+      console.log(LOG_PREFIX, "encoding as", format);
+      encoded = await encodeImage(bitmap, format, prefs.jpgQuality);
+      outputFormat = format;
+    }
+
+    const filename = buildFilename(resolved.url, outputFormat, folder, altText);
     console.log(LOG_PREFIX, "downloading", filename);
     await downloadBlob(encoded, filename, saveAs);
     console.log(LOG_PREFIX, "done", filename);
+    void incrementImagesSaved();
     void clearPermissionBlockFlag();
   } catch (err) {
     console.error(LOG_PREFIX, "save failed", err);

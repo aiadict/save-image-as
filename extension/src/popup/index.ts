@@ -1,5 +1,6 @@
-import { getPreferences, setPreferences, type DefaultFormat, type SaveMode } from "../lib/storage";
+import { getPreferences, setPreferences, type DefaultFormat, type SaveMode, type SizeBudget } from "../lib/storage";
 import { hasBroadImageAccess, requestBroadImageAccess } from "../lib/permissions";
+import { getStats } from "../lib/stats";
 import { initRatingWidget } from "./rating-widget";
 
 const SAVE_MODE_HELP: Record<SaveMode, string> = {
@@ -21,6 +22,9 @@ async function init(): Promise<void> {
   const qualityValue = document.getElementById("jpgQualityValue")!;
   const grantAccessBtn = document.getElementById("grantAccess") as HTMLButtonElement;
   const accessStatus = document.getElementById("accessStatus")!;
+  const trustLine = document.getElementById("trustLine")!;
+  const useDescriptiveFilenames = document.getElementById("useDescriptiveFilenames") as HTMLInputElement;
+  const sizeBudgetButtons = Array.from(document.querySelectorAll<HTMLButtonElement>("#sizeBudgetSeg button"));
   const permissionBanner = document.getElementById("permissionBanner") as HTMLElement;
   const permissionBannerBody = document.getElementById("permissionBannerBody")!;
   const bannerGrantBtn = document.getElementById("bannerGrantBtn") as HTMLButtonElement;
@@ -83,6 +87,38 @@ async function init(): Promise<void> {
   });
   qualitySlider.addEventListener("change", () => {
     void setPreferences({ jpgQuality: Number(qualitySlider.value) });
+  });
+
+  // --- Trust ledger ---
+  // See docs/architecture.md "Trust ledger" for the exact wording rules this
+  // must satisfy — it has to stay literally true, not just reassuring.
+  const stats = await getStats();
+  trustLine.textContent =
+    stats.imagesSavedCount > 0
+      ? `🔒 ${stats.imagesSavedCount.toLocaleString()} image${stats.imagesSavedCount === 1 ? "" : "s"} saved on this device — none ever uploaded.`
+      : "🔒 100% on-device — nothing is ever uploaded.";
+
+  // --- Descriptive filenames ---
+  useDescriptiveFilenames.checked = prefs.useDescriptiveFilenames;
+  useDescriptiveFilenames.addEventListener("change", () => {
+    void setPreferences({ useDescriptiveFilenames: useDescriptiveFilenames.checked });
+  });
+
+  // --- Compressed target size ---
+  const setActiveSizeBudget = (budget: SizeBudget) => {
+    sizeBudgetButtons.forEach((btn) => {
+      const active = btn.dataset.budget === budget;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-checked", String(active));
+    });
+  };
+  setActiveSizeBudget(prefs.sizeBudget);
+  sizeBudgetButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const budget = btn.dataset.budget as SizeBudget;
+      setActiveSizeBudget(budget);
+      void setPreferences({ sizeBudget: budget });
+    });
   });
 
   // --- Site access ---

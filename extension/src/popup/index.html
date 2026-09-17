@@ -18,6 +18,8 @@
         <span class="word">Save Image As</span>
       </header>
 
+      <p class="trust-line" id="trustLine"></p>
+
       <section class="banner" id="permissionBanner" hidden>
         <p class="banner-title">One quick fix</p>
         <p class="banner-body" id="permissionBannerBody"></p>
@@ -76,6 +78,22 @@
               <button type="button" class="btn-primary" id="grantAccess">Allow on all sites</button>
             </div>
             <p class="status-pill" id="accessStatus"></p>
+          </div>
+          <div>
+            <p class="field-label">Filenames</p>
+            <label class="toggle-row" for="useDescriptiveFilenames">
+              <input type="checkbox" id="useDescriptiveFilenames" />
+              <span>Name files from the image's alt text when available</span>
+            </label>
+            <p class="helper">Falls back to the original filename when there's no alt text. Example: "golden-retriever-puppy.jpg" instead of "IMG_4821.jpg".</p>
+          </div>
+          <div>
+            <p class="field-label">Compressed target size</p>
+            <div class="segmented" id="sizeBudgetSeg" role="radiogroup" aria-label="Compressed target size">
+              <button type="button" data-budget="chat" role="radio">Chat &amp; email (&lt;1MB)</button>
+              <button type="button" data-budget="web" role="radio">Web (&lt;200KB)</button>
+            </div>
+            <p class="helper">Used by "Compressed" in the right-click menu — converts to WebP to hit the target reliably.</p>
           </div>
         </div>
       </section>

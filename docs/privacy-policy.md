@@ -14,7 +14,7 @@ _Last updated: [fill in at publish time]_
 
 ## What the extension does
 
-Save Image As lets you right-click an image on a web page and save it in a different format (JPG, PNG, WebP, AVIF), optionally to a folder and format you've chosen as your default. All image decoding and re-encoding happens **entirely on your device**, inside your browser. The image you save is never uploaded to any server we operate or any third party.
+Save Image As lets you right-click an image on a web page and save it in a different format (JPG, PNG, WebP, AVIF, PDF, or a size-limited "Compressed" WebP), optionally to a folder and format you've chosen as your default. All image decoding and re-encoding happens **entirely on your device**, inside your browser. The image you save is never uploaded to any server we operate or any third party.
 
 ## Data we collect
 
@@ -32,6 +32,8 @@ The extension stores a small set of **preferences**, locally in your browser (vi
 - Your preferred save mode (ask where to save vs. quick save)
 - Your default image format and default download sub-folder name
 - Whether you've completed the first-run walkthrough
+- Whether to use the image's alt text for filenames, and your preferred size for "Compressed" saves
+- A simple count of how many images you've saved with the extension, shown back to you in the popup — stored separately from the preferences above and never synced across devices, since it's a usage count, not a preference
 
 None of this leaves your device or is accessible to us.
 

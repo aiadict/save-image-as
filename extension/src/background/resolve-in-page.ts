@@ -77,6 +77,9 @@ export function resolveImageInPage(srcUrl: string, linkUrl: string | null): Prom
 
       const images = Array.from(document.images);
       const el = images.find((img) => img.currentSrc === srcUrl || img.src === srcUrl) ?? null;
+      // Trimmed, present only when non-empty — feeds the descriptive-filenames
+      // feature (see image-core/filename.ts), never required downstream.
+      const alt = el?.alt?.trim() || undefined;
 
       if (el) {
         candidates.push({ url: el.currentSrc || el.src, width: el.naturalWidth || 0, density: 0, height: el.naturalHeight || 0 });
@@ -134,10 +137,11 @@ export function resolveImageInPage(srcUrl: string, linkUrl: string | null): Prom
           width: best.width,
           height: best.height,
           inlineBlob: { base64: btoa(binary), mime: res.headers.get("content-type") || "application/octet-stream" },
+          alt,
         };
       }
 
-      return { url: best.url, width: best.width, height: best.height };
+      return { url: best.url, width: best.width, height: best.height, alt };
     } catch {
       return fallback;
     }

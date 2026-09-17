@@ -15,6 +15,14 @@ export interface ResolvedSource {
   width: number;
   height: number;
   inlineBlob?: { base64: string; mime: string };
+  /**
+   * The matched <img>'s alt text, trimmed, present only when non-empty.
+   * Used for descriptive filenames (see image-core/filename.ts) when the
+   * user has that preference enabled — never required, always optional,
+   * since most images either have no alt text or generic CDN-guessed names
+   * work fine on their own.
+   */
+  alt?: string;
 }
 
 export type ConversionFailureReason =

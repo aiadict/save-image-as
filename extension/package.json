@@ -1,6 +1,6 @@
 {
   "name": "save-image-as-extension",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": true,
   "description": "Save Image As — Chrome extension. Save any web image as PNG, JPG, WebP, AVIF or PDF from the right-click menu.",
   "type": "module",
@@ -8,8 +8,9 @@
     "dev": "node build.mjs --watch",
     "build": "node build.mjs",
     "zip": "node build.mjs --zip",
-    "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "test": "vitest run && npm run check:telemetry",
+    "typecheck": "tsc --noEmit",
+    "check:telemetry": "node scripts/check-no-telemetry.mjs"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.270",
