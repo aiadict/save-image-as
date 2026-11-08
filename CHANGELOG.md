@@ -12,6 +12,14 @@ All notable changes to the Save Image As Chrome extension. Dates are when each v
   - Settings grouped under "More options".
   - A neutral graphite dark mode that follows your system, replacing the old teal-black.
   - The Geist font is bundled (SIL OFL); the icon is the same glyph in the new teal.
+- **A welcome tab that completes itself.** It ticks off pinning (detected automatically), choosing a format, and a first save of the bundled sample photo, then shows a "First image saved" card.
+- **Feedback on the toolbar icon:** ✓ for a moment after each save; "!" after a failed save, until you open the popup.
+- **Fewer, better-timed asks:**
+  - The rating row appears only after 3 successful saves. It has a "Not now" button and asks again at most once.
+  - One-time milestone cards (10, 100, 500… saves) with a share link.
+  - A one-time "What's new" card after updating.
+- **Share button** in the popup copies the website link.
+- **Optional uninstall feedback page.** Low ratings now also see a link to review publicly on the Chrome Web Store.
 - **Readable everywhere:** every text colour now meets WCAG AA (4.5:1) in both themes, checked by `npm test`. The old dark-mode buttons were 1.9:1.
 - **Keyboard:** the format tiles and every segmented control are real radio groups with arrow-key support.
 - **Right-click menu: every format is one menu closer.** Chrome was folding our two top-level items under an extra "Save Image As" level, so formats were three menus deep. Now there's a single "Save Image As" item with the one-click save at the top, then the formats, Compressed and Original file.

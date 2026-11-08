@@ -7,45 +7,102 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="welcome">
-      <span class="mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M12 3.5v11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-          <path d="M7.5 11l4.5 4.5 4.5-4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </span>
-      <h1>You're set up 🎉</h1>
-      <p class="lede">Three quick steps and you're saving images in seconds.</p>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <span class="brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3.5v11" />
+              <path d="M7.5 11l4.5 4.5 4.5-4.5" />
+              <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" />
+            </svg>
+          </span>
+          Save Image As
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="5" y="11" width="14" height="10" rx="2" />
+            <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+          </svg>
+          Runs 100% on your device
+        </span>
+      </div>
+    </header>
 
-      <ol class="steps">
-        <li class="step">
-          <span class="step-badge">1</span>
-          <div>
-            <h2>Pin it</h2>
-            <p>Click the puzzle-piece icon in your toolbar, then pin Save Image As so it's always one click away.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step-badge">2</span>
-          <div>
-            <h2>Set your defaults</h2>
-            <p>Open the popup and choose your save mode, default format, and folder — it takes about ten seconds.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step-badge">3</span>
-          <div>
-            <h2>Try it</h2>
-            <p>Right-click any image on any page. Pick a format, or use the one-click "Save as&hellip;" item.</p>
-          </div>
-        </li>
-      </ol>
+    <main class="wrap main">
+      <div class="col">
+        <h1>You're in.<br /><span class="accent">Let's save your first image.</span></h1>
+        <p class="lede">Three steps, about twenty seconds.</p>
 
-      <div class="cta-row">
-        <button type="button" class="btn-primary" id="closeTabBtn">Got it &mdash; close this tab</button>
+        <ol class="steps">
+          <li class="step" id="stepPin" data-state="active">
+            <span class="badge" aria-hidden="true"><span class="num">1</span></span>
+            <div class="step-body">
+              <h2>Pin it to your toolbar</h2>
+              <p class="todo">Click the puzzle icon at the top right of Chrome, then the pin next to Save Image As. This step ticks itself.</p>
+              <p class="done">Pinned. It's one click away now.</p>
+            </div>
+          </li>
+
+          <li class="step" id="stepFormat" data-state="waiting">
+            <span class="badge" aria-hidden="true"><span class="num">2</span></span>
+            <div class="step-body">
+              <h2 id="formatHeading">Pick your one-click format</h2>
+              <div class="pills" id="formatPills" role="radiogroup" aria-labelledby="formatHeading">
+                <button type="button" role="radio" data-format="png">PNG</button>
+                <button type="button" role="radio" data-format="jpg">JPG</button>
+                <button type="button" role="radio" data-format="webp">WebP</button>
+                <button type="button" role="radio" data-format="avif">AVIF</button>
+                <button type="button" role="radio" data-format="pdf">PDF</button>
+                <button type="button" role="radio" data-format="original">Original</button>
+              </div>
+              <p class="hint">Your menu will say <strong id="menuLabel"></strong>. Change it any time in the popup.</p>
+            </div>
+          </li>
+
+          <li class="step" id="stepSave" data-state="waiting">
+            <span class="badge" aria-hidden="true"><span class="num">3</span></span>
+            <div class="step-body">
+              <h2>Right-click the photo and save it</h2>
+              <p class="todo">Right-click it, then <strong>Save Image As › <span id="menuLabel2"></span></strong>. This page notices when it's done.</p>
+              <p class="done">Done. That's the whole trick.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="col">
+        <figure class="sample">
+          <div class="sample-frame">
+            <img id="sample" src="golden-hour.webp" alt="Golden hour over the lake" width="1600" height="1067" />
+            <span class="sticker" id="sticker">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l14 9-6.5 1.2L15 19l-2.6 1.3-3.4-6.7L4 18z" fill="currentColor" /></svg>
+              Right-click me
+            </span>
+            <div class="celebrate" id="celebrate" hidden>
+              <div class="celebrate-card" role="status">
+                <span class="big-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+                </span>
+                <p class="celebrate-title">First image saved</p>
+                <p class="celebrate-body">Find it in Downloads<span id="savedFolder"></span>.</p>
+                <p class="celebrate-trust">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="5" y="11" width="14" height="10" rx="2" />
+                    <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+                  </svg>
+                  Converted here. Nothing uploaded.
+                </p>
+                <button type="button" class="btn-primary" id="closeTabBtn">All set, close this tab</button>
+              </div>
+            </div>
+          </div>
+          <figcaption>Sample photo · WebP · 1600 × 1067</figcaption>
+        </figure>
       </div>
     </main>
+
+    <footer class="wrap foot">Everything happens in your browser.</footer>
     <script type="module" src="index.js"></script>
   </body>
 </html>

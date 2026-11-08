@@ -34,6 +34,7 @@ The extension stores a small set of **preferences**, locally in your browser (vi
 - Whether you've completed the first-run walkthrough
 - Whether to use the image's alt text for filenames, and your preferred size for "Compressed" saves
 - A simple count of how many images you've saved with the extension, shown back to you in the popup — stored separately from the preferences above and never synced across devices, since it's a usage count, not a preference
+- Whether you've rated the extension or dismissed the rating prompt, which save-count milestone card you've already seen, and whether you've seen the "what's new" card after an update — so the popup doesn't ask twice
 
 None of this leaves your device or is accessible to us.
 
@@ -58,6 +59,10 @@ Every part of the extension that runs is packaged inside the extension itself an
 ## No ads, no affiliate links, no tracking
 
 The extension does not display ads, inject affiliate links, or track you across sites.
+
+## When you uninstall
+
+Chrome opens a short, optional feedback page when the extension is removed. Nothing is sent unless you fill in that form and press Send.
 
 ## Changes to this policy
 

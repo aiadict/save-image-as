@@ -657,3 +657,85 @@ input[type="range"] {
 .rating-hint:not(:empty) {
   padding-bottom: 10px;
 }
+
+.icon-btn.small {
+  width: 28px;
+  height: 28px;
+}
+
+.icon-btn.small svg {
+  width: 14px;
+  height: 14px;
+}
+
+.popup-footer[hidden] {
+  display: none;
+}
+
+/* ---------- One-time cards: what's new, milestones ---------- */
+
+.note-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 8px 12px 14px;
+  border-radius: var(--radius-l);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.note-card[hidden] {
+  display: none;
+}
+
+.note-card.milestone {
+  border-color: var(--accent);
+}
+
+.note-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.note-title {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.note-body {
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+
+.note-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+/* ---------- Toast ---------- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 14px;
+  transform: translate(-50%, 8px);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

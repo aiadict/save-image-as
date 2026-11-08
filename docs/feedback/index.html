@@ -84,6 +84,11 @@
           <button type="submit" class="btn-primary" id="submitBtn">Send feedback</button>
         </div>
         <p class="hint" id="hint">Sent straight to us — no account or email app needed.</p>
+        <p class="hint" id="publicReview" style="display: none">
+          Prefer to leave a public review instead?
+          <a href="https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk/reviews" rel="noopener">Rate it on the Chrome Web Store</a>.
+        </p>
+        <p class="hint">Sent through FormSubmit, a form-to-email service, only when you press Send.</p>
       </form>
 
       <div class="card" id="successMessage" style="display: none">
@@ -106,6 +111,13 @@
           lede.textContent =
             "You rated Save Image As " + rating + "/5 — sorry it wasn't better. Tell us what happened and we'll take a look.";
           document.getElementById("ratingField").value = rating + "/5";
+          document.getElementById("publicReview").style.display = "block";
+        }
+        if (params.get("reason") === "uninstall") {
+          document.querySelector("h1").textContent = "Sorry to see you go";
+          lede.textContent =
+            "Save Image As has been removed. If you have a moment, tell us what didn't work. It's optional, and nothing is sent unless you press Send.";
+          document.getElementById("ratingField").value = "Uninstalled";
         }
 
         var selectedReason = "";

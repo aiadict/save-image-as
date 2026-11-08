@@ -7,9 +7,10 @@ import {
   type SizeBudget,
 } from "../lib/storage";
 import { hasBroadImageAccess, requestBroadImageAccess } from "../lib/permissions";
-import { getStats } from "../lib/stats";
+import { getStats, milestoneToShow, setStats, shouldAskForRating } from "../lib/stats";
+import { clearBadge } from "../lib/badge";
 import { quickSaveTitle } from "../lib/menu-spec";
-import { WEBSITE_URL } from "../lib/config";
+import { CWS_REVIEWS_URL, WEBSITE_URL } from "../lib/config";
 import { initRatingWidget } from "./rating-widget";
 
 const SAVE_MODE_HELP: Record<SaveMode, string> = {
@@ -85,6 +86,10 @@ async function init(): Promise<void> {
   document.getElementById("helpBtn")?.addEventListener("click", () => {
     void chrome.tabs.create({ url: WEBSITE_URL });
   });
+  document.getElementById("howLink")?.addEventListener("click", () => {
+    void chrome.tabs.create({ url: WEBSITE_URL });
+  });
+  document.getElementById("shareBtn")?.addEventListener("click", () => void shareLink());
 
   // --- Right-click menu preview (what the one-click item will say) ---
   let defaultFormat = prefs.defaultFormat;
@@ -177,6 +182,9 @@ async function init(): Promise<void> {
     ledgerLabel.textContent = "Right-click any image on any page.";
   }
 
+  // --- One-time cards and the rating prompt ---
+  initCards(stats);
+
   // --- Site access ---
   const refreshAccessStatus = async () => {
     const granted = await hasBroadImageAccess();
@@ -231,6 +239,80 @@ async function init(): Promise<void> {
     }
   }
 }
+
+const toast = document.getElementById("toast")!;
+let toastTimer: ReturnType<typeof setTimeout> | undefined;
+
+function showToast(message: string): void {
+  toast.textContent = message;
+  toast.classList.add("visible");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("visible"), 2200);
+}
+
+/** Copies the website link (it has the link preview and the install button). */
+async function shareLink(): Promise<void> {
+  try {
+    await navigator.clipboard.writeText(WEBSITE_URL);
+    showToast("Link copied. Thanks for sharing!");
+  } catch {
+    showToast(WEBSITE_URL);
+  }
+}
+
+function initCards(stats: Awaited<ReturnType<typeof getStats>>): void {
+  const whatsNewCard = document.getElementById("whatsNewCard")!;
+  if (stats.whatsNew) {
+    whatsNewCard.hidden = false;
+    document.getElementById("whatsNewDismiss")!.addEventListener("click", () => {
+      whatsNewCard.hidden = true;
+      void setStats({ whatsNew: "" });
+    });
+  }
+
+  const milestone = milestoneToShow(stats);
+  const milestoneCard = document.getElementById("milestoneCard")!;
+  if (milestone !== null) {
+    document.getElementById("milestoneTitle")!.textContent = `${milestone.toLocaleString()} images saved!`;
+    milestoneCard.hidden = false;
+    const done = () => {
+      milestoneCard.hidden = true;
+      void setStats({ lastMilestoneShown: milestone });
+    };
+    document.getElementById("milestoneDismiss")!.addEventListener("click", done);
+    document.getElementById("milestoneShare")!.addEventListener("click", () => {
+      void shareLink();
+      done();
+    });
+    const rate = document.getElementById("milestoneRate")!;
+    rate.hidden = stats.ratingState === "rated";
+    rate.addEventListener("click", () => {
+      void setStats({ ratingState: "rated", ratingStateAtCount: stats.imagesSavedCount, lastMilestoneShown: milestone });
+      void chrome.tabs.create({ url: CWS_REVIEWS_URL });
+    });
+  }
+
+  const ratingFooter = document.getElementById("ratingFooter")!;
+  if (shouldAskForRating(stats)) {
+    ratingFooter.hidden = false;
+    document.getElementById("ratingDismiss")!.addEventListener("click", () => {
+      ratingFooter.hidden = true;
+      document.getElementById("ratingHint")!.textContent = "";
+      void setStats({
+        ratingState: "dismissed",
+        ratingStateAtCount: stats.imagesSavedCount,
+        ratingDismissals: stats.ratingDismissals + 1,
+      });
+    });
+  } else if (stats.imagesSavedCount === 0) {
+    document.getElementById("newcomerFooter")!.hidden = false;
+  }
+}
+
+// A "!" left on the toolbar icon by a failed save has done its job once the popup is open.
+void chrome.tabs.query({ active: true, currentWindow: true }).then(([tab]) => {
+  if (tab?.id !== undefined) void clearBadge(tab.id);
+});
 
 void init();
 initRatingWidget();

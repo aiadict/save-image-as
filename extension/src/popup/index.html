@@ -17,6 +17,13 @@
           </svg>
         </span>
         <span class="word">Save Image As</span>
+        <button type="button" class="icon-btn" id="shareBtn" aria-label="Share Save Image As: copy the link" title="Share">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 15V4" />
+            <path d="M8 8l4-4 4 4" />
+            <path d="M5 13v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" />
+          </svg>
+        </button>
         <button type="button" class="icon-btn" id="helpBtn" aria-label="Help: how Save Image As works" title="Help">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="9" />
@@ -34,6 +41,30 @@
             <button type="button" class="btn-primary" id="bannerGrantBtn">Allow on all sites</button>
             <button type="button" class="btn-text" id="bannerDismissBtn">Dismiss</button>
           </div>
+        </section>
+
+        <section class="note-card" id="whatsNewCard" hidden>
+          <div class="note-text">
+            <p class="note-title">New in version 1.2</p>
+            <p class="note-body">A fresh look, every format one menu closer, and an optional one-click-only menu (More options).</p>
+          </div>
+          <button type="button" class="icon-btn small" id="whatsNewDismiss" aria-label="Dismiss">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+          </button>
+        </section>
+
+        <section class="note-card milestone" id="milestoneCard" hidden>
+          <div class="note-text">
+            <p class="note-title" id="milestoneTitle"></p>
+            <p class="note-body">All converted on this device, none uploaded. Know someone who'd like it?</p>
+            <div class="note-actions">
+              <button type="button" class="btn-primary" id="milestoneShare">Copy link to share</button>
+              <button type="button" class="btn-text" id="milestoneRate">Rate it</button>
+            </div>
+          </div>
+          <button type="button" class="icon-btn small" id="milestoneDismiss" aria-label="Dismiss">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+          </button>
         </section>
 
         <!-- Trust ledger: wording rules in docs/architecture.md "Trust ledger" — must stay literally true. -->
@@ -165,7 +196,7 @@
         </section>
       </div>
 
-      <footer class="popup-footer">
+      <footer class="popup-footer" id="ratingFooter" hidden>
         <span class="prompt">Enjoying Save Image As?</span>
         <div class="stars" id="stars">
           <button type="button" class="star" data-value="1" aria-label="1 star">★</button>
@@ -174,8 +205,16 @@
           <button type="button" class="star" data-value="4" aria-label="4 stars">★</button>
           <button type="button" class="star" data-value="5" aria-label="5 stars">★</button>
         </div>
+        <button type="button" class="icon-btn small" id="ratingDismiss" aria-label="Not now" title="Not now">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
       </footer>
       <p class="rating-hint" id="ratingHint"></p>
+      <footer class="popup-footer" id="newcomerFooter" hidden>
+        <span class="prompt">New here?</span>
+        <button type="button" class="btn-text" id="howLink">See how it works →</button>
+      </footer>
+      <p class="toast" id="toast" role="status" aria-live="polite"></p>
     </main>
     <script type="module" src="index.js"></script>
   </body>

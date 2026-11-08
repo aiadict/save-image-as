@@ -15,7 +15,8 @@
     "e2e": "node build.mjs --e2e && playwright test -c e2e",
     "check:bundle": "node scripts/check-prod-bundle.mjs",
     "check:contrast": "node scripts/check-contrast.mjs",
-    "render:icons": "node scripts/render-icons.mjs"
+    "render:icons": "node scripts/render-icons.mjs",
+    "render:sample": "node scripts/render-welcome-sample.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",

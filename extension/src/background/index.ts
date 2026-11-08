@@ -7,7 +7,9 @@ import { tryRequestOriginPermission } from "../lib/permissions";
 import { downloadBlob } from "../lib/downloads";
 import { notifyFailure, notifyInfo } from "../lib/notify";
 import { base64ToBlob } from "../lib/base64";
-import { incrementImagesSaved } from "../lib/stats";
+import { incrementImagesSaved, setStats } from "../lib/stats";
+import { showFailed, showSaved } from "../lib/badge";
+import { FEEDBACK_FORM_URL } from "../lib/config";
 import { formatBytes } from "../lib/format-bytes";
 import {
   buildMenuSpec,
@@ -41,10 +43,31 @@ configureAvifWasm(chrome.runtime.getURL("codecs/avif_enc.wasm"));
 chrome.runtime.onInstalled.addListener((details) => {
   console.log(LOG_PREFIX, "onInstalled", details.reason);
   void rebuildContextMenu();
+  // Opens an optional feedback page when someone uninstalls. Nothing is sent
+  // unless they choose to submit the form there.
+  void chrome.runtime.setUninstallURL(`${FEEDBACK_FORM_URL}?reason=uninstall`);
   if (details.reason === "install") {
     void chrome.tabs.create({ url: chrome.runtime.getURL("welcome/index.html") });
   }
+  if (details.reason === "update" && isOlderThan(details.previousVersion, WHATS_NEW_VERSION)) {
+    // A one-time card in the popup; never a tab opened on update.
+    void setStats({ whatsNew: WHATS_NEW_VERSION });
+  }
 });
+
+/** The release whose highlights the popup's "What's new" card describes. */
+const WHATS_NEW_VERSION = "1.2.0";
+
+function isOlderThan(version: string | undefined, than: string): boolean {
+  if (!version) return false;
+  const a = version.split(".").map(Number);
+  const b = than.split(".").map(Number);
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    const d = (a[i] ?? 0) - (b[i] ?? 0);
+    if (d !== 0) return d < 0;
+  }
+  return false;
+}
 
 onPreferencesChanged(() => {
   void rebuildContextMenu();
@@ -131,7 +154,9 @@ async function handleSaveRequest(
   try {
     const resolved = await resolveSource(info, tabId);
     await saveResolvedImage(resolved, format, { folder, pageUrl: info.pageUrl });
+    showSaved(tabId);
   } catch (err) {
+    showFailed(tabId);
     console.error(LOG_PREFIX, "save failed", err);
     const message =
       err instanceof ConversionError ? err.failure.message : "Something went wrong saving this image. Please try again.";
