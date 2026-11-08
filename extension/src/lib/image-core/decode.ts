@@ -20,6 +20,7 @@ import { ConversionError } from "./types";
 export async function fetchImageBlob(url: string, referrer?: string): Promise<Blob> {
   let response: Response;
   try {
+    // telemetry-guard: allow image-being-saved
     response = await fetch(url, referrer ? { referrer, referrerPolicy: "strict-origin-when-cross-origin" } : undefined);
   } catch {
     throw new ConversionError({

@@ -17,15 +17,20 @@ const SCRIPT_DIR = fileURLToPath(new URL(".", import.meta.url));
 const SRC_DIR = join(SCRIPT_DIR, "..", "src");
 const NETWORK_CALL_PATTERN = /\b(fetch|XMLHttpRequest|sendBeacon)\s*\(/;
 
-// Each entry: the only lines allowed to contain a network-call token, because
-// they've been reviewed and confirmed to fetch only the image being saved
-// (or the page's own already-loaded blob: bytes) — never a third-party or
-// extension-owned endpoint. Update this list only after actually reviewing a
-// new call site for the same property.
+// Each entry: a reviewed call site that's allowed to make a network call,
+// because it only fetches the image being saved (or the page's own
+// already-loaded blob: bytes) — never a third-party or extension-owned
+// endpoint. The call site itself carries the marker comment
+//   // telemetry-guard: allow <reason>
+// on the line above (or the same line). Markers rather than line numbers, so
+// unrelated edits elsewhere in the file don't break the build. Add an entry
+// only after actually reviewing a new call site for the same property.
 const ALLOWLIST = [
-  { file: "lib/image-core/decode.ts", line: 23 }, // fetchImageBlob: downloads the image the user right-clicked
-  { file: "background/resolve-in-page.ts", line: 127 }, // reads a page-scoped blob: URL's own already-loaded bytes
+  { file: "lib/image-core/decode.ts", reason: "image-being-saved" }, // fetchImageBlob: downloads the image the user right-clicked
+  { file: "background/resolve-in-page.ts", reason: "page-blob-bytes" }, // reads a page-scoped blob: URL's own already-loaded bytes
 ];
+
+const MARKER_PATTERN = /telemetry-guard: allow ([\w-]+)/;
 
 function walk(dir) {
   const entries = readdirSync(dir);
@@ -42,6 +47,7 @@ function walk(dir) {
 }
 
 const violations = [];
+const usedEntries = new Set();
 
 for (const filePath of walk(SRC_DIR)) {
   const relPath = relative(SRC_DIR, filePath).split("\\").join("/");
@@ -54,11 +60,20 @@ for (const filePath of walk(SRC_DIR)) {
     if (trimmed.startsWith("//") || trimmed.startsWith("*") || trimmed.startsWith("/*")) return;
     if (!NETWORK_CALL_PATTERN.test(lineText)) return;
     const lineNumber = idx + 1;
-    const allowed = ALLOWLIST.some((a) => a.file === relPath && a.line === lineNumber);
-    if (!allowed) {
+    const marker = MARKER_PATTERN.exec(lineText) ?? MARKER_PATTERN.exec(lines[idx - 1] ?? "");
+    const entry = marker && ALLOWLIST.find((a) => a.file === relPath && a.reason === marker[1]);
+    if (entry) {
+      usedEntries.add(entry);
+    } else {
       violations.push(`${relPath}:${lineNumber}: ${lineText.trim()}`);
     }
   });
+}
+
+for (const entry of ALLOWLIST) {
+  if (!usedEntries.has(entry)) {
+    violations.push(`${entry.file}: allowlist entry "${entry.reason}" has no matching marked call site — remove it or restore the marker`);
+  }
 }
 
 if (violations.length > 0) {
@@ -66,7 +81,7 @@ if (violations.length > 0) {
   for (const v of violations) console.error(`  ${v}`);
   console.error(
     "\nIf this is a legitimate new call that only fetches the image being saved, add it to ALLOWLIST in " +
-      "scripts/check-no-telemetry.mjs after reviewing it. If it's telemetry/analytics, it can't ship — the popup's " +
+      "scripts/check-no-telemetry.mjs after reviewing it, and mark the call site with a telemetry-guard comment. If it's telemetry/analytics, it can't ship — the popup's " +
       "Trust Ledger claims none exists."
   );
   process.exit(1);

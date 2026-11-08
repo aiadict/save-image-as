@@ -2,14 +2,17 @@
 // dev:   node build.mjs --watch   (unpacked dist/, for chrome://extensions "Load unpacked")
 // build: node build.mjs           (production bundle)
 // zip:   node build.mjs --zip     (build, then zip dist/ for Chrome Web Store upload)
+// e2e:   node build.mjs --e2e     (dist-e2e/ with the test hook and localhost
+//                                  host access; see e2e/README.md — never ship this)
 import { build, context } from "esbuild";
-import { cpSync, mkdirSync, rmSync, existsSync, readFileSync } from "node:fs";
+import { cpSync, mkdirSync, rmSync, existsSync, readFileSync, writeFileSync } from "node:fs";
 import { execSync } from "node:child_process";
 import { resolve } from "node:path";
 
 const watch = process.argv.includes("--watch");
 const zip = process.argv.includes("--zip");
-const outdir = "dist";
+const e2e = process.argv.includes("--e2e");
+const outdir = e2e ? "dist-e2e" : "dist";
 
 const entryPoints = {
   "background/index": "src/background/index.ts",
@@ -20,7 +23,15 @@ const entryPoints = {
 function copyStatic() {
   rmSync(outdir, { recursive: true, force: true });
   mkdirSync(outdir, { recursive: true });
-  cpSync("manifest.json", `${outdir}/manifest.json`);
+  const manifest = JSON.parse(readFileSync("manifest.json", "utf8"));
+  if (e2e) {
+    // Tests can't click the toolbar or the context menu, so activeTab never
+    // fires; without this, in-page source resolution would silently fall back
+    // and hide srcset bugs. 127.0.0.1 is deliberately NOT granted: it's the
+    // suite's "other site" for the permission-denied path.
+    manifest.host_permissions = ["http://localhost/*"];
+  }
+  writeFileSync(`${outdir}/manifest.json`, JSON.stringify(manifest, null, 2));
   cpSync("public", outdir, { recursive: true });
   for (const dir of ["popup", "welcome"]) {
     if (existsSync(`src/${dir}/index.html`)) {
@@ -41,6 +52,7 @@ const buildOptions = {
   format: "esm",
   target: "chrome116",
   sourcemap: watch ? "inline" : false,
+  define: { __E2E__: String(e2e) },
   minify: !watch,
   logLevel: "info",
 };

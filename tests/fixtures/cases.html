@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- E2E fixture page (extension/e2e/save.spec.ts). Served by the suite's own
+     static server; {{OTHER_ORIGIN}} is replaced with the same server under a
+     second host name, which the E2E build has no permission for. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Save Image As fixtures</title>
+</head>
+<body>
+  <!-- plain formats; alt text for descriptive filenames -->
+  <img id="webp" src="images/photo-800.webp" alt="Golden retriever puppy" width="400">
+  <img id="png" src="images/logo-transparent.png" alt="">
+  <img id="jpg" src="images/photo-320.jpg">
+
+  <!-- Each image has its own URL: the resolver finds the clicked element by URL,
+       so shared URLs would match the first <img> instead (known limitation,
+       docs/site-compatibility.md "Duplicate src"). -->
+
+  <!-- srcset with width descriptors: the 1600w candidate must win -->
+  <img id="srcset-w" src="images/photo-320.jpg?w" srcset="images/photo-320.jpg?w 320w, images/photo-1600.jpg 1600w" sizes="320px">
+
+  <!-- srcset with only a density descriptor (the Wikipedia pattern) -->
+  <img id="srcset-x" src="images/photo-320.jpg?x" srcset="images/photo-1600.jpg 2x">
+
+  <!-- art direction: only the <source> whose media matches may be used -->
+  <picture>
+    <source media="(max-width: 1px)" srcset="images/logo-transparent.png">
+    <source media="(min-width: 2px)" srcset="images/photo-1600.jpg">
+    <img id="picture" src="images/photo-320.jpg">
+  </picture>
+
+  <!-- thumbnail linking to the full-size original -->
+  <a id="linked-a" href="images/photo-1600.jpg"><img id="linked" src="images/photo-320.jpg?thumb"></a>
+
+  <!-- data: URL -->
+  <img id="data" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVR4nGPgqu//j4wZSBcAAFnoIXHunnC1AAAAAElFTkSuQmCC">
+
+  <!-- blob: URL, only readable from inside this page -->
+  <img id="blob">
+  <script>
+    fetch("images/photo-800.webp")
+      .then((r) => r.blob())
+      .then((b) => {
+        document.getElementById("blob").src = URL.createObjectURL(b);
+      });
+  </script>
+
+  <!-- another site with no CORS headers and no host permission -->
+  <img id="cross-origin" src="{{OTHER_ORIGIN}}/images/photo-320.jpg?cross">
+</body>
+</html>

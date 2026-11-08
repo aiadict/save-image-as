@@ -8,10 +8,12 @@
     "dev": "node build.mjs --watch",
     "build": "node build.mjs",
     "zip": "node build.mjs --zip",
-    "test": "vitest run && npm run check:telemetry",
+    "test": "vitest run && npm run check:telemetry && npm run check:bundle",
     "typecheck": "tsc --noEmit",
     "check:telemetry": "node scripts/check-no-telemetry.mjs",
-    "render:site": "node scripts/render-site-images.mjs"
+    "render:site": "node scripts/render-site-images.mjs",
+    "e2e": "node build.mjs --e2e && playwright test -c e2e",
+    "check:bundle": "node scripts/check-prod-bundle.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",

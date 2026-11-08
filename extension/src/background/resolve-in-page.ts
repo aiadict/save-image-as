@@ -124,6 +124,7 @@ export function resolveImageInPage(srcUrl: string, linkUrl: string | null): Prom
       const best = candidates[0] ?? fallback;
 
       if (best.url.startsWith("blob:")) {
+        // telemetry-guard: allow page-blob-bytes
         const res = await fetch(best.url);
         const buf = await res.arrayBuffer();
         const bytes = new Uint8Array(buf);

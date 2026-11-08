@@ -31,7 +31,8 @@ Then load `extension/dist/` as an unpacked extension via `chrome://extensions` (
 ```bash
 npm run build     # production bundle
 npm run zip        # zip dist/ for Chrome Web Store upload
-npm test           # image-core unit tests + the no-telemetry guard
+npm test           # unit tests + the no-telemetry guard + a check that dist/ has no test hook
+npm run e2e        # real saves in Playwright's Chromium (npx playwright install chromium once); see extension/e2e/README.md
 npm run typecheck  # tsc --noEmit
 ```
 

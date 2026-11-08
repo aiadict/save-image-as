@@ -3,7 +3,7 @@
 Per `docs/architecture.md` "Phase 2 source detection" — this is the actual technical moat, not boilerplate. Two tiers of testing apply here, not one:
 
 1. **Pure parsing/ranking logic** — no DOM needed, already unit-tested with plain Vitest: `extension/src/lib/image-core/srcset.test.ts` (16 passing) covers `srcset` width/density-descriptor parsing, relative-URL resolution, and width-based ranking. `filename.test.ts` and `pdf.test.ts` cover their respective pure logic.
-2. **Real-DOM/browser cases below** — these need an actual page + `chrome.scripting.executeScript` (or at minimum jsdom) to exercise `background/resolve-in-page.ts` end-to-end. **Not yet set up** — candidate approach is Playwright driving the built `dist/` extension against local HTML fixtures, which is a bigger lift than the Vitest suite and hasn't been started.
+2. **Real-DOM/browser cases below** — exercised end-to-end by the Playwright suite (`extension/e2e/`, `npm run e2e`, set up 2026-11-08) against `cases.html` in this folder. Automated so far: plain WebP/PNG/JPG, `srcset` (`w` and `x`), `<picture>` with `media`, linked original, `data:`, `blob:`, transparent PNG → JPG, and the cross-origin blocked path. The rest of the unchecked list below is still manual.
 
 ## Cases (from the deep-research report + competitive analysis)
 
