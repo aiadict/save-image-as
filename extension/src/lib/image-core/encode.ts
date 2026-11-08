@@ -1,6 +1,7 @@
 import { ConversionError, type OutputFormat } from "./types";
 import { buildSinglePageImagePdf } from "./pdf";
 import { findQualityForTargetSize, type SizeSearchResult } from "./size-search";
+import { encodeAvif } from "./avif";
 
 const MIME: Record<OutputFormat, string> = {
   png: "image/png",
@@ -45,17 +46,36 @@ export async function encodeImage(bitmap: ImageBitmap, format: OutputFormat, qua
     return encodePdfPage(canvas, quality, bitmap.width, bitmap.height);
   }
 
+  if (format === "avif") {
+    // The canvas can't encode AVIF (it silently returns PNG) — see avif.ts.
+    try {
+      return await encodeAvif(ctx.getImageData(0, 0, bitmap.width, bitmap.height));
+    } catch (err) {
+      console.error("AVIF encode failed", err);
+      throw unsupported(format);
+    }
+  }
+
+  let blob: Blob;
   try {
-    return await canvas.convertToBlob({
+    blob = await canvas.convertToBlob({
       type: MIME[format],
       quality: format === "png" ? undefined : quality,
     });
   } catch {
-    throw new ConversionError({
-      reason: "unsupported-format",
-      message: `Your browser can't encode ${format.toUpperCase()} yet. Try a different format.`,
-    });
+    throw unsupported(format);
   }
+  // Browsers fall back to PNG for a type they can't encode instead of
+  // throwing. Never save one format under another format's name.
+  if (blob.type !== MIME[format]) throw unsupported(format);
+  return blob;
+}
+
+function unsupported(format: OutputFormat): ConversionError {
+  return new ConversionError({
+    reason: "unsupported-format",
+    message: `Your browser can't encode ${format.toUpperCase()} yet. Try a different format.`,
+  });
 }
 
 export interface TargetSizeEncodeResult extends SizeSearchResult {

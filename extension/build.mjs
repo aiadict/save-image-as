@@ -33,6 +33,10 @@ function copyStatic() {
   }
   writeFileSync(`${outdir}/manifest.json`, JSON.stringify(manifest, null, 2));
   cpSync("public", outdir, { recursive: true });
+  // libavif encoder for AVIF saves (see src/lib/image-core/avif.ts), loaded on first use.
+  mkdirSync(`${outdir}/codecs`, { recursive: true });
+  cpSync("node_modules/@jsquash/avif/codec/enc/avif_enc.wasm", `${outdir}/codecs/avif_enc.wasm`);
+  cpSync("node_modules/@jsquash/avif/LICENSE", `${outdir}/codecs/LICENSE-jsquash-avif.txt`);
   for (const dir of ["popup", "welcome"]) {
     if (existsSync(`src/${dir}/index.html`)) {
       mkdirSync(`${outdir}/${dir}`, { recursive: true });
@@ -72,7 +76,12 @@ if (watch) {
     const releasesDir = resolve(process.cwd(), "..", "releases");
     mkdirSync(releasesDir, { recursive: true });
     const zipPath = resolve(releasesDir, `save-image-as-v${version}.zip`);
-    rmSync(zipPath, { force: true });
+    // A release zip is what was uploaded for review; never replace one by
+    // accident. Bump the version in manifest.json + package.json first.
+    if (existsSync(zipPath)) {
+      console.error(`${zipPath} already exists. Bump the version before zipping a new release.`);
+      process.exit(1);
+    }
     execSync(`cd ${outdir} && zip -r "${zipPath}" .`, { stdio: "inherit" });
     console.log(`Packaged ${zipPath} for Chrome Web Store upload.`);
   }

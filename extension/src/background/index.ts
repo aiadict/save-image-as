@@ -21,6 +21,7 @@ import {
 } from "../lib/menu-spec";
 import { fetchImageBlob, decodeImage } from "../lib/image-core/decode";
 import { encodeImage, encodeToTargetSize } from "../lib/image-core/encode";
+import { configureAvifWasm } from "../lib/image-core/avif";
 import { buildFilename, buildOriginalFilename } from "../lib/image-core/filename";
 import { ConversionError, type OutputFormat, type ResolvedSource } from "../lib/image-core/types";
 import { resolveImageInPage } from "./resolve-in-page";
@@ -34,6 +35,8 @@ const SIZE_BUDGET_BYTES: Record<SizeBudget, number> = {
 };
 
 type SaveFormat = DefaultFormat | "compressed";
+
+configureAvifWasm(chrome.runtime.getURL("codecs/avif_enc.wasm"));
 
 chrome.runtime.onInstalled.addListener((details) => {
   console.log(LOG_PREFIX, "onInstalled", details.reason);

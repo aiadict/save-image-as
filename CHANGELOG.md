@@ -2,6 +2,15 @@
 
 All notable changes to the Save Image As Chrome extension. Dates are when each version was built/released, not when Chrome Web Store review completed.
 
+## Unreleased (v1.2.0)
+
+**Fixed:**
+- **"Save as AVIF" now produces real AVIF files.** Chrome's canvas has no AVIF encoder: asked for AVIF, it silently returned PNG, so every AVIF save since v1.0.0 was a PNG with a `.avif` name. Found by the new end-to-end tests.
+  - AVIF now uses libavif compiled to WebAssembly (`@jsquash/avif`, the codec behind Squoosh). It ships inside the extension and loads on the first AVIF save only.
+  - Transparency is kept. A 1600×1067 photo takes about a second.
+  - Needs `'wasm-unsafe-eval'` in the extension's content security policy. No new permissions.
+  - Any format the browser can't really encode now fails with a clear message instead of saving the wrong format.
+
 ## v1.1.0 — 2026-09-17
 
 **New features**, chosen from a customer-research pass on what would make users choose this extension over a defunct, trust-damaged competitor:

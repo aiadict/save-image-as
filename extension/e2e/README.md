@@ -26,6 +26,6 @@ npm run e2e                       # builds dist-e2e/, then runs the suite (~15 s
 
 ## Known failures
 
-Marked with `test.fail()`, so the suite stays green and the test flags itself once the bug is fixed:
+None at the moment. Mark a known bug with `test.fail()` and a comment, so the suite stays green and the test flags itself once the bug is fixed.
 
-- **JPG → AVIF:** Chrome's canvas can't encode AVIF. `convertToBlob({ type: "image/avif" })` returns a PNG, so AVIF saves are PNG bytes with a `.avif` name. Found by this suite on 2026-11-08.
+The first one, AVIF saves silently producing PNG bytes, was found by this suite on 2026-11-08 and fixed in v1.2.0 (see `src/lib/image-core/avif.ts`).

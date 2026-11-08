@@ -40,6 +40,10 @@ npm run typecheck  # tsc --noEmit
 
 The background service worker's `console.log`/`console.error` output is the fastest way to see what happened during a save — it's not shown in a page's own DevTools. On the extension's card in `chrome://extensions`, click **"service worker"** to open its console.
 
+## Third-party code
+
+- **[@jsquash/avif](https://github.com/jamsinclair/jSquash)** (Apache-2.0): libavif compiled to WebAssembly, used for AVIF saves because Chrome's canvas can't encode AVIF. Its licence ships as `codecs/LICENSE-jsquash-avif.txt`.
+
 ## Repo layout
 
 ```

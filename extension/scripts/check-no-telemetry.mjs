@@ -28,6 +28,7 @@ const NETWORK_CALL_PATTERN = /\b(fetch|XMLHttpRequest|sendBeacon)\s*\(/;
 const ALLOWLIST = [
   { file: "lib/image-core/decode.ts", reason: "image-being-saved" }, // fetchImageBlob: downloads the image the user right-clicked
   { file: "background/resolve-in-page.ts", reason: "page-blob-bytes" }, // reads a page-scoped blob: URL's own already-loaded bytes
+  { file: "lib/image-core/avif.ts", reason: "packaged-codec" }, // loads the AVIF encoder .wasm packaged inside the extension itself
 ];
 
 const MARKER_PATTERN = /telemetry-guard: allow ([\w-]+)/;

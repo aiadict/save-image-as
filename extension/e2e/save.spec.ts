@@ -61,15 +61,30 @@ test.describe("formats", () => {
     expect(r.lastSave!.head.slice(16, 24)).toBe(MAGIC.webpTag);
   });
 
+  // Chrome's canvas can't encode AVIF (it silently returns PNG), so these go
+  // through the bundled libavif encoder — see image-core/avif.ts.
   test("JPG → AVIF", async ({ page, sw }) => {
-    // KNOWN BUG (found by this suite, 2026-11-08): Chrome's canvas has no AVIF
-    // encoder. convertToBlob({ type: "image/avif" }) silently returns a PNG,
-    // and encode.ts doesn't check, so "AVIF" saves are PNG bytes named .avif.
-    // Remove test.fail() once encode.ts handles it.
-    test.fail();
     const r = await saveViaMenu(page, sw, "jpg", `${SUBMENU}-avif`);
     expectCompleted(r);
     expect(r.lastSave!.head.slice(8, 16)).toBe(MAGIC.avifFtyp);
+    expect(r.lastSave!.head.slice(16, 24)).toBe("61766966"); // "avif" brand
+    expect(r.lastSave!.mime).toBe("image/avif");
+    expect(r.lastSave!.filename).toBe("photo-320.avif");
+  });
+
+  test("large photo → AVIF in reasonable time", async ({ page, sw }) => {
+    const started = Date.now();
+    const r = await saveViaMenu(page, sw, "srcset-w", `${SUBMENU}-avif`);
+    expectCompleted(r);
+    expect(r.lastSave!.width).toBe(1600);
+    expect(r.lastSave!.head.slice(16, 24)).toBe("61766966");
+    expect(Date.now() - started).toBeLessThan(10_000);
+  });
+
+  test("transparent PNG → AVIF", async ({ page, sw }) => {
+    const r = await saveViaMenu(page, sw, "png", `${SUBMENU}-avif`);
+    expectCompleted(r);
+    expect(r.lastSave!.head.slice(16, 24)).toBe("61766966");
   });
 
   test("JPG → PDF", async ({ page, sw }) => {
