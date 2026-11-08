@@ -43,7 +43,7 @@ test("controls write preferences and rebuild the menu", async ({ page, sw }) => 
   await page.click('#saveModeSeg button[data-mode="quick"]');
   await expect.poll(async () => (await getSyncPrefs(sw)).saveMode).toBe("quick");
 
-  await page.selectOption("#defaultFormat", "jpg");
+  await page.click('#formatTiles [data-format="jpg"]');
   await page.fill("#defaultFolder", "Pictures");
   await page.locator("#defaultFolder").blur();
   await expect.poll(async () => quickTitle(await menuSpec(sw))).toBe("Save as JPG → Pictures/");
@@ -72,7 +72,7 @@ test("an empty folder falls back to SaveImageAs", async ({ page, sw }) => {
 
 test("Original can be the one-click default", async ({ page, sw }) => {
   await page.goto(`chrome-extension://${extensionId(sw)}/popup/index.html`);
-  await page.selectOption("#defaultFormat", "original");
+  await page.click('#formatTiles [data-format="original"]');
   await expect.poll(async () => quickTitle(await menuSpec(sw))).toBe("Save original → SaveImageAs/");
 });
 
@@ -99,8 +99,23 @@ test("permission banner shows after a blocked save and dismisses", async ({ page
   await expect.poll(async () => (await getSyncPrefs(sw)).lastSaveBlockedByPermission).toBe(false);
 });
 
-test("trust line shows the on-device count", async ({ page, sw }) => {
+test("ledger shows the on-device count, or a ready state at zero", async ({ page, sw }) => {
   await sw.evaluate(() => chrome.storage.local.set({ imagesSavedCount: 1234 }));
   await page.goto(`chrome-extension://${extensionId(sw)}/popup/index.html`);
-  await expect(page.locator("#trustLine")).toHaveText("🔒 1,234 images saved on this device — none ever uploaded.");
+  await expect(page.locator("#ledgerCount")).toHaveText("1,234");
+  await expect(page.locator("#ledgerLabel")).toHaveText("images saved on this device");
+
+  await sw.evaluate(() => chrome.storage.local.set({ imagesSavedCount: 0 }));
+  await page.reload();
+  await expect(page.locator("#ledgerCount")).toHaveText("Ready when you are");
+});
+
+test("format tiles: arrow keys move the choice and the menu preview follows", async ({ page, sw }) => {
+  await page.goto(`chrome-extension://${extensionId(sw)}/popup/index.html`);
+  await expect(page.locator('#formatTiles [aria-checked="true"]')).toHaveAttribute("data-format", "png");
+  await page.focus('#formatTiles [data-format="png"]');
+  await page.keyboard.press("ArrowRight");
+  await expect(page.locator('#formatTiles [aria-checked="true"]')).toHaveAttribute("data-format", "jpg");
+  await expect(page.locator("#menuPreviewItem")).toHaveText("⚡ Save as JPG → SaveImageAs/");
+  await expect.poll(async () => (await getSyncPrefs(sw)).defaultFormat).toBe("jpg");
 });

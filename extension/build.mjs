@@ -33,6 +33,11 @@ function copyStatic() {
   }
   writeFileSync(`${outdir}/manifest.json`, JSON.stringify(manifest, null, 2));
   cpSync("public", outdir, { recursive: true });
+  // Shared design tokens + the Geist font (SIL OFL 1.1) used by every page.
+  cpSync("src/ui", `${outdir}/ui`, { recursive: true });
+  mkdirSync(`${outdir}/fonts`, { recursive: true });
+  cpSync("node_modules/geist/dist/fonts/geist-sans/Geist-Variable.woff2", `${outdir}/fonts/Geist-Variable.woff2`);
+  cpSync("node_modules/geist/LICENSE.txt", `${outdir}/fonts/LICENSE-Geist-OFL.txt`);
   // libavif encoder for AVIF saves (see src/lib/image-core/avif.ts), loaded on first use.
   mkdirSync(`${outdir}/codecs`, { recursive: true });
   cpSync("node_modules/@jsquash/avif/codec/enc/avif_enc.wasm", `${outdir}/codecs/avif_enc.wasm`);

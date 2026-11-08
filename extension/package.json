@@ -8,17 +8,20 @@
     "dev": "node build.mjs --watch",
     "build": "node build.mjs",
     "zip": "node build.mjs --zip",
-    "test": "vitest run && npm run check:telemetry && npm run check:bundle",
+    "test": "vitest run && npm run check:telemetry && npm run check:contrast && npm run check:bundle",
     "typecheck": "tsc --noEmit",
     "check:telemetry": "node scripts/check-no-telemetry.mjs",
     "render:site": "node scripts/render-site-images.mjs",
     "e2e": "node build.mjs --e2e && playwright test -c e2e",
-    "check:bundle": "node scripts/check-prod-bundle.mjs"
+    "check:bundle": "node scripts/check-prod-bundle.mjs",
+    "check:contrast": "node scripts/check-contrast.mjs",
+    "render:icons": "node scripts/render-icons.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",
     "@types/chrome": "^0.0.270",
     "esbuild": "^0.23.0",
+    "geist": "^1.9.2",
     "typescript": "^5.5.0",
     "vitest": "^2.0.0"
   },

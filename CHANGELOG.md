@@ -5,6 +5,15 @@ All notable changes to the Save Image As Chrome extension. Dates are when each v
 ## Unreleased (v1.2.0)
 
 **Changed:**
+- **New look.** A clean, lighter popup in the same family as Notes AI:
+  - Format tiles instead of a dropdown.
+  - A live preview of what your right-click menu will say.
+  - The on-device save count shown as a card.
+  - Settings grouped under "More options".
+  - A neutral graphite dark mode that follows your system, replacing the old teal-black.
+  - The Geist font is bundled (SIL OFL); the icon is the same glyph in the new teal.
+- **Readable everywhere:** every text colour now meets WCAG AA (4.5:1) in both themes, checked by `npm test`. The old dark-mode buttons were 1.9:1.
+- **Keyboard:** the format tiles and every segmented control are real radio groups with arrow-key support.
 - **Right-click menu: every format is one menu closer.** Chrome was folding our two top-level items under an extra "Save Image As" level, so formats were three menus deep. Now there's a single "Save Image As" item with the one-click save at the top, then the formats, Compressed and Original file.
 - **New "One-click only" menu style** (popup → Advanced → Right-click menu): the save item sits directly in Chrome's right-click menu. Right-click, click, done.
 - **"Original" can now be the one-click default** ("Save original → folder/"). Before, choosing it removed the one-click item.

@@ -3,108 +3,167 @@
   <head>
     <meta charset="utf-8" />
     <title>Save Image As</title>
+    <link rel="stylesheet" href="../ui/tokens.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="popup">
       <header class="popup-header">
         <span class="mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M12 3.5v11" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
-            <path d="M7.5 11l4.5 4.5 4.5-4.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3.5v11" />
+            <path d="M7.5 11l4.5 4.5 4.5-4.5" />
+            <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" />
           </svg>
         </span>
         <span class="word">Save Image As</span>
+        <button type="button" class="icon-btn" id="helpBtn" aria-label="Help: how Save Image As works" title="Help">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6" />
+            <path d="M12 17h.01" />
+          </svg>
+        </button>
       </header>
 
-      <p class="trust-line" id="trustLine"></p>
-
-      <section class="banner" id="permissionBanner" hidden>
-        <p class="banner-title">One quick fix</p>
-        <p class="banner-body" id="permissionBannerBody"></p>
-        <div class="banner-actions">
-          <button type="button" class="btn-primary" id="bannerGrantBtn">Allow on all sites</button>
-          <button type="button" class="btn-text" id="bannerDismissBtn">Dismiss</button>
-        </div>
-      </section>
-
-      <section>
-        <div class="segmented" id="saveModeSeg" role="radiogroup" aria-label="Save mode">
-          <button type="button" data-mode="ask" role="radio">Ask where to save</button>
-          <button type="button" data-mode="quick" role="radio">Quick save</button>
-        </div>
-        <p class="helper" id="saveModeHelper"></p>
-      </section>
-
-      <section class="quick-action">
-        <p class="label">Right-click menu</p>
-        <p class="sentence">
-          Save as
-          <select id="defaultFormat" class="chip-select" aria-label="Default format">
-            <option value="original">Original</option>
-            <option value="png">PNG</option>
-            <option value="jpg">JPG</option>
-            <option value="webp">WebP</option>
-            <option value="avif">AVIF</option>
-            <option value="pdf">PDF</option>
-          </select>
-          to
-          <span class="chip-static">Downloads /</span>
-          <input id="defaultFolder" class="chip-input" type="text" aria-label="Default folder" placeholder="SaveImageAs" />
-        </p>
-        <p class="quick-action-note" id="quickActionNote"></p>
-      </section>
-
-      <section>
-        <button type="button" class="advanced-toggle" id="advToggle" aria-expanded="false" aria-controls="advPanel">
-          <svg class="chevron" viewBox="0 0 10 10" fill="none">
-            <path d="M3 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          Advanced
-        </button>
-        <div class="advanced-panel" id="advPanel" hidden>
-          <div>
-            <p class="field-label">Right-click menu</p>
-            <div class="segmented" id="menuStyleSeg" role="radiogroup" aria-label="Right-click menu">
-              <button type="button" data-menu-style="full" role="radio">Full menu</button>
-              <button type="button" data-menu-style="oneClick" role="radio">One-click only</button>
-            </div>
-            <p class="helper">"One-click only" puts just the save item straight into Chrome's right-click menu.</p>
+      <div class="body">
+        <section class="banner" id="permissionBanner" hidden>
+          <p class="banner-title">One quick fix</p>
+          <p class="banner-body" id="permissionBannerBody"></p>
+          <div class="banner-actions">
+            <button type="button" class="btn-primary" id="bannerGrantBtn">Allow on all sites</button>
+            <button type="button" class="btn-text" id="bannerDismissBtn">Dismiss</button>
           </div>
-          <div>
-            <p class="field-label">JPG quality</p>
-            <div class="quality-row">
+        </section>
+
+        <!-- Trust ledger: wording rules in docs/architecture.md "Trust ledger" — must stay literally true. -->
+        <section class="ledger" aria-label="Your saves">
+          <div class="ledger-text">
+            <p class="ledger-count" id="ledgerCount"></p>
+            <p class="ledger-label" id="ledgerLabel"></p>
+          </div>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="11" width="14" height="10" rx="2" />
+              <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+            </svg>
+            0 uploaded
+          </span>
+        </section>
+
+        <section aria-labelledby="formatLabel">
+          <p class="section-label" id="formatLabel">Your one-click format</p>
+          <div class="tiles" id="formatTiles" role="radiogroup" aria-labelledby="formatLabel">
+            <button type="button" class="tile" role="radio" data-format="png"><span class="tile-name">PNG</span><span class="tile-sub">Lossless</span></button>
+            <button type="button" class="tile" role="radio" data-format="jpg"><span class="tile-name">JPG</span><span class="tile-sub">Photos</span></button>
+            <button type="button" class="tile" role="radio" data-format="webp"><span class="tile-name">WebP</span><span class="tile-sub">Small</span></button>
+            <button type="button" class="tile" role="radio" data-format="avif"><span class="tile-name">AVIF</span><span class="tile-sub">Smallest</span></button>
+            <button type="button" class="tile" role="radio" data-format="pdf"><span class="tile-name">PDF</span><span class="tile-sub">Document</span></button>
+            <button type="button" class="tile" role="radio" data-format="original"><span class="tile-name">Original</span><span class="tile-sub">As-is</span></button>
+          </div>
+        </section>
+
+        <section aria-labelledby="saveModeLabel">
+          <p class="section-label" id="saveModeLabel">When you save</p>
+          <div class="segmented" id="saveModeSeg" role="radiogroup" aria-labelledby="saveModeLabel">
+            <button type="button" data-mode="ask" role="radio">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3.5" y="5" width="17" height="14" rx="2.5" />
+                <path d="M3.5 9h17" />
+              </svg>
+              Ask where
+            </button>
+            <button type="button" data-mode="quick" role="radio">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13 3L5 13.5h6L10 21l8-10.5h-6L13 3z" />
+              </svg>
+              Save instantly
+            </button>
+          </div>
+          <p class="helper" id="saveModeHelper"></p>
+          <div class="folder-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3.5 7.5a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z" />
+            </svg>
+            <label for="defaultFolder">Downloads /</label>
+            <input id="defaultFolder" class="text-input" type="text" placeholder="SaveImageAs" spellcheck="false" />
+          </div>
+        </section>
+
+        <section class="menu-preview" aria-labelledby="menuPreviewLabel">
+          <p class="menu-preview-label" id="menuPreviewLabel">In your right-click menu</p>
+          <p class="menu-preview-path">
+            <span class="menu-parent" id="menuPreviewParent">
+              <span class="menu-icon" aria-hidden="true"></span>Save Image As
+              <svg class="menu-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+            </span>
+            <span class="menu-item" id="menuPreviewItem"></span>
+          </p>
+          <p class="quick-action-note" id="quickActionNote"></p>
+        </section>
+
+        <section>
+          <button type="button" class="more-toggle" id="advToggle" aria-expanded="false" aria-controls="advPanel">
+            <svg class="more-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h10M18 7h2M4 17h4M12 17h8" />
+              <circle cx="16" cy="7" r="2" />
+              <circle cx="10" cy="17" r="2" />
+            </svg>
+            <span class="more-text">
+              <span class="more-title">More options</span>
+              <span class="more-sub">Menu style, quality, filenames, access</span>
+            </span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+          </button>
+
+          <div class="advanced-panel" id="advPanel" hidden>
+            <div>
+              <p class="field-label" id="menuStyleLabel">Right-click menu</p>
+              <div class="segmented" id="menuStyleSeg" role="radiogroup" aria-labelledby="menuStyleLabel">
+                <button type="button" data-menu-style="full" role="radio">Full menu</button>
+                <button type="button" data-menu-style="oneClick" role="radio">One-click only</button>
+              </div>
+              <p class="helper">"One-click only" puts just the save item straight into Chrome's right-click menu.</p>
+            </div>
+
+            <div>
+              <div class="field-row">
+                <label class="field-label" for="jpgQuality">JPG quality</label>
+                <span class="value" id="jpgQualityValue"></span>
+              </div>
               <input type="range" id="jpgQuality" min="0.5" max="1" step="0.01" />
-              <span class="value" id="jpgQualityValue"></span>
+            </div>
+
+            <div>
+              <p class="field-label" id="sizeBudgetLabel">"Compressed" target</p>
+              <div class="segmented" id="sizeBudgetSeg" role="radiogroup" aria-labelledby="sizeBudgetLabel">
+                <button type="button" data-budget="chat" role="radio">Email &amp; chat · 1 MB</button>
+                <button type="button" data-budget="web" role="radio">Web · 200 KB</button>
+              </div>
+              <p class="helper">Used by "Compressed" in the right-click menu. Saves as WebP to hit the target.</p>
+            </div>
+
+            <div class="switch-row">
+              <label class="switch-text" for="useDescriptiveFilenames">
+                <span class="switch-title">Smart filenames</span>
+                <span class="helper">Named from the image's description, e.g. "golden-retriever-puppy.jpg" instead of "IMG_4821.jpg".</span>
+              </label>
+              <input type="checkbox" class="switch" id="useDescriptiveFilenames" role="switch" />
+            </div>
+
+            <div>
+              <div class="access-row">
+                <p class="switch-text">
+                  <span class="switch-title">Site access</span>
+                  <span class="helper">Only needed if a site blocks a save.</span>
+                </p>
+                <button type="button" class="btn-primary" id="grantAccess">Allow on all sites</button>
+              </div>
+              <p class="status-pill" id="accessStatus"></p>
             </div>
           </div>
-          <div>
-            <p class="field-label">Site access</p>
-            <div class="access-row">
-              <p>Needed to read an image's bytes from its own site.</p>
-              <button type="button" class="btn-primary" id="grantAccess">Allow on all sites</button>
-            </div>
-            <p class="status-pill" id="accessStatus"></p>
-          </div>
-          <div>
-            <p class="field-label">Filenames</p>
-            <label class="toggle-row" for="useDescriptiveFilenames">
-              <input type="checkbox" id="useDescriptiveFilenames" />
-              <span>Name files from the image's alt text when available</span>
-            </label>
-            <p class="helper">Falls back to the original filename when there's no alt text. Example: "golden-retriever-puppy.jpg" instead of "IMG_4821.jpg".</p>
-          </div>
-          <div>
-            <p class="field-label">Compressed target size</p>
-            <div class="segmented" id="sizeBudgetSeg" role="radiogroup" aria-label="Compressed target size">
-              <button type="button" data-budget="chat" role="radio">Chat &amp; email (&lt;1MB)</button>
-              <button type="button" data-budget="web" role="radio">Web (&lt;200KB)</button>
-            </div>
-            <p class="helper">Used by "Compressed" in the right-click menu — converts to WebP to hit the target reliably.</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <footer class="popup-footer">
         <span class="prompt">Enjoying Save Image As?</span>

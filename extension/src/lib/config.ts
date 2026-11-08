@@ -16,3 +16,6 @@ export const FEEDBACK_FORM_URL = "https://aiadict.github.io/save-image-as/feedba
  * rating widget. Real listing, live as of 2026-08-19.
  */
 export const CWS_REVIEWS_URL = "https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk/reviews";
+
+/** The public website: help, privacy policy, and the link people share. */
+export const WEBSITE_URL = "https://aiadict.github.io/save-image-as/";

@@ -1,0 +1,96 @@
+/* Design tokens shared by every extension page (popup, welcome).
+   Direction "A · Clean" (docs/redesign-plan.md, D1/D2): white and teal in
+   light mode, neutral graphite in dark mode, following the system theme.
+
+   Rules:
+   - Every colour a component uses comes from a token.
+   - Text on --accent always uses --on-accent, never a hard-coded white.
+     (The v1.1.0 dark theme put white on light teal: 1.9:1.)
+   - --ink-3 is the lightest allowed text colour.
+   scripts/check-contrast.mjs checks the text pairs in both themes.
+   Copied to dist/ui/ by build.mjs. */
+
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f0f3f3;
+  --surface-raised: #ffffff;
+  --line: #e2e6e7;
+  --line-strong: #cfd8da;
+  --ink: #15191c;
+  --ink-2: #3f4b4f;
+  --ink-3: #56656a;
+  --accent: #0a7f8f;
+  --on-accent: #ffffff;
+  --accent-ink: #085d69;
+  --accent-tint: #eef7f8;
+  --accent-tint-line: #d6eaed;
+  --star: #f5a524;
+  --star-line: #b7791f;
+  --danger: #b42318;
+  --shadow-sm: 0 1px 2px rgba(16, 24, 28, 0.12);
+
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --radius-pill: 999px;
+  --font: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #141618;
+    --surface: #1a1d20;
+    --surface-2: #1f2326;
+    --surface-raised: #343b40;
+    --line: #2a2f33;
+    --line-strong: #3a4246;
+    --ink: #eceff0;
+    --ink-2: #c3cbce;
+    --ink-3: #a6b0b4;
+    --accent: #5cc8d4;
+    --on-accent: #0b1f22;
+    --accent-ink: #8fe0e8;
+    --accent-tint: #173136;
+    --accent-tint-line: #24393d;
+    --star: #f5b43c;
+    --star-line: #f5b43c;
+    --danger: #ff8a80;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
