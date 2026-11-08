@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- Source for docs/assets/og.png (1200×630 link preview). Render with
+     node extension/scripts/render-site-images.mjs -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; }
+  .og {
+    width: 1200px; height: 630px; box-sizing: border-box; padding: 72px 80px;
+    display: flex; align-items: center; gap: 64px;
+    background: radial-gradient(60% 80% at 85% 0%, #e3f2f4 0%, rgba(227, 242, 244, 0) 70%), #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #15191c;
+  }
+  .text { flex: 1; }
+  .brand { display: flex; align-items: center; gap: 14px; font-size: 30px; font-weight: 700; letter-spacing: -0.01em; }
+  .mark { width: 52px; height: 52px; border-radius: 14px; background: #0a7f8f; display: grid; place-items: center; }
+  h1 { margin: 40px 0 0; font-size: 62px; line-height: 1.05; letter-spacing: -0.045em; font-weight: 800; }
+  h1 span { color: #0a7f8f; }
+  p { margin: 26px 0 0; font-size: 26px; color: #46535a; }
+  .menu { width: 330px; background: #fff; border: 1px solid #d8dcdf; border-radius: 12px; padding: 8px 0;
+    box-shadow: 0 30px 60px -28px rgba(24, 26, 32, 0.45); font-size: 22px; }
+  .menu div { height: 42px; display: flex; align-items: center; padding: 0 20px; }
+  .menu .hl { background: #2a62d6; color: #fff; margin: 0 6px; border-radius: 6px; padding: 0 14px; }
+  .menu .head { font-weight: 700; gap: 10px; }
+  .menu hr { border: 0; height: 1px; background: #e3e5e8; margin: 6px 0; }
+</style>
+</head>
+<body>
+<div class="og">
+  <div class="text">
+    <div class="brand">
+      <span class="mark"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M7.5 11l4.5 4.5 4.5-4.5"/><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16"/></svg></span>
+      Save Image As
+    </div>
+    <h1>Right-click any image.<br><span>Save it as PNG, JPG, WebP, AVIF or PDF.</span></h1>
+    <p>Converted on your device. Nothing uploaded. Free Chrome extension.</p>
+  </div>
+  <div class="menu" aria-hidden="true">
+    <div class="head">Save Image As</div>
+    <hr>
+    <div class="hl">PNG</div>
+    <div>JPG</div>
+    <div>WebP</div>
+    <div>AVIF</div>
+    <div>PDF</div>
+  </div>
+</div>
+</body>
+</html>

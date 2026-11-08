@@ -10,9 +10,11 @@
     "zip": "node build.mjs --zip",
     "test": "vitest run && npm run check:telemetry",
     "typecheck": "tsc --noEmit",
-    "check:telemetry": "node scripts/check-no-telemetry.mjs"
+    "check:telemetry": "node scripts/check-no-telemetry.mjs",
+    "render:site": "node scripts/render-site-images.mjs"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.0",
     "@types/chrome": "^0.0.270",
     "esbuild": "^0.23.0",
     "typescript": "^5.5.0",

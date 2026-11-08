@@ -2,8 +2,9 @@
   color-scheme: light dark;
   --teal-50: #eef6f5;
   --teal-100: #d7ece8;
-  --teal-600: #0d9488;
-  --teal-700: #0b7a70;
+  --teal-600: #0a7f8f;
+  --teal-700: #085d69;
+  --on-accent: #ffffff;
   --bg: #f6f9f8;
   --surface: #ffffff;
   --surface-sunken: #eef3f2;
@@ -26,6 +27,7 @@
     --ink-muted: #93a9a4;
     --ink-faint: #5f746f;
     --border: #1c2e2a;
+    --on-accent: #0a1512;
   }
 }
 
@@ -187,7 +189,7 @@ td:first-child {
   font-family: inherit;
   font-size: 14px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--on-accent);
   background: var(--teal-600);
   border: none;
   border-radius: 9px;
