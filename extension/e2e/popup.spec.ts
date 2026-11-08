@@ -4,8 +4,18 @@
 import { test, expect, extensionId, setPrefs, getSyncPrefs } from "./fixtures";
 import type { Worker } from "@playwright/test";
 
-async function menuSpec(sw: Worker): Promise<{ id: string; title: string }[]> {
+interface Entry {
+  id: string;
+  title?: string;
+  parentId?: string;
+}
+
+async function menuSpec(sw: Worker): Promise<Entry[]> {
   return sw.evaluate(() => (globalThis as any).__siaTest.lastMenuSpec);
+}
+
+function quickTitle(spec: Entry[]): string | undefined {
+  return spec.find((e) => e.id === "save-image-as-quick-save")?.title;
 }
 
 test.beforeEach(async ({ sw }) => {
@@ -16,6 +26,7 @@ test.beforeEach(async ({ sw }) => {
     jpgQuality: 0.92,
     useDescriptiveFilenames: true,
     sizeBudget: "chat",
+    menuStyle: "full",
     lastSaveBlockedByPermission: false,
     lastBlockedOrigin: "",
   });
@@ -35,7 +46,7 @@ test("controls write preferences and rebuild the menu", async ({ page, sw }) => 
   await page.selectOption("#defaultFormat", "jpg");
   await page.fill("#defaultFolder", "Pictures");
   await page.locator("#defaultFolder").blur();
-  await expect.poll(async () => (await menuSpec(sw))[0]?.title).toBe("Save as JPG → Pictures/");
+  await expect.poll(async () => quickTitle(await menuSpec(sw))).toBe("Save as JPG → Pictures/");
 
   await page.click("#advToggle");
   await expect(page.locator("#advPanel")).toBeVisible();
@@ -49,7 +60,7 @@ test("controls write preferences and rebuild the menu", async ({ page, sw }) => 
   await page.click('#sizeBudgetSeg button[data-budget="web"]');
   await expect
     .poll(async () => (await menuSpec(sw)).find((e) => e.id === "save-image-as-compressed")?.title)
-    .toBe("Compressed (WebP, under 200KB)");
+    .toBe("Compressed (WebP, under 200 KB)");
 });
 
 test("an empty folder falls back to SaveImageAs", async ({ page, sw }) => {
@@ -59,10 +70,22 @@ test("an empty folder falls back to SaveImageAs", async ({ page, sw }) => {
   await expect.poll(async () => (await getSyncPrefs(sw)).defaultFolder).toBe("SaveImageAs");
 });
 
-test("Original as default removes the one-click item", async ({ page, sw }) => {
+test("Original can be the one-click default", async ({ page, sw }) => {
   await page.goto(`chrome-extension://${extensionId(sw)}/popup/index.html`);
   await page.selectOption("#defaultFormat", "original");
-  await expect.poll(async () => (await menuSpec(sw)).some((e) => e.id === "save-image-as-quick-save")).toBe(false);
+  await expect.poll(async () => quickTitle(await menuSpec(sw))).toBe("Save original → SaveImageAs/");
+});
+
+test("menu style: one-click only leaves a single top-level item", async ({ page, sw }) => {
+  await page.goto(`chrome-extension://${extensionId(sw)}/popup/index.html`);
+  await page.click("#advToggle");
+  await page.click('#menuStyleSeg button[data-menu-style="oneClick"]');
+  await expect(page.locator("#quickActionNote")).toBeVisible();
+  await expect.poll(async () => menuSpec(sw)).toEqual([{ id: "save-image-as-quick-save", title: "Save as PNG → SaveImageAs/" }]);
+
+  await page.click('#menuStyleSeg button[data-menu-style="full"]');
+  await expect(page.locator("#quickActionNote")).toBeHidden();
+  await expect.poll(async () => (await menuSpec(sw)).filter((e) => !e.parentId).map((e) => e.id)).toEqual(["save-image-as-submenu"]);
 });
 
 test("permission banner shows after a blocked save and dismisses", async ({ page, sw }) => {

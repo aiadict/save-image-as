@@ -4,6 +4,11 @@ All notable changes to the Save Image As Chrome extension. Dates are when each v
 
 ## Unreleased (v1.2.0)
 
+**Changed:**
+- **Right-click menu: every format is one menu closer.** Chrome was folding our two top-level items under an extra "Save Image As" level, so formats were three menus deep. Now there's a single "Save Image As" item with the one-click save at the top, then the formats, Compressed and Original file.
+- **New "One-click only" menu style** (popup → Advanced → Right-click menu): the save item sits directly in Chrome's right-click menu. Right-click, click, done.
+- **"Original" can now be the one-click default** ("Save original → folder/"). Before, choosing it removed the one-click item.
+
 **Fixed:**
 - **"Save as AVIF" now produces real AVIF files.** Chrome's canvas has no AVIF encoder: asked for AVIF, it silently returned PNG, so every AVIF save since v1.0.0 was a PNG with a `.avif` name. Found by the new end-to-end tests.
   - AVIF now uses libavif compiled to WebAssembly (`@jsquash/avif`, the codec behind Squoosh). It ships inside the extension and loads on the first AVIF save only.

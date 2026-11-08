@@ -156,6 +156,14 @@ test.describe("preferences", () => {
     expect(r.lastSave!.filename).toBe("E2E Folder/Golden retriever puppy.jpg");
   });
 
+  test("quick save with Original keeps the file as-is in the folder", async ({ page, sw }) => {
+    await setPrefs(sw, { defaultFormat: "original", defaultFolder: "Originals" });
+    const r = await saveViaMenu(page, sw, "jpg", QUICK);
+    expectCompleted(r);
+    expect(r.lastSave!.head.startsWith(MAGIC.jpg)).toBe(true);
+    expect(r.lastSave!.filename).toBe("Originals/photo-320.jpg");
+  });
+
   test("descriptive filenames off → URL basename", async ({ page, sw }) => {
     await setPrefs(sw, { useDescriptiveFilenames: false });
     const r = await saveViaMenu(page, sw, "webp", `${SUBMENU}-png`);

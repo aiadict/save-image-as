@@ -1,4 +1,4 @@
-import { getPreferences, setPreferences, type DefaultFormat, type SaveMode, type SizeBudget } from "../lib/storage";
+import { getPreferences, setPreferences, type DefaultFormat, type MenuStyle, type SaveMode, type SizeBudget } from "../lib/storage";
 import { hasBroadImageAccess, requestBroadImageAccess } from "../lib/permissions";
 import { getStats } from "../lib/stats";
 import { initRatingWidget } from "./rating-widget";
@@ -49,10 +49,11 @@ async function init(): Promise<void> {
   });
 
   // --- Default format + folder (drives the one-click context-menu item) ---
+  let menuStyle = prefs.menuStyle;
   const updateQuickActionNote = () => {
-    if (formatSelect.value === "original") {
+    if (menuStyle === "oneClick") {
       quickActionNote.textContent =
-        "\"Original\" has nothing to convert to, so the one-click item won't appear — use the Save Image As submenu instead.";
+        "One-click only: this is the only item in your right-click menu. Switch to Full menu under Advanced for other formats.";
       quickActionNote.classList.add("visible");
     } else {
       quickActionNote.classList.remove("visible");
@@ -65,7 +66,6 @@ async function init(): Promise<void> {
 
   formatSelect.addEventListener("change", () => {
     void setPreferences({ defaultFormat: formatSelect.value as DefaultFormat });
-    updateQuickActionNote();
   });
 
   folderInput.addEventListener("change", () => {
@@ -102,6 +102,25 @@ async function init(): Promise<void> {
   useDescriptiveFilenames.checked = prefs.useDescriptiveFilenames;
   useDescriptiveFilenames.addEventListener("change", () => {
     void setPreferences({ useDescriptiveFilenames: useDescriptiveFilenames.checked });
+  });
+
+  // --- Right-click menu style ---
+  const menuStyleButtons = Array.from(document.querySelectorAll<HTMLButtonElement>("#menuStyleSeg button"));
+  const setActiveMenuStyle = (style: MenuStyle) => {
+    menuStyleButtons.forEach((btn) => {
+      const active = btn.dataset.menuStyle === style;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-checked", String(active));
+    });
+  };
+  setActiveMenuStyle(menuStyle);
+  menuStyleButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      menuStyle = btn.dataset.menuStyle as MenuStyle;
+      setActiveMenuStyle(menuStyle);
+      updateQuickActionNote();
+      void setPreferences({ menuStyle });
+    });
   });
 
   // --- Compressed target size ---

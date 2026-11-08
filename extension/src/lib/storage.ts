@@ -6,6 +6,8 @@ export type SaveMode = "ask" | "quick";
 export type DefaultFormat = "png" | "jpg" | "webp" | "avif" | "pdf" | "original";
 /** Target size for the context menu's "Compressed" item — see image-core/size-search.ts. */
 export type SizeBudget = "chat" | "web";
+/** "full": one "Save Image As" parent with every format; "oneClick": only the quick item, directly in Chrome's menu. */
+export type MenuStyle = "full" | "oneClick";
 
 export interface Preferences {
   saveMode: SaveMode;
@@ -24,6 +26,8 @@ export interface Preferences {
   useDescriptiveFilenames: boolean;
   /** Byte target for the "Compressed" context-menu item. See image-core/size-search.ts for the thresholds. */
   sizeBudget: SizeBudget;
+  /** Right-click menu layout — see lib/menu-spec.ts. */
+  menuStyle: MenuStyle;
   /**
    * Set by the background pipeline when a save fails specifically because
    * "Allow on all sites" wasn't granted; cleared on a successful save or
@@ -45,6 +49,7 @@ export const DEFAULT_PREFERENCES: Preferences = {
   hasCompletedOnboarding: false,
   useDescriptiveFilenames: true,
   sizeBudget: "chat",
+  menuStyle: "full",
   lastSaveBlockedByPermission: false,
   lastBlockedOrigin: "",
 };

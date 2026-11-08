@@ -65,6 +65,14 @@
         </button>
         <div class="advanced-panel" id="advPanel" hidden>
           <div>
+            <p class="field-label">Right-click menu</p>
+            <div class="segmented" id="menuStyleSeg" role="radiogroup" aria-label="Right-click menu">
+              <button type="button" data-menu-style="full" role="radio">Full menu</button>
+              <button type="button" data-menu-style="oneClick" role="radio">One-click only</button>
+            </div>
+            <p class="helper">"One-click only" puts just the save item straight into Chrome's right-click menu.</p>
+          </div>
+          <div>
             <p class="field-label">JPG quality</p>
             <div class="quality-row">
               <input type="range" id="jpgQuality" min="0.5" max="1" step="0.01" />
