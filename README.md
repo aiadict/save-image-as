@@ -2,6 +2,10 @@
 
 A Chrome extension that adds real image format conversion to the right-click menu — save any web image as PNG, JPG, WebP, AVIF or PDF, or set a default format and folder for a genuine one-click save. Everything runs locally in your browser; no uploads, no accounts, no tracking.
 
+![Right-click an image, pick a format, and it's saved at full size; or save every image on a page from a gallery](store-assets/video/save-image-as-demo.gif)
+
+[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk) · [Website](https://aiadict.github.io/save-image-as/) · [Free online converter](https://aiadict.github.io/save-image-as/convert/)
+
 - [Privacy policy](docs/privacy-policy.md)
 
 ## Features

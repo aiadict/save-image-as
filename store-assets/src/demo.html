@@ -1,0 +1,354 @@
+<!doctype html>
+<!-- Demo video storyboard (28 s, 1280×720 CSS px). Rendered frame by frame by
+     extension/scripts/render-demo-video.mjs (npm run render:video) into
+     store-assets/video/: an MP4 for the store listing / YouTube and a GIF for
+     the README and launch posts. Every animation runs on one timeline of
+     TOTAL ms; the renderer pauses them all and sets currentTime per frame.
+     Scene 2 reuses the website's hero demo (markup copied from
+     docs/index.html, styles from docs/assets/style.css). Open the file in a
+     browser to watch it play in real time. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Save Image As demo video</title>
+<link rel="stylesheet" href="../../docs/assets/style.css">
+<style>
+  :root { color-scheme: light; }
+  html, body { margin: 0; width: 1280px; height: 720px; overflow: hidden; }
+  body {
+    position: relative;
+    background: radial-gradient(900px 500px at 85% 20%, rgba(10, 127, 143, 0.09), transparent 70%), #ffffff;
+    color: #15191c;
+    font-family: var(--font);
+  }
+  .scene { position: absolute; inset: 0; opacity: 0; }
+
+  .mark { display: grid; place-items: center; background: #0a7f8f; color: #fff; }
+  .mark svg { width: 58%; height: 58%; }
+
+  /* ---------- 1 · Intro and 4 · End ---------- */
+  .center { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .brand-row { display: flex; align-items: center; gap: 18px; font-size: 40px; font-weight: 700; letter-spacing: -0.03em; }
+  .brand-row .mark { width: 72px; height: 72px; border-radius: 20px; }
+  .title { margin: 34px 0 0; font-size: 60px; line-height: 1.08; font-weight: 750; letter-spacing: -0.045em; }
+  .title span { color: #0a7f8f; }
+  .chips { display: flex; gap: 12px; margin-top: 34px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 999px;
+    background: #eef7f8; border: 1px solid #d6eaed; color: #085d69; font-size: 19px; font-weight: 650; }
+  .chip svg { width: 18px; height: 18px; }
+  .cta { margin-top: 38px; display: inline-flex; align-items: center; gap: 12px; padding: 18px 30px; border-radius: 999px;
+    background: #0a7f8f; color: #fff; font-size: 24px; font-weight: 700; }
+  .url { margin-top: 18px; font-size: 19px; color: #56656a; }
+
+  /* ---------- 2 · Right-click and 3 · Gallery: shared layout ---------- */
+  .copy { position: absolute; left: 72px; top: 0; bottom: 0; width: 430px; display: flex; flex-direction: column; justify-content: center; }
+  .eyebrow-v { font-size: 16px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #085d69; }
+  .copy h2 { margin: 14px 0 0; font-size: 46px; line-height: 1.08; font-weight: 750; letter-spacing: -0.04em; }
+  .copy h2 span { color: #0a7f8f; }
+  .steps { list-style: none; margin: 34px 0 0; padding: 0; display: grid; gap: 14px; }
+  .steps li { display: flex; align-items: center; gap: 14px; font-size: 22px; font-weight: 600; color: #15191c; opacity: 0.32; }
+  .steps .n { width: 36px; height: 36px; border-radius: 999px; display: grid; place-items: center; flex: none;
+    background: #eef7f8; color: #085d69; font-size: 17px; font-weight: 700; }
+  .copy .sub { margin: 22px 0 0; font-size: 22px; line-height: 1.45; color: #3f4b4f; }
+
+  .demo-holder { position: absolute; left: 548px; top: 84px; width: 580px; height: 460px; transform: scale(1.2); transform-origin: 0 0; }
+  /* The hero loop starts 3.4 s into the video. */
+  .demo.is-playing * { animation-delay: 3400ms !important; }
+
+  /* ---------- 3 · Gallery ---------- */
+  .gal { position: absolute; left: 556px; top: 84px; width: 680px; height: 552px; border-radius: 20px; background: #fff;
+    border: 1px solid #e7ebec; box-shadow: 0 1px 2px rgba(24, 26, 32, 0.06), 0 30px 60px -28px rgba(24, 26, 32, 0.35); overflow: hidden; }
+  .gal-chrome { height: 44px; display: flex; align-items: center; gap: 7px; padding: 0 16px; background: #f4f7f7; border-bottom: 1px solid #e7ebec; }
+  .gal-chrome .dot { width: 10px; height: 10px; border-radius: 999px; background: #cfd8da; }
+  .gal-chrome .addr { margin-left: 10px; font-size: 13px; color: #56656a; display: inline-flex; align-items: center; gap: 8px; }
+  .gal-chrome .addr .mark { width: 16px; height: 16px; border-radius: 5px; }
+  .gal h3 { position: absolute; left: 24px; top: 62px; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.03em; }
+  .seg { position: absolute; left: 24px; top: 104px; display: flex; gap: 3px; padding: 3px; border-radius: 999px; background: #f0f3f3; font-size: 13px; font-weight: 600; color: #3f4b4f; }
+  .seg span { padding: 6px 12px; border-radius: 999px; }
+  .seg span:first-child { background: #fff; color: #15191c; box-shadow: 0 1px 2px rgba(16, 24, 28, 0.12); }
+  .sel-all { position: absolute; right: 24px; top: 104px; padding: 6px 12px; border-radius: 999px; font-size: 14px; font-weight: 650; color: #3f4b4f; }
+  .grid4 { position: absolute; left: 24px; top: 150px; width: 632px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .t { position: relative; border: 1px solid #e2e6e7; border-radius: 12px; overflow: hidden; background: #fff; }
+  .t svg.pic { display: block; width: 100%; height: auto; }
+  .t .m { display: flex; justify-content: space-between; padding: 5px 9px; font-size: 11.5px; color: #3f4b4f; border-top: 1px solid #e2e6e7; }
+  .t .m b { color: #56656a; }
+  .t .on { position: absolute; inset: -1px; border-radius: 12px; border: 2px solid #0a7f8f; opacity: 0; }
+  .t .box { position: absolute; left: 8px; top: 8px; width: 20px; height: 20px; border-radius: 6px; border: 1.5px solid #cfd8da; background: #fff; }
+  .t .tick { position: absolute; left: 8px; top: 8px; width: 20px; height: 20px; border-radius: 6px; background: #0a7f8f; color: #fff; display: grid; place-items: center; opacity: 0; }
+  .t .tick svg { width: 13px; height: 13px; }
+  .t .saved { position: absolute; right: 8px; top: 8px; padding: 3px 8px; border-radius: 999px; background: #0a7f8f; color: #fff; font-size: 11px; font-weight: 700; opacity: 0; }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 84px; border-top: 1px solid #e7ebec; display: flex; align-items: center; gap: 14px; padding: 0 24px; font-size: 15px; font-weight: 600; color: #3f4b4f; }
+  .bar .pick { padding: 9px 30px 9px 14px; border: 1px solid #cfd8da; border-radius: 999px; color: #15191c; position: relative; }
+  .bar .pick::after { content: ""; position: absolute; right: 13px; top: 15px; width: 6px; height: 6px; border-right: 2px solid #56656a; border-bottom: 2px solid #56656a; transform: rotate(45deg); }
+  .bar .zip { display: inline-flex; align-items: center; gap: 8px; }
+  .bar .zip i { width: 16px; height: 16px; border: 1.5px solid #cfd8da; border-radius: 4px; }
+  .btn { margin-left: auto; position: relative; width: 170px; height: 46px; border-radius: 999px; background: #0a7f8f; color: #fff; font-size: 16px; font-weight: 700; }
+  .btn span { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; }
+  .btn span:first-child { opacity: 1; }
+  .done { position: absolute; left: 16px; right: 16px; bottom: 14px; height: 56px; border-radius: 14px; background: #eef7f8; border: 1px solid #d6eaed;
+    display: flex; align-items: center; gap: 12px; padding: 0 18px; font-size: 16px; color: #15191c; opacity: 0; }
+  .done .ok { width: 28px; height: 28px; border-radius: 999px; background: #0a7f8f; color: #fff; display: grid; place-items: center; flex: none; }
+  .done .ok svg { width: 16px; height: 16px; }
+  .done code { font-family: inherit; color: #085d69; font-weight: 600; }
+
+  .cursor { position: absolute; left: 0; top: 0; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3)); }
+  .ring { position: absolute; left: 0; top: 0; width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 999px; border: 2px solid #0a7f8f; opacity: 0; }
+</style>
+</head>
+<body>
+
+<!-- ======================= 1 · Intro ======================= -->
+<section class="scene center" id="intro">
+  <div class="brand-row" id="introBrand">
+    <span class="mark" style="width:72px;height:72px;border-radius:20px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11" /><path d="M7.5 11l4.5 4.5 4.5-4.5" /><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" /></svg>
+    </span>
+    Save Image As
+  </div>
+  <p class="title" id="introTitle">Right-click any image.<br><span>Save it the way you need it.</span></p>
+</section>
+
+<!-- ======================= 2 · Right-click ======================= -->
+<section class="scene" id="sceneA">
+  <div class="copy">
+    <p class="eyebrow-v">How it works</p>
+    <h2>Any image.<br><span>Any format.</span></h2>
+    <ol class="steps">
+      <li id="stepA1"><span class="n">1</span>Right-click the image</li>
+      <li id="stepA2"><span class="n">2</span>Pick PNG, JPG, WebP, AVIF or PDF</li>
+      <li id="stepA3"><span class="n">3</span>Saved at full size, on your device</li>
+    </ol>
+  </div>
+  <div class="demo-holder">
+    <div class="demo is-playing" id="demo">
+      <div class="demo-chrome">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="url">travel-journal.example/golden-hour</span>
+      </div>
+      <div class="demo-photo">
+        <svg width="300" height="200" viewBox="0 0 300 200" aria-hidden="true">
+          <defs>
+            <linearGradient id="demo-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd8a8" /><stop offset="1" stop-color="#ff9f80" /></linearGradient>
+          </defs>
+          <rect width="300" height="200" fill="url(#demo-sky)" />
+          <circle cx="214" cy="86" r="30" fill="#fff3d6" />
+          <path d="M0 150 L70 92 L130 140 L190 84 L300 160 L300 200 L0 200Z" fill="#2f7f86" />
+          <path d="M0 172 L90 130 L170 168 L240 128 L300 166 L300 200 L0 200Z" fill="#1d5c63" />
+        </svg>
+        <div class="demo-shine"></div>
+        <span class="demo-badge webp">WEBP · 320 × 213</span>
+        <span class="demo-badge png">PNG · 2400 × 1600</span>
+      </div>
+      <div class="demo-lines" style="left: 356px; top: 78px; width: 196px">
+        <span style="height: 12px; width: 92%"></span>
+        <span style="height: 12px; width: 78%"></span>
+        <span style="width: 100%; margin-top: 10px"></span>
+        <span style="width: 96%"></span>
+        <span style="width: 88%"></span>
+        <span style="width: 94%"></span>
+      </div>
+      <div class="demo-lines" style="left: 32px; top: 294px; width: 516px">
+        <span style="width: 100%"></span>
+        <span style="width: 93%"></span>
+        <span style="width: 70%"></span>
+      </div>
+      <span class="demo-ring r1"></span>
+      <span class="demo-ring r2" style="border-color: #ffffff"></span>
+      <div class="demo-menu m1" style="left: 174px; top: 156px; width: 190px">
+        <div class="row">Open image in new tab</div>
+        <div class="row">Copy image</div>
+        <div class="row">Copy image address</div>
+        <div class="sep"></div>
+        <div class="row hl hl1"><span class="ext-icon"></span><span style="flex: 1">Save Image As</span><span aria-hidden="true">›</span></div>
+      </div>
+      <div class="demo-menu m2" style="left: 364px; top: 243px; width: 200px">
+        <div class="row" style="font-weight: 600">⚡ Save as JPG → Photos/</div>
+        <div class="sep"></div>
+        <div class="row hl hl2">PNG</div>
+        <div class="row">JPG</div>
+        <div class="row">WebP</div>
+        <div class="row">AVIF</div>
+        <div class="row">PDF</div>
+      </div>
+      <div class="demo-toast">
+        <span class="file">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h7l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-9.5A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z" /><path d="M14 3.5V8h4" /></svg>
+        </span>
+        <span>
+          <span class="name">golden-hour-over-the-lake.png</span>
+          <span class="meta">2400 × 1600 · saved to Downloads</span>
+        </span>
+        <span class="ok">✓ On your device</span>
+      </div>
+      <svg class="demo-cursor" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l14 9-6.5 1.2L15 19l-2.6 1.3-3.4-6.7L4 18z" fill="#15191c" stroke="#ffffff" stroke-width="1.4" stroke-linejoin="round" /></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3 · Gallery ======================= -->
+<section class="scene" id="sceneB">
+  <div class="copy">
+    <p class="eyebrow-v">New in 1.3</p>
+    <h2>Every image<br>on the page,<br><span>in one go.</span></h2>
+    <p class="sub">The largest version of each, no duplicates. Pick some or all, save in any format or as one .zip.</p>
+  </div>
+  <div class="gal" id="gal">
+    <div class="gal-chrome">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      <span class="addr"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11" /><path d="M7.5 11l4.5 4.5 4.5-4.5" /><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" /></svg></span>Save Image As · Images on travel-journal.example</span>
+    </div>
+    <h3>8 images on travel-journal.example</h3>
+    <div class="seg"><span>All sizes</span><span>300 px+</span><span>1000 px+</span></div>
+    <span class="sel-all" id="selAll">Select all</span>
+    <div class="grid4" id="grid4"></div>
+    <div class="bar">
+      Save as <span class="pick">PNG</span>
+      <span class="zip"><i></i>One .zip file</span>
+      <span class="btn" id="btn"><span>Select images</span><span>Save 8 images</span><span>Save 7 images</span><span>Save 6 images</span><span>Saving…</span></span>
+    </div>
+    <div class="done" id="done">
+      <span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+      <span>6 images saved to <code>Downloads/SaveImageAs/travel-journal.example/</code></span>
+    </div>
+    <span class="ring" id="ringB"></span>
+    <svg class="cursor" id="cursorB" width="26" height="26" viewBox="0 0 24 24"><path d="M4 2l14 9-6.5 1.2L15 19l-2.6 1.3-3.4-6.7L4 18z" fill="#15191c" stroke="#ffffff" stroke-width="1.4" stroke-linejoin="round" /></svg>
+  </div>
+</section>
+
+<!-- ======================= 4 · End ======================= -->
+<section class="scene center" id="end">
+  <div class="brand-row">
+    <span class="mark" style="width:72px;height:72px;border-radius:20px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11" /><path d="M7.5 11l4.5 4.5 4.5-4.5" /><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" /></svg>
+    </span>
+    Save Image As
+  </div>
+  <div class="chips">
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>100% on-device</span>
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>No account</span>
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>Open source</span>
+  </div>
+  <span class="cta">Free on the Chrome Web Store</span>
+  <span class="url">aiadict.github.io/save-image-as</span>
+</section>
+
+<script>
+  const TOTAL = 28000;
+  const $ = (id) => document.getElementById(id);
+
+  /** One element's whole life on the shared timeline: [[ms, props], …], held before the first and after the last. */
+  function track(el, frames, easing = "ease") {
+    const kf = frames.map(([t, p]) => ({ ...p, offset: t / TOTAL, easing }));
+    if (kf[0].offset > 0) kf.unshift({ ...frames[0][1], offset: 0, easing });
+    if (kf[kf.length - 1].offset < 1) kf.push({ ...frames[frames.length - 1][1], offset: 1 });
+    el.animate(kf, { duration: TOTAL, fill: "both" });
+  }
+  /** Fade a scene in at `from` and out at `to`. */
+  function scene(el, from, to, fade = 400) {
+    track(el, [[Math.max(0, from - fade), { opacity: 0 }], [from, { opacity: 1 }], [to - fade, { opacity: 1 }], [to, { opacity: 0 }]]);
+  }
+  /** Visible exactly between `from` and `to`. */
+  function between(el, from, to, prop = "opacity") {
+    const off = { [prop]: prop === "opacity" ? 0 : "hidden" };
+    const on = { [prop]: prop === "opacity" ? 1 : "visible" };
+    const f = from <= 0 ? [[0, on]] : [[from - 1, off], [from, on]];
+    if (to < TOTAL) f.push([to - 1, on], [to, off]);
+    track(el, f, "linear");
+  }
+
+  // ---------- timeline (ms) ----------
+  const A0 = 2900, B0 = 13700, E0 = 24300;
+
+  // 1 · Intro
+  track($("intro"), [[0, { opacity: 1 }], [2500, { opacity: 1 }], [A0, { opacity: 0 }]]);
+  track($("introBrand"), [[0, { opacity: 0, transform: "translateY(16px)" }], [600, { opacity: 1, transform: "none" }]], "cubic-bezier(.2,.8,.2,1)");
+  track($("introTitle"), [[400, { opacity: 0, transform: "translateY(16px)" }], [1100, { opacity: 1, transform: "none" }]], "cubic-bezier(.2,.8,.2,1)");
+
+  // 2 · Right-click: the hero loop (delayed 3.4 s in CSS) plays 3.4–13.4 s.
+  scene($("sceneA"), A0 + 300, B0);
+  const D = 3400; // hero demo start
+  track($("stepA1"), [[D, { opacity: 0.32 }], [D + 1500, { opacity: 1 }], [D + 2700, { opacity: 1 }], [D + 3000, { opacity: 0.32 }]]);
+  track($("stepA2"), [[D + 2700, { opacity: 0.32 }], [D + 3000, { opacity: 1 }], [D + 4600, { opacity: 1 }], [D + 4900, { opacity: 0.32 }]]);
+  track($("stepA3"), [[D + 4600, { opacity: 0.32 }], [D + 4900, { opacity: 1 }]]);
+
+  // 3 · Gallery
+  scene($("sceneB"), B0 + 300, E0);
+  const pics = [
+    ["#ffd8a8", "#ff9f80", "#2f7f86", "#1d5c63", "2400 × 1600", "JPG"],
+    ["#bfe3ff", "#8cc8f0", "#3c7a5a", "#2a5a42", "1920 × 1280", "WebP"],
+    ["#ffe7b0", "#f7c46c", "#9a6b3c", "#6e4a28", "320 × 213", "PNG"],
+    ["#e4d7ff", "#b9a4f2", "#4b4f8f", "#33366b", "2048 × 1365", "JPG"],
+    ["#cdeee6", "#94d6c6", "#2f7f86", "#1d5c63", "1600 × 1067", "JPG"],
+    ["#ffd0d6", "#f59aa8", "#7a3d55", "#542a3b", "180 × 180", "PNG"],
+    ["#fff1c9", "#ffc98a", "#4f7d3a", "#365a27", "3000 × 2000", "WebP"],
+    ["#d6e6f5", "#a6c3e0", "#55606e", "#3a434e", "1200 × 800", "AVIF"],
+  ];
+  const tiles = pics.map(([s1, s2, h1, h2, size, type], i) => {
+    const t = document.createElement("div");
+    t.className = "t";
+    t.innerHTML = `<svg class="pic" viewBox="0 0 160 120"><defs><linearGradient id="g${i}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${s1}"/><stop offset="1" stop-color="${s2}"/></linearGradient></defs><rect width="160" height="120" fill="url(#g${i})"/><circle cx="${40 + i * 13}" cy="${38 + (i % 3) * 6}" r="14" fill="#fff6dd" opacity=".9"/><path d="M0 ${84 - (i % 3) * 6} L${34 + i * 3} ${52 + (i % 2) * 8} L${74 + i * 2} ${80} L${112 - i} ${48 + (i % 4) * 5} L160 ${86} V120 H0Z" fill="${h1}"/><path d="M0 104 L50 ${82 + (i % 2) * 6} L96 102 L140 ${84 + (i % 3) * 4} L160 98 V120 H0Z" fill="${h2}"/></svg><span class="m"><span>${size}</span><b>${type}</b></span><span class="on"></span><span class="box"></span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="saved">Saved</span>`;
+    $("grid4").append(t);
+    return t;
+  });
+
+  // Tiles pop in.
+  tiles.forEach((t, i) => track(t, [[B0 + 300 + i * 70, { opacity: 0, transform: "scale(.94)" }], [B0 + 650 + i * 70, { opacity: 1, transform: "none" }]], "cubic-bezier(.2,.8,.2,1)"));
+
+  // Cursor path, positions measured from the laid-out card.
+  const gal = $("gal").getBoundingClientRect();
+  const at = (el, dx = 0.5, dy = 0.5) => {
+    const r = el.getBoundingClientRect();
+    return [r.left - gal.left + r.width * dx, r.top - gal.top + r.height * dy];
+  };
+  const pSel = at($("selAll"));
+  const p2 = at(tiles[2], 0.55, 0.45);
+  const p5 = at(tiles[5], 0.55, 0.45);
+  const pBtn = at($("btn"), 0.6, 0.55);
+  const tf = ([x, y]) => ({ transform: `translate(${x - 4}px, ${y - 2}px)` });
+  const S = B0;
+  const clickSel = S + 2100, click2 = S + 3300, click5 = S + 4300, clickBtn = S + 5500;
+  track($("cursorB"), [
+    [S + 900, tf([620, 520])],
+    [clickSel - 150, tf(pSel)], [clickSel + 350, tf(pSel)],
+    [click2 - 150, tf(p2)], [click2 + 250, tf(p2)],
+    [click5 - 150, tf(p5)], [click5 + 300, tf(p5)],
+    [clickBtn - 150, tf(pBtn)], [clickBtn + 2400, tf(pBtn)],
+    [clickBtn + 3400, tf([700, 600])],
+  ], "cubic-bezier(.45,.05,.3,1)");
+  const ringAt = (p, t) => [
+    [t - 1, { opacity: 0, transform: `translate(${p[0]}px, ${p[1]}px) scale(.4)` }],
+    [t, { opacity: 0.9, transform: `translate(${p[0]}px, ${p[1]}px) scale(1)` }],
+    [t + 350, { opacity: 0, transform: `translate(${p[0]}px, ${p[1]}px) scale(1.7)` }],
+  ];
+  track($("ringB"), [...ringAt(pSel, clickSel), ...ringAt(p2, click2), ...ringAt(p5, click5), ...ringAt(pBtn, clickBtn)], "ease-out");
+  track($("selAll"), [[clickSel - 300, { background: "transparent" }], [clickSel - 200, { background: "#f0f3f3" }], [clickSel + 400, { background: "#f0f3f3" }], [clickSel + 500, { background: "transparent" }]], "linear");
+
+  // Ticks: all on with "Select all", then 2 and 5 off.
+  tiles.forEach((t, i) => {
+    const on = clickSel + 80 + i * 45;
+    const off = i === 2 ? click2 + 50 : i === 5 ? click5 + 50 : TOTAL;
+    for (const sel of [".tick", ".on"]) between(t.querySelector(sel), on, off);
+  });
+  // Button label.
+  const labels = $("btn").children;
+  between(labels[0], 0, clickSel + 100);
+  between(labels[1], clickSel + 100, click2 + 50);
+  between(labels[2], click2 + 50, click5 + 50);
+  between(labels[3], click5 + 50, clickBtn + 100);
+  between(labels[4], clickBtn + 100, TOTAL);
+  // Saved badges, one by one, then the summary.
+  const savedOrder = [0, 1, 3, 4, 6, 7];
+  savedOrder.forEach((i, k) => track(tiles[i].querySelector(".saved"), [[clickBtn + 350 + k * 260, { opacity: 0, transform: "scale(.6)" }], [clickBtn + 550 + k * 260, { opacity: 1, transform: "none" }]], "cubic-bezier(.2,.8,.2,1)"));
+  const doneAt = clickBtn + 350 + 6 * 260 + 150;
+  track($("done"), [[doneAt, { opacity: 0, transform: "translateY(16px)" }], [doneAt + 400, { opacity: 1, transform: "none" }]], "cubic-bezier(.2,.8,.2,1)");
+
+  // 4 · End
+  track($("end"), [[E0, { opacity: 0, transform: "scale(.98)" }], [E0 + 500, { opacity: 1, transform: "none" }]], "cubic-bezier(.2,.8,.2,1)");
+
+  // Opened directly in a browser: loop it.
+  if (!location.hash.includes("render")) {
+    setInterval(() => document.getAnimations().forEach((a) => (a.currentTime = 0)), TOTAL);
+  }
+</script>
+</body>
+</html>

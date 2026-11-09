@@ -18,7 +18,8 @@
     "render:icons": "node scripts/render-icons.mjs",
     "render:sample": "node scripts/render-welcome-sample.mjs",
     "render:store": "node scripts/render-store-assets.mjs",
-    "build:web": "node scripts/build-web.mjs"
+    "build:web": "node scripts/build-web.mjs",
+    "render:video": "node scripts/render-demo-video.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",
