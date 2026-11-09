@@ -2,7 +2,7 @@
 
 All notable changes to the Save Image As Chrome extension. Dates are when each version was built/released, not when Chrome Web Store review completed.
 
-## Unreleased (v1.2.0)
+## v1.2.0 — 2026-11-09
 
 **Changed:**
 - **New look.** A clean, lighter popup in the same family as Notes AI:
