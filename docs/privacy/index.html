@@ -18,29 +18,33 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href="../assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="../assets/style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="../">
-        <span class="mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M12 3.5v11" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
-            <path d="M7.5 11l4.5 4.5 4.5-4.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </span>
-        Save Image As
-      </a>
-      <nav class="site-nav">
-        <a href="../">Welcome</a>
-        <a href="./" aria-current="page">Privacy</a>
-        <a href="../terms/">Terms</a>
-        <a href="../feedback/">Feedback</a>
-      </nav>
-    </header>
+    <div class="header-band">
+      <header class="site-header">
+        <a class="brand" href="../">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3.5v11" />
+              <path d="M7.5 11l4.5 4.5 4.5-4.5" />
+              <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" />
+            </svg>
+          </span>
+          Save Image As
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="../">Home</a>
+          <a href="../privacy/" aria-current="page">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../feedback/">Feedback</a>
+          <a class="btn-primary btn-sm" href="https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk" rel="noopener">Add to Chrome</a>
+        </nav>
+      </header>
+    </div>
 
-    <main>
+    <main class="doc">
       <h1>Privacy Policy</h1>
       <p class="updated">Last updated: November 9, 2026</p>
 
@@ -129,9 +133,16 @@
       <p>Questions about this policy: <a href="mailto:majchrowski.d@gmail.com">majchrowski.d@gmail.com</a>, or open an issue on <a href="https://github.com/aiadict/save-image-as" rel="noopener">GitHub</a>.</p>
     </main>
 
-    <footer class="site-footer">
-      <span>Save Image As</span>
-      <span><a href="https://github.com/aiadict/save-image-as" rel="noopener">Source on GitHub</a></span>
-    </footer>
+    <div class="footer-band">
+      <footer class="site-footer">
+        <span>Save Image As · no analytics, no cookies on this site</span>
+        <nav aria-label="Footer">
+          <a href="../privacy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../feedback/">Feedback</a>
+          <a href="https://github.com/aiadict/save-image-as" rel="noopener">Source on GitHub</a>
+        </nav>
+      </footer>
+    </div>
   </body>
 </html>

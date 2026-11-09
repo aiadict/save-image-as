@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Save Image As — save any web image as PNG, JPG, WebP, AVIF or PDF</title>
+    <title>Save Image As: save any image as PNG, JPG, WebP, AVIF or PDF</title>
     <meta
       name="description"
-      content="A Chrome extension that adds real image format conversion to the right-click menu. 100% local, no uploads, no tracking."
+      content="Free Chrome extension: right-click any image and save it as PNG, JPG, WebP, AVIF or PDF. Converted on your device at the highest resolution the page has. Nothing uploaded."
     />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
@@ -14,90 +14,375 @@
     <link rel="canonical" href="https://aiadict.github.io/save-image-as/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Save Image As" />
-    <meta property="og:title" content="Save Image As: save any web image as PNG, JPG, WebP, AVIF or PDF" />
-    <meta property="og:description" content="A Chrome extension that adds real image format conversion to the right-click menu. 100% local, no uploads, no tracking." />
+    <meta property="og:title" content="Save Image As: save any image as PNG, JPG, WebP, AVIF or PDF" />
+    <meta property="og:description" content="Right-click any image, pick a format. Converted on your device, nothing uploaded. Free Chrome extension." />
     <meta property="og:url" content="https://aiadict.github.io/save-image-as/" />
     <meta property="og:image" content="https://aiadict.github.io/save-image-as/assets/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href="assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Save Image As",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "description": "Right-click any image and save it as PNG, JPG, WebP, AVIF or PDF, converted on your device.",
+        "url": "https://aiadict.github.io/save-image-as/",
+        "downloadUrl": "https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./">
-        <span class="mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M12 3.5v11" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
-            <path d="M7.5 11l4.5 4.5 4.5-4.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </span>
-        Save Image As
-      </a>
-      <nav class="site-nav">
-        <a href="./" aria-current="page">Welcome</a>
-        <a href="privacy/">Privacy</a>
-        <a href="terms/">Terms</a>
-        <a href="feedback/">Feedback</a>
-      </nav>
-    </header>
+    <div class="header-band">
+      <header class="site-header">
+        <a class="brand" href="./">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3.5v11" />
+              <path d="M7.5 11l4.5 4.5 4.5-4.5" />
+              <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" />
+            </svg>
+          </span>
+          Save Image As
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="#how">How it works</a>
+          <a href="#formats">Formats</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#faq">FAQ</a>
+          <a class="btn-primary btn-sm" href="https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk" rel="noopener">Add to Chrome</a>
+        </nav>
+      </header>
+    </div>
 
     <main>
-      <h1>Save any web image exactly how you need it.</h1>
-      <p class="lede">
-        Right-click any image, pick PNG, JPG, WebP, AVIF or PDF, and get a real, correctly-encoded file — not just the
-        original bytes with a new extension slapped on. Everything happens on your device.
-      </p>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3.5" y="4.5" width="17" height="15" rx="2.5" />
+                <circle cx="9" cy="10" r="1.8" />
+                <path d="M20.5 16l-5-5-9 8.5" />
+              </svg>
+              Free Chrome extension
+            </p>
+            <h1 id="hero-title">Right-click any image.<br /><span>Save it the way you need it.</span></h1>
+            <p class="lede">
+              PNG, JPG, WebP, AVIF or PDF, converted on your device at the highest resolution the page has. One click to
+              your folder. Nothing uploaded.
+            </p>
+            <div class="cta-row">
+              <a class="btn-primary btn-lg" href="https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk" rel="noopener">
+                Add to Chrome, it's free
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+              <a class="btn-secondary btn-lg" href="#how">See how it works</a>
+            </div>
+            <ul class="trust-row">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>100% on-device</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>No account</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>Open source</li>
+            </ul>
+          </div>
 
-      <div class="actions">
-        <a class="btn-primary" href="https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk" rel="noopener">Add to Chrome, it's free →</a>
-        <a class="btn-secondary" href="https://github.com/aiadict/save-image-as" rel="noopener">View source on GitHub</a>
-      </div>
+          <div class="demo-wrap">
+            <div class="demo-bar">
+              <button type="button" class="replay" id="replay">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.7" /><path d="M4 4v4h4" /></svg>
+                Replay
+              </button>
+            </div>
+            <div class="demo-scale">
+              <div class="demo" id="demo" role="img" aria-label="Animation: a cursor right-clicks a WebP photo, opens Save Image As, picks PNG, and the photo is saved as a 2400 by 1600 PNG into Downloads.">
+                <div class="demo-chrome">
+                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                  <span class="url">travel-journal.example/golden-hour</span>
+                </div>
+                <div class="demo-photo">
+                  <svg width="300" height="200" viewBox="0 0 300 200" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="demo-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd8a8" /><stop offset="1" stop-color="#ff9f80" /></linearGradient>
+                    </defs>
+                    <rect width="300" height="200" fill="url(#demo-sky)" />
+                    <circle cx="214" cy="86" r="30" fill="#fff3d6" />
+                    <path d="M0 150 L70 92 L130 140 L190 84 L300 160 L300 200 L0 200Z" fill="#2f7f86" />
+                    <path d="M0 172 L90 130 L170 168 L240 128 L300 166 L300 200 L0 200Z" fill="#1d5c63" />
+                  </svg>
+                  <div class="demo-shine"></div>
+                  <span class="demo-badge webp">WEBP · 320 × 213</span>
+                  <span class="demo-badge png">PNG · 2400 × 1600</span>
+                </div>
+                <div class="demo-lines" style="left: 356px; top: 78px; width: 196px">
+                  <span style="height: 12px; width: 92%"></span>
+                  <span style="height: 12px; width: 78%"></span>
+                  <span style="width: 100%; margin-top: 10px"></span>
+                  <span style="width: 96%"></span>
+                  <span style="width: 88%"></span>
+                  <span style="width: 94%"></span>
+                </div>
+                <div class="demo-lines" style="left: 32px; top: 294px; width: 516px">
+                  <span style="width: 100%"></span>
+                  <span style="width: 93%"></span>
+                  <span style="width: 70%"></span>
+                </div>
+                <span class="demo-ring r1"></span>
+                <span class="demo-ring r2" style="border-color: #ffffff"></span>
+                <div class="demo-menu m1" style="left: 174px; top: 156px; width: 190px">
+                  <div class="row">Open image in new tab</div>
+                  <div class="row">Copy image</div>
+                  <div class="row">Copy image address</div>
+                  <div class="sep"></div>
+                  <div class="row hl hl1"><span class="ext-icon"></span><span style="flex: 1">Save Image As</span><span aria-hidden="true">›</span></div>
+                </div>
+                <div class="demo-menu m2" style="left: 364px; top: 243px; width: 200px">
+                  <div class="row" style="font-weight: 600">⚡ Save as JPG → Photos/</div>
+                  <div class="sep"></div>
+                  <div class="row hl hl2">PNG</div>
+                  <div class="row">JPG</div>
+                  <div class="row">WebP</div>
+                  <div class="row">AVIF</div>
+                  <div class="row">PDF</div>
+                </div>
+                <div class="demo-toast">
+                  <span class="file">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h7l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-9.5A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z" /><path d="M14 3.5V8h4" /></svg>
+                  </span>
+                  <span>
+                    <span class="name">golden-hour-over-the-lake.png</span>
+                    <span class="meta">2400 × 1600 · saved to Downloads</span>
+                  </span>
+                  <span class="ok">✓ On your device</span>
+                </div>
+                <svg class="demo-cursor" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l14 9-6.5 1.2L15 19l-2.6 1.3-3.4-6.7L4 18z" fill="#15191c" stroke="#ffffff" stroke-width="1.4" stroke-linejoin="round" /></svg>
+              </div>
+            </div>
+            <p class="demo-caption">Simplified illustration.</p>
+          </div>
+        </div>
+      </section>
 
-      <h2>What it does</h2>
-      <div class="card">
-        <h3>⚙️ Five real output formats</h3>
-        <p>
-          PNG for lossless quality and transparency, JPG for smaller photo files, WebP and AVIF for modern
-          compression, PDF for a print-ready document — or just save the original with no conversion at all.
-        </p>
-      </div>
-      <div class="card">
-        <h3>⚡ One click, every time</h3>
-        <p>
-          Set your favorite format and folder once. After that, the right-click menu shows a single "Save as
-          [format]" shortcut that saves instantly — no dialog, no digging through a submenu.
-        </p>
-      </div>
-      <div class="card">
-        <h3>📐 The real image, not the thumbnail</h3>
-        <p>
-          Modern pages load an image several different ways — <code>srcset</code>, <code>&lt;picture&gt;</code>, a
-          small preview linked to a larger original. Save Image As checks all of them and saves the
-          highest-resolution version actually available.
-        </p>
-      </div>
-      <div class="card">
-        <h3>🔒 100% local, private by design</h3>
-        <p>
-          Every conversion happens directly on your device. Images are never uploaded, never sent to a server, and
-          never seen by us. No accounts, no ads, no tracking. Read the full details on the
-          <a href="privacy/">privacy policy</a> page.
-        </p>
-      </div>
+      <section aria-label="Problems it solves">
+        <div class="container grid" style="padding-bottom: 88px">
+          <div class="tile">
+            <p class="pain-q">Saved as .webp again?</p>
+            <p class="pain-a">Pick PNG or JPG right in the menu. It's converted on your device.</p>
+          </div>
+          <div class="tile">
+            <p class="pain-q">Got a blurry thumbnail?</p>
+            <p class="pain-a">It saves the largest version the page offers, not the preview.</p>
+          </div>
+          <div class="tile">
+            <p class="pain-q">Tired of save dialogs?</p>
+            <p class="pain-a">Set a format and folder once. Then it's one click.</p>
+          </div>
+        </div>
+      </section>
 
-      <h2>Three steps to get started</h2>
-      <ol>
-        <li><strong>Pin it</strong> — click the puzzle-piece icon in your Chrome toolbar and pin Save Image As.</li>
-        <li><strong>Set your defaults</strong> — open the popup and choose your save mode, format and folder.</li>
-        <li><strong>Right-click any image</strong> — pick a format, or use the one-click shortcut.</li>
-      </ol>
+      <section class="section" id="how" aria-labelledby="how-title" style="border-top: 1px solid var(--line)">
+        <div class="container">
+          <p class="eyebrow">How it works</p>
+          <h2 class="h2" id="how-title">Set it once.<br /><span>Then it's one click.</span></h2>
+          <ol class="steps grid spaced">
+            <li class="tile">
+              <span class="step-num">1</span>
+              <h3>Pin it</h3>
+              <p>Click the puzzle icon in Chrome's toolbar and pin Save Image As.</p>
+            </li>
+            <li class="tile">
+              <span class="step-num">2</span>
+              <h3>Pick your format</h3>
+              <p>Choose PNG, JPG, WebP, AVIF, PDF or Original, and a folder inside Downloads.</p>
+            </li>
+            <li class="tile">
+              <span class="step-num">3</span>
+              <h3>Right-click and save</h3>
+              <p>Use the one-click item, or pick any other format from the same menu. Want it even faster? Switch on "One-click only".</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="formats" aria-labelledby="formats-title">
+        <div class="container">
+          <p class="eyebrow">Formats</p>
+          <h2 class="h2" id="formats-title">Every format you need.<br /><span>Really converted, not renamed.</span></h2>
+          <div class="grid spaced">
+            <div class="format-card">
+              <div class="format-art checker"><span style="width: 64px; height: 64px; border-radius: 18px; background: #0a7f8f; transform: rotate(-8deg)"></span></div>
+              <div class="format-body"><h3>PNG</h3><p>Lossless, keeps transparency. Logos, graphics, screenshots.</p></div>
+            </div>
+            <div class="format-card">
+              <div class="format-art sky"><span class="hills"></span></div>
+              <div class="format-body"><h3>JPG</h3><p>Small photo files that open everywhere. Quality is yours to set.</p></div>
+            </div>
+            <div class="format-card">
+              <div class="format-art" style="flex-direction: column; align-items: stretch; gap: 10px; padding: 0 26px">
+                <span style="height: 12px; border-radius: 6px; background: var(--line-strong)"></span>
+                <span style="height: 12px; width: 46%; border-radius: 6px; background: var(--accent)"></span>
+                <span style="height: 12px; width: 34%; border-radius: 6px; background: var(--accent-ink)"></span>
+              </div>
+              <div class="format-body"><h3>WebP and AVIF</h3><p>Modern formats for the smallest files at the same visual quality.</p></div>
+            </div>
+            <div class="format-card">
+              <div class="format-art">
+                <span style="width: 70px; height: 90px; border-radius: 8px; background: #ffffff; border: 1px solid #d8e1e3; display: flex; flex-direction: column; gap: 6px; padding: 10px; box-sizing: border-box">
+                  <span class="sky" style="height: 34px; border-radius: 4px"></span>
+                  <span style="height: 5px; border-radius: 3px; background: #e2e8e9"></span>
+                  <span style="height: 5px; width: 70%; border-radius: 3px; background: #e2e8e9"></span>
+                </span>
+              </div>
+              <div class="format-body"><h3>PDF</h3><p>Turn any picture into a one-page PDF, ready to print or share.</p></div>
+            </div>
+            <div class="format-card">
+              <div class="format-art" style="font-size: 30px; font-weight: 700; letter-spacing: -0.04em">
+                <span style="color: var(--ink-3); text-decoration: line-through">4.2 MB</span>
+                <span aria-hidden="true" style="color: var(--accent)">→</span>
+                <span style="color: var(--accent-ink)">&lt;1 MB</span>
+              </div>
+              <div class="format-body"><h3>Compressed</h3><p>Aim for a size, not a quality number: under 1 MB for email, 200 KB for the web.</p></div>
+            </div>
+            <div class="format-card">
+              <div class="format-art">
+                <span style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); font-size: 15px; font-weight: 600">golden-retriever-puppy.jpg</span>
+              </div>
+              <div class="format-body"><h3>Original, with a real name</h3><p>Keep the file as-is. Names come from the image's description, not IMG_4821.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="real-title">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Full resolution</p>
+            <h2 class="h2" id="real-title">The real image,<br /><span>not the thumbnail.</span></h2>
+            <p class="section-lede">
+              Pages often show a small preview and keep the large version in srcset, a &lt;picture&gt; element or a link.
+              Save Image As checks all of them and saves the largest one the page offers.
+            </p>
+          </div>
+          <div style="display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap">
+            <div>
+              <div class="sky" style="width: 120px; height: 80px; border-radius: 8px; filter: blur(1.2px)"></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: var(--ink-2)">On the page<br /><strong style="color: var(--ink)">320 × 213</strong></p>
+            </div>
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--accent); margin-bottom: 40px"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            <div>
+              <div class="sky" style="position: relative; overflow: hidden; width: 300px; max-width: 70vw; height: 200px; border-radius: 12px; box-shadow: var(--shadow-window)"><span class="hills"></span></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: var(--ink-2)">What you save<br /><strong style="color: var(--accent-ink)">2400 × 1600</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section privacy-band" id="privacy" aria-labelledby="privacy-title">
+        <div class="container">
+          <p class="eyebrow">Privacy</p>
+          <h2 class="h2" id="privacy-title">Your images never<br /><span>leave your device.</span></h2>
+          <div class="grid spaced">
+            <div class="tile">
+              <p class="big-stat">0 uploads</p>
+              <p>Conversion runs in your browser. The only download is the image itself, from the site it's on.</p>
+            </div>
+            <div class="tile">
+              <h3>No account, no ads, no tracking</h3>
+              <p>Nothing to sign up for. The popup counts your saves on this device, so you can see it for yourself.</p>
+            </div>
+            <div class="tile">
+              <h3>Open source</h3>
+              <p>Every line is <a href="https://github.com/aiadict/save-image-as" rel="noopener">on GitHub</a>, and a build check fails if anyone adds a new network call. Read the <a href="privacy/">privacy policy</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="container faq-layout">
+          <div>
+            <p class="eyebrow">FAQ</p>
+            <h2 class="h2" id="faq-title">Questions</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>Does it upload my images?</summary>
+              <p>No. The image is fetched from the site it's on and converted inside your browser. Nothing is sent to us or anyone else.</p>
+            </details>
+            <details>
+              <summary>Where do saved files go?</summary>
+              <p>Into Downloads, or a folder inside it that you name. Choose "Ask where" in the popup to pick a location every time.</p>
+            </details>
+            <details>
+              <summary>Why does Chrome save some images as .webp?</summary>
+              <p>Many sites serve WebP because it loads faster. Save Image As converts it to PNG, JPG, AVIF or PDF so the file opens anywhere.</p>
+            </details>
+            <details>
+              <summary>Why might it ask to "Allow on all sites"?</summary>
+              <p>Some sites block extensions from reading image files. If a save is blocked, the popup offers this one permission. It's optional and stays off until you click it.</p>
+            </details>
+            <details>
+              <summary>Looking for a "Save image as Type" alternative?</summary>
+              <p>Save Image As does the same job, right-click and pick a format, with conversion on your device, the full-resolution image and minimal permissions.</p>
+            </details>
+            <details>
+              <summary>Is it free?</summary>
+              <p>Yes. No ads, no account.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="container">
+          <h2 class="h2" id="closing-title">Save your next image the right way.</h2>
+          <p>It takes ten seconds to set up and works on any site you can see an image on.</p>
+          <a class="btn-primary btn-lg" href="https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk" rel="noopener">
+            Add to Chrome, it's free
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer">
-      <span>Save Image As</span>
-      <span><a href="https://github.com/aiadict/save-image-as" rel="noopener">Source on GitHub</a></span>
-    </footer>
+    <div class="footer-band">
+      <footer class="site-footer">
+        <span>Save Image As · no analytics, no cookies on this site</span>
+        <nav aria-label="Footer">
+          <a href="privacy/">Privacy</a>
+          <a href="terms/">Terms</a>
+          <a href="feedback/">Feedback</a>
+          <a href="https://github.com/aiadict/save-image-as" rel="noopener">Source on GitHub</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script>
+      // Play the demo once it scrolls into view; Replay restarts it.
+      (function () {
+        var demo = document.getElementById("demo");
+        var play = function () {
+          demo.classList.remove("is-playing");
+          void demo.offsetWidth; // restart the CSS animations
+          demo.classList.add("is-playing");
+        };
+        if ("IntersectionObserver" in window) {
+          var seen = false;
+          new IntersectionObserver(function (entries) {
+            if (!seen && entries[0].isIntersecting) {
+              seen = true;
+              play();
+            }
+          }, { threshold: 0.4 }).observe(demo);
+        } else {
+          play();
+        }
+        document.getElementById("replay").addEventListener("click", play);
+      })();
+    </script>
   </body>
 </html>
