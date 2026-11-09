@@ -16,7 +16,8 @@
     "check:bundle": "node scripts/check-prod-bundle.mjs",
     "check:contrast": "node scripts/check-contrast.mjs",
     "render:icons": "node scripts/render-icons.mjs",
-    "render:sample": "node scripts/render-welcome-sample.mjs"
+    "render:sample": "node scripts/render-welcome-sample.mjs",
+    "render:store": "node scripts/render-store-assets.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",

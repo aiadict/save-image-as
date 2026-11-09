@@ -1,0 +1,192 @@
+<!doctype html>
+<!-- Source for the Chrome Web Store images. Each .shot is rendered to its own
+     PNG by extension/scripts/render-store-assets.mjs (npm run render:store):
+     five 1280×800 screenshots, a 440×280 small tile, a 1400×560 marquee.
+     Few words on purpose: most installs come from non-English locales. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Geist"; src: url("../../docs/assets/fonts/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+  body { margin: 0; background: #ccc; font-family: "Geist", ui-sans-serif, system-ui, sans-serif; color: #15191c; }
+  .shot { position: relative; overflow: hidden; box-sizing: border-box; margin: 0 0 40px;
+    background: radial-gradient(60% 80% at 85% 0%, #e3f2f4 0%, rgba(227, 242, 244, 0) 70%), #ffffff; }
+  .s1280 { width: 1280px; height: 800px; padding: 80px 88px; display: flex; align-items: center; gap: 64px; }
+  .copy { flex: 0 0 420px; }
+  .copy h1 { margin: 0; font-size: 58px; line-height: 1.04; letter-spacing: -0.045em; font-weight: 750; }
+  .copy h1 span { color: #0a7f8f; }
+  .copy p { margin: 22px 0 0; font-size: 24px; line-height: 1.4; color: #46535a; }
+  .visual { flex: 1; position: relative; height: 100%; display: flex; align-items: center; justify-content: center; }
+  .brand { position: absolute; left: 88px; bottom: 56px; display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 650; }
+  .mark { width: 40px; height: 40px; border-radius: 11px; background: #0a7f8f; display: grid; place-items: center; }
+  .mark svg { width: 24px; height: 24px; }
+
+  .photo { border-radius: 16px; overflow: hidden; position: relative; box-shadow: 0 30px 60px -28px rgba(24, 26, 32, 0.45);
+    background: linear-gradient(180deg, #ffd8a8 0%, #ff9f80 100%); }
+  .photo .sun { position: absolute; width: 22%; aspect-ratio: 1; border-radius: 50%; background: #fff3d6; right: 18%; top: 22%; }
+  .photo .hills { position: absolute; left: 0; right: 0; bottom: 0; height: 48%; background: #2f7f86;
+    clip-path: polygon(0 60%, 25% 10%, 50% 55%, 75% 0, 100% 45%, 100% 100%, 0 100%); }
+  .photo .hills2 { position: absolute; left: 0; right: 0; bottom: 0; height: 28%; background: #1d5c63;
+    clip-path: polygon(0 50%, 30% 0, 55% 60%, 80% 10%, 100% 50%, 100% 100%, 0 100%); }
+  .badge { position: absolute; left: 16px; top: 16px; padding: 8px 14px; border-radius: 999px; color: #fff; font-size: 18px; font-weight: 700; letter-spacing: 0.03em; }
+
+  .menu { position: absolute; background: #fff; border: 1px solid #d8dcdf; border-radius: 10px; padding: 6px 0;
+    box-shadow: 0 24px 48px -18px rgba(0, 0, 0, 0.4); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 19px; }
+  .menu .row { height: 38px; display: flex; align-items: center; gap: 10px; padding: 0 18px; white-space: nowrap; }
+  .menu .hl { background: #2a62d6; color: #fff; margin: 0 6px; padding: 0 12px; border-radius: 6px; }
+  .menu .sep { height: 1px; background: #e3e5e8; margin: 6px 0; }
+  .menu .icon { width: 18px; height: 18px; border-radius: 5px; background: #0a7f8f; flex: none; }
+  .menu .bold { font-weight: 650; }
+
+  .card { background: #fff; border: 1px solid #e3e7e8; border-radius: 20px; box-shadow: 0 30px 60px -30px rgba(24, 26, 32, 0.35); }
+  .big { font-size: 64px; font-weight: 750; letter-spacing: -0.05em; line-height: 1; }
+  .chip { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 999px; font-size: 22px; font-weight: 650; }
+  .arrow { width: 60px; height: 60px; color: #0a7f8f; flex: none; }
+</style>
+</head>
+<body>
+
+<!-- 1: right-click, pick a format -->
+<section class="shot s1280" id="shot-1-right-click">
+  <div class="copy">
+    <h1>Right-click any image.<br><span>Pick any format.</span></h1>
+    <p>PNG · JPG · WebP · AVIF · PDF</p>
+  </div>
+  <div class="visual">
+    <div class="photo" style="width: 440px; height: 294px; position: absolute; left: 0; top: 170px">
+      <span class="sun"></span><span class="hills"></span><span class="hills2"></span>
+      <span class="badge" style="background: rgba(21, 25, 28, 0.78)">WEBP</span>
+    </div>
+    <div class="menu" style="left: 180px; top: 270px; width: 250px">
+      <div class="row">Open image in new tab</div>
+      <div class="row">Copy image</div>
+      <div class="sep"></div>
+      <div class="row hl"><span class="icon" style="box-shadow: 0 0 0 1px #fff"></span><span style="flex: 1">Save Image As</span>›</div>
+    </div>
+    <div class="menu" style="left: 425px; top: 350px; width: 190px">
+      <div class="row hl">PNG</div>
+      <div class="row">JPG</div>
+      <div class="row">WebP</div>
+      <div class="row">AVIF</div>
+      <div class="row">PDF</div>
+      <div class="sep"></div>
+      <div class="row">Compressed</div>
+      <div class="row">Original file</div>
+    </div>
+  </div>
+  <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M7.5 11l4.5 4.5 4.5-4.5"/><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16"/></svg></span>Save Image As</div>
+</section>
+
+<!-- 2: set it once, then one click -->
+<section class="shot s1280" id="shot-2-one-click">
+  <div class="copy">
+    <h1>Set it once.<br><span>Then it's one click.</span></h1>
+    <p>Your format, your folder. Right-click → saved.</p>
+  </div>
+  <div class="visual">
+    <img src="img/popup-light.png" alt="" style="position: absolute; left: 0; top: 40px; width: 360px; border-radius: 16px; box-shadow: 0 30px 60px -24px rgba(24, 26, 32, 0.45); border: 1px solid #e3e7e8">
+    <div class="menu" style="left: 330px; top: 300px; width: 360px">
+      <div class="row">Open image in new tab</div>
+      <div class="row">Copy image</div>
+      <div class="sep"></div>
+      <div class="row hl bold"><span class="icon" style="box-shadow: 0 0 0 1px #fff"></span>Save as PNG → SaveImageAs/</div>
+      <div class="sep"></div>
+      <div class="row">Inspect</div>
+    </div>
+  </div>
+  <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M7.5 11l4.5 4.5 4.5-4.5"/><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16"/></svg></span>Save Image As</div>
+</section>
+
+<!-- 3: full resolution -->
+<section class="shot s1280" id="shot-3-full-resolution">
+  <div class="copy">
+    <h1>The real image,<br><span>not the thumbnail.</span></h1>
+    <p>It finds the largest version the page has.</p>
+  </div>
+  <div class="visual" style="gap: 18px; align-items: flex-end; padding-bottom: 150px">
+    <div style="text-align: center">
+      <div class="photo" style="width: 150px; height: 100px; filter: blur(1.5px)"><span class="sun"></span><span class="hills"></span></div>
+      <p style="margin: 14px 0 0; font-size: 26px; font-weight: 650; color: #6a777b">320 × 213</p>
+    </div>
+    <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 70px"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    <div style="text-align: center">
+      <div class="photo" style="width: 350px; height: 233px"><span class="sun"></span><span class="hills"></span><span class="hills2"></span></div>
+      <p style="margin: 14px 0 0; font-size: 32px; font-weight: 750; color: #085d69">2400 × 1600</p>
+    </div>
+  </div>
+  <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M7.5 11l4.5 4.5 4.5-4.5"/><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16"/></svg></span>Save Image As</div>
+</section>
+
+<!-- 4: compressed -->
+<section class="shot s1280" id="shot-4-compressed">
+  <div class="copy">
+    <h1>Too big to send?<br><span>Compressed.</span></h1>
+    <p>Under 1 MB for email and chat, or 200 KB for the web.</p>
+  </div>
+  <div class="visual" style="gap: 22px">
+    <div class="card" style="padding: 30px 30px; text-align: center">
+      <div class="photo" style="width: 180px; height: 120px; margin: 0 auto"><span class="sun"></span><span class="hills"></span></div>
+      <p class="big" style="margin: 22px 0 0; font-size: 52px; color: #8a959a; text-decoration: line-through; text-decoration-thickness: 4px">4.2 MB</p>
+    </div>
+    <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    <div class="card" style="padding: 30px 30px; text-align: center; border: 2px solid #0a7f8f">
+      <div class="photo" style="width: 180px; height: 120px; margin: 0 auto"><span class="sun"></span><span class="hills"></span></div>
+      <p class="big" style="margin: 22px 0 0; font-size: 52px; color: #085d69">0.9 MB</p>
+    </div>
+  </div>
+  <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M7.5 11l4.5 4.5 4.5-4.5"/><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16"/></svg></span>Save Image As</div>
+</section>
+
+<!-- 5: privacy -->
+<section class="shot s1280" id="shot-5-on-device">
+  <div class="copy">
+    <h1>Converted on your device.<br><span>0 uploads.</span></h1>
+    <p>No account. No ads. No tracking. Open source.</p>
+  </div>
+  <div class="visual">
+    <div class="card" style="padding: 44px 48px; width: 560px; background: #eef7f8; border-color: #d6eaed">
+      <p class="big" style="margin: 0; font-size: 96px">1,284</p>
+      <p style="margin: 14px 0 0; font-size: 26px; color: #3f4b4f">images saved on this device</p>
+      <span class="chip" style="margin-top: 30px; background: #fff; border: 1px solid #d6eaed; color: #085d69">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+        0 uploaded
+      </span>
+    </div>
+  </div>
+  <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M7.5 11l4.5 4.5 4.5-4.5"/><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16"/></svg></span>Save Image As</div>
+</section>
+
+<!-- small promo tile 440×280 -->
+<section class="shot" id="tile-small" style="width: 440px; height: 280px; padding: 34px 36px; display: flex; flex-direction: column; justify-content: space-between">
+  <div style="display: flex; align-items: center; gap: 12px; font-size: 26px; font-weight: 700; letter-spacing: -0.02em">
+    <span class="mark" style="width: 48px; height: 48px; border-radius: 13px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px"><path d="M12 3.5v11"/><path d="M7.5 11l4.5 4.5 4.5-4.5"/><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16"/></svg></span>
+    Save Image As
+  </div>
+  <p style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 750; letter-spacing: -0.035em">Right-click any image.<br><span style="color: #0a7f8f">Save it in any format.</span></p>
+  <p style="margin: 0; font-size: 17px; font-weight: 650; color: #46535a; letter-spacing: 0.02em">PNG · JPG · WebP · AVIF · PDF</p>
+</section>
+
+<!-- marquee 1400×560 -->
+<section class="shot" id="tile-marquee" style="width: 1400px; height: 560px; padding: 70px 96px; display: flex; align-items: center; gap: 70px">
+  <div style="flex: 0 0 560px">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 26px; font-weight: 700">
+      <span class="mark" style="width: 46px; height: 46px; border-radius: 12px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width: 27px; height: 27px"><path d="M12 3.5v11"/><path d="M7.5 11l4.5 4.5 4.5-4.5"/><path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16"/></svg></span>
+      Save Image As
+    </div>
+    <h1 style="margin: 34px 0 0; font-size: 60px; line-height: 1.04; letter-spacing: -0.045em; font-weight: 750">Right-click any image.<br><span style="color: #0a7f8f">Save it the way you need it.</span></h1>
+    <p style="margin: 22px 0 0; font-size: 24px; color: #46535a">Converted on your device. Nothing uploaded.</p>
+  </div>
+  <div style="position: relative; flex: 1; height: 100%">
+    <div class="photo" style="position: absolute; left: 0; top: 50px; width: 440px; height: 294px"><span class="sun"></span><span class="hills"></span><span class="hills2"></span><span class="badge" style="background: #0a7f8f">PNG · 2400 × 1600</span></div>
+    <div class="menu" style="left: 300px; top: 150px; width: 230px">
+      <div class="row hl">PNG</div>
+      <div class="row">JPG</div>
+      <div class="row">WebP</div>
+      <div class="row">AVIF</div>
+      <div class="row">PDF</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
