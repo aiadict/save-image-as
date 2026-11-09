@@ -2,7 +2,7 @@
 
 All notable changes to the Save Image As Chrome extension. Dates are when each version was built/released, not when Chrome Web Store review completed.
 
-## v1.3.0 — unreleased
+## v1.3.0 — 2026-11-09
 
 **New:**
 - **Save images from this page.** A new button in the popup lists every image on the page you're on in a gallery tab:
