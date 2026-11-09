@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The page may load only its own files (the script, styles, font and the
+         AVIF encoder from this site). It has no way to send your images
+         anywhere: connect-src allows nothing but this static site,
+         form-action allows nothing at all. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'"
+    />
+    <title>WebP to PNG & JPG converter: free, private, in your browser · Save Image As</title>
+    <meta
+      name="description"
+      content="Convert WebP, AVIF, PNG or JPG images to PNG, JPG, WebP, AVIF or PDF right in your browser. Free, no upload, no sign-up: your files never leave your device."
+    />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <link rel="canonical" href="https://aiadict.github.io/save-image-as/convert/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Save Image As" />
+    <meta property="og:title" content="Free image converter: WebP to PNG & JPG, in your browser" />
+    <meta property="og:description" content="No upload, no sign-up. Your files never leave your device." />
+    <meta property="og:url" content="https://aiadict.github.io/save-image-as/convert/" />
+    <meta property="og:image" content="https://aiadict.github.io/save-image-as/assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <style>svg:not([width]){width:20px;height:20px}</style>
+    <link rel="stylesheet" href="../assets/style.css?v=2026-11-09" />
+    <link rel="stylesheet" href="convert.css?v=2026-11-09" />
+  </head>
+  <body>
+    <div class="header-band">
+      <header class="site-header">
+        <a class="brand" href="../">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3.5v11" />
+              <path d="M7.5 11l4.5 4.5 4.5-4.5" />
+              <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" />
+            </svg>
+          </span>
+          Save Image As
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="../">Home</a>
+          <a href="./" aria-current="page">Converter</a>
+          <a href="../privacy/">Privacy</a>
+          <a class="btn-primary btn-sm" href="https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk" rel="noopener">Add to Chrome</a>
+        </nav>
+      </header>
+    </div>
+
+    <main class="container convert">
+      <p class="eyebrow">Free converter</p>
+      <h1 class="h2">Convert images<br /><span>right in your browser.</span></h1>
+      <p class="section-lede">WebP to PNG or JPG, anything to AVIF or PDF. Your files never leave this page.</p>
+
+      <div class="convert-panel">
+        <div class="format-row">
+          <p class="format-label" id="formatLabel">Convert to</p>
+          <div class="format-seg" id="formatSeg" role="radiogroup" aria-labelledby="formatLabel">
+            <button type="button" role="radio" data-format="png">PNG</button>
+            <button type="button" role="radio" data-format="jpg">JPG</button>
+            <button type="button" role="radio" data-format="webp">WebP</button>
+            <button type="button" role="radio" data-format="avif">AVIF</button>
+            <button type="button" role="radio" data-format="pdf">PDF</button>
+            <button type="button" role="radio" data-format="compressed">Under 1 MB</button>
+          </div>
+        </div>
+
+        <label class="drop" id="dropZone" for="fileInput">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3.5" y="4.5" width="17" height="15" rx="2.5" />
+            <circle cx="9" cy="10" r="1.8" />
+            <path d="M20.5 16l-5-5-9 8.5" />
+          </svg>
+          <span class="drop-title">Drop images here, or click to choose</span>
+          <span class="drop-sub">You can also paste an image (⌘V / Ctrl+V)</span>
+          <input id="fileInput" type="file" accept="image/*" multiple />
+        </label>
+
+        <p class="privacy-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="5" y="11" width="14" height="10" rx="2" />
+            <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+          </svg>
+          Converted on your device. This page's security policy blocks uploads; open DevTools → Network to check.
+        </p>
+
+        <ul class="results" id="results" aria-live="polite"></ul>
+        <button type="button" class="btn-primary" id="downloadAll" hidden>Download all</button>
+      </div>
+
+      <section class="convert-cta">
+        <h2>Do this without leaving the page you're on.</h2>
+        <p>Save Image As adds the same converter to Chrome's right-click menu, and picks the full-resolution image for you.</p>
+        <a class="btn-primary btn-lg" href="https://chromewebstore.google.com/detail/save-image-as/hcopnelbknilmhdehpdpegngempljkdk" rel="noopener">Add to Chrome, it's free</a>
+      </section>
+
+      <section class="faq convert-faq" aria-label="Questions">
+        <details>
+          <summary>Are my images uploaded?</summary>
+          <p>No. Conversion runs in your browser with the same code as the Save Image As extension. The page's Content-Security-Policy only lets it load its own files, so it has no way to send yours anywhere.</p>
+        </details>
+        <details>
+          <summary>Which files can I convert?</summary>
+          <p>Anything your browser can open: WebP, AVIF, PNG, JPG, GIF (first frame) and BMP. HEIC photos from iPhones aren't supported in Chrome yet.</p>
+        </details>
+        <details>
+          <summary>What does "Under 1 MB" do?</summary>
+          <p>It finds the highest quality that fits under 1 MB and saves a WebP, which is handy for email and chat attachments.</p>
+        </details>
+      </section>
+    </main>
+
+    <div class="footer-band">
+      <footer class="site-footer">
+        <span>Save Image As · no analytics, no cookies on this site</span>
+        <nav aria-label="Footer">
+          <a href="../convert/">Free converter</a>
+          <a href="../privacy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../feedback/">Feedback</a>
+          <a href="https://github.com/aiadict/save-image-as" rel="noopener">Source on GitHub</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

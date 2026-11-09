@@ -17,7 +17,8 @@
     "check:contrast": "node scripts/check-contrast.mjs",
     "render:icons": "node scripts/render-icons.mjs",
     "render:sample": "node scripts/render-welcome-sample.mjs",
-    "render:store": "node scripts/render-store-assets.mjs"
+    "render:store": "node scripts/render-store-assets.mjs",
+    "build:web": "node scripts/build-web.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",
