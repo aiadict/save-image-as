@@ -2,6 +2,21 @@
 
 All notable changes to the Save Image As Chrome extension. Dates are when each version was built/released, not when Chrome Web Store review completed.
 
+## v1.3.0 — unreleased
+
+**New:**
+- **Save images from this page.** A new button in the popup lists every image on the page you're on in a gallery tab:
+  - Each image is the best version the page offers (srcset, `<picture>`, linked originals, lazy-loaded `data-src`), using the same rules as a right-click save. CSS background images are included.
+  - Duplicates and tracking pixels are left out. Up to 300 images per page.
+  - Filter by size (300 px+, 1000 px+) and file type. Select all or none, or shift-click a range.
+  - Save the picked images as Original, PNG, JPG, WebP, AVIF or PDF, into `Downloads/<your folder>/<site>/`, or as one `.zip` file.
+  - Images a site blocks are marked, with one "Allow on all sites" button that then saves just those.
+  - No new permissions: the scan only runs when you click the button.
+- The "What's new" card after updating describes this feature.
+
+**Changed (internal):**
+- The fetch-and-convert steps moved from the service worker into `lib/save-pipeline.ts`, shared by right-click saves and the gallery.
+
 ## v1.2.0 — 2026-11-09
 
 **Changed:**

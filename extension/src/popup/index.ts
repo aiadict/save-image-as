@@ -12,6 +12,9 @@ import { clearBadge } from "../lib/badge";
 import { quickSaveTitle } from "../lib/menu-spec";
 import { CWS_REVIEWS_URL, WEBSITE_URL } from "../lib/config";
 import { initRatingWidget } from "./rating-widget";
+import { scanImagesInPage } from "../lib/scan-in-page";
+import { rankPageImages } from "../lib/page-images";
+import { storeGallery } from "../lib/gallery-store";
 
 const SAVE_MODE_HELP: Record<SaveMode, string> = {
   ask: "Opens a save dialog so you can rename the file or pick another folder.",
@@ -309,9 +312,61 @@ function initCards(stats: Awaited<ReturnType<typeof getStats>>): void {
   }
 }
 
-// A "!" left on the toolbar icon by a failed save has done its job once the popup is open.
-void chrome.tabs.query({ active: true, currentWindow: true }).then(([tab]) => {
+/** The tab the popup was opened on. E2E builds can name it (?tabId=), since a test opens the popup as a tab of its own. */
+async function pageTab(): Promise<chrome.tabs.Tab | undefined> {
+  if (__E2E__) {
+    const id = new URLSearchParams(location.search).get("tabId");
+    if (id) return chrome.tabs.get(Number(id));
+  }
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  return tab;
+}
+
+/**
+ * "Save images from this page": scans the tab right here, during the click
+ * (opening the popup granted activeTab for it), and opens the gallery tab
+ * next to the page. Saving happens in the gallery; see gallery/index.ts.
+ */
+function initPageScan(tab: chrome.tabs.Tab | undefined): void {
+  const button = document.getElementById("scanPageBtn") as HTMLButtonElement;
+  const sub = document.getElementById("scanPageSub")!;
+  if (tab?.id === undefined || !/^https?:/i.test(tab.url ?? "")) {
+    button.disabled = true;
+    sub.textContent = "Open a web page to use this";
+    return;
+  }
+  const tabId = tab.id;
+
+  button.addEventListener("click", async () => {
+    button.disabled = true;
+    sub.textContent = "Finding images…";
+    try {
+      const [result] = await chrome.scripting.executeScript({ target: { tabId }, func: scanImagesInPage });
+      if (!result?.result) throw new Error("The scan returned nothing.");
+      const data = rankPageImages(result.result);
+      if (data.images.length === 0) {
+        sub.textContent = "No images found on this page";
+        button.disabled = false;
+        return;
+      }
+      const id = await storeGallery(data);
+      await chrome.tabs.create({
+        url: chrome.runtime.getURL(`gallery/index.html#${id}`),
+        index: tab.index + 1,
+        openerTabId: tabId,
+      });
+      window.close();
+    } catch (err) {
+      console.warn("[Save Image As] page scan failed", err);
+      sub.textContent = "Chrome doesn't let extensions read this page";
+    }
+  });
+}
+
+void pageTab().then((tab) => {
+  // A "!" left on the toolbar icon by a failed save has done its job once the popup is open.
   if (tab?.id !== undefined) void clearBadge(tab.id);
+  initPageScan(tab);
 });
 
 void init();

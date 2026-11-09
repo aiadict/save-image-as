@@ -78,7 +78,7 @@ test.describe("popup cards and rating", () => {
   });
 
   test("what's new card shows once after an update", async ({ page, sw }) => {
-    await setStats(sw, { whatsNew: "1.2.0" });
+    await setStats(sw, { whatsNew: "1.3.0" });
     await open(page, sw);
     await expect(page.locator("#whatsNewCard")).toBeVisible();
     await page.click("#whatsNewDismiss");

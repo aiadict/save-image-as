@@ -416,6 +416,21 @@ svg {
   color: var(--ink-3);
 }
 
+.page-action .more-icon {
+  color: var(--accent);
+}
+
+.page-action:disabled {
+  cursor: default;
+  background: var(--surface);
+}
+
+.page-action:disabled .more-title,
+.page-action:disabled .more-icon,
+.page-action:disabled .chevron {
+  color: var(--ink-3);
+}
+
 .more-toggle .chevron {
   width: 14px;
   height: 14px;

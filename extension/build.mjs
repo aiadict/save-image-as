@@ -18,6 +18,7 @@ const entryPoints = {
   "background/index": "src/background/index.ts",
   "popup/index": "src/popup/index.ts",
   "welcome/index": "src/welcome/index.ts",
+  "gallery/index": "src/gallery/index.ts",
 };
 
 function copyStatic() {
@@ -42,7 +43,7 @@ function copyStatic() {
   mkdirSync(`${outdir}/codecs`, { recursive: true });
   cpSync("node_modules/@jsquash/avif/codec/enc/avif_enc.wasm", `${outdir}/codecs/avif_enc.wasm`);
   cpSync("node_modules/@jsquash/avif/LICENSE", `${outdir}/codecs/LICENSE-jsquash-avif.txt`);
-  for (const dir of ["popup", "welcome"]) {
+  for (const dir of ["popup", "welcome", "gallery"]) {
     if (existsSync(`src/${dir}/index.html`)) {
       mkdirSync(`${outdir}/${dir}`, { recursive: true });
       cpSync(`src/${dir}/index.html`, `${outdir}/${dir}/index.html`);

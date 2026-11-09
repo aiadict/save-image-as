@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- E2E fixture page for "Save images from this page"
+     (extension/e2e/gallery.spec.ts). Twelve images; the gallery should list
+     ten, in this order: webp, png, jpg, srcset, picture, linked, lazy,
+     cross-origin, large, CSS background. The tracking pixel is dropped and
+     the repeated jpg is merged. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gallery fixture</title>
+</head>
+<body>
+  <img src="images/photo-800.webp?g1" alt="Golden retriever puppy" width="200">
+  <img src="images/logo-transparent.png?g2" alt="">
+  <img src="images/photo-320.jpg?g3">
+
+  <!-- srcset: the 1600w candidate is the one to save -->
+  <img src="images/photo-320.jpg?g4" srcset="images/photo-320.jpg?g4 320w, images/photo-1600.jpg?g4 1600w" sizes="320px">
+
+  <!-- art direction: only the matching <source> counts -->
+  <picture>
+    <source media="(max-width: 1px)" srcset="images/logo-transparent.png?g5">
+    <source media="(min-width: 2px)" srcset="images/photo-1600.jpg?g5">
+    <img src="images/photo-320.jpg?g5">
+  </picture>
+
+  <!-- thumbnail linking to the full-size original -->
+  <a href="images/photo-1600.jpg?g6"><img src="images/photo-320.jpg?g6t"></a>
+
+  <!-- lazy-loading placeholder with the real image in data-src -->
+  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/photo-320.jpg?g8">
+
+  <!-- tracking pixel: dropped -->
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVR4nGPgqu//j4wZSBcAAFnoIXHunnC1AAAAAElFTkSuQmCC">
+
+  <!-- the same jpg again: merged with the third image -->
+  <img src="images/photo-320.jpg?g3">
+
+  <!-- another site with no CORS headers and no host permission: blocked -->
+  <img src="{{OTHER_ORIGIN}}/images/photo-320.jpg?g11">
+
+  <img src="images/photo-1600.jpg?g12" width="400">
+
+  <!-- CSS background image -->
+  <div style="width: 200px; height: 150px; background: url('images/photo-800.webp?g7') center / cover"></div>
+</body>
+</html>

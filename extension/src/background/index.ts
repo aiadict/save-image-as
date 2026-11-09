@@ -2,11 +2,10 @@
 // pipeline, calls chrome.downloads. See docs/architecture.md "End-to-end
 // data flow" for the pipeline this implements.
 
-import { getPreferences, setPreferences, onPreferencesChanged, type DefaultFormat, type SizeBudget } from "../lib/storage";
+import { getPreferences, setPreferences, onPreferencesChanged } from "../lib/storage";
 import { tryRequestOriginPermission } from "../lib/permissions";
 import { downloadBlob } from "../lib/downloads";
 import { notifyFailure, notifyInfo } from "../lib/notify";
-import { base64ToBlob } from "../lib/base64";
 import { incrementImagesSaved, setStats } from "../lib/stats";
 import { showFailed, showSaved } from "../lib/badge";
 import { FEEDBACK_FORM_URL } from "../lib/config";
@@ -21,22 +20,12 @@ import {
   SIZE_BUDGET_LABEL,
   type MenuEntry,
 } from "../lib/menu-spec";
-import { fetchImageBlob, decodeImage } from "../lib/image-core/decode";
-import { encodeImage, encodeToTargetSize } from "../lib/image-core/encode";
 import { configureAvifWasm } from "../lib/image-core/avif";
-import { buildFilename, buildOriginalFilename } from "../lib/image-core/filename";
-import { ConversionError, type OutputFormat, type ResolvedSource } from "../lib/image-core/types";
+import { ConversionError, type ResolvedSource } from "../lib/image-core/types";
+import { convertForSave, loadSourceBlob, type SaveFormat } from "../lib/save-pipeline";
 import { resolveImageInPage } from "./resolve-in-page";
 
 const LOG_PREFIX = "[Save Image As]";
-
-/** Byte targets for the "Compressed" context-menu item — see docs/architecture.md "Size-budget compression". */
-const SIZE_BUDGET_BYTES: Record<SizeBudget, number> = {
-  chat: 1024 * 1024, // 1MB — comfortable for email/Slack/messaging attachments
-  web: 200 * 1024, // 200KB — for fastest page loads
-};
-
-type SaveFormat = DefaultFormat | "compressed";
 
 configureAvifWasm(chrome.runtime.getURL("codecs/avif_enc.wasm"));
 
@@ -56,7 +45,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 });
 
 /** The release whose highlights the popup's "What's new" card describes. */
-const WHATS_NEW_VERSION = "1.2.0";
+const WHATS_NEW_VERSION = "1.3.0";
 
 function isOlderThan(version: string | undefined, than: string): boolean {
   if (!version) return false;
@@ -178,99 +167,36 @@ async function saveResolvedImage(resolved: ResolvedSource, format: SaveFormat, o
   const { folder, pageUrl } = options;
   const prefs = await getPreferences();
   const saveAs = prefs.saveMode === "ask";
-  // Descriptive-filenames feature: only pass alt text through when the user
-  // opted in — buildFilename/buildOriginalFilename fall back to the CDN
-  // basename on `undefined` either way, so this is the only place the
-  // preference is consulted.
-  const altText = prefs.useDescriptiveFilenames ? resolved.alt : undefined;
 
-  const blob = await loadSourceBlob(resolved, pageUrl);
-
-  if (format === "original") {
-    const filename = buildOriginalFilename(resolved.url, folder, altText);
-    console.log(LOG_PREFIX, "downloading original", filename);
-    if (__E2E__) await recordSave(blob, filename);
-    await downloadBlob(blob, filename, saveAs);
-    void incrementImagesSaved();
-    void clearPermissionBlockFlag();
-    return;
+  console.log(LOG_PREFIX, "fetching", resolved.url);
+  const source = await loadSourceBlob(resolved, pageUrl, requestAccessAfterBlock);
+  console.log(LOG_PREFIX, "converting to", format);
+  const converted = await convertForSave(source, resolved, format, prefs, folder);
+  if (converted.missedTarget) {
+    // Saved successfully, just not as small as requested — tell the user
+    // the honest result instead of silently claiming full success. See
+    // docs/architecture.md "Size-budget compression".
+    notifyInfo(
+      `Saved at ${formatBytes(converted.blob.size)} — the smallest size possible without losing too much quality (target was under ${SIZE_BUDGET_LABEL[prefs.sizeBudget]}).`
+    );
   }
 
-  console.log(LOG_PREFIX, "decoding");
-  const bitmap = await decodeImage(blob);
-
-  let encoded: Blob;
-  let outputFormat: OutputFormat;
-  if (format === "compressed") {
-    const maxBytes = SIZE_BUDGET_BYTES[prefs.sizeBudget];
-    console.log(LOG_PREFIX, "compressing to fit", SIZE_BUDGET_LABEL[prefs.sizeBudget]);
-    const result = await encodeToTargetSize(bitmap, maxBytes);
-    encoded = result.blob;
-    outputFormat = "webp";
-    if (!result.hitTarget) {
-      // Saved successfully, just not as small as requested — tell the user
-      // the honest result instead of silently claiming full success. See
-      // docs/architecture.md "Size-budget compression".
-      notifyInfo(
-        `Saved at ${formatBytes(result.size)} — the smallest size possible without losing too much quality (target was under ${SIZE_BUDGET_LABEL[prefs.sizeBudget]}).`
-      );
-    }
-  } else {
-    console.log(LOG_PREFIX, "encoding as", format);
-    encoded = await encodeImage(bitmap, format, prefs.jpgQuality);
-    outputFormat = format;
-  }
-
-  const filename = buildFilename(resolved.url, outputFormat, folder, altText);
-  console.log(LOG_PREFIX, "downloading", filename);
-  if (__E2E__) await recordSave(encoded, filename, bitmap);
-  await downloadBlob(encoded, filename, saveAs);
-  console.log(LOG_PREFIX, "done", filename);
+  console.log(LOG_PREFIX, "downloading", converted.filename);
+  if (__E2E__) await recordSave(converted.blob, converted.filename, converted.bitmap);
+  await downloadBlob(converted.blob, converted.filename, saveAs);
+  console.log(LOG_PREFIX, "done", converted.filename);
   void incrementImagesSaved();
   void clearPermissionBlockFlag();
 }
 
-/** Gets the source image's bytes: in-page blob bytes, or a fetch with a best-effort permission retry. */
-async function loadSourceBlob(resolved: ResolvedSource, pageUrl: string | undefined): Promise<Blob> {
-  if (resolved.inlineBlob) {
-    // A blob: source whose bytes were already read in-page (the extension
-    // background can't fetch a page-scoped blob: URL directly).
-    return base64ToBlob(resolved.inlineBlob.base64, resolved.inlineBlob.mime);
+/** A right-click save was blocked: try a narrow per-site grant, and flag the popup banner if that fails. */
+async function requestAccessAfterBlock(url: string): Promise<boolean> {
+  console.log(LOG_PREFIX, "fetch blocked, requesting origin permission (best effort)", url);
+  const granted = await tryRequestOriginPermission(url);
+  if (!granted) {
+    void setPreferences({ lastSaveBlockedByPermission: true, lastBlockedOrigin: safeOrigin(url) });
   }
-  if (resolved.url.startsWith("blob:")) {
-    // In-page resolution couldn't reach this blob: source either — nothing
-    // left to try.
-    throw new ConversionError({
-      reason: "unsupported-source",
-      message: "This image uses a temporary in-page source Save Image As can't reach.",
-    });
-  }
-
-  // Try a direct fetch first — many images need no special permission at
-  // all. Only fall back to requesting access if that actually fails.
-  console.log(LOG_PREFIX, "fetching", resolved.url);
-  // Best-effort mitigation for hotlink-protected image hosts (they check
-  // Referer and silently serve a placeholder instead of erroring — see
-  // docs/site-compatibility.md). pageUrl is the page the image was
-  // actually found on, which is what a real browser navigation would send.
-  try {
-    return await fetchImageBlob(resolved.url, pageUrl);
-  } catch (err) {
-    if (!(err instanceof ConversionError) || err.failure.reason !== "protected-source") {
-      throw err;
-    }
-    console.log(LOG_PREFIX, "fetch blocked, requesting origin permission (best effort)", resolved.url);
-    const granted = await tryRequestOriginPermission(resolved.url);
-    if (!granted) {
-      void setPreferences({ lastSaveBlockedByPermission: true, lastBlockedOrigin: safeOrigin(resolved.url) });
-      throw new ConversionError({
-        reason: "permission-denied",
-        message:
-          'Save Image As doesn\'t have permission to read images from this site yet. Open the extension\'s Settings and turn on "Allow on all sites," then try again.',
-      });
-    }
-    return fetchImageBlob(resolved.url, pageUrl);
-  }
+  return granted;
 }
 
 function safeOrigin(url: string): string {

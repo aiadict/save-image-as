@@ -59,6 +59,11 @@
         re-encoding happens entirely on your device, inside your browser. The image you save is never uploaded to
         any server we operate or any third party.
       </p>
+      <p>
+        "Save images from this page" (in the extension's menu) lists the images on the page you're on, only when you
+        click it. The list is kept in your browser's memory for that one gallery tab and is cleared when Chrome
+        closes. The gallery shows previews loaded straight from the site, just as the page itself does.
+      </p>
 
       <h2>Data we collect</h2>
       <p>None. Specifically, we do not collect:</p>
@@ -97,7 +102,7 @@
           <tr><td>contextMenus</td><td>Add "Save Image As" entries to the right-click menu</td></tr>
           <tr><td>downloads</td><td>Save the converted file to your Downloads folder</td></tr>
           <tr><td>storage</td><td>Remember your format/folder/save-mode preferences, locally</td></tr>
-          <tr><td>scripting / activeTab</td><td>Read the specific image you right-clicked, on the tab you're using, so it can be resolved to its real source</td></tr>
+          <tr><td>scripting / activeTab</td><td>Read the specific image you right-clicked (or, when you click "Save images from this page", the images on that page), on the tab you're using, so each can be resolved to its real source</td></tr>
           <tr><td>notifications</td><td>Tell you why a save failed, if it fails, instead of failing silently</td></tr>
           <tr><td>Host permission for a specific site (automatic, best-effort)</td><td>Fetch the actual image bytes from that site when the browser's own security rules would otherwise block it</td></tr>
           <tr><td>Host permission for all sites (optional)</td><td>Only if you click "Allow on all sites" in Settings — the reliable alternative when the automatic per-site request doesn't go through; entirely your choice, off by default</td></tr>

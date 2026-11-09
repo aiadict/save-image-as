@@ -86,7 +86,7 @@ function sanitize(name: string): string {
   return cleaned.length > MAX_BASENAME_LENGTH ? cleaned.slice(0, MAX_BASENAME_LENGTH) : cleaned;
 }
 
-function sanitizeFolder(folder: string): string {
+export function sanitizeFolder(folder: string): string {
   return folder
     .split("/")
     .map((part) => sanitize(part))

@@ -16,6 +16,8 @@ _Last updated: [fill in at publish time]_
 
 Save Image As lets you right-click an image on a web page and save it in a different format (JPG, PNG, WebP, AVIF, PDF, or a size-limited "Compressed" WebP), optionally to a folder and format you've chosen as your default. All image decoding and re-encoding happens **entirely on your device**, inside your browser. The image you save is never uploaded to any server we operate or any third party.
 
+"Save images from this page" (in the extension's menu) lists the images on the page you're on, only when you click it. The list is kept in your browser's memory for that one gallery tab and is cleared when Chrome closes. The gallery shows previews loaded straight from the site, just as the page itself does.
+
 ## Data we collect
 
 **None.** Specifically, we do not collect:
@@ -45,7 +47,7 @@ None of this leaves your device or is accessible to us.
 | `contextMenus` | Add "Save Image As" entries to the right-click menu |
 | `downloads` | Save the converted file to your Downloads folder |
 | `storage` | Remember your format/folder/save-mode preferences, locally |
-| `scripting` / `activeTab` | Read the specific image you right-clicked, on the tab you're using, so it can be resolved to its real source |
+| `scripting` / `activeTab` | Read the specific image you right-clicked (or, when you click "Save images from this page", the images on that page), on the tab you're using, so each can be resolved to its real source |
 | `notifications` | Tell you why a save failed, if it fails, instead of failing silently |
 | Host permission for a specific site (automatic, best-effort) | Fetch the actual image bytes from that site when the browser's own security rules would otherwise block it |
 | Host permission for all sites (optional — only if you click "Allow on all sites" in Settings) | The reliable alternative if the automatic per-site request above doesn't go through; entirely your choice, off by default |

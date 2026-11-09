@@ -56,9 +56,9 @@ export async function setStats(patch: Partial<Stats>): Promise<void> {
   await chrome.storage.local.set(patch);
 }
 
-export async function incrementImagesSaved(): Promise<void> {
+export async function incrementImagesSaved(by = 1): Promise<void> {
   const { imagesSavedCount } = await getStats();
-  await chrome.storage.local.set({ imagesSavedCount: imagesSavedCount + 1 });
+  await chrome.storage.local.set({ imagesSavedCount: imagesSavedCount + by });
 }
 
 /** Pure: should the popup show the star rating row? */

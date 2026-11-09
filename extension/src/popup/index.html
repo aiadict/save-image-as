@@ -45,8 +45,8 @@
 
         <section class="note-card" id="whatsNewCard" hidden>
           <div class="note-text">
-            <p class="note-title">New in version 1.2</p>
-            <p class="note-body">A fresh look, every format one menu closer, and an optional one-click-only menu (More options).</p>
+            <p class="note-title">New in version 1.3</p>
+            <p class="note-body">Save every image on a page at once: open this menu on any page and choose "Save images from this page".</p>
           </div>
           <button type="button" class="icon-btn small" id="whatsNewDismiss" aria-label="Dismiss">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
@@ -81,6 +81,20 @@
             0 uploaded
           </span>
         </section>
+
+        <button type="button" class="more-toggle page-action" id="scanPageBtn">
+          <svg class="more-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" />
+            <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" />
+            <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" />
+            <path d="M17 13.5v7M13.5 17h7" />
+          </svg>
+          <span class="more-text">
+            <span class="more-title">Save images from this page</span>
+            <span class="more-sub" id="scanPageSub">See them all, pick any or every one</span>
+          </span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+        </button>
 
         <section aria-labelledby="formatLabel">
           <p class="section-label" id="formatLabel">Your one-click format</p>

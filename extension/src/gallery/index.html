@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Save images · Save Image As</title>
+    <link rel="stylesheet" href="../ui/tokens.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <span class="brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3.5v11" />
+              <path d="M7.5 11l4.5 4.5 4.5-4.5" />
+              <path d="M4 16v2.5a1.5 1.5 0 001.5 1.5h13a1.5 1.5 0 001.5-1.5V16" />
+            </svg>
+          </span>
+          Save Image As
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="5" y="11" width="14" height="10" rx="2" />
+            <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+          </svg>
+          Converted on this device
+        </span>
+      </div>
+    </header>
+
+    <main class="wrap page">
+      <div class="intro">
+        <h1 id="heading">Images on this page</h1>
+        <p class="intro-sub" id="subheading"></p>
+      </div>
+
+      <section class="expired" id="expired" hidden>
+        <p class="expired-title">This list is no longer available</p>
+        <p>Scans are kept until Chrome closes. Open the page again, click the Save Image As icon and choose "Save images from this page".</p>
+      </section>
+
+      <div class="toolbar" id="toolbar" hidden>
+        <div class="segmented" id="sizeFilter" role="radiogroup" aria-label="Image size">
+          <button type="button" role="radio" data-size="0">All sizes</button>
+          <button type="button" role="radio" data-size="300">300 px+</button>
+          <button type="button" role="radio" data-size="1000">1000 px+</button>
+        </div>
+        <label class="select-wrap">
+          <span class="visually-hidden">File type</span>
+          <select id="typeFilter" class="select">
+            <option value="">All types</option>
+          </select>
+        </label>
+        <span class="toolbar-spacer"></span>
+        <button type="button" class="btn-text" id="selectAll">Select all</button>
+        <button type="button" class="btn-text" id="selectNone">Select none</button>
+      </div>
+
+      <ul class="grid" id="grid" aria-label="Images"></ul>
+      <p class="empty" id="empty" hidden>No images match these filters.</p>
+    </main>
+
+    <div class="action-bar" id="actionBar" hidden>
+      <div class="wrap action-inner">
+        <div class="action-main">
+          <label class="format-pick">
+            <span>Save as</span>
+            <select id="formatSelect" class="select">
+              <option value="original">Original</option>
+              <option value="png">PNG</option>
+              <option value="jpg">JPG</option>
+              <option value="webp">WebP</option>
+              <option value="avif">AVIF</option>
+              <option value="pdf">PDF</option>
+            </select>
+          </label>
+          <label class="zip-pick">
+            <input type="checkbox" id="zipToggle" />
+            <span>One .zip file</span>
+          </label>
+          <span class="action-spacer"></span>
+          <button type="button" class="btn-primary btn-lg" id="saveBtn" disabled>Save images</button>
+        </div>
+        <p class="dest" id="dest"></p>
+        <div class="summary" id="summary" role="status" aria-live="polite" hidden>
+          <p id="summaryText"></p>
+          <div class="summary-actions">
+            <button type="button" class="btn-primary" id="grantBtn" hidden>Allow on all sites</button>
+            <button type="button" class="btn-secondary" id="showBtn" hidden>Show in folder</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
